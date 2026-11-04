@@ -1,0 +1,4001 @@
+age,source_inscription,anciennete_mois,frequence,taux_ouverture,taux_clic,achats_12_mois,desinscription
+35,Partenaire,40,Hebdomadaire,26.00,5.40,0,0
+52,Jeu concours,25,Hebdomadaire,33.20,6.30,1,0
+41,Site,33,Hebdomadaire,6.30,1.60,0,1
+35,Réseaux sociaux,34,Bimensuelle,38.20,5.40,1,0
+43,Site,27,Bimensuelle,13.10,2.60,0,0
+22,Jeu concours,30,Hebdomadaire,7.00,1.40,0,1
+41,Site,46,Hebdomadaire,1.60,0.40,0,0
+42,Site,17,Bimensuelle,43.60,8.10,2,0
+21,Site,5,Bimensuelle,38.60,6.10,2,0
+56,Site,30,Hebdomadaire,0.00,0.00,1,1
+30,Site,23,Hebdomadaire,15.60,1.50,1,0
+57,Site,20,Hebdomadaire,36.60,5.30,0,0
+24,Site,22,Mensuelle,34.30,4.10,1,0
+35,Réseaux sociaux,29,Hebdomadaire,18.20,2.40,0,1
+25,Jeu concours,11,Hebdomadaire,17.50,1.90,0,1
+38,Jeu concours,9,Bimensuelle,30.40,7.00,2,0
+27,Jeu concours,14,Bimensuelle,22.30,3.80,1,1
+46,Réseaux sociaux,46,Hebdomadaire,0.00,0.00,1,0
+51,Salon,26,Bimensuelle,42.40,9.70,1,0
+23,Jeu concours,30,Hebdomadaire,0.00,0.00,0,1
+57,Site,2,Hebdomadaire,45.10,7.00,1,0
+32,Partenaire,12,Hebdomadaire,37.40,3.40,1,0
+33,Partenaire,42,Bimensuelle,24.70,3.20,0,0
+27,Partenaire,46,Hebdomadaire,40.20,10.30,0,0
+44,Site,40,Hebdomadaire,17.00,4.00,0,0
+19,Site,27,Mensuelle,12.80,3.00,0,0
+25,Site,6,Bimensuelle,20.90,2.60,1,0
+42,Réseaux sociaux,30,Hebdomadaire,44.60,6.00,0,0
+31,Site,35,Hebdomadaire,0.00,0.00,0,0
+20,Salon,25,Hebdomadaire,44.40,12.90,0,0
+18,Site,27,Hebdomadaire,41.30,8.40,0,0
+23,Salon,43,Mensuelle,31.10,7.50,0,0
+40,Site,40,Hebdomadaire,41.60,8.40,1,0
+44,Partenaire,29,Hebdomadaire,20.60,3.90,1,0
+41,Site,12,Hebdomadaire,34.00,8.20,2,0
+18,Site,10,Bimensuelle,65.00,11.40,2,0
+42,Réseaux sociaux,26,Bimensuelle,21.00,4.90,0,0
+36,Réseaux sociaux,3,Bimensuelle,30.70,9.30,0,0
+56,Site,43,Bimensuelle,41.50,5.40,0,0
+42,Partenaire,38,Bimensuelle,20.50,3.90,0,0
+38,Réseaux sociaux,41,Hebdomadaire,15.50,2.10,0,0
+53,Jeu concours,39,Bimensuelle,0.00,0.00,0,1
+45,Site,45,Bimensuelle,0.00,0.00,0,0
+33,Réseaux sociaux,38,Mensuelle,4.50,1.10,0,0
+46,Réseaux sociaux,41,Hebdomadaire,32.60,7.30,0,0
+18,Site,9,Bimensuelle,14.10,2.20,1,0
+41,Jeu concours,5,Mensuelle,21.30,4.90,2,0
+20,Réseaux sociaux,7,Mensuelle,15.80,3.60,1,1
+61,Partenaire,31,Hebdomadaire,15.20,4.00,2,0
+47,Réseaux sociaux,23,Hebdomadaire,30.70,4.60,0,0
+27,Site,12,Mensuelle,23.40,4.70,1,0
+44,Réseaux sociaux,39,Hebdomadaire,27.00,3.70,0,1
+20,Site,45,Hebdomadaire,22.90,0.70,0,0
+59,Réseaux sociaux,30,Mensuelle,21.50,2.00,0,1
+61,Partenaire,47,Hebdomadaire,24.10,5.60,0,0
+50,Salon,30,Bimensuelle,1.40,0.30,0,0
+46,Site,7,Hebdomadaire,40.80,10.10,0,0
+45,Site,22,Hebdomadaire,19.10,4.40,0,0
+47,Réseaux sociaux,37,Hebdomadaire,36.10,5.30,1,0
+22,Jeu concours,4,Bimensuelle,47.50,6.50,2,0
+29,Jeu concours,39,Hebdomadaire,0.00,0.00,0,1
+51,Site,33,Hebdomadaire,30.10,4.50,0,0
+33,Partenaire,28,Mensuelle,36.20,6.50,1,0
+51,Partenaire,40,Hebdomadaire,41.90,4.60,0,0
+62,Salon,7,Hebdomadaire,21.90,3.70,0,0
+38,Réseaux sociaux,30,Bimensuelle,30.70,7.00,0,0
+36,Partenaire,4,Hebdomadaire,47.40,4.20,1,0
+53,Salon,33,Hebdomadaire,33.20,6.40,0,0
+25,Site,19,Hebdomadaire,44.40,6.40,2,0
+52,Site,6,Bimensuelle,40.40,10.70,2,0
+52,Partenaire,6,Bimensuelle,60.70,10.60,1,0
+28,Jeu concours,19,Hebdomadaire,12.60,2.60,0,0
+43,Salon,4,Bimensuelle,59.80,4.60,1,0
+36,Réseaux sociaux,9,Hebdomadaire,48.80,10.00,2,0
+52,Salon,5,Bimensuelle,40.50,9.60,0,0
+21,Réseaux sociaux,25,Bimensuelle,72.40,18.80,2,0
+62,Réseaux sociaux,21,Hebdomadaire,33.80,6.20,0,0
+43,Réseaux sociaux,31,Hebdomadaire,28.60,3.80,1,0
+36,Réseaux sociaux,3,Mensuelle,72.50,15.50,3,0
+20,Site,45,Hebdomadaire,3.40,0.70,0,0
+36,Site,2,Hebdomadaire,49.40,8.20,0,0
+25,Réseaux sociaux,44,Hebdomadaire,28.60,3.20,2,0
+36,Site,44,Hebdomadaire,0.00,0.00,0,0
+25,Réseaux sociaux,19,Hebdomadaire,25.40,5.10,1,0
+22,Site,6,Bimensuelle,50.00,7.90,0,0
+30,Partenaire,33,Mensuelle,5.60,1.60,0,1
+33,Jeu concours,34,Bimensuelle,18.10,2.30,0,0
+19,Jeu concours,25,Mensuelle,8.50,2.20,2,0
+33,Réseaux sociaux,17,Hebdomadaire,52.10,7.30,0,0
+38,Réseaux sociaux,32,Bimensuelle,17.00,2.00,1,0
+40,Site,16,Hebdomadaire,19.10,4.20,2,0
+29,Site,35,Mensuelle,43.10,10.30,3,0
+36,Partenaire,20,Bimensuelle,33.60,5.30,2,0
+29,Site,19,Bimensuelle,18.90,2.10,0,0
+29,Site,30,Mensuelle,29.90,6.60,1,0
+24,Réseaux sociaux,4,Mensuelle,43.10,5.30,0,1
+36,Réseaux sociaux,42,Hebdomadaire,12.60,1.90,1,0
+51,Site,28,Hebdomadaire,16.30,2.30,1,0
+36,Jeu concours,40,Hebdomadaire,3.40,0.40,2,1
+50,Site,1,Bimensuelle,21.70,3.70,1,0
+40,Réseaux sociaux,1,Hebdomadaire,45.10,14.70,2,0
+44,Site,25,Bimensuelle,41.40,11.60,1,0
+39,Jeu concours,31,Hebdomadaire,0.20,0.00,0,1
+68,Site,38,Mensuelle,10.10,2.80,0,0
+46,Partenaire,12,Hebdomadaire,35.40,7.50,2,0
+41,Site,23,Mensuelle,52.20,12.80,2,0
+28,Site,5,Hebdomadaire,18.90,1.40,1,0
+28,Site,21,Hebdomadaire,44.10,6.70,0,0
+36,Site,47,Bimensuelle,25.90,3.20,1,0
+24,Site,3,Hebdomadaire,28.50,6.10,0,0
+27,Site,8,Hebdomadaire,37.50,4.00,0,0
+37,Salon,38,Hebdomadaire,32.30,4.50,0,0
+18,Site,5,Hebdomadaire,46.60,9.10,2,0
+72,Réseaux sociaux,22,Mensuelle,9.80,3.20,0,0
+41,Salon,47,Hebdomadaire,22.20,2.80,1,0
+52,Jeu concours,32,Mensuelle,13.90,2.00,0,0
+38,Site,24,Mensuelle,48.80,11.50,2,0
+49,Site,39,Bimensuelle,11.70,2.90,1,0
+33,Site,43,Bimensuelle,16.60,2.60,1,0
+24,Partenaire,13,Bimensuelle,40.70,6.90,1,0
+37,Jeu concours,22,Hebdomadaire,20.40,3.70,1,1
+33,Site,19,Bimensuelle,42.90,7.20,1,0
+22,Partenaire,14,Bimensuelle,12.10,3.50,0,0
+35,Site,4,Hebdomadaire,40.70,7.90,2,0
+42,Jeu concours,36,Hebdomadaire,25.60,3.70,0,1
+62,Site,2,Hebdomadaire,3.30,0.50,0,0
+43,Site,29,Mensuelle,7.70,1.70,1,0
+29,Site,10,Hebdomadaire,15.90,3.00,1,0
+24,Site,9,Hebdomadaire,60.30,9.40,1,0
+28,Partenaire,31,Mensuelle,26.00,3.10,1,0
+24,Réseaux sociaux,18,Mensuelle,24.80,4.50,1,0
+23,Réseaux sociaux,10,Bimensuelle,37.80,7.10,2,0
+49,Partenaire,25,Bimensuelle,21.40,4.30,0,0
+34,Jeu concours,18,Mensuelle,6.30,1.60,1,0
+27,Réseaux sociaux,43,Bimensuelle,30.10,2.80,0,0
+47,Site,7,Hebdomadaire,20.70,5.50,0,0
+39,Réseaux sociaux,11,Bimensuelle,30.10,3.80,0,0
+18,Site,7,Hebdomadaire,28.10,5.50,2,0
+35,Jeu concours,3,Mensuelle,2.00,0.30,0,0
+43,Réseaux sociaux,15,Mensuelle,0.00,0.00,1,0
+29,Site,12,Mensuelle,38.10,5.50,1,0
+18,Jeu concours,7,Bimensuelle,39.20,10.30,2,0
+38,Jeu concours,28,Bimensuelle,0.00,0.00,1,1
+18,Site,45,Hebdomadaire,20.40,3.20,0,0
+28,Jeu concours,2,Hebdomadaire,29.10,3.50,0,1
+41,Salon,34,Mensuelle,47.10,5.00,2,1
+33,Site,35,Hebdomadaire,31.10,2.80,2,0
+18,Jeu concours,20,Hebdomadaire,0.00,0.00,1,1
+19,Réseaux sociaux,27,Bimensuelle,23.10,5.00,1,0
+35,Site,21,Mensuelle,14.90,2.40,0,0
+51,Jeu concours,19,Mensuelle,41.20,8.00,0,0
+40,Partenaire,45,Bimensuelle,43.80,3.20,0,0
+42,Site,11,Bimensuelle,19.50,1.80,0,0
+49,Site,7,Bimensuelle,31.70,5.90,1,0
+33,Jeu concours,9,Hebdomadaire,32.00,5.10,1,1
+35,Site,12,Bimensuelle,24.30,4.70,0,0
+42,Site,10,Bimensuelle,25.80,4.60,2,0
+44,Site,44,Hebdomadaire,28.30,6.00,1,0
+53,Réseaux sociaux,43,Hebdomadaire,4.60,0.60,1,0
+39,Site,43,Bimensuelle,21.20,4.20,0,0
+55,Partenaire,46,Hebdomadaire,4.30,0.60,0,0
+26,Réseaux sociaux,33,Hebdomadaire,18.30,6.30,1,0
+46,Jeu concours,45,Hebdomadaire,5.60,0.40,0,1
+61,Site,13,Mensuelle,39.60,9.30,3,0
+41,Site,2,Mensuelle,32.50,7.40,0,0
+34,Réseaux sociaux,38,Mensuelle,43.80,9.50,2,0
+58,Site,23,Hebdomadaire,22.10,0.20,0,0
+26,Site,46,Hebdomadaire,11.20,2.00,0,0
+31,Réseaux sociaux,31,Bimensuelle,50.80,7.20,1,0
+50,Réseaux sociaux,19,Bimensuelle,42.00,8.20,1,0
+31,Réseaux sociaux,4,Hebdomadaire,62.30,13.50,1,0
+43,Site,1,Bimensuelle,15.00,2.70,0,0
+38,Salon,32,Hebdomadaire,29.10,4.30,0,0
+43,Site,3,Bimensuelle,20.00,5.30,0,0
+59,Réseaux sociaux,22,Mensuelle,30.00,5.60,1,0
+32,Site,26,Hebdomadaire,4.80,0.70,0,0
+35,Salon,33,Hebdomadaire,35.30,2.50,2,0
+49,Partenaire,1,Mensuelle,24.90,2.90,0,0
+27,Salon,1,Bimensuelle,55.40,8.50,0,0
+38,Salon,31,Bimensuelle,17.60,3.00,0,0
+54,Site,2,Hebdomadaire,11.80,2.50,0,0
+45,Jeu concours,11,Mensuelle,36.40,4.90,1,0
+32,Site,33,Mensuelle,15.00,1.50,1,0
+20,Site,38,Bimensuelle,10.10,1.00,3,1
+58,Réseaux sociaux,32,Mensuelle,24.70,7.20,1,0
+32,Site,25,Hebdomadaire,9.70,2.30,0,1
+18,Réseaux sociaux,20,Hebdomadaire,18.30,4.10,1,1
+53,Salon,24,Bimensuelle,30.70,6.10,1,0
+27,Réseaux sociaux,17,Bimensuelle,23.90,6.60,2,0
+48,Site,46,Hebdomadaire,18.00,2.60,1,0
+37,Site,43,Mensuelle,24.80,6.10,0,0
+18,Site,8,Bimensuelle,54.20,8.00,0,0
+22,Site,29,Hebdomadaire,29.70,3.70,1,0
+48,Réseaux sociaux,39,Bimensuelle,10.40,2.50,1,1
+29,Jeu concours,17,Mensuelle,12.80,2.20,1,0
+41,Partenaire,47,Hebdomadaire,3.60,0.70,0,0
+25,Site,7,Mensuelle,51.60,8.60,0,0
+57,Réseaux sociaux,23,Hebdomadaire,33.80,5.00,0,0
+37,Site,2,Hebdomadaire,32.60,4.70,1,0
+41,Réseaux sociaux,19,Mensuelle,56.40,11.40,2,0
+23,Site,42,Bimensuelle,32.70,7.10,2,0
+25,Partenaire,41,Hebdomadaire,10.60,1.10,2,1
+59,Jeu concours,4,Bimensuelle,0.00,0.00,0,1
+23,Partenaire,17,Hebdomadaire,19.30,4.90,1,0
+61,Site,47,Hebdomadaire,11.20,1.90,1,0
+34,Réseaux sociaux,44,Hebdomadaire,46.90,10.80,0,0
+39,Site,17,Mensuelle,54.00,8.90,1,0
+28,Jeu concours,28,Bimensuelle,11.20,2.10,0,0
+46,Site,18,Bimensuelle,0.00,0.00,0,0
+18,Jeu concours,40,Hebdomadaire,6.90,0.70,0,0
+48,Réseaux sociaux,27,Hebdomadaire,62.60,10.90,2,0
+33,Site,19,Hebdomadaire,27.70,4.50,0,0
+41,Site,14,Bimensuelle,22.50,4.30,1,0
+41,Site,13,Bimensuelle,22.90,5.00,0,0
+38,Réseaux sociaux,2,Mensuelle,42.90,6.90,1,0
+61,Réseaux sociaux,4,Hebdomadaire,34.00,4.40,1,0
+53,Site,17,Mensuelle,24.80,4.50,0,0
+18,Réseaux sociaux,35,Hebdomadaire,25.60,5.20,2,0
+29,Site,3,Hebdomadaire,19.40,4.80,1,1
+59,Salon,35,Mensuelle,54.90,7.70,1,0
+32,Réseaux sociaux,14,Mensuelle,27.00,4.10,1,0
+18,Réseaux sociaux,45,Hebdomadaire,5.30,0.50,0,0
+49,Partenaire,12,Hebdomadaire,2.30,0.40,1,0
+18,Site,42,Hebdomadaire,34.80,4.40,0,0
+18,Jeu concours,46,Hebdomadaire,26.00,4.20,0,0
+55,Site,4,Mensuelle,28.00,7.10,1,0
+50,Réseaux sociaux,21,Hebdomadaire,3.60,0.80,0,0
+28,Salon,12,Bimensuelle,60.50,9.70,3,0
+28,Réseaux sociaux,29,Bimensuelle,19.80,4.40,2,0
+40,Site,35,Hebdomadaire,0.00,0.00,0,1
+35,Site,10,Hebdomadaire,37.90,6.00,0,0
+31,Salon,25,Hebdomadaire,48.90,6.00,0,0
+30,Jeu concours,44,Hebdomadaire,0.10,0.00,0,0
+28,Site,41,Bimensuelle,44.40,6.20,0,0
+36,Site,19,Hebdomadaire,20.30,3.40,1,0
+37,Site,4,Bimensuelle,30.30,7.30,0,0
+40,Site,27,Bimensuelle,65.40,14.00,3,0
+20,Réseaux sociaux,5,Hebdomadaire,55.30,10.80,0,0
+24,Site,5,Hebdomadaire,68.70,16.30,0,0
+35,Jeu concours,45,Bimensuelle,38.20,5.40,1,0
+26,Jeu concours,26,Hebdomadaire,22.80,6.50,1,1
+37,Partenaire,35,Hebdomadaire,10.40,2.70,0,0
+33,Site,23,Mensuelle,34.30,4.30,0,0
+57,Site,42,Hebdomadaire,26.20,5.70,1,0
+66,Site,12,Hebdomadaire,54.10,12.70,0,0
+36,Partenaire,44,Mensuelle,23.10,3.30,1,0
+44,Site,22,Bimensuelle,18.90,1.90,0,0
+40,Site,6,Hebdomadaire,41.00,5.00,0,0
+18,Réseaux sociaux,21,Bimensuelle,36.00,8.40,0,0
+58,Réseaux sociaux,1,Hebdomadaire,47.10,5.90,1,0
+24,Site,22,Bimensuelle,0.00,0.00,1,1
+50,Partenaire,4,Hebdomadaire,12.50,2.60,1,0
+33,Jeu concours,47,Mensuelle,14.90,2.60,1,0
+26,Site,47,Hebdomadaire,33.50,5.10,1,0
+62,Jeu concours,37,Bimensuelle,0.00,0.00,1,0
+49,Site,25,Hebdomadaire,56.00,9.10,2,0
+49,Salon,39,Bimensuelle,37.90,8.50,2,0
+20,Partenaire,33,Hebdomadaire,58.40,11.80,2,0
+20,Site,24,Hebdomadaire,42.90,9.10,1,0
+35,Réseaux sociaux,12,Hebdomadaire,20.50,5.70,1,0
+50,Site,9,Bimensuelle,1.20,0.30,0,1
+28,Réseaux sociaux,37,Bimensuelle,20.00,2.20,0,0
+30,Site,44,Hebdomadaire,24.50,5.70,0,0
+24,Site,23,Bimensuelle,38.10,4.80,1,0
+35,Partenaire,15,Hebdomadaire,39.10,3.00,0,0
+32,Site,4,Bimensuelle,14.20,1.50,0,1
+36,Site,28,Hebdomadaire,14.80,1.70,0,0
+38,Site,13,Hebdomadaire,22.30,4.90,3,1
+46,Salon,19,Bimensuelle,38.70,6.60,0,0
+39,Site,31,Hebdomadaire,15.90,1.70,0,0
+50,Réseaux sociaux,33,Hebdomadaire,21.60,5.50,1,0
+43,Site,32,Hebdomadaire,17.30,2.20,1,0
+31,Partenaire,7,Mensuelle,43.50,5.90,0,0
+48,Réseaux sociaux,12,Mensuelle,38.20,3.30,1,0
+35,Site,30,Bimensuelle,0.00,0.00,1,0
+44,Site,11,Hebdomadaire,0.00,0.00,0,1
+25,Site,20,Bimensuelle,15.00,2.40,0,0
+34,Réseaux sociaux,15,Hebdomadaire,1.40,0.10,0,0
+45,Site,5,Hebdomadaire,40.70,3.60,0,0
+50,Jeu concours,40,Bimensuelle,8.00,1.70,0,0
+29,Site,23,Bimensuelle,26.70,6.40,0,0
+50,Réseaux sociaux,26,Hebdomadaire,30.40,7.30,0,0
+22,Réseaux sociaux,35,Mensuelle,15.60,3.80,0,1
+37,Réseaux sociaux,11,Hebdomadaire,54.30,8.10,0,0
+19,Réseaux sociaux,16,Bimensuelle,21.40,5.70,1,0
+47,Réseaux sociaux,12,Hebdomadaire,44.60,7.90,0,0
+36,Réseaux sociaux,32,Hebdomadaire,12.60,2.80,1,1
+29,Salon,28,Hebdomadaire,31.70,5.70,0,1
+32,Partenaire,35,Hebdomadaire,37.30,8.70,1,0
+18,Jeu concours,7,Bimensuelle,19.80,5.20,2,0
+18,Salon,35,Bimensuelle,34.40,7.00,0,0
+38,Réseaux sociaux,12,Bimensuelle,40.10,6.20,0,0
+23,Site,27,Bimensuelle,52.60,10.50,1,0
+24,Site,7,Hebdomadaire,40.00,9.80,0,0
+53,Site,28,Bimensuelle,46.40,5.90,1,0
+50,Salon,33,Hebdomadaire,31.30,6.60,2,0
+46,Partenaire,44,Mensuelle,14.30,2.00,1,0
+44,Réseaux sociaux,16,Hebdomadaire,0.20,0.00,0,0
+45,Jeu concours,39,Bimensuelle,18.70,3.80,1,1
+59,Réseaux sociaux,4,Bimensuelle,5.80,1.10,2,0
+30,Partenaire,11,Hebdomadaire,23.90,4.60,0,1
+43,Site,11,Bimensuelle,58.10,8.00,0,0
+22,Site,14,Bimensuelle,20.20,3.20,0,0
+49,Partenaire,38,Bimensuelle,33.00,8.00,0,0
+29,Partenaire,33,Mensuelle,21.10,3.20,0,0
+21,Partenaire,27,Mensuelle,44.60,5.10,0,0
+26,Jeu concours,15,Hebdomadaire,17.80,3.20,0,0
+39,Site,11,Hebdomadaire,17.20,3.90,0,1
+18,Partenaire,29,Hebdomadaire,23.60,2.80,1,0
+50,Réseaux sociaux,9,Hebdomadaire,35.10,8.60,1,0
+39,Salon,25,Bimensuelle,15.90,2.40,1,0
+39,Partenaire,45,Bimensuelle,7.60,2.20,0,0
+52,Site,43,Hebdomadaire,34.30,6.30,0,0
+29,Site,14,Hebdomadaire,21.60,2.00,0,1
+53,Salon,26,Hebdomadaire,25.30,4.50,0,0
+37,Jeu concours,20,Mensuelle,30.40,3.30,0,0
+53,Site,22,Hebdomadaire,0.00,0.00,2,1
+34,Site,2,Hebdomadaire,24.60,4.80,1,0
+30,Site,2,Mensuelle,32.00,3.20,1,0
+32,Site,25,Bimensuelle,23.70,1.70,0,0
+25,Jeu concours,4,Mensuelle,43.30,6.90,1,0
+20,Jeu concours,34,Mensuelle,24.40,5.40,1,0
+41,Réseaux sociaux,31,Bimensuelle,8.30,1.80,1,1
+47,Site,13,Mensuelle,33.20,3.40,0,0
+32,Jeu concours,14,Bimensuelle,41.80,6.20,0,0
+31,Site,1,Hebdomadaire,45.80,5.00,0,0
+32,Réseaux sociaux,16,Hebdomadaire,13.50,2.30,1,0
+37,Site,5,Hebdomadaire,51.20,8.10,0,0
+37,Salon,12,Bimensuelle,45.90,13.30,1,0
+34,Site,28,Hebdomadaire,38.80,4.90,1,0
+36,Site,6,Mensuelle,44.90,14.60,0,0
+18,Partenaire,4,Hebdomadaire,23.40,2.60,0,0
+18,Partenaire,38,Hebdomadaire,26.90,5.90,2,0
+42,Réseaux sociaux,42,Bimensuelle,0.00,0.00,0,0
+30,Réseaux sociaux,4,Mensuelle,23.30,5.30,0,0
+49,Site,10,Bimensuelle,56.60,9.60,0,0
+23,Site,8,Hebdomadaire,2.20,0.30,0,1
+18,Site,17,Bimensuelle,28.10,4.20,0,0
+29,Site,45,Hebdomadaire,17.50,2.30,1,0
+73,Site,2,Hebdomadaire,44.50,11.90,1,0
+18,Réseaux sociaux,18,Mensuelle,55.70,6.10,0,0
+18,Site,6,Bimensuelle,41.00,9.70,2,0
+57,Site,37,Hebdomadaire,20.40,2.20,2,0
+28,Réseaux sociaux,29,Hebdomadaire,11.20,2.10,2,0
+33,Salon,17,Bimensuelle,32.20,7.20,0,0
+43,Site,28,Hebdomadaire,30.20,2.40,1,0
+37,Jeu concours,7,Hebdomadaire,49.90,10.10,1,0
+70,Réseaux sociaux,37,Hebdomadaire,32.20,3.50,1,0
+30,Réseaux sociaux,21,Hebdomadaire,29.90,3.80,1,0
+38,Site,4,Hebdomadaire,48.30,9.30,2,0
+55,Partenaire,20,Mensuelle,6.80,0.80,0,0
+58,Partenaire,34,Bimensuelle,18.40,3.60,1,0
+58,Jeu concours,27,Bimensuelle,13.30,2.90,2,0
+27,Partenaire,5,Hebdomadaire,48.00,13.30,3,0
+61,Salon,1,Hebdomadaire,44.80,8.60,2,0
+40,Site,17,Hebdomadaire,45.60,7.50,3,0
+47,Réseaux sociaux,16,Bimensuelle,27.70,3.80,2,0
+39,Jeu concours,39,Hebdomadaire,0.00,0.00,1,1
+50,Jeu concours,2,Hebdomadaire,32.80,6.00,1,0
+23,Réseaux sociaux,33,Hebdomadaire,29.00,8.70,2,0
+43,Site,5,Bimensuelle,43.80,4.30,0,0
+46,Jeu concours,18,Hebdomadaire,32.70,2.40,0,0
+31,Partenaire,46,Hebdomadaire,20.40,4.40,0,0
+46,Réseaux sociaux,17,Hebdomadaire,44.30,3.20,1,0
+36,Jeu concours,40,Hebdomadaire,24.90,4.90,0,1
+48,Jeu concours,2,Hebdomadaire,15.20,2.90,0,0
+42,Réseaux sociaux,41,Hebdomadaire,38.10,2.40,1,0
+44,Réseaux sociaux,5,Bimensuelle,41.60,8.60,3,0
+56,Site,6,Hebdomadaire,65.70,14.90,2,0
+24,Réseaux sociaux,39,Hebdomadaire,25.20,6.40,1,0
+51,Site,18,Hebdomadaire,34.50,6.30,0,0
+43,Jeu concours,3,Bimensuelle,43.70,8.10,2,0
+31,Réseaux sociaux,39,Hebdomadaire,29.50,5.00,1,0
+51,Site,44,Bimensuelle,29.50,8.10,1,0
+28,Jeu concours,43,Bimensuelle,12.90,4.10,2,1
+44,Jeu concours,28,Bimensuelle,14.60,2.60,1,0
+39,Jeu concours,12,Mensuelle,14.20,3.00,1,0
+32,Réseaux sociaux,47,Hebdomadaire,3.90,0.70,1,1
+20,Salon,19,Mensuelle,28.60,6.50,1,0
+31,Salon,28,Bimensuelle,53.20,12.60,2,0
+46,Salon,14,Hebdomadaire,39.10,6.20,1,0
+37,Site,10,Mensuelle,48.40,10.30,2,0
+57,Partenaire,18,Bimensuelle,37.40,6.40,0,0
+23,Jeu concours,43,Mensuelle,0.00,0.00,1,0
+29,Site,42,Hebdomadaire,18.80,4.10,1,1
+49,Réseaux sociaux,16,Bimensuelle,12.30,2.70,0,0
+48,Site,46,Hebdomadaire,24.70,3.90,0,0
+42,Jeu concours,16,Hebdomadaire,4.80,0.60,0,1
+18,Partenaire,18,Mensuelle,38.90,10.60,0,0
+18,Jeu concours,29,Hebdomadaire,33.30,3.60,1,0
+32,Réseaux sociaux,14,Hebdomadaire,24.00,1.50,0,0
+49,Réseaux sociaux,8,Mensuelle,4.40,0.80,0,0
+40,Jeu concours,13,Hebdomadaire,2.90,0.30,1,1
+38,Partenaire,18,Hebdomadaire,45.40,9.50,0,1
+29,Site,38,Mensuelle,10.80,2.40,1,0
+35,Jeu concours,20,Hebdomadaire,1.50,0.20,1,1
+32,Site,16,Bimensuelle,35.50,8.90,2,0
+41,Réseaux sociaux,20,Mensuelle,9.70,2.10,0,0
+35,Réseaux sociaux,13,Hebdomadaire,38.20,9.90,5,0
+20,Partenaire,40,Hebdomadaire,28.30,4.10,1,0
+43,Site,17,Hebdomadaire,45.00,10.40,2,0
+57,Partenaire,24,Hebdomadaire,15.70,4.90,0,1
+50,Site,45,Bimensuelle,0.00,0.00,0,0
+55,Réseaux sociaux,8,Bimensuelle,57.10,10.00,2,0
+47,Réseaux sociaux,32,Hebdomadaire,14.20,1.20,0,1
+42,Site,39,Hebdomadaire,24.50,5.90,0,0
+41,Site,46,Hebdomadaire,16.50,2.90,0,0
+26,Site,11,Hebdomadaire,35.50,3.40,1,0
+32,Jeu concours,6,Hebdomadaire,8.50,1.60,0,1
+51,Partenaire,42,Hebdomadaire,29.90,4.10,0,0
+51,Site,12,Mensuelle,23.90,4.10,1,0
+38,Jeu concours,43,Bimensuelle,10.20,1.30,0,0
+24,Jeu concours,24,Bimensuelle,9.30,1.80,1,0
+48,Partenaire,44,Hebdomadaire,37.90,11.10,1,0
+29,Site,36,Hebdomadaire,32.70,5.00,1,0
+31,Réseaux sociaux,12,Mensuelle,33.80,6.40,1,0
+26,Site,42,Hebdomadaire,5.60,0.90,2,0
+40,Jeu concours,37,Hebdomadaire,22.10,3.60,2,0
+26,Jeu concours,5,Mensuelle,19.70,4.00,0,0
+56,Site,23,Mensuelle,20.20,2.40,0,0
+36,Site,5,Bimensuelle,46.60,8.90,1,0
+47,Site,42,Hebdomadaire,0.00,0.00,1,1
+42,Jeu concours,32,Hebdomadaire,10.00,1.10,0,0
+31,Salon,35,Bimensuelle,42.60,4.50,0,0
+31,Jeu concours,4,Hebdomadaire,37.00,4.00,0,0
+25,Site,5,Hebdomadaire,12.00,2.30,0,0
+18,Jeu concours,34,Hebdomadaire,8.10,1.20,1,0
+18,Site,5,Bimensuelle,28.10,6.40,2,0
+29,Site,38,Hebdomadaire,32.50,4.10,1,0
+48,Site,15,Hebdomadaire,35.00,4.80,1,0
+55,Partenaire,4,Hebdomadaire,56.20,10.50,0,0
+51,Salon,36,Hebdomadaire,48.50,6.90,2,0
+55,Jeu concours,29,Bimensuelle,18.60,4.10,0,0
+37,Site,28,Hebdomadaire,23.90,3.80,0,0
+44,Réseaux sociaux,25,Mensuelle,23.90,5.10,0,0
+39,Réseaux sociaux,37,Hebdomadaire,46.00,7.90,1,0
+19,Réseaux sociaux,47,Mensuelle,14.50,2.90,0,0
+49,Jeu concours,36,Mensuelle,6.60,1.50,0,0
+26,Salon,19,Bimensuelle,72.00,14.90,1,0
+42,Réseaux sociaux,14,Hebdomadaire,33.90,7.90,0,0
+43,Réseaux sociaux,32,Bimensuelle,14.10,1.50,0,0
+53,Jeu concours,4,Bimensuelle,28.50,3.80,1,0
+18,Site,35,Mensuelle,22.30,2.00,0,0
+56,Jeu concours,22,Hebdomadaire,16.60,4.80,2,1
+40,Jeu concours,5,Bimensuelle,12.40,1.90,0,0
+32,Partenaire,13,Hebdomadaire,29.50,3.80,1,0
+34,Réseaux sociaux,14,Mensuelle,57.10,6.40,0,0
+38,Site,30,Mensuelle,21.50,4.80,1,0
+44,Salon,47,Hebdomadaire,37.30,3.10,0,0
+59,Site,18,Bimensuelle,13.20,3.70,0,1
+25,Site,29,Mensuelle,29.70,4.90,0,0
+50,Partenaire,47,Hebdomadaire,35.20,3.80,0,0
+30,Réseaux sociaux,20,Hebdomadaire,22.90,2.80,0,0
+20,Partenaire,34,Hebdomadaire,31.30,7.60,0,0
+31,Site,45,Hebdomadaire,12.00,2.50,1,0
+32,Jeu concours,42,Hebdomadaire,15.90,2.60,2,0
+40,Jeu concours,35,Hebdomadaire,5.80,1.00,0,1
+56,Réseaux sociaux,15,Mensuelle,0.00,0.00,0,0
+33,Site,35,Hebdomadaire,9.50,2.10,0,1
+31,Réseaux sociaux,7,Mensuelle,16.20,4.20,0,1
+20,Réseaux sociaux,7,Mensuelle,48.80,5.40,3,0
+36,Site,13,Hebdomadaire,20.40,2.00,1,0
+32,Réseaux sociaux,37,Hebdomadaire,32.30,5.20,1,0
+65,Partenaire,6,Hebdomadaire,53.40,13.40,1,0
+33,Site,5,Bimensuelle,21.30,5.50,1,0
+57,Partenaire,4,Mensuelle,56.20,17.50,0,0
+54,Réseaux sociaux,33,Bimensuelle,23.40,4.30,0,0
+49,Réseaux sociaux,31,Hebdomadaire,24.50,8.00,0,0
+55,Site,47,Bimensuelle,20.20,3.60,1,0
+36,Site,37,Hebdomadaire,29.40,3.90,4,0
+40,Partenaire,1,Bimensuelle,58.90,7.50,1,0
+18,Réseaux sociaux,14,Bimensuelle,25.10,4.20,3,0
+40,Réseaux sociaux,29,Hebdomadaire,12.50,2.40,1,0
+42,Salon,35,Hebdomadaire,14.10,3.30,0,0
+42,Site,8,Hebdomadaire,54.70,9.70,0,0
+35,Partenaire,12,Mensuelle,51.50,15.00,6,0
+21,Site,10,Hebdomadaire,34.20,5.40,1,0
+37,Jeu concours,21,Hebdomadaire,10.50,1.40,0,0
+55,Site,35,Bimensuelle,18.30,2.30,0,0
+52,Jeu concours,1,Bimensuelle,19.40,4.60,2,0
+43,Jeu concours,25,Hebdomadaire,0.00,0.00,0,1
+60,Réseaux sociaux,47,Mensuelle,8.20,1.20,0,0
+18,Site,46,Hebdomadaire,20.30,3.70,1,0
+41,Salon,33,Bimensuelle,72.90,10.80,1,0
+46,Site,1,Hebdomadaire,35.50,7.10,0,0
+47,Site,23,Hebdomadaire,25.20,1.80,0,1
+37,Site,7,Hebdomadaire,35.40,5.00,0,0
+39,Salon,26,Mensuelle,40.10,10.90,1,0
+46,Site,23,Hebdomadaire,48.60,12.20,0,0
+57,Site,18,Hebdomadaire,29.00,5.50,1,0
+54,Partenaire,1,Bimensuelle,1.70,0.20,1,0
+24,Réseaux sociaux,26,Bimensuelle,9.20,1.50,2,0
+66,Jeu concours,42,Hebdomadaire,11.00,2.20,1,0
+32,Site,14,Bimensuelle,50.20,12.50,1,0
+35,Site,26,Hebdomadaire,12.50,3.00,1,0
+22,Réseaux sociaux,40,Bimensuelle,34.20,4.90,0,0
+43,Site,47,Hebdomadaire,0.00,0.00,0,1
+18,Site,38,Bimensuelle,10.60,2.40,0,0
+38,Jeu concours,33,Bimensuelle,0.00,0.00,1,0
+38,Site,40,Bimensuelle,4.20,0.70,0,0
+18,Site,30,Hebdomadaire,34.80,4.60,0,0
+37,Site,20,Mensuelle,21.30,4.50,0,0
+57,Site,38,Hebdomadaire,23.20,3.60,1,0
+52,Site,15,Hebdomadaire,67.30,18.40,0,0
+48,Site,41,Hebdomadaire,33.60,6.90,0,0
+48,Réseaux sociaux,42,Hebdomadaire,14.80,2.50,0,1
+45,Site,30,Hebdomadaire,47.90,9.10,1,0
+26,Site,30,Mensuelle,31.40,4.20,0,0
+26,Site,29,Mensuelle,35.10,5.50,0,0
+33,Réseaux sociaux,30,Hebdomadaire,48.00,7.70,2,0
+28,Jeu concours,26,Mensuelle,53.60,9.50,1,0
+40,Partenaire,21,Hebdomadaire,28.20,5.50,2,1
+20,Site,30,Hebdomadaire,11.00,2.40,1,1
+46,Réseaux sociaux,4,Hebdomadaire,16.40,2.20,0,1
+27,Réseaux sociaux,21,Hebdomadaire,6.70,1.50,1,0
+55,Site,7,Mensuelle,57.80,8.70,0,0
+40,Réseaux sociaux,6,Bimensuelle,16.70,2.80,0,0
+54,Jeu concours,6,Hebdomadaire,28.90,0.40,1,0
+33,Site,13,Bimensuelle,43.30,12.30,0,0
+58,Site,43,Hebdomadaire,21.10,1.80,1,0
+32,Réseaux sociaux,45,Bimensuelle,0.00,0.00,0,0
+42,Jeu concours,8,Mensuelle,9.60,1.90,2,0
+45,Site,46,Hebdomadaire,23.60,6.20,0,1
+37,Site,5,Mensuelle,47.30,4.00,0,0
+39,Site,6,Mensuelle,34.30,7.30,0,0
+18,Site,22,Bimensuelle,21.10,4.10,1,0
+43,Site,32,Hebdomadaire,23.90,3.20,3,0
+44,Site,19,Hebdomadaire,23.60,4.00,2,1
+40,Réseaux sociaux,19,Mensuelle,28.00,6.30,0,0
+50,Jeu concours,37,Hebdomadaire,1.60,0.30,0,1
+35,Site,39,Mensuelle,7.80,1.90,0,0
+30,Jeu concours,31,Hebdomadaire,20.80,2.40,0,0
+24,Salon,41,Hebdomadaire,36.60,6.40,0,0
+45,Partenaire,26,Bimensuelle,33.50,5.50,1,0
+21,Jeu concours,42,Hebdomadaire,4.30,0.60,0,1
+46,Site,6,Mensuelle,29.50,5.00,0,0
+41,Site,32,Hebdomadaire,16.40,3.80,0,0
+35,Réseaux sociaux,35,Hebdomadaire,19.80,2.70,1,0
+48,Site,6,Bimensuelle,70.80,14.00,1,0
+18,Réseaux sociaux,44,Bimensuelle,22.90,2.20,0,0
+24,Partenaire,35,Hebdomadaire,0.80,0.10,2,1
+61,Réseaux sociaux,18,Hebdomadaire,38.20,8.40,0,0
+47,Site,8,Bimensuelle,54.70,13.00,1,0
+29,Jeu concours,42,Bimensuelle,21.00,3.90,1,0
+34,Site,37,Hebdomadaire,29.00,3.60,1,0
+47,Site,14,Hebdomadaire,18.70,2.10,0,0
+36,Site,16,Hebdomadaire,35.10,5.80,0,0
+62,Site,25,Hebdomadaire,41.10,6.80,0,0
+18,Site,26,Mensuelle,26.60,4.20,0,0
+50,Site,45,Mensuelle,21.50,4.00,0,0
+38,Partenaire,15,Hebdomadaire,34.40,4.50,1,0
+60,Site,26,Bimensuelle,12.10,1.40,1,0
+18,Site,7,Bimensuelle,17.50,3.00,0,0
+25,Jeu concours,2,Bimensuelle,27.50,5.40,1,0
+48,Site,15,Hebdomadaire,15.60,2.30,1,0
+43,Partenaire,26,Bimensuelle,26.00,5.50,1,0
+25,Partenaire,42,Hebdomadaire,6.90,1.40,0,1
+42,Site,42,Hebdomadaire,16.90,3.30,1,1
+25,Partenaire,37,Bimensuelle,16.70,4.60,0,0
+47,Partenaire,22,Hebdomadaire,59.10,11.10,0,0
+52,Site,4,Hebdomadaire,33.10,9.00,2,0
+38,Jeu concours,35,Bimensuelle,0.00,0.00,0,0
+18,Site,9,Mensuelle,17.50,2.70,0,0
+27,Site,27,Bimensuelle,0.40,0.10,1,0
+42,Partenaire,10,Hebdomadaire,14.90,2.70,1,0
+18,Site,35,Bimensuelle,18.90,5.00,0,0
+52,Partenaire,47,Bimensuelle,31.70,4.40,0,0
+18,Partenaire,33,Bimensuelle,18.30,2.90,1,0
+32,Site,13,Bimensuelle,35.50,9.20,1,0
+46,Jeu concours,33,Hebdomadaire,13.40,1.90,0,1
+39,Site,28,Bimensuelle,19.40,4.70,1,0
+43,Salon,26,Hebdomadaire,2.10,0.40,1,0
+44,Site,38,Bimensuelle,0.00,0.00,2,0
+58,Réseaux sociaux,31,Hebdomadaire,20.90,3.60,2,0
+41,Site,3,Hebdomadaire,58.80,15.80,2,0
+59,Site,5,Hebdomadaire,45.30,6.00,0,0
+31,Site,30,Hebdomadaire,47.00,7.30,2,0
+38,Jeu concours,1,Hebdomadaire,28.90,2.80,0,0
+18,Site,31,Hebdomadaire,8.40,1.30,1,0
+44,Site,35,Mensuelle,26.50,4.00,1,0
+48,Site,7,Hebdomadaire,30.90,3.30,0,1
+61,Partenaire,3,Mensuelle,28.30,6.00,0,0
+18,Site,2,Hebdomadaire,42.20,6.60,1,1
+26,Réseaux sociaux,26,Bimensuelle,65.30,6.40,2,0
+28,Site,25,Hebdomadaire,44.00,3.00,1,0
+31,Réseaux sociaux,47,Hebdomadaire,24.00,3.60,0,0
+47,Réseaux sociaux,24,Hebdomadaire,37.90,8.80,2,0
+45,Salon,5,Bimensuelle,51.90,5.90,1,0
+37,Partenaire,38,Bimensuelle,27.40,3.60,0,0
+56,Site,34,Mensuelle,25.00,5.60,0,0
+43,Réseaux sociaux,14,Hebdomadaire,37.20,5.00,1,0
+40,Site,14,Bimensuelle,62.10,6.00,3,0
+35,Jeu concours,14,Mensuelle,9.50,2.70,3,0
+50,Partenaire,25,Hebdomadaire,18.00,4.30,0,0
+43,Salon,30,Hebdomadaire,21.20,2.90,0,0
+24,Jeu concours,21,Mensuelle,11.90,1.90,0,0
+43,Partenaire,8,Hebdomadaire,47.90,7.40,0,0
+48,Site,25,Mensuelle,18.60,4.70,0,0
+37,Jeu concours,23,Hebdomadaire,16.40,1.50,0,0
+30,Jeu concours,33,Mensuelle,0.00,0.00,0,1
+40,Partenaire,4,Bimensuelle,42.80,7.60,0,0
+53,Site,42,Hebdomadaire,22.30,4.60,0,0
+45,Site,36,Mensuelle,14.50,2.80,0,0
+50,Site,28,Bimensuelle,20.60,6.10,0,0
+43,Réseaux sociaux,20,Bimensuelle,38.20,4.60,1,0
+49,Partenaire,33,Hebdomadaire,41.50,8.10,0,0
+45,Site,33,Hebdomadaire,17.00,3.70,2,0
+18,Site,15,Hebdomadaire,32.90,6.50,1,0
+42,Site,8,Hebdomadaire,18.00,3.30,0,0
+46,Site,4,Bimensuelle,0.00,0.00,0,0
+18,Site,10,Hebdomadaire,40.70,3.80,0,0
+46,Jeu concours,22,Hebdomadaire,0.00,0.00,0,1
+45,Jeu concours,41,Hebdomadaire,0.00,0.00,0,1
+37,Partenaire,47,Bimensuelle,0.00,0.00,1,0
+55,Jeu concours,17,Bimensuelle,0.00,0.00,0,1
+35,Jeu concours,38,Hebdomadaire,0.00,0.00,2,1
+55,Réseaux sociaux,8,Hebdomadaire,23.00,4.40,0,0
+50,Partenaire,41,Hebdomadaire,27.70,4.90,0,0
+23,Site,2,Bimensuelle,46.30,10.00,2,0
+71,Salon,39,Mensuelle,20.40,3.40,2,0
+50,Site,12,Hebdomadaire,12.50,3.30,1,1
+39,Site,8,Hebdomadaire,26.50,4.10,1,0
+33,Site,4,Bimensuelle,62.40,8.50,1,0
+33,Partenaire,15,Hebdomadaire,13.80,3.60,0,1
+37,Site,47,Mensuelle,4.90,0.70,0,0
+48,Site,27,Hebdomadaire,46.40,6.20,1,0
+24,Jeu concours,25,Hebdomadaire,0.00,0.00,2,1
+70,Salon,38,Hebdomadaire,28.50,5.70,2,1
+49,Réseaux sociaux,24,Hebdomadaire,31.10,5.20,0,0
+20,Partenaire,41,Mensuelle,20.00,3.30,0,0
+18,Site,2,Mensuelle,27.40,5.40,0,0
+24,Réseaux sociaux,5,Mensuelle,37.30,6.70,1,0
+42,Salon,16,Bimensuelle,47.80,8.70,2,0
+31,Site,17,Hebdomadaire,16.50,2.40,0,0
+69,Site,15,Hebdomadaire,41.30,7.40,1,0
+50,Site,32,Mensuelle,39.40,8.90,1,0
+23,Site,25,Mensuelle,50.20,4.90,0,0
+44,Jeu concours,38,Hebdomadaire,0.00,0.00,0,1
+24,Site,29,Mensuelle,14.00,2.50,0,0
+42,Salon,6,Bimensuelle,28.70,2.90,1,0
+41,Site,5,Hebdomadaire,13.20,2.00,0,1
+53,Salon,27,Hebdomadaire,26.70,4.10,1,0
+36,Site,15,Bimensuelle,56.00,8.40,1,0
+31,Réseaux sociaux,46,Bimensuelle,36.60,8.70,1,0
+21,Jeu concours,34,Bimensuelle,9.60,1.10,1,0
+34,Jeu concours,30,Bimensuelle,29.00,6.90,0,0
+53,Jeu concours,43,Hebdomadaire,15.70,2.30,0,1
+20,Salon,37,Hebdomadaire,0.00,0.00,0,0
+41,Site,43,Hebdomadaire,15.00,1.80,3,0
+40,Jeu concours,9,Bimensuelle,23.80,4.40,1,0
+49,Site,30,Mensuelle,38.60,7.70,0,0
+48,Réseaux sociaux,8,Hebdomadaire,33.60,6.00,0,0
+41,Site,2,Bimensuelle,45.50,4.90,0,0
+29,Site,9,Bimensuelle,35.20,3.70,1,0
+45,Réseaux sociaux,13,Hebdomadaire,47.30,5.30,0,0
+42,Partenaire,6,Hebdomadaire,40.20,4.80,1,0
+37,Site,7,Hebdomadaire,33.20,5.60,0,0
+46,Salon,40,Bimensuelle,45.10,8.00,4,0
+55,Partenaire,42,Hebdomadaire,22.80,2.30,0,0
+22,Site,18,Bimensuelle,28.10,6.10,2,0
+28,Site,21,Hebdomadaire,35.00,3.60,0,0
+39,Jeu concours,11,Hebdomadaire,30.40,3.40,2,0
+41,Salon,11,Hebdomadaire,58.00,8.40,0,0
+25,Site,7,Hebdomadaire,31.40,3.90,1,0
+19,Réseaux sociaux,39,Hebdomadaire,20.00,1.90,1,1
+44,Jeu concours,34,Bimensuelle,40.60,7.70,1,0
+43,Site,7,Hebdomadaire,30.70,6.30,3,0
+44,Jeu concours,31,Mensuelle,2.10,0.40,1,0
+28,Site,47,Hebdomadaire,0.00,0.00,0,0
+31,Site,32,Bimensuelle,15.20,1.70,2,0
+56,Jeu concours,43,Bimensuelle,16.80,2.40,1,1
+45,Site,39,Hebdomadaire,51.20,4.60,0,0
+40,Site,3,Mensuelle,27.60,4.50,1,0
+41,Site,37,Hebdomadaire,37.00,7.30,1,0
+53,Réseaux sociaux,42,Hebdomadaire,23.30,4.30,0,0
+28,Site,2,Bimensuelle,22.40,3.10,0,0
+52,Réseaux sociaux,38,Bimensuelle,2.00,0.30,0,0
+49,Site,4,Hebdomadaire,52.00,12.10,1,0
+32,Site,10,Bimensuelle,49.80,7.60,1,0
+39,Jeu concours,29,Hebdomadaire,0.00,0.00,0,1
+47,Réseaux sociaux,44,Bimensuelle,5.60,0.80,1,0
+43,Salon,22,Hebdomadaire,37.70,9.80,1,0
+18,Site,15,Bimensuelle,18.60,3.10,1,0
+34,Salon,27,Bimensuelle,51.60,6.00,0,0
+46,Jeu concours,6,Hebdomadaire,60.10,8.80,2,0
+42,Jeu concours,34,Hebdomadaire,4.60,0.90,1,1
+50,Site,31,Mensuelle,0.00,0.00,0,1
+34,Site,20,Hebdomadaire,47.70,10.20,2,0
+44,Site,32,Hebdomadaire,28.20,6.60,1,0
+31,Partenaire,26,Mensuelle,10.90,1.60,2,0
+18,Réseaux sociaux,36,Hebdomadaire,48.20,7.60,0,0
+29,Réseaux sociaux,28,Mensuelle,31.50,2.80,2,0
+40,Partenaire,23,Hebdomadaire,28.00,3.00,0,0
+55,Réseaux sociaux,26,Bimensuelle,21.70,6.20,0,0
+46,Site,37,Mensuelle,4.30,1.00,1,0
+37,Partenaire,10,Mensuelle,28.30,1.90,1,0
+47,Réseaux sociaux,35,Hebdomadaire,9.80,1.20,0,0
+33,Jeu concours,36,Bimensuelle,0.00,0.00,0,1
+37,Salon,46,Bimensuelle,38.30,7.10,1,0
+46,Site,2,Bimensuelle,38.10,6.20,0,0
+34,Site,13,Mensuelle,56.20,6.70,2,0
+42,Site,43,Bimensuelle,49.60,9.90,2,0
+54,Salon,24,Hebdomadaire,61.10,11.10,1,0
+68,Site,36,Hebdomadaire,13.10,1.90,0,1
+42,Site,19,Bimensuelle,47.80,14.80,0,0
+37,Site,39,Mensuelle,32.60,2.30,0,0
+31,Site,11,Bimensuelle,25.70,3.30,1,0
+46,Réseaux sociaux,18,Hebdomadaire,34.30,6.60,1,0
+18,Réseaux sociaux,40,Mensuelle,7.00,1.00,1,0
+62,Réseaux sociaux,21,Hebdomadaire,37.30,4.00,0,0
+19,Site,26,Hebdomadaire,35.80,9.90,2,0
+26,Jeu concours,27,Hebdomadaire,10.70,2.40,0,1
+46,Réseaux sociaux,20,Bimensuelle,47.40,12.30,2,0
+32,Réseaux sociaux,25,Hebdomadaire,33.20,6.00,2,0
+18,Site,17,Hebdomadaire,25.90,6.30,2,1
+39,Partenaire,30,Hebdomadaire,23.90,4.30,1,0
+35,Site,47,Hebdomadaire,33.40,4.50,1,0
+49,Site,28,Bimensuelle,24.70,5.80,1,0
+47,Site,7,Hebdomadaire,46.00,13.30,1,0
+46,Jeu concours,7,Hebdomadaire,25.10,1.90,1,0
+57,Salon,8,Bimensuelle,18.00,3.80,0,0
+32,Partenaire,14,Hebdomadaire,22.80,5.30,0,0
+23,Site,47,Bimensuelle,42.90,7.40,1,0
+39,Site,10,Hebdomadaire,28.60,4.00,3,0
+37,Site,12,Hebdomadaire,25.10,6.60,0,0
+18,Site,17,Hebdomadaire,29.30,9.40,3,1
+71,Site,26,Hebdomadaire,32.40,4.20,0,0
+34,Site,1,Hebdomadaire,36.60,6.60,0,0
+35,Site,22,Hebdomadaire,44.70,10.50,0,0
+30,Site,43,Bimensuelle,12.00,2.90,0,0
+34,Réseaux sociaux,25,Hebdomadaire,40.80,9.00,2,0
+54,Jeu concours,45,Hebdomadaire,3.60,1.00,0,1
+51,Site,42,Mensuelle,31.50,4.70,0,0
+32,Jeu concours,19,Hebdomadaire,19.40,3.80,1,0
+26,Site,2,Hebdomadaire,78.60,13.80,2,0
+55,Salon,38,Hebdomadaire,25.70,7.20,2,0
+50,Partenaire,1,Hebdomadaire,49.00,5.60,1,0
+59,Site,9,Hebdomadaire,27.20,5.10,1,0
+38,Réseaux sociaux,34,Hebdomadaire,4.20,0.80,0,1
+30,Site,39,Hebdomadaire,55.30,14.30,0,0
+42,Site,22,Bimensuelle,34.30,4.00,2,0
+25,Site,1,Hebdomadaire,38.30,7.10,1,0
+68,Site,17,Hebdomadaire,11.90,2.30,1,0
+49,Site,28,Hebdomadaire,32.40,3.00,2,0
+23,Jeu concours,1,Mensuelle,0.00,0.00,1,0
+43,Partenaire,34,Hebdomadaire,37.60,4.80,0,0
+44,Partenaire,28,Bimensuelle,37.90,6.30,2,0
+38,Jeu concours,15,Hebdomadaire,0.00,0.00,0,1
+42,Réseaux sociaux,8,Hebdomadaire,37.10,7.00,0,0
+27,Jeu concours,32,Hebdomadaire,0.00,0.00,0,1
+43,Site,26,Hebdomadaire,11.90,2.70,2,0
+59,Partenaire,12,Mensuelle,41.80,10.10,1,0
+31,Partenaire,38,Mensuelle,13.80,3.00,1,0
+18,Salon,46,Hebdomadaire,27.60,4.50,0,0
+30,Site,43,Hebdomadaire,15.20,5.50,0,0
+44,Réseaux sociaux,36,Bimensuelle,33.10,5.40,3,0
+37,Site,18,Hebdomadaire,20.70,3.70,0,0
+26,Site,6,Bimensuelle,40.40,9.20,0,0
+50,Site,8,Hebdomadaire,32.60,10.10,2,0
+38,Site,32,Bimensuelle,4.30,0.90,2,0
+34,Site,46,Hebdomadaire,0.00,0.00,0,0
+54,Site,28,Hebdomadaire,22.00,3.00,0,0
+18,Jeu concours,8,Bimensuelle,18.10,3.50,2,0
+38,Site,29,Mensuelle,24.90,5.00,1,0
+33,Site,44,Mensuelle,38.10,6.50,3,0
+46,Partenaire,32,Mensuelle,10.90,1.80,0,0
+23,Partenaire,45,Bimensuelle,12.20,1.70,0,0
+46,Partenaire,2,Mensuelle,35.80,3.80,0,0
+26,Site,31,Bimensuelle,19.90,3.30,1,0
+40,Jeu concours,23,Bimensuelle,4.00,1.00,0,0
+33,Site,20,Hebdomadaire,54.40,10.10,1,0
+19,Partenaire,46,Hebdomadaire,5.80,1.40,0,0
+38,Réseaux sociaux,1,Bimensuelle,30.60,5.90,2,0
+56,Jeu concours,14,Mensuelle,38.00,5.00,1,0
+43,Site,4,Mensuelle,29.40,4.80,0,0
+23,Jeu concours,16,Hebdomadaire,30.70,7.20,1,0
+27,Site,37,Hebdomadaire,6.00,1.10,0,1
+22,Site,26,Hebdomadaire,42.10,5.30,0,0
+68,Site,1,Mensuelle,33.00,4.50,1,0
+52,Réseaux sociaux,44,Hebdomadaire,26.60,4.30,2,0
+25,Site,10,Bimensuelle,41.90,5.80,1,0
+53,Site,21,Hebdomadaire,29.30,5.20,1,0
+42,Réseaux sociaux,16,Bimensuelle,30.20,3.70,1,0
+40,Jeu concours,32,Hebdomadaire,12.20,2.50,1,1
+46,Site,25,Hebdomadaire,13.40,3.00,2,0
+33,Réseaux sociaux,39,Hebdomadaire,24.40,4.70,0,0
+60,Réseaux sociaux,5,Hebdomadaire,43.40,9.90,1,0
+36,Site,20,Bimensuelle,30.10,7.40,1,0
+37,Site,1,Hebdomadaire,37.50,3.40,1,0
+41,Réseaux sociaux,39,Bimensuelle,18.10,2.00,0,1
+22,Partenaire,46,Hebdomadaire,15.80,1.80,1,0
+33,Site,46,Bimensuelle,25.40,6.10,2,0
+49,Site,29,Hebdomadaire,36.90,8.10,1,0
+42,Partenaire,20,Mensuelle,38.30,10.10,2,0
+50,Réseaux sociaux,14,Hebdomadaire,25.00,3.40,0,0
+56,Réseaux sociaux,36,Mensuelle,31.80,4.80,0,0
+52,Site,33,Hebdomadaire,32.70,6.80,1,0
+55,Réseaux sociaux,10,Hebdomadaire,43.00,8.20,2,0
+49,Salon,43,Hebdomadaire,37.80,4.30,0,0
+67,Site,43,Bimensuelle,4.60,1.00,0,0
+62,Site,1,Hebdomadaire,43.00,8.60,0,0
+49,Site,18,Bimensuelle,33.20,9.30,2,0
+18,Site,36,Hebdomadaire,33.20,9.10,0,0
+38,Réseaux sociaux,42,Mensuelle,34.80,7.50,1,0
+58,Site,24,Mensuelle,10.80,2.30,1,0
+35,Réseaux sociaux,17,Bimensuelle,16.50,4.20,0,0
+30,Jeu concours,38,Hebdomadaire,26.70,6.40,1,0
+52,Site,6,Hebdomadaire,32.80,4.90,0,0
+47,Réseaux sociaux,44,Mensuelle,0.00,0.00,1,0
+40,Réseaux sociaux,47,Hebdomadaire,24.10,5.00,1,0
+22,Réseaux sociaux,44,Bimensuelle,56.20,6.00,0,0
+64,Réseaux sociaux,28,Hebdomadaire,14.20,2.00,1,0
+48,Jeu concours,45,Hebdomadaire,5.40,1.00,1,1
+21,Site,12,Hebdomadaire,16.90,3.30,1,0
+35,Jeu concours,3,Bimensuelle,54.90,10.60,2,0
+44,Site,27,Hebdomadaire,41.40,9.50,0,0
+36,Site,19,Hebdomadaire,37.60,9.90,1,0
+54,Site,32,Bimensuelle,28.70,7.10,1,0
+52,Site,27,Bimensuelle,0.00,0.00,2,0
+67,Site,46,Mensuelle,30.00,7.90,2,0
+22,Site,38,Hebdomadaire,43.50,8.60,2,0
+26,Site,29,Bimensuelle,21.00,3.00,3,0
+27,Site,45,Mensuelle,8.60,2.10,0,0
+31,Salon,24,Mensuelle,21.40,3.00,1,0
+52,Jeu concours,27,Hebdomadaire,20.70,4.50,0,1
+46,Réseaux sociaux,4,Bimensuelle,42.50,5.30,0,0
+41,Jeu concours,19,Hebdomadaire,36.30,8.90,0,0
+30,Site,4,Bimensuelle,29.20,1.50,0,0
+32,Jeu concours,19,Bimensuelle,26.80,5.60,2,0
+37,Site,29,Bimensuelle,6.30,1.50,1,0
+20,Partenaire,9,Hebdomadaire,12.10,2.50,1,1
+32,Partenaire,36,Bimensuelle,42.80,9.30,0,0
+18,Salon,21,Hebdomadaire,45.90,10.80,1,0
+18,Site,37,Hebdomadaire,9.90,1.60,0,0
+37,Partenaire,16,Hebdomadaire,4.30,0.70,1,1
+47,Site,23,Mensuelle,9.30,2.30,0,0
+33,Réseaux sociaux,32,Mensuelle,19.90,3.00,0,0
+18,Site,32,Hebdomadaire,6.20,1.30,0,1
+28,Salon,14,Hebdomadaire,36.40,5.00,0,0
+63,Salon,40,Hebdomadaire,59.00,10.40,0,0
+41,Réseaux sociaux,47,Hebdomadaire,11.40,1.40,0,1
+37,Partenaire,23,Hebdomadaire,19.50,4.50,2,0
+32,Jeu concours,10,Hebdomadaire,36.90,3.90,3,0
+43,Partenaire,34,Bimensuelle,33.70,7.60,0,0
+31,Réseaux sociaux,42,Bimensuelle,10.00,1.10,0,0
+53,Réseaux sociaux,11,Bimensuelle,29.30,6.10,1,0
+73,Site,3,Hebdomadaire,31.60,8.40,0,0
+38,Site,10,Hebdomadaire,11.10,2.40,0,1
+18,Jeu concours,16,Mensuelle,21.00,3.20,0,0
+60,Partenaire,29,Hebdomadaire,27.20,5.40,0,0
+66,Réseaux sociaux,9,Hebdomadaire,38.30,7.30,1,0
+38,Jeu concours,39,Mensuelle,10.70,2.10,0,0
+46,Salon,15,Mensuelle,26.50,2.90,1,0
+51,Site,1,Hebdomadaire,50.20,3.90,0,0
+43,Site,16,Hebdomadaire,37.00,6.10,0,0
+46,Salon,2,Hebdomadaire,46.30,12.60,2,0
+38,Site,2,Bimensuelle,33.60,4.70,2,0
+37,Partenaire,44,Hebdomadaire,29.90,7.50,0,0
+25,Jeu concours,2,Hebdomadaire,27.20,6.40,3,1
+26,Site,21,Hebdomadaire,33.00,5.60,0,0
+31,Site,7,Hebdomadaire,26.00,2.70,0,0
+38,Site,27,Hebdomadaire,37.10,5.30,3,0
+44,Site,4,Hebdomadaire,25.70,3.20,0,1
+43,Jeu concours,14,Hebdomadaire,31.50,2.50,1,0
+33,Partenaire,20,Bimensuelle,53.30,12.60,4,0
+34,Jeu concours,16,Bimensuelle,29.20,8.70,0,0
+48,Partenaire,46,Mensuelle,0.00,0.00,1,0
+28,Réseaux sociaux,1,Mensuelle,27.00,5.50,0,0
+39,Site,23,Bimensuelle,32.20,4.10,1,0
+34,Réseaux sociaux,47,Mensuelle,13.00,2.40,2,0
+43,Jeu concours,10,Hebdomadaire,0.00,0.00,0,1
+46,Salon,18,Hebdomadaire,34.30,6.10,1,0
+47,Salon,36,Hebdomadaire,11.40,2.10,0,1
+52,Site,16,Hebdomadaire,37.00,5.10,0,0
+31,Site,4,Hebdomadaire,23.80,5.30,1,0
+50,Jeu concours,31,Mensuelle,14.00,2.40,0,0
+29,Site,47,Bimensuelle,43.00,4.10,1,0
+40,Réseaux sociaux,5,Bimensuelle,36.80,3.90,1,1
+20,Partenaire,2,Hebdomadaire,42.80,7.80,0,0
+41,Jeu concours,27,Mensuelle,37.60,9.10,1,0
+18,Réseaux sociaux,22,Bimensuelle,36.00,5.90,1,0
+47,Jeu concours,22,Mensuelle,6.10,0.50,2,0
+72,Jeu concours,33,Bimensuelle,26.60,2.40,0,0
+31,Jeu concours,21,Bimensuelle,36.60,9.30,0,0
+18,Partenaire,47,Mensuelle,13.50,2.50,2,0
+30,Site,3,Hebdomadaire,29.60,7.50,0,0
+42,Jeu concours,34,Mensuelle,16.10,2.60,0,0
+23,Partenaire,27,Mensuelle,36.10,7.00,1,0
+23,Site,34,Hebdomadaire,33.20,4.90,1,0
+47,Site,34,Bimensuelle,5.10,0.40,0,0
+51,Site,13,Mensuelle,25.80,3.80,0,0
+51,Site,35,Mensuelle,29.30,6.00,0,0
+56,Jeu concours,43,Hebdomadaire,0.00,0.00,1,1
+19,Jeu concours,9,Mensuelle,40.00,6.70,4,0
+49,Jeu concours,34,Mensuelle,0.50,0.10,0,1
+18,Jeu concours,21,Hebdomadaire,14.90,1.30,0,1
+53,Site,3,Hebdomadaire,40.90,11.30,1,0
+28,Site,37,Mensuelle,31.50,5.40,1,1
+45,Site,43,Hebdomadaire,15.80,1.80,0,0
+43,Site,33,Bimensuelle,34.80,8.20,0,0
+36,Réseaux sociaux,46,Hebdomadaire,40.80,9.20,0,0
+57,Site,11,Hebdomadaire,46.30,11.90,0,0
+22,Réseaux sociaux,44,Hebdomadaire,19.10,4.20,2,0
+47,Site,22,Hebdomadaire,78.50,6.80,1,0
+37,Salon,1,Hebdomadaire,24.40,5.60,1,0
+34,Site,11,Mensuelle,31.30,2.90,3,0
+23,Site,3,Mensuelle,29.60,6.40,2,0
+33,Partenaire,20,Hebdomadaire,7.40,1.80,0,0
+31,Salon,10,Bimensuelle,40.70,10.10,1,0
+34,Jeu concours,38,Bimensuelle,0.00,0.00,0,0
+40,Jeu concours,25,Mensuelle,16.70,3.20,1,0
+40,Réseaux sociaux,38,Hebdomadaire,0.00,0.00,0,0
+18,Site,26,Mensuelle,10.80,3.70,0,0
+36,Jeu concours,45,Hebdomadaire,0.00,0.00,0,1
+36,Jeu concours,25,Bimensuelle,12.20,0.90,0,0
+18,Réseaux sociaux,9,Bimensuelle,26.90,4.60,1,0
+47,Partenaire,28,Hebdomadaire,32.90,3.80,0,0
+62,Partenaire,44,Mensuelle,21.80,4.90,1,0
+36,Jeu concours,3,Hebdomadaire,20.00,4.60,2,1
+46,Site,27,Mensuelle,13.90,2.00,0,0
+59,Site,39,Mensuelle,3.60,0.40,0,1
+36,Site,32,Hebdomadaire,9.10,2.00,1,1
+19,Salon,45,Hebdomadaire,0.00,0.00,0,1
+41,Site,44,Hebdomadaire,3.10,0.50,0,0
+18,Site,27,Mensuelle,0.00,0.00,0,1
+39,Site,16,Hebdomadaire,16.00,3.70,0,1
+46,Site,5,Mensuelle,47.10,6.60,0,0
+53,Site,19,Mensuelle,39.20,7.80,0,0
+47,Site,21,Hebdomadaire,7.50,1.10,0,1
+48,Site,36,Hebdomadaire,32.40,2.90,2,0
+55,Jeu concours,27,Hebdomadaire,23.70,3.40,1,1
+19,Réseaux sociaux,5,Bimensuelle,36.10,4.20,1,0
+53,Site,46,Bimensuelle,0.00,0.00,0,0
+39,Salon,14,Hebdomadaire,12.60,2.90,0,1
+28,Salon,7,Bimensuelle,37.70,10.20,0,1
+32,Réseaux sociaux,39,Bimensuelle,20.40,3.10,1,0
+60,Site,17,Bimensuelle,31.80,4.30,2,0
+37,Jeu concours,12,Hebdomadaire,42.60,3.60,0,0
+18,Réseaux sociaux,21,Bimensuelle,32.00,5.40,0,0
+78,Partenaire,10,Hebdomadaire,24.80,3.00,0,0
+57,Salon,37,Mensuelle,64.70,11.30,2,0
+44,Site,26,Hebdomadaire,24.30,1.00,0,0
+36,Site,36,Hebdomadaire,48.10,7.20,0,0
+49,Réseaux sociaux,21,Bimensuelle,50.30,6.40,1,0
+46,Réseaux sociaux,8,Bimensuelle,33.10,7.40,1,0
+49,Site,36,Hebdomadaire,22.90,7.50,1,0
+31,Salon,9,Mensuelle,41.30,7.70,2,0
+57,Site,2,Bimensuelle,39.80,4.20,2,0
+37,Site,17,Hebdomadaire,41.40,6.70,2,0
+39,Réseaux sociaux,2,Hebdomadaire,33.80,4.60,0,1
+32,Site,18,Bimensuelle,19.40,2.10,1,0
+38,Site,40,Bimensuelle,18.20,5.00,1,0
+32,Site,32,Hebdomadaire,53.70,9.20,0,0
+43,Jeu concours,15,Hebdomadaire,31.30,4.80,1,0
+30,Réseaux sociaux,9,Hebdomadaire,39.30,5.40,1,0
+30,Réseaux sociaux,8,Bimensuelle,47.50,13.50,2,0
+38,Réseaux sociaux,30,Bimensuelle,23.80,5.10,0,0
+46,Site,44,Bimensuelle,0.00,0.00,0,0
+45,Partenaire,37,Bimensuelle,20.30,4.70,0,0
+53,Réseaux sociaux,26,Hebdomadaire,40.80,10.70,0,0
+47,Site,18,Hebdomadaire,26.70,6.40,1,0
+42,Partenaire,40,Hebdomadaire,10.90,2.10,1,0
+39,Salon,2,Bimensuelle,40.40,7.30,1,0
+44,Réseaux sociaux,22,Hebdomadaire,23.40,5.20,2,1
+18,Jeu concours,10,Mensuelle,17.30,5.30,0,0
+41,Réseaux sociaux,38,Hebdomadaire,24.10,5.90,0,0
+41,Jeu concours,12,Bimensuelle,19.70,4.60,0,0
+54,Site,42,Hebdomadaire,21.90,1.80,0,0
+30,Salon,1,Mensuelle,48.80,4.60,0,0
+41,Salon,30,Bimensuelle,58.00,4.50,1,0
+65,Partenaire,3,Hebdomadaire,25.70,3.30,1,0
+41,Jeu concours,25,Mensuelle,47.20,11.60,1,0
+23,Site,21,Hebdomadaire,40.80,7.30,2,0
+57,Site,9,Hebdomadaire,32.90,6.10,2,0
+38,Site,41,Hebdomadaire,40.50,9.10,0,0
+38,Salon,24,Hebdomadaire,12.90,2.00,0,0
+38,Site,27,Mensuelle,51.00,14.20,1,0
+54,Partenaire,45,Bimensuelle,8.80,1.50,0,1
+54,Salon,23,Hebdomadaire,48.50,5.30,2,0
+29,Site,47,Hebdomadaire,35.10,4.40,0,0
+27,Site,26,Bimensuelle,5.20,1.60,0,0
+18,Jeu concours,19,Bimensuelle,0.00,0.00,2,1
+28,Site,39,Bimensuelle,17.80,4.70,1,0
+30,Site,5,Hebdomadaire,47.30,7.10,3,0
+18,Réseaux sociaux,37,Hebdomadaire,20.70,4.00,0,1
+38,Réseaux sociaux,45,Mensuelle,29.90,4.30,0,0
+35,Partenaire,18,Mensuelle,24.20,1.80,0,0
+51,Jeu concours,16,Bimensuelle,35.20,6.80,0,0
+62,Site,34,Hebdomadaire,30.90,4.40,0,0
+20,Site,31,Hebdomadaire,20.30,5.00,0,0
+32,Site,4,Mensuelle,45.30,7.80,0,0
+33,Réseaux sociaux,24,Hebdomadaire,48.80,11.20,0,0
+55,Partenaire,18,Hebdomadaire,35.50,5.60,0,1
+57,Partenaire,24,Hebdomadaire,54.60,6.80,0,0
+18,Site,36,Hebdomadaire,20.70,4.60,0,0
+41,Site,31,Hebdomadaire,43.60,6.60,0,0
+25,Jeu concours,5,Hebdomadaire,27.20,4.00,1,1
+52,Jeu concours,26,Mensuelle,15.60,1.90,1,0
+58,Site,12,Mensuelle,35.40,6.60,1,0
+68,Site,27,Mensuelle,20.40,3.90,1,1
+18,Réseaux sociaux,37,Mensuelle,35.90,4.90,2,0
+36,Partenaire,18,Hebdomadaire,30.60,9.20,0,0
+36,Réseaux sociaux,9,Bimensuelle,56.80,12.30,3,0
+32,Site,8,Hebdomadaire,38.50,9.20,1,0
+51,Partenaire,44,Mensuelle,21.30,5.40,0,0
+40,Salon,20,Bimensuelle,53.50,10.70,2,0
+23,Salon,18,Hebdomadaire,51.40,5.70,2,0
+46,Site,42,Bimensuelle,16.00,2.50,1,0
+58,Site,32,Bimensuelle,31.00,5.10,0,0
+18,Jeu concours,5,Hebdomadaire,51.70,8.20,0,0
+35,Réseaux sociaux,4,Hebdomadaire,29.60,5.70,0,1
+25,Partenaire,43,Mensuelle,37.20,8.80,1,0
+25,Site,12,Hebdomadaire,41.90,9.40,0,0
+36,Salon,21,Mensuelle,28.90,6.80,1,0
+24,Réseaux sociaux,25,Bimensuelle,27.20,5.60,1,0
+50,Site,4,Bimensuelle,35.60,12.40,0,0
+38,Site,8,Hebdomadaire,33.50,2.30,0,0
+45,Réseaux sociaux,35,Bimensuelle,0.00,0.00,0,0
+40,Réseaux sociaux,31,Bimensuelle,40.10,6.10,1,0
+28,Jeu concours,26,Bimensuelle,31.20,6.00,1,0
+46,Site,40,Bimensuelle,5.90,1.10,1,0
+40,Site,25,Bimensuelle,34.40,5.50,0,0
+49,Partenaire,14,Hebdomadaire,17.00,2.80,1,1
+35,Jeu concours,9,Hebdomadaire,10.50,2.50,1,0
+32,Site,40,Hebdomadaire,16.20,2.20,2,0
+46,Jeu concours,41,Hebdomadaire,16.90,3.80,1,1
+36,Jeu concours,15,Hebdomadaire,30.30,3.70,0,1
+31,Partenaire,25,Hebdomadaire,11.60,1.80,1,1
+31,Site,8,Bimensuelle,27.90,2.30,1,0
+66,Site,3,Hebdomadaire,33.50,5.70,1,0
+73,Jeu concours,38,Hebdomadaire,23.30,4.90,0,0
+29,Site,1,Mensuelle,38.00,7.30,1,0
+51,Réseaux sociaux,15,Hebdomadaire,27.70,3.90,1,0
+32,Site,33,Hebdomadaire,5.70,0.70,1,0
+35,Site,5,Hebdomadaire,19.00,2.20,0,1
+32,Site,22,Bimensuelle,29.30,6.80,1,0
+34,Salon,28,Hebdomadaire,28.80,4.70,2,1
+57,Site,21,Bimensuelle,34.50,5.80,1,0
+26,Site,1,Mensuelle,8.50,2.00,0,0
+35,Réseaux sociaux,2,Bimensuelle,48.50,9.10,2,0
+35,Site,14,Mensuelle,16.80,3.10,0,0
+52,Site,2,Mensuelle,28.50,2.20,0,0
+23,Jeu concours,47,Hebdomadaire,22.50,3.20,0,1
+30,Partenaire,30,Mensuelle,34.80,6.00,0,0
+27,Site,2,Hebdomadaire,62.50,11.60,0,0
+35,Site,33,Bimensuelle,40.10,8.20,0,0
+35,Partenaire,7,Mensuelle,57.00,7.90,0,0
+35,Site,36,Hebdomadaire,24.80,4.30,1,0
+38,Réseaux sociaux,31,Mensuelle,37.50,3.90,0,0
+39,Salon,39,Hebdomadaire,41.20,9.00,1,0
+46,Site,15,Hebdomadaire,15.20,3.80,0,1
+48,Réseaux sociaux,7,Hebdomadaire,42.20,8.10,0,0
+34,Jeu concours,19,Bimensuelle,8.60,2.00,1,0
+52,Site,20,Bimensuelle,51.70,12.30,3,0
+53,Réseaux sociaux,4,Hebdomadaire,38.30,8.50,0,0
+39,Réseaux sociaux,31,Hebdomadaire,27.00,4.90,1,0
+28,Site,24,Bimensuelle,56.70,17.20,2,0
+23,Site,46,Bimensuelle,46.30,9.00,2,0
+40,Salon,4,Mensuelle,21.10,2.40,1,0
+41,Site,24,Bimensuelle,39.50,6.90,0,0
+57,Site,28,Hebdomadaire,30.20,3.70,0,0
+45,Site,4,Hebdomadaire,23.70,4.90,0,0
+55,Jeu concours,15,Bimensuelle,32.40,10.30,1,0
+18,Réseaux sociaux,21,Hebdomadaire,65.40,13.50,1,0
+18,Site,15,Bimensuelle,23.00,4.80,1,0
+37,Jeu concours,20,Hebdomadaire,12.00,3.00,1,1
+47,Réseaux sociaux,15,Hebdomadaire,21.70,5.00,0,0
+23,Partenaire,6,Hebdomadaire,42.10,10.10,0,0
+30,Jeu concours,39,Bimensuelle,0.00,0.00,0,1
+45,Site,30,Hebdomadaire,36.70,5.80,1,0
+49,Jeu concours,40,Mensuelle,11.70,3.20,0,0
+36,Jeu concours,12,Mensuelle,80.10,11.80,0,0
+30,Site,2,Bimensuelle,35.30,6.40,0,0
+25,Réseaux sociaux,26,Hebdomadaire,9.40,2.90,3,1
+31,Salon,2,Hebdomadaire,37.20,3.40,0,0
+35,Jeu concours,7,Bimensuelle,43.60,9.80,1,0
+26,Site,21,Bimensuelle,37.10,7.30,0,0
+43,Réseaux sociaux,40,Mensuelle,3.60,0.70,1,0
+20,Partenaire,15,Hebdomadaire,33.30,6.00,1,0
+63,Partenaire,13,Bimensuelle,37.10,4.30,1,0
+18,Réseaux sociaux,7,Bimensuelle,39.40,3.80,0,0
+35,Réseaux sociaux,10,Bimensuelle,48.00,10.40,1,0
+37,Site,43,Hebdomadaire,29.80,5.40,1,0
+33,Réseaux sociaux,47,Hebdomadaire,0.00,0.00,0,1
+18,Salon,39,Bimensuelle,38.00,8.20,0,0
+24,Jeu concours,30,Hebdomadaire,23.40,6.10,1,1
+58,Réseaux sociaux,3,Bimensuelle,37.00,1.30,1,0
+34,Jeu concours,46,Bimensuelle,19.60,2.90,2,0
+63,Partenaire,32,Hebdomadaire,11.80,2.30,2,0
+50,Site,3,Mensuelle,1.60,0.00,0,0
+27,Réseaux sociaux,25,Hebdomadaire,20.10,3.20,0,0
+23,Réseaux sociaux,5,Hebdomadaire,43.80,7.10,1,0
+50,Partenaire,10,Mensuelle,54.40,12.00,1,0
+49,Réseaux sociaux,41,Mensuelle,0.00,0.00,2,0
+53,Site,25,Bimensuelle,35.90,8.60,0,0
+68,Réseaux sociaux,26,Hebdomadaire,22.70,6.20,0,0
+46,Site,11,Mensuelle,53.60,6.60,2,0
+49,Site,5,Bimensuelle,28.10,5.60,0,0
+32,Site,1,Hebdomadaire,42.10,5.20,0,0
+60,Jeu concours,3,Hebdomadaire,23.50,3.50,0,1
+19,Partenaire,1,Mensuelle,60.80,16.30,1,0
+18,Réseaux sociaux,17,Bimensuelle,2.80,0.50,1,1
+42,Site,15,Bimensuelle,49.30,9.90,0,0
+48,Salon,22,Hebdomadaire,50.00,6.90,0,0
+38,Partenaire,39,Bimensuelle,8.20,1.90,1,1
+18,Partenaire,24,Hebdomadaire,4.30,0.80,0,0
+21,Site,20,Mensuelle,25.50,0.10,1,0
+49,Site,14,Hebdomadaire,11.80,3.50,0,1
+33,Site,13,Hebdomadaire,53.30,11.30,1,0
+26,Partenaire,34,Bimensuelle,40.50,7.70,2,0
+49,Jeu concours,20,Hebdomadaire,0.00,0.00,2,0
+61,Jeu concours,21,Mensuelle,18.80,3.40,0,0
+36,Site,13,Mensuelle,35.70,7.70,1,0
+73,Partenaire,33,Hebdomadaire,35.40,4.60,2,0
+36,Site,20,Bimensuelle,30.60,6.50,1,0
+28,Site,32,Hebdomadaire,21.40,2.00,1,1
+38,Site,32,Hebdomadaire,18.30,4.20,1,0
+22,Réseaux sociaux,3,Bimensuelle,28.90,8.50,2,0
+26,Réseaux sociaux,18,Hebdomadaire,30.40,2.60,0,1
+49,Réseaux sociaux,40,Hebdomadaire,16.20,3.80,0,0
+45,Site,14,Hebdomadaire,32.10,2.90,1,0
+35,Site,11,Hebdomadaire,12.10,2.30,1,0
+28,Jeu concours,40,Hebdomadaire,0.00,0.00,0,1
+33,Site,38,Bimensuelle,19.90,3.20,0,0
+69,Site,9,Bimensuelle,31.00,6.50,0,0
+56,Site,23,Mensuelle,31.90,4.60,0,0
+23,Réseaux sociaux,18,Hebdomadaire,24.10,3.30,1,1
+44,Partenaire,26,Bimensuelle,40.70,9.00,2,0
+38,Réseaux sociaux,11,Hebdomadaire,11.60,1.90,0,1
+33,Salon,25,Mensuelle,47.50,9.50,4,0
+49,Réseaux sociaux,30,Bimensuelle,17.80,4.30,0,0
+36,Réseaux sociaux,29,Mensuelle,28.10,4.90,0,0
+39,Site,4,Mensuelle,43.80,9.00,0,0
+59,Site,34,Hebdomadaire,25.30,7.50,0,0
+40,Site,35,Hebdomadaire,0.40,0.10,1,1
+58,Salon,46,Hebdomadaire,23.80,4.90,1,0
+26,Site,14,Mensuelle,33.40,4.00,0,0
+50,Site,31,Hebdomadaire,52.80,12.20,2,0
+53,Site,30,Bimensuelle,26.60,2.10,0,0
+49,Jeu concours,41,Mensuelle,9.50,2.30,0,1
+34,Site,23,Bimensuelle,13.70,2.50,1,0
+63,Jeu concours,1,Hebdomadaire,6.40,0.90,1,1
+31,Réseaux sociaux,16,Hebdomadaire,21.50,4.40,0,0
+51,Réseaux sociaux,46,Hebdomadaire,3.70,0.70,1,1
+41,Partenaire,45,Mensuelle,9.00,1.60,1,0
+22,Site,42,Hebdomadaire,3.80,0.60,1,0
+26,Jeu concours,35,Hebdomadaire,0.00,0.00,0,0
+42,Salon,29,Mensuelle,31.20,6.50,1,0
+36,Site,13,Bimensuelle,49.90,11.10,1,0
+44,Réseaux sociaux,18,Hebdomadaire,38.40,9.10,0,0
+20,Jeu concours,10,Mensuelle,37.70,9.50,0,0
+48,Jeu concours,40,Hebdomadaire,2.70,0.80,0,0
+39,Réseaux sociaux,2,Bimensuelle,41.10,7.50,1,0
+50,Site,27,Mensuelle,22.70,3.80,1,0
+30,Salon,17,Bimensuelle,38.70,9.40,3,0
+52,Jeu concours,34,Bimensuelle,6.30,1.70,0,1
+23,Site,23,Mensuelle,8.50,1.80,0,0
+19,Jeu concours,23,Bimensuelle,48.10,7.90,0,0
+40,Réseaux sociaux,41,Hebdomadaire,29.30,0.70,2,0
+45,Site,38,Hebdomadaire,27.00,5.90,0,0
+27,Réseaux sociaux,28,Bimensuelle,11.60,1.50,1,0
+40,Jeu concours,2,Hebdomadaire,38.40,6.90,2,0
+29,Partenaire,20,Hebdomadaire,13.20,2.20,0,1
+34,Réseaux sociaux,36,Hebdomadaire,2.40,0.20,2,0
+49,Salon,38,Bimensuelle,20.10,2.40,0,0
+30,Site,26,Hebdomadaire,9.40,1.90,1,1
+48,Site,38,Bimensuelle,33.40,1.90,0,0
+45,Site,14,Hebdomadaire,2.90,0.60,0,1
+51,Site,11,Hebdomadaire,15.00,0.50,0,0
+42,Jeu concours,21,Hebdomadaire,31.40,4.50,1,0
+53,Réseaux sociaux,23,Bimensuelle,51.30,10.70,1,0
+30,Site,19,Hebdomadaire,35.10,8.00,1,0
+36,Site,36,Hebdomadaire,5.90,0.60,1,0
+42,Réseaux sociaux,37,Bimensuelle,23.10,4.00,0,0
+27,Réseaux sociaux,23,Mensuelle,4.60,1.50,0,0
+36,Site,34,Mensuelle,36.50,7.70,0,0
+39,Partenaire,38,Bimensuelle,22.40,5.60,1,0
+26,Site,13,Bimensuelle,14.60,2.20,1,0
+31,Jeu concours,25,Hebdomadaire,3.50,0.50,0,1
+51,Jeu concours,41,Mensuelle,0.20,0.10,0,1
+39,Jeu concours,6,Bimensuelle,47.60,5.40,1,0
+18,Partenaire,39,Hebdomadaire,28.30,3.30,0,0
+48,Salon,8,Bimensuelle,57.40,13.80,2,0
+29,Site,6,Hebdomadaire,45.00,8.90,0,0
+47,Réseaux sociaux,8,Bimensuelle,9.30,1.80,2,1
+29,Jeu concours,18,Bimensuelle,16.20,3.10,0,0
+43,Site,19,Bimensuelle,7.80,1.00,0,0
+40,Salon,40,Bimensuelle,20.30,2.00,0,0
+38,Jeu concours,15,Mensuelle,15.80,3.20,1,0
+48,Site,2,Hebdomadaire,50.90,11.00,0,0
+37,Salon,39,Hebdomadaire,23.60,5.10,0,0
+42,Jeu concours,40,Bimensuelle,7.90,2.50,0,1
+52,Jeu concours,3,Bimensuelle,13.10,4.00,0,0
+46,Jeu concours,31,Mensuelle,18.60,4.10,0,0
+34,Site,25,Mensuelle,42.70,5.00,1,0
+18,Réseaux sociaux,9,Mensuelle,22.00,3.00,2,1
+28,Site,5,Bimensuelle,32.80,3.90,0,0
+34,Salon,27,Bimensuelle,46.30,11.40,0,0
+51,Réseaux sociaux,16,Hebdomadaire,50.90,10.40,1,0
+55,Jeu concours,5,Hebdomadaire,14.60,1.10,0,1
+36,Jeu concours,35,Hebdomadaire,39.00,10.80,0,0
+48,Site,4,Mensuelle,9.30,1.70,0,0
+40,Site,30,Mensuelle,31.50,10.00,0,0
+18,Site,18,Hebdomadaire,22.40,4.80,4,1
+56,Jeu concours,39,Hebdomadaire,5.90,1.00,0,0
+50,Jeu concours,39,Bimensuelle,0.00,0.00,0,0
+36,Réseaux sociaux,31,Mensuelle,25.70,4.90,0,0
+28,Jeu concours,17,Bimensuelle,16.40,3.20,1,1
+39,Réseaux sociaux,24,Hebdomadaire,43.90,4.90,0,0
+42,Réseaux sociaux,35,Hebdomadaire,13.10,2.80,0,0
+41,Réseaux sociaux,39,Mensuelle,13.20,2.20,0,0
+52,Site,36,Hebdomadaire,15.30,1.90,1,0
+30,Site,5,Hebdomadaire,43.40,8.00,1,0
+33,Site,21,Hebdomadaire,26.60,5.70,0,0
+47,Jeu concours,10,Hebdomadaire,26.70,3.80,2,0
+18,Jeu concours,16,Hebdomadaire,18.50,2.80,0,1
+32,Salon,29,Bimensuelle,52.60,7.60,2,0
+30,Partenaire,29,Mensuelle,31.80,3.50,0,0
+53,Réseaux sociaux,39,Mensuelle,22.80,3.50,0,0
+35,Partenaire,43,Hebdomadaire,10.60,1.30,0,1
+58,Site,25,Hebdomadaire,23.50,4.10,1,0
+30,Site,21,Bimensuelle,30.10,8.30,0,1
+42,Partenaire,19,Hebdomadaire,33.40,5.70,2,0
+53,Site,15,Bimensuelle,27.30,4.30,2,0
+18,Réseaux sociaux,23,Bimensuelle,25.20,6.10,1,1
+26,Jeu concours,27,Hebdomadaire,0.00,0.00,0,1
+34,Site,3,Bimensuelle,75.80,10.20,1,0
+26,Site,1,Hebdomadaire,70.90,15.30,0,0
+61,Site,29,Mensuelle,18.00,3.10,0,0
+49,Site,8,Hebdomadaire,44.60,7.70,1,0
+37,Partenaire,30,Hebdomadaire,11.70,2.10,0,1
+18,Partenaire,21,Hebdomadaire,20.90,6.10,2,1
+58,Site,32,Bimensuelle,7.10,1.40,0,1
+50,Site,39,Hebdomadaire,12.90,3.60,0,0
+32,Jeu concours,19,Hebdomadaire,13.30,0.20,0,1
+32,Salon,47,Bimensuelle,24.80,4.30,1,0
+42,Réseaux sociaux,22,Mensuelle,37.60,9.50,0,0
+33,Partenaire,31,Bimensuelle,30.50,3.70,2,0
+35,Partenaire,36,Hebdomadaire,26.90,5.70,0,0
+59,Site,37,Hebdomadaire,0.00,0.00,1,1
+53,Site,33,Mensuelle,26.40,5.90,1,0
+25,Jeu concours,26,Bimensuelle,0.00,0.00,1,1
+33,Partenaire,28,Hebdomadaire,38.00,6.90,3,0
+48,Site,6,Hebdomadaire,27.10,3.10,0,0
+49,Réseaux sociaux,2,Bimensuelle,28.30,7.20,0,0
+53,Jeu concours,6,Hebdomadaire,29.10,5.70,0,0
+63,Site,12,Hebdomadaire,31.90,2.40,0,1
+37,Site,4,Hebdomadaire,27.70,4.10,3,0
+26,Réseaux sociaux,32,Hebdomadaire,30.70,4.30,0,0
+25,Site,28,Bimensuelle,37.80,4.30,1,0
+55,Salon,16,Hebdomadaire,56.70,9.30,1,0
+39,Site,13,Hebdomadaire,40.40,9.10,0,0
+38,Réseaux sociaux,21,Hebdomadaire,3.40,0.40,2,0
+30,Salon,46,Mensuelle,22.50,1.00,0,0
+80,Site,45,Hebdomadaire,19.30,2.10,0,0
+54,Partenaire,16,Bimensuelle,29.30,4.80,1,0
+34,Partenaire,19,Hebdomadaire,42.50,12.80,0,0
+50,Salon,5,Hebdomadaire,55.90,12.80,0,0
+44,Site,20,Hebdomadaire,41.40,9.40,3,0
+30,Réseaux sociaux,18,Bimensuelle,40.80,6.20,0,0
+50,Jeu concours,9,Hebdomadaire,25.70,5.40,2,0
+32,Partenaire,11,Hebdomadaire,0.00,0.00,0,0
+46,Réseaux sociaux,37,Mensuelle,21.50,4.90,1,0
+53,Site,33,Hebdomadaire,21.50,5.30,1,0
+18,Réseaux sociaux,1,Hebdomadaire,33.00,4.70,1,0
+31,Site,24,Bimensuelle,55.70,11.70,3,0
+37,Salon,42,Hebdomadaire,32.10,6.30,1,0
+49,Site,31,Mensuelle,38.50,11.60,1,0
+23,Site,19,Hebdomadaire,24.70,2.20,0,0
+26,Site,27,Mensuelle,30.70,5.30,0,0
+48,Salon,23,Bimensuelle,10.90,2.60,2,0
+25,Jeu concours,3,Hebdomadaire,27.30,2.50,0,0
+36,Site,9,Hebdomadaire,26.60,4.60,0,0
+24,Jeu concours,10,Hebdomadaire,37.10,5.20,1,0
+60,Réseaux sociaux,28,Hebdomadaire,13.70,2.50,0,0
+35,Jeu concours,41,Hebdomadaire,31.50,7.20,2,0
+36,Site,26,Hebdomadaire,25.70,6.00,1,0
+31,Réseaux sociaux,25,Hebdomadaire,23.70,1.90,0,1
+51,Site,10,Bimensuelle,53.70,3.40,1,0
+19,Site,36,Hebdomadaire,13.30,3.30,0,0
+35,Site,18,Hebdomadaire,40.00,5.10,0,0
+34,Site,14,Mensuelle,28.80,2.70,1,0
+42,Site,26,Hebdomadaire,45.60,4.20,0,0
+43,Site,47,Mensuelle,0.20,0.10,0,0
+39,Réseaux sociaux,13,Hebdomadaire,33.30,2.50,1,0
+44,Réseaux sociaux,3,Hebdomadaire,41.20,8.60,3,0
+28,Site,28,Mensuelle,39.70,7.40,2,0
+39,Site,27,Hebdomadaire,7.70,1.80,0,1
+43,Site,27,Bimensuelle,20.30,5.30,0,0
+20,Jeu concours,4,Hebdomadaire,15.60,2.70,0,1
+40,Jeu concours,21,Mensuelle,32.40,4.50,0,0
+42,Réseaux sociaux,46,Hebdomadaire,6.60,0.60,0,0
+60,Salon,29,Mensuelle,37.50,6.80,0,0
+30,Jeu concours,24,Hebdomadaire,29.00,5.10,1,0
+18,Site,38,Hebdomadaire,40.80,7.50,1,0
+25,Site,22,Bimensuelle,32.40,3.20,1,0
+45,Partenaire,27,Mensuelle,16.70,3.90,0,1
+34,Site,33,Hebdomadaire,54.70,7.80,1,0
+37,Site,38,Hebdomadaire,19.40,4.20,0,0
+38,Jeu concours,33,Bimensuelle,31.10,5.10,1,0
+53,Salon,41,Hebdomadaire,33.60,7.10,0,0
+26,Réseaux sociaux,36,Bimensuelle,31.60,4.40,1,0
+40,Réseaux sociaux,20,Hebdomadaire,50.20,8.60,0,0
+31,Site,11,Hebdomadaire,36.80,9.50,0,0
+18,Réseaux sociaux,13,Mensuelle,23.90,3.30,1,0
+18,Site,37,Hebdomadaire,34.90,5.50,0,0
+49,Jeu concours,37,Bimensuelle,41.00,5.50,1,0
+37,Réseaux sociaux,43,Hebdomadaire,17.60,4.70,0,0
+25,Jeu concours,41,Hebdomadaire,20.90,3.30,0,0
+27,Réseaux sociaux,37,Hebdomadaire,28.40,6.20,0,1
+48,Site,13,Hebdomadaire,20.50,6.00,2,0
+46,Site,24,Hebdomadaire,17.60,1.80,0,0
+44,Réseaux sociaux,20,Hebdomadaire,16.70,3.20,0,0
+18,Site,46,Bimensuelle,20.30,2.40,0,0
+35,Jeu concours,25,Bimensuelle,25.20,4.10,0,0
+33,Partenaire,1,Bimensuelle,72.40,16.80,1,0
+58,Site,40,Mensuelle,21.80,4.40,0,0
+36,Jeu concours,25,Hebdomadaire,0.00,0.00,0,1
+45,Jeu concours,38,Bimensuelle,21.70,6.00,2,0
+43,Partenaire,25,Mensuelle,21.30,2.50,1,0
+28,Partenaire,30,Bimensuelle,3.70,0.70,1,0
+18,Jeu concours,46,Mensuelle,0.00,0.00,0,1
+32,Réseaux sociaux,40,Mensuelle,30.80,6.60,2,0
+48,Partenaire,20,Bimensuelle,25.00,2.50,1,0
+42,Salon,24,Hebdomadaire,53.50,9.40,1,0
+42,Réseaux sociaux,16,Hebdomadaire,0.00,0.00,0,1
+42,Réseaux sociaux,37,Bimensuelle,11.10,2.00,0,0
+35,Site,3,Hebdomadaire,45.20,11.00,1,0
+32,Partenaire,17,Hebdomadaire,11.10,2.60,0,1
+29,Jeu concours,16,Mensuelle,21.10,5.90,1,0
+19,Réseaux sociaux,45,Hebdomadaire,14.60,3.40,0,0
+44,Salon,15,Mensuelle,28.60,4.50,0,0
+45,Site,23,Hebdomadaire,21.90,4.20,1,0
+19,Partenaire,17,Mensuelle,52.00,12.00,1,0
+22,Jeu concours,4,Bimensuelle,29.80,4.90,0,0
+66,Site,21,Bimensuelle,60.20,15.70,1,0
+65,Salon,5,Hebdomadaire,14.60,2.20,0,0
+49,Partenaire,4,Mensuelle,19.50,3.30,0,0
+48,Jeu concours,42,Hebdomadaire,16.00,3.00,1,0
+23,Réseaux sociaux,6,Bimensuelle,58.60,17.10,1,0
+29,Site,29,Mensuelle,0.00,0.00,0,0
+34,Site,41,Hebdomadaire,8.30,1.20,1,0
+48,Site,1,Hebdomadaire,46.30,6.40,0,0
+22,Site,4,Bimensuelle,35.50,7.20,0,0
+46,Site,2,Mensuelle,46.20,9.10,0,0
+32,Site,33,Hebdomadaire,9.70,1.50,0,0
+35,Salon,40,Bimensuelle,19.00,3.80,1,0
+37,Réseaux sociaux,19,Hebdomadaire,54.60,8.80,2,0
+43,Site,35,Hebdomadaire,40.70,5.80,0,0
+37,Site,33,Hebdomadaire,28.40,7.10,0,0
+19,Site,24,Mensuelle,38.70,9.10,1,0
+48,Partenaire,4,Hebdomadaire,24.70,2.70,2,0
+33,Site,6,Bimensuelle,22.20,3.90,0,0
+32,Site,14,Bimensuelle,25.60,7.40,1,0
+57,Réseaux sociaux,19,Bimensuelle,11.80,2.20,0,0
+39,Jeu concours,36,Hebdomadaire,44.10,2.80,0,0
+18,Jeu concours,34,Bimensuelle,28.50,5.30,1,0
+25,Réseaux sociaux,17,Hebdomadaire,26.00,6.40,2,0
+51,Jeu concours,7,Hebdomadaire,0.00,0.00,0,1
+30,Partenaire,29,Bimensuelle,39.90,5.50,1,0
+29,Site,18,Hebdomadaire,9.40,1.50,0,1
+35,Réseaux sociaux,46,Bimensuelle,38.50,8.40,0,0
+41,Site,36,Bimensuelle,63.60,10.50,0,0
+24,Partenaire,21,Hebdomadaire,21.30,4.80,2,1
+42,Jeu concours,33,Hebdomadaire,37.20,4.40,0,0
+34,Site,4,Mensuelle,31.40,1.70,0,0
+18,Site,15,Mensuelle,39.40,6.90,1,0
+22,Site,22,Hebdomadaire,28.90,7.90,1,0
+36,Réseaux sociaux,14,Bimensuelle,69.10,9.20,1,0
+36,Site,27,Mensuelle,30.00,3.00,0,0
+35,Réseaux sociaux,24,Hebdomadaire,46.50,8.70,1,0
+37,Partenaire,45,Mensuelle,26.10,6.10,0,0
+45,Site,46,Hebdomadaire,32.60,8.20,1,0
+33,Site,3,Hebdomadaire,38.30,8.60,1,0
+41,Partenaire,28,Bimensuelle,40.70,14.10,3,0
+52,Salon,11,Bimensuelle,54.40,14.60,3,0
+18,Jeu concours,27,Hebdomadaire,19.60,4.40,1,0
+44,Réseaux sociaux,36,Hebdomadaire,31.20,7.90,0,0
+46,Réseaux sociaux,28,Mensuelle,63.70,7.60,1,0
+45,Site,44,Bimensuelle,0.00,0.00,1,0
+35,Site,28,Bimensuelle,44.90,10.30,0,0
+36,Site,21,Mensuelle,21.10,6.00,0,0
+39,Site,17,Mensuelle,41.00,5.90,1,0
+55,Partenaire,28,Hebdomadaire,15.00,2.80,0,0
+43,Réseaux sociaux,12,Mensuelle,37.50,7.40,1,0
+39,Site,22,Hebdomadaire,61.20,11.40,2,0
+51,Site,26,Bimensuelle,22.90,3.40,0,0
+28,Salon,15,Hebdomadaire,41.40,6.00,0,0
+42,Réseaux sociaux,46,Mensuelle,35.70,6.40,1,0
+18,Jeu concours,39,Bimensuelle,6.00,0.40,1,0
+53,Site,27,Hebdomadaire,28.40,5.80,0,0
+33,Site,25,Hebdomadaire,37.40,7.80,1,0
+19,Partenaire,42,Bimensuelle,8.40,0.60,0,0
+53,Salon,43,Hebdomadaire,55.30,13.10,0,0
+18,Site,19,Mensuelle,20.20,3.30,0,0
+24,Site,46,Bimensuelle,45.60,9.60,1,0
+25,Salon,16,Bimensuelle,24.00,5.70,2,0
+49,Salon,37,Bimensuelle,11.00,2.20,0,0
+44,Jeu concours,42,Mensuelle,17.00,3.30,0,0
+29,Réseaux sociaux,45,Mensuelle,30.60,3.70,1,0
+53,Réseaux sociaux,4,Hebdomadaire,39.50,5.10,3,0
+48,Partenaire,8,Hebdomadaire,25.60,4.10,1,0
+56,Réseaux sociaux,12,Bimensuelle,47.20,4.90,0,0
+18,Réseaux sociaux,46,Mensuelle,34.40,8.90,2,0
+33,Réseaux sociaux,46,Hebdomadaire,6.80,1.70,0,1
+20,Site,19,Hebdomadaire,0.00,0.00,0,1
+46,Jeu concours,32,Hebdomadaire,26.30,6.20,1,0
+34,Jeu concours,45,Hebdomadaire,13.10,2.80,1,1
+47,Site,46,Hebdomadaire,25.30,4.20,0,1
+43,Réseaux sociaux,39,Hebdomadaire,30.00,4.50,0,0
+47,Jeu concours,34,Mensuelle,0.00,0.00,0,0
+42,Réseaux sociaux,3,Bimensuelle,15.80,3.40,1,0
+18,Réseaux sociaux,10,Hebdomadaire,19.70,2.70,2,1
+49,Partenaire,28,Hebdomadaire,51.00,11.80,1,1
+41,Salon,12,Hebdomadaire,35.00,7.30,2,0
+57,Site,6,Hebdomadaire,50.30,12.00,1,0
+58,Partenaire,18,Hebdomadaire,33.50,5.50,0,0
+20,Site,34,Hebdomadaire,4.80,1.20,1,0
+31,Site,10,Hebdomadaire,12.70,2.60,0,0
+33,Site,21,Mensuelle,12.60,2.20,0,1
+19,Site,25,Bimensuelle,30.10,4.10,0,0
+60,Site,34,Mensuelle,23.70,1.60,1,0
+68,Partenaire,41,Hebdomadaire,18.40,2.40,0,0
+20,Jeu concours,8,Bimensuelle,39.10,9.10,1,0
+37,Site,39,Hebdomadaire,18.10,2.90,2,0
+39,Jeu concours,9,Bimensuelle,26.70,3.30,1,1
+48,Jeu concours,36,Hebdomadaire,12.10,2.20,1,1
+41,Réseaux sociaux,4,Bimensuelle,23.50,6.20,0,0
+32,Partenaire,4,Hebdomadaire,51.20,12.10,1,0
+51,Réseaux sociaux,18,Hebdomadaire,40.50,6.80,0,0
+18,Jeu concours,3,Bimensuelle,28.40,6.70,0,0
+47,Site,40,Mensuelle,5.60,0.90,0,0
+56,Salon,6,Hebdomadaire,31.10,4.00,1,0
+78,Salon,12,Hebdomadaire,45.90,7.20,2,0
+61,Réseaux sociaux,8,Mensuelle,31.40,2.40,0,0
+70,Réseaux sociaux,33,Mensuelle,28.80,3.80,0,0
+21,Salon,32,Hebdomadaire,21.00,3.60,1,0
+52,Réseaux sociaux,2,Mensuelle,60.80,9.50,0,0
+28,Salon,3,Bimensuelle,52.00,9.90,2,0
+39,Jeu concours,10,Bimensuelle,44.40,2.30,0,0
+46,Site,13,Bimensuelle,44.00,6.70,0,0
+41,Réseaux sociaux,33,Hebdomadaire,1.30,0.30,0,0
+46,Réseaux sociaux,29,Hebdomadaire,16.90,3.30,2,0
+26,Site,28,Bimensuelle,14.00,2.60,2,0
+18,Site,28,Hebdomadaire,38.00,4.00,0,0
+36,Partenaire,37,Mensuelle,25.20,6.50,1,0
+40,Jeu concours,8,Bimensuelle,15.30,2.50,1,0
+30,Réseaux sociaux,41,Bimensuelle,32.70,7.10,1,0
+20,Site,19,Hebdomadaire,14.30,1.10,0,0
+45,Jeu concours,2,Bimensuelle,16.50,4.40,0,0
+52,Site,46,Hebdomadaire,29.10,5.90,0,0
+44,Salon,12,Hebdomadaire,59.20,7.70,1,0
+26,Réseaux sociaux,23,Hebdomadaire,32.00,6.70,0,0
+50,Partenaire,35,Mensuelle,1.50,0.20,1,0
+62,Salon,2,Hebdomadaire,42.40,5.20,2,0
+18,Site,25,Hebdomadaire,7.30,1.30,0,0
+33,Réseaux sociaux,37,Hebdomadaire,10.50,1.60,0,0
+36,Jeu concours,22,Bimensuelle,10.40,2.70,0,0
+23,Site,16,Hebdomadaire,34.70,4.90,0,0
+36,Site,43,Hebdomadaire,50.20,11.40,1,0
+34,Réseaux sociaux,43,Hebdomadaire,22.20,3.40,0,1
+23,Réseaux sociaux,14,Bimensuelle,43.20,6.00,2,0
+66,Partenaire,47,Bimensuelle,33.50,6.70,0,0
+37,Partenaire,12,Bimensuelle,4.60,1.20,1,0
+48,Site,41,Mensuelle,9.70,2.00,0,0
+55,Site,46,Bimensuelle,18.70,3.50,2,0
+51,Site,47,Bimensuelle,24.40,4.40,1,0
+39,Partenaire,36,Hebdomadaire,14.00,3.50,1,0
+33,Site,7,Hebdomadaire,30.20,6.30,0,0
+46,Réseaux sociaux,9,Mensuelle,61.80,14.80,1,0
+50,Site,19,Hebdomadaire,9.80,1.60,0,1
+51,Site,30,Bimensuelle,41.80,12.20,0,0
+50,Site,32,Hebdomadaire,2.50,0.40,1,1
+43,Partenaire,26,Bimensuelle,19.40,3.60,0,0
+41,Réseaux sociaux,40,Mensuelle,34.20,4.10,1,0
+39,Site,20,Hebdomadaire,21.60,4.30,0,0
+51,Jeu concours,19,Bimensuelle,0.00,0.00,0,0
+18,Réseaux sociaux,8,Mensuelle,31.00,0.00,1,0
+23,Réseaux sociaux,37,Bimensuelle,25.90,4.10,1,0
+34,Site,1,Hebdomadaire,30.60,6.10,5,0
+43,Jeu concours,17,Hebdomadaire,19.20,3.50,0,0
+35,Site,11,Hebdomadaire,24.80,5.40,2,0
+39,Site,9,Hebdomadaire,48.00,7.30,0,0
+44,Jeu concours,35,Bimensuelle,18.30,3.60,1,0
+21,Site,1,Bimensuelle,25.40,2.10,0,0
+49,Site,4,Bimensuelle,65.20,13.00,0,0
+38,Site,41,Hebdomadaire,20.90,3.70,0,0
+22,Réseaux sociaux,38,Hebdomadaire,25.40,3.50,0,0
+48,Site,39,Hebdomadaire,26.70,4.00,0,0
+54,Réseaux sociaux,15,Mensuelle,22.00,4.30,0,0
+45,Site,32,Hebdomadaire,38.40,6.80,0,0
+47,Jeu concours,27,Bimensuelle,42.60,10.10,2,0
+25,Site,44,Hebdomadaire,0.00,0.00,2,1
+28,Site,9,Hebdomadaire,21.90,7.50,0,0
+44,Salon,3,Hebdomadaire,43.50,8.70,0,0
+29,Réseaux sociaux,1,Hebdomadaire,67.30,15.10,0,0
+38,Site,18,Hebdomadaire,39.90,9.70,1,0
+31,Réseaux sociaux,44,Bimensuelle,8.90,1.80,1,0
+42,Partenaire,31,Bimensuelle,0.00,0.00,0,0
+31,Réseaux sociaux,47,Mensuelle,20.30,5.70,1,0
+54,Partenaire,47,Mensuelle,4.60,0.60,1,0
+46,Site,15,Bimensuelle,0.00,0.00,1,0
+19,Site,21,Hebdomadaire,34.50,3.30,0,0
+18,Jeu concours,46,Hebdomadaire,32.00,6.90,1,0
+32,Site,36,Mensuelle,32.80,6.20,0,0
+25,Site,32,Hebdomadaire,42.70,7.30,1,0
+29,Jeu concours,32,Bimensuelle,1.70,0.30,1,1
+52,Site,33,Hebdomadaire,14.90,2.30,0,0
+26,Jeu concours,26,Hebdomadaire,5.30,1.00,1,0
+50,Partenaire,11,Bimensuelle,21.70,4.90,1,0
+51,Site,25,Bimensuelle,23.30,3.40,0,0
+52,Site,24,Mensuelle,26.60,7.40,0,0
+44,Salon,29,Hebdomadaire,12.60,2.00,0,0
+50,Site,41,Bimensuelle,34.50,5.40,3,0
+39,Site,22,Bimensuelle,34.10,7.10,2,0
+34,Réseaux sociaux,21,Bimensuelle,3.10,0.60,1,0
+34,Site,14,Bimensuelle,34.20,3.90,0,0
+39,Site,35,Bimensuelle,49.30,10.40,2,0
+38,Salon,7,Bimensuelle,39.50,4.90,0,0
+45,Réseaux sociaux,8,Hebdomadaire,36.10,6.50,1,0
+36,Partenaire,29,Hebdomadaire,3.70,0.70,0,0
+46,Site,10,Hebdomadaire,52.40,3.70,1,0
+33,Jeu concours,6,Hebdomadaire,24.20,5.60,0,0
+18,Réseaux sociaux,24,Bimensuelle,38.30,8.50,2,0
+27,Site,1,Hebdomadaire,31.70,3.70,0,0
+27,Site,26,Bimensuelle,53.20,9.50,0,0
+41,Site,42,Bimensuelle,22.50,3.60,1,0
+24,Salon,27,Bimensuelle,36.30,3.80,2,0
+47,Site,16,Bimensuelle,47.20,10.90,1,0
+33,Site,37,Hebdomadaire,20.00,2.40,0,0
+43,Jeu concours,29,Hebdomadaire,15.60,4.10,1,0
+42,Jeu concours,47,Hebdomadaire,0.00,0.00,0,1
+37,Site,41,Mensuelle,0.00,0.00,0,1
+33,Jeu concours,47,Hebdomadaire,14.50,2.10,2,0
+35,Site,11,Hebdomadaire,47.80,7.60,1,0
+38,Site,32,Hebdomadaire,0.00,0.00,0,0
+57,Site,39,Hebdomadaire,10.90,1.50,1,0
+37,Site,12,Hebdomadaire,21.90,2.30,1,0
+38,Site,7,Hebdomadaire,15.70,3.50,0,0
+42,Site,34,Hebdomadaire,31.50,7.20,1,0
+25,Réseaux sociaux,27,Hebdomadaire,28.70,3.90,0,0
+31,Réseaux sociaux,7,Bimensuelle,13.90,3.90,2,0
+48,Jeu concours,26,Mensuelle,10.20,3.00,2,0
+35,Site,38,Mensuelle,29.20,5.70,2,0
+56,Site,8,Bimensuelle,21.90,2.00,0,0
+24,Site,37,Bimensuelle,14.60,2.40,1,0
+39,Site,43,Hebdomadaire,30.40,9.00,0,0
+29,Partenaire,31,Bimensuelle,16.90,2.50,2,0
+26,Jeu concours,31,Bimensuelle,27.50,3.10,1,0
+36,Site,38,Hebdomadaire,0.00,0.00,0,0
+57,Jeu concours,17,Hebdomadaire,23.30,4.10,0,1
+27,Site,16,Mensuelle,23.60,4.50,1,0
+51,Réseaux sociaux,29,Bimensuelle,42.30,10.30,4,0
+56,Site,11,Hebdomadaire,37.60,8.40,2,0
+30,Site,15,Hebdomadaire,50.00,7.50,0,0
+40,Site,29,Bimensuelle,22.70,5.20,2,1
+34,Site,22,Hebdomadaire,7.30,1.40,0,1
+53,Réseaux sociaux,25,Bimensuelle,28.60,4.20,0,1
+62,Site,8,Hebdomadaire,38.50,8.50,1,0
+39,Partenaire,17,Hebdomadaire,26.00,6.30,1,0
+31,Salon,37,Mensuelle,40.70,4.30,0,0
+68,Site,45,Bimensuelle,9.90,1.80,0,0
+25,Site,14,Bimensuelle,41.60,11.50,2,0
+32,Salon,38,Bimensuelle,17.50,3.70,1,1
+23,Salon,47,Hebdomadaire,12.60,3.20,0,0
+41,Site,5,Mensuelle,59.60,17.30,2,0
+35,Réseaux sociaux,10,Hebdomadaire,23.60,6.90,0,0
+54,Salon,18,Hebdomadaire,76.60,15.40,0,0
+30,Jeu concours,1,Hebdomadaire,23.20,5.90,3,0
+40,Site,43,Bimensuelle,22.30,4.90,1,0
+49,Jeu concours,42,Bimensuelle,30.20,5.40,0,0
+33,Site,45,Bimensuelle,57.80,15.50,1,0
+22,Jeu concours,38,Bimensuelle,14.70,1.40,0,0
+31,Site,7,Hebdomadaire,47.60,9.60,0,0
+18,Salon,19,Mensuelle,34.60,9.50,1,0
+51,Site,36,Bimensuelle,41.90,3.70,0,0
+41,Site,29,Bimensuelle,14.00,3.10,0,0
+57,Jeu concours,44,Bimensuelle,20.10,4.70,3,0
+37,Site,24,Hebdomadaire,19.50,3.30,1,0
+45,Réseaux sociaux,38,Bimensuelle,31.30,9.00,1,0
+20,Jeu concours,26,Bimensuelle,20.60,4.20,0,0
+18,Réseaux sociaux,1,Hebdomadaire,38.00,9.00,0,0
+27,Partenaire,24,Mensuelle,31.20,6.90,1,0
+46,Site,3,Mensuelle,54.80,13.40,1,0
+47,Site,9,Bimensuelle,35.60,3.40,0,0
+42,Jeu concours,45,Hebdomadaire,21.10,0.20,0,0
+78,Site,2,Hebdomadaire,33.40,7.60,1,0
+35,Partenaire,8,Mensuelle,56.50,15.20,1,0
+39,Réseaux sociaux,24,Bimensuelle,37.80,5.60,0,0
+32,Site,40,Bimensuelle,24.30,5.40,1,0
+27,Site,34,Hebdomadaire,30.90,3.80,0,0
+41,Site,38,Bimensuelle,7.60,2.10,1,0
+19,Jeu concours,35,Bimensuelle,25.10,2.60,0,0
+18,Jeu concours,20,Hebdomadaire,23.60,3.70,0,0
+40,Site,28,Hebdomadaire,13.10,3.40,1,0
+40,Salon,17,Bimensuelle,37.40,9.30,2,0
+28,Site,33,Hebdomadaire,12.20,2.20,1,0
+38,Site,6,Hebdomadaire,39.40,8.20,1,0
+37,Site,37,Hebdomadaire,14.20,3.80,2,0
+21,Salon,12,Hebdomadaire,61.20,6.50,1,0
+28,Site,30,Bimensuelle,36.90,8.00,0,0
+42,Jeu concours,39,Hebdomadaire,16.20,2.60,1,0
+49,Site,46,Bimensuelle,41.20,3.50,0,0
+34,Site,7,Hebdomadaire,27.30,4.90,1,0
+18,Site,12,Bimensuelle,29.50,6.50,2,0
+33,Salon,6,Bimensuelle,46.50,12.20,2,0
+34,Site,28,Hebdomadaire,39.10,11.00,3,0
+38,Jeu concours,4,Bimensuelle,7.70,1.40,0,1
+18,Site,46,Hebdomadaire,36.50,6.70,2,0
+20,Partenaire,8,Hebdomadaire,49.40,7.60,0,0
+57,Site,8,Hebdomadaire,31.60,9.20,0,0
+49,Réseaux sociaux,42,Mensuelle,18.80,1.60,1,0
+28,Réseaux sociaux,18,Bimensuelle,32.20,4.90,1,0
+43,Site,22,Bimensuelle,26.40,3.00,0,1
+58,Site,39,Hebdomadaire,29.00,6.90,0,1
+18,Réseaux sociaux,11,Hebdomadaire,32.70,3.90,2,0
+73,Site,10,Hebdomadaire,23.20,3.30,2,0
+33,Réseaux sociaux,24,Hebdomadaire,24.80,4.00,1,0
+37,Partenaire,47,Bimensuelle,0.00,0.00,0,0
+42,Salon,6,Hebdomadaire,37.30,8.70,0,0
+30,Jeu concours,47,Mensuelle,0.00,0.00,1,1
+51,Site,4,Hebdomadaire,14.20,2.80,0,0
+44,Salon,17,Mensuelle,37.70,8.00,0,0
+49,Site,41,Hebdomadaire,46.90,0.60,1,0
+29,Site,43,Mensuelle,32.20,4.00,0,0
+42,Site,46,Bimensuelle,19.70,3.50,0,0
+20,Site,25,Bimensuelle,36.20,3.60,0,0
+37,Site,3,Hebdomadaire,71.40,2.10,1,0
+49,Jeu concours,2,Mensuelle,50.60,8.10,0,0
+42,Réseaux sociaux,26,Hebdomadaire,38.50,4.70,3,0
+40,Site,37,Bimensuelle,16.30,2.70,1,0
+25,Réseaux sociaux,7,Hebdomadaire,33.00,3.70,0,0
+34,Salon,26,Hebdomadaire,28.50,6.60,2,0
+38,Réseaux sociaux,5,Hebdomadaire,42.50,9.30,0,0
+47,Site,18,Hebdomadaire,48.10,4.90,0,0
+43,Réseaux sociaux,37,Hebdomadaire,22.70,3.50,0,0
+65,Réseaux sociaux,12,Mensuelle,46.90,12.80,1,0
+56,Réseaux sociaux,4,Hebdomadaire,17.30,5.20,0,0
+35,Jeu concours,32,Bimensuelle,29.30,8.80,0,1
+61,Réseaux sociaux,34,Hebdomadaire,29.20,3.00,0,0
+38,Jeu concours,38,Bimensuelle,24.90,0.90,1,0
+48,Réseaux sociaux,43,Mensuelle,10.50,2.30,0,0
+39,Site,25,Mensuelle,4.90,1.20,1,0
+37,Réseaux sociaux,12,Bimensuelle,18.20,4.00,0,0
+45,Partenaire,36,Hebdomadaire,16.90,2.40,2,0
+31,Site,44,Mensuelle,24.80,7.20,1,0
+43,Jeu concours,46,Bimensuelle,15.00,2.70,2,0
+18,Jeu concours,10,Mensuelle,41.80,6.60,2,0
+18,Site,44,Hebdomadaire,28.30,5.30,1,0
+38,Jeu concours,21,Hebdomadaire,0.00,0.00,1,0
+40,Site,5,Mensuelle,42.00,9.10,0,0
+44,Site,47,Bimensuelle,11.70,2.70,0,0
+23,Site,15,Hebdomadaire,35.10,6.10,0,0
+46,Site,15,Bimensuelle,5.30,1.20,0,0
+40,Site,9,Hebdomadaire,30.40,5.30,1,0
+39,Site,32,Bimensuelle,21.80,3.10,0,0
+39,Salon,27,Bimensuelle,26.20,3.60,0,0
+37,Partenaire,9,Mensuelle,9.00,1.10,0,0
+33,Salon,5,Bimensuelle,85.80,15.50,0,0
+18,Site,41,Bimensuelle,20.50,5.70,1,0
+59,Jeu concours,35,Bimensuelle,34.00,6.20,0,0
+42,Réseaux sociaux,1,Mensuelle,42.90,9.50,2,0
+37,Jeu concours,12,Hebdomadaire,18.50,2.80,0,0
+46,Jeu concours,17,Hebdomadaire,31.00,8.00,1,0
+49,Partenaire,13,Hebdomadaire,6.00,0.70,1,0
+33,Site,20,Bimensuelle,7.30,1.30,0,1
+42,Réseaux sociaux,10,Bimensuelle,36.20,6.80,0,0
+18,Site,16,Bimensuelle,18.70,3.80,1,0
+52,Site,35,Hebdomadaire,21.20,2.70,1,0
+41,Réseaux sociaux,33,Bimensuelle,39.60,4.50,0,0
+37,Partenaire,29,Hebdomadaire,8.90,1.30,1,0
+32,Site,33,Bimensuelle,3.50,0.40,0,0
+37,Site,13,Hebdomadaire,55.90,11.70,1,0
+51,Jeu concours,15,Hebdomadaire,37.20,4.40,0,0
+48,Jeu concours,21,Bimensuelle,31.00,1.10,1,0
+28,Jeu concours,26,Hebdomadaire,7.90,1.70,0,0
+55,Site,34,Hebdomadaire,43.70,8.40,2,0
+37,Partenaire,31,Mensuelle,25.80,4.10,1,0
+25,Salon,36,Bimensuelle,11.50,1.50,2,0
+41,Site,16,Hebdomadaire,17.90,3.50,1,0
+27,Site,1,Hebdomadaire,47.50,3.80,1,0
+30,Site,31,Hebdomadaire,43.70,6.70,0,0
+18,Site,21,Bimensuelle,25.30,3.20,0,0
+31,Jeu concours,4,Bimensuelle,16.60,2.50,0,0
+33,Site,42,Hebdomadaire,0.00,0.00,1,0
+34,Site,43,Hebdomadaire,31.40,5.00,0,0
+49,Jeu concours,44,Bimensuelle,6.80,1.30,0,1
+53,Site,43,Bimensuelle,0.00,0.00,0,0
+43,Partenaire,46,Hebdomadaire,10.30,0.90,0,0
+23,Site,26,Hebdomadaire,29.70,4.50,0,0
+43,Site,15,Bimensuelle,42.00,11.40,1,0
+36,Jeu concours,22,Mensuelle,30.10,7.20,0,0
+31,Réseaux sociaux,33,Hebdomadaire,21.30,4.10,1,1
+37,Jeu concours,9,Hebdomadaire,31.10,9.00,3,0
+56,Site,44,Bimensuelle,13.50,1.50,0,0
+38,Réseaux sociaux,32,Mensuelle,22.90,4.10,0,0
+50,Site,22,Hebdomadaire,8.60,1.80,0,0
+18,Jeu concours,33,Mensuelle,6.90,1.50,0,0
+41,Site,27,Bimensuelle,30.90,3.90,1,0
+54,Site,8,Hebdomadaire,43.70,11.10,2,0
+27,Salon,4,Bimensuelle,35.60,5.90,0,0
+29,Site,22,Hebdomadaire,24.30,3.20,0,0
+53,Jeu concours,35,Bimensuelle,27.20,5.90,0,0
+30,Site,20,Bimensuelle,37.40,3.70,0,0
+45,Salon,25,Mensuelle,16.50,3.10,1,0
+36,Site,26,Bimensuelle,40.10,6.10,1,0
+26,Site,23,Bimensuelle,20.80,3.60,1,0
+32,Site,41,Hebdomadaire,0.00,0.00,1,1
+41,Partenaire,7,Bimensuelle,26.40,7.00,1,0
+42,Partenaire,23,Hebdomadaire,23.40,5.40,1,0
+76,Réseaux sociaux,40,Bimensuelle,11.20,2.30,1,0
+34,Site,47,Hebdomadaire,9.30,2.30,0,0
+29,Site,46,Bimensuelle,44.80,9.80,0,0
+66,Site,14,Hebdomadaire,87.50,18.80,4,0
+33,Réseaux sociaux,10,Hebdomadaire,26.10,5.90,1,0
+38,Jeu concours,15,Bimensuelle,9.30,3.00,0,1
+35,Réseaux sociaux,25,Bimensuelle,45.70,10.40,0,1
+18,Jeu concours,4,Hebdomadaire,63.20,9.70,0,0
+20,Site,25,Hebdomadaire,34.40,3.50,0,0
+28,Réseaux sociaux,47,Hebdomadaire,15.80,2.70,0,0
+55,Site,33,Bimensuelle,5.20,0.70,1,1
+34,Site,10,Hebdomadaire,33.40,9.80,0,0
+48,Partenaire,27,Mensuelle,42.60,8.30,0,0
+36,Jeu concours,39,Hebdomadaire,0.00,0.00,0,1
+32,Jeu concours,29,Hebdomadaire,22.30,2.60,0,1
+50,Réseaux sociaux,31,Hebdomadaire,14.50,1.40,0,0
+37,Site,26,Mensuelle,29.70,3.30,1,0
+43,Site,18,Hebdomadaire,24.10,3.20,1,0
+54,Site,14,Hebdomadaire,48.80,10.80,1,0
+53,Site,22,Bimensuelle,38.70,7.60,1,0
+40,Jeu concours,31,Hebdomadaire,17.20,2.20,1,0
+18,Salon,18,Hebdomadaire,33.70,8.00,0,0
+54,Réseaux sociaux,33,Hebdomadaire,48.30,9.80,1,0
+48,Site,13,Hebdomadaire,25.90,5.00,2,0
+41,Salon,7,Bimensuelle,40.80,10.60,2,0
+73,Réseaux sociaux,17,Mensuelle,9.30,2.10,0,0
+50,Jeu concours,43,Hebdomadaire,0.00,0.00,0,1
+28,Réseaux sociaux,20,Hebdomadaire,43.90,4.20,1,0
+41,Réseaux sociaux,47,Mensuelle,5.50,0.50,2,0
+36,Réseaux sociaux,35,Hebdomadaire,36.50,8.40,1,0
+35,Site,10,Hebdomadaire,51.00,8.70,1,0
+51,Site,44,Bimensuelle,16.00,3.10,1,0
+45,Site,32,Hebdomadaire,11.60,3.00,1,1
+68,Site,29,Hebdomadaire,21.00,3.30,1,0
+18,Réseaux sociaux,46,Bimensuelle,34.90,8.50,5,0
+29,Site,20,Hebdomadaire,9.10,1.80,2,1
+30,Partenaire,41,Hebdomadaire,8.80,1.80,0,0
+27,Site,17,Mensuelle,72.70,9.20,1,0
+49,Partenaire,4,Hebdomadaire,21.70,0.90,0,0
+18,Site,12,Hebdomadaire,47.30,11.00,3,0
+34,Réseaux sociaux,37,Mensuelle,38.40,7.60,1,0
+54,Site,10,Hebdomadaire,29.00,6.10,0,0
+49,Site,14,Bimensuelle,13.50,0.80,0,0
+35,Site,28,Bimensuelle,51.10,5.40,0,0
+53,Réseaux sociaux,44,Hebdomadaire,17.20,4.10,2,0
+22,Partenaire,22,Mensuelle,35.00,3.60,0,0
+32,Site,17,Mensuelle,39.10,7.70,1,1
+47,Jeu concours,20,Bimensuelle,17.50,2.70,1,0
+54,Site,16,Hebdomadaire,30.10,7.20,0,0
+62,Réseaux sociaux,46,Hebdomadaire,23.00,4.90,2,0
+36,Jeu concours,36,Mensuelle,22.00,4.20,0,0
+31,Site,12,Hebdomadaire,18.70,3.30,1,0
+23,Site,15,Bimensuelle,25.80,4.20,0,0
+35,Partenaire,40,Hebdomadaire,12.70,3.40,0,1
+40,Site,42,Hebdomadaire,25.70,5.60,1,0
+32,Jeu concours,46,Hebdomadaire,23.40,2.90,1,0
+39,Site,17,Hebdomadaire,28.10,3.20,1,0
+27,Site,19,Hebdomadaire,26.50,6.50,0,0
+34,Réseaux sociaux,24,Hebdomadaire,24.00,3.70,2,1
+63,Salon,15,Bimensuelle,16.00,1.00,0,0
+47,Réseaux sociaux,29,Hebdomadaire,31.70,7.30,1,0
+56,Site,42,Hebdomadaire,15.20,4.10,0,0
+18,Jeu concours,32,Mensuelle,28.30,4.90,3,0
+52,Jeu concours,9,Hebdomadaire,14.60,4.00,1,0
+51,Site,35,Hebdomadaire,11.00,2.40,0,0
+34,Site,23,Mensuelle,34.80,8.50,1,0
+40,Jeu concours,15,Hebdomadaire,16.50,2.60,0,1
+40,Site,46,Hebdomadaire,35.20,5.10,1,0
+28,Réseaux sociaux,19,Bimensuelle,20.30,4.30,0,0
+37,Partenaire,21,Hebdomadaire,40.00,7.30,0,0
+69,Jeu concours,8,Bimensuelle,35.60,6.00,1,0
+57,Jeu concours,33,Mensuelle,7.30,1.50,0,0
+56,Jeu concours,41,Bimensuelle,21.00,4.60,1,0
+31,Site,9,Hebdomadaire,29.50,6.80,1,0
+36,Site,43,Hebdomadaire,35.70,9.60,2,0
+28,Jeu concours,14,Mensuelle,14.20,3.10,1,1
+23,Site,28,Hebdomadaire,16.40,3.00,0,0
+43,Site,34,Mensuelle,0.00,0.00,0,1
+46,Site,5,Bimensuelle,41.90,10.50,1,0
+18,Site,34,Hebdomadaire,33.80,4.30,0,0
+36,Salon,29,Hebdomadaire,55.90,9.70,0,0
+32,Partenaire,29,Hebdomadaire,9.90,3.00,0,1
+52,Salon,19,Hebdomadaire,38.60,7.00,2,0
+18,Salon,14,Hebdomadaire,50.60,9.60,0,0
+36,Site,20,Mensuelle,28.00,4.70,0,0
+34,Salon,28,Bimensuelle,19.20,3.50,1,0
+55,Jeu concours,8,Hebdomadaire,5.20,1.20,0,1
+34,Site,34,Mensuelle,29.40,5.20,1,0
+37,Salon,21,Hebdomadaire,16.20,3.10,2,0
+42,Jeu concours,26,Hebdomadaire,6.20,1.60,0,1
+33,Site,28,Hebdomadaire,10.90,1.80,0,1
+46,Jeu concours,4,Bimensuelle,27.90,6.50,1,0
+22,Partenaire,39,Mensuelle,4.40,0.40,0,1
+40,Salon,32,Mensuelle,10.40,2.00,0,0
+25,Site,17,Hebdomadaire,33.40,6.50,1,0
+24,Salon,4,Bimensuelle,37.80,4.80,1,0
+48,Salon,8,Bimensuelle,29.30,5.10,2,0
+35,Jeu concours,35,Hebdomadaire,30.90,5.50,0,0
+44,Réseaux sociaux,36,Bimensuelle,24.00,4.70,0,0
+40,Site,18,Bimensuelle,29.40,1.50,0,0
+29,Site,19,Bimensuelle,12.20,2.70,1,0
+53,Partenaire,31,Hebdomadaire,0.00,0.00,1,1
+33,Jeu concours,18,Mensuelle,7.70,1.40,0,1
+38,Salon,22,Hebdomadaire,54.60,12.90,1,0
+34,Jeu concours,31,Mensuelle,0.00,0.00,0,1
+38,Jeu concours,27,Mensuelle,24.90,2.40,1,0
+51,Partenaire,19,Bimensuelle,24.00,3.80,0,1
+42,Salon,28,Hebdomadaire,7.80,1.60,0,1
+78,Jeu concours,21,Hebdomadaire,0.10,0.00,1,1
+29,Partenaire,31,Mensuelle,23.70,5.30,0,0
+29,Réseaux sociaux,18,Mensuelle,25.40,4.50,1,0
+45,Jeu concours,35,Mensuelle,0.00,0.00,0,0
+23,Jeu concours,21,Hebdomadaire,22.00,5.60,1,1
+20,Site,30,Hebdomadaire,19.50,2.40,2,1
+44,Jeu concours,47,Mensuelle,7.40,1.00,0,0
+37,Site,25,Bimensuelle,19.80,3.80,0,0
+44,Jeu concours,29,Hebdomadaire,33.80,4.50,2,0
+40,Réseaux sociaux,22,Hebdomadaire,26.80,3.60,0,0
+21,Site,6,Bimensuelle,42.10,6.90,0,0
+28,Réseaux sociaux,20,Bimensuelle,25.00,5.30,0,0
+41,Salon,13,Bimensuelle,40.30,8.90,1,0
+67,Partenaire,43,Hebdomadaire,25.80,3.60,1,0
+50,Site,21,Hebdomadaire,19.80,2.70,0,0
+26,Site,17,Hebdomadaire,37.00,8.70,1,1
+47,Partenaire,19,Hebdomadaire,31.20,2.80,1,0
+25,Site,37,Bimensuelle,21.00,5.70,0,0
+38,Site,40,Hebdomadaire,20.30,5.20,0,1
+54,Site,18,Hebdomadaire,17.20,2.60,0,0
+42,Site,4,Hebdomadaire,15.00,2.70,0,0
+35,Partenaire,25,Mensuelle,25.10,5.00,0,0
+51,Site,13,Bimensuelle,43.30,8.40,0,0
+42,Réseaux sociaux,35,Bimensuelle,53.10,9.00,2,0
+22,Site,21,Bimensuelle,36.00,5.10,0,0
+30,Site,31,Bimensuelle,31.50,7.20,0,0
+48,Site,42,Bimensuelle,25.00,1.60,0,0
+29,Réseaux sociaux,8,Hebdomadaire,64.70,14.70,0,0
+50,Site,31,Mensuelle,30.50,6.70,0,0
+58,Jeu concours,12,Hebdomadaire,18.60,3.30,1,1
+33,Site,10,Hebdomadaire,31.60,3.80,0,0
+50,Site,20,Hebdomadaire,22.10,6.30,1,0
+38,Partenaire,12,Hebdomadaire,22.10,4.40,1,0
+41,Salon,30,Hebdomadaire,25.70,2.70,1,0
+18,Jeu concours,21,Hebdomadaire,38.00,6.40,1,0
+24,Jeu concours,12,Hebdomadaire,47.70,10.20,0,0
+40,Jeu concours,27,Bimensuelle,23.20,3.50,0,1
+60,Partenaire,6,Hebdomadaire,42.00,6.70,1,1
+26,Partenaire,11,Hebdomadaire,13.60,3.60,1,1
+51,Site,10,Hebdomadaire,28.10,5.70,0,0
+48,Jeu concours,47,Mensuelle,6.90,0.90,1,0
+32,Réseaux sociaux,40,Mensuelle,37.80,6.30,0,0
+36,Salon,6,Hebdomadaire,41.90,10.50,1,0
+46,Jeu concours,7,Bimensuelle,2.10,0.40,0,0
+48,Réseaux sociaux,21,Hebdomadaire,15.10,3.90,2,0
+58,Réseaux sociaux,28,Bimensuelle,16.80,2.80,0,0
+18,Réseaux sociaux,29,Bimensuelle,18.00,4.00,0,0
+21,Site,46,Mensuelle,20.10,0.60,0,0
+18,Site,31,Bimensuelle,36.70,8.20,0,0
+65,Jeu concours,16,Hebdomadaire,21.70,2.60,0,1
+33,Site,1,Bimensuelle,72.70,12.70,0,0
+32,Réseaux sociaux,35,Hebdomadaire,42.70,9.80,2,0
+49,Jeu concours,32,Mensuelle,18.20,4.00,1,0
+23,Salon,4,Hebdomadaire,71.50,19.70,1,0
+21,Jeu concours,31,Hebdomadaire,38.20,4.20,0,0
+36,Site,31,Hebdomadaire,28.10,5.00,0,0
+43,Site,5,Hebdomadaire,47.00,11.90,0,0
+37,Partenaire,28,Bimensuelle,8.20,1.20,0,0
+35,Site,32,Bimensuelle,35.00,2.80,0,0
+33,Salon,2,Mensuelle,39.10,7.70,1,0
+46,Site,3,Mensuelle,25.40,5.80,0,0
+31,Partenaire,33,Mensuelle,25.00,4.50,1,0
+24,Site,1,Mensuelle,53.40,5.00,0,0
+43,Site,37,Bimensuelle,55.10,2.40,1,0
+51,Réseaux sociaux,9,Hebdomadaire,46.50,6.70,1,0
+50,Réseaux sociaux,7,Mensuelle,45.20,10.90,1,0
+33,Site,6,Hebdomadaire,39.40,6.60,0,0
+27,Réseaux sociaux,16,Hebdomadaire,52.20,13.20,2,0
+26,Salon,2,Mensuelle,50.80,14.60,2,0
+36,Partenaire,3,Hebdomadaire,22.90,6.70,2,0
+48,Jeu concours,3,Hebdomadaire,21.50,3.60,2,1
+23,Site,28,Bimensuelle,14.70,2.00,1,0
+74,Site,25,Bimensuelle,13.10,1.20,0,0
+44,Site,17,Bimensuelle,35.20,4.60,0,0
+47,Site,29,Hebdomadaire,50.60,14.50,3,0
+37,Jeu concours,38,Hebdomadaire,29.30,6.70,0,0
+40,Réseaux sociaux,11,Bimensuelle,0.00,0.00,0,0
+33,Réseaux sociaux,15,Hebdomadaire,7.60,1.60,0,1
+18,Site,45,Bimensuelle,45.80,8.90,1,0
+53,Réseaux sociaux,28,Hebdomadaire,8.10,0.70,0,1
+53,Salon,1,Bimensuelle,47.10,9.10,3,0
+18,Site,28,Hebdomadaire,56.00,14.30,1,0
+38,Site,20,Bimensuelle,56.60,20.20,2,0
+55,Site,22,Mensuelle,33.80,3.10,0,0
+37,Partenaire,36,Mensuelle,36.30,6.80,0,0
+28,Site,22,Bimensuelle,19.80,5.30,1,0
+36,Site,25,Mensuelle,24.80,6.80,1,0
+51,Site,45,Hebdomadaire,0.00,0.00,0,0
+29,Site,31,Hebdomadaire,43.10,3.90,0,0
+19,Site,32,Bimensuelle,28.10,4.30,1,0
+53,Site,3,Bimensuelle,62.00,23.20,1,0
+30,Site,20,Bimensuelle,37.50,5.70,0,0
+64,Site,40,Bimensuelle,56.60,13.60,2,1
+37,Partenaire,8,Mensuelle,28.00,3.90,0,1
+26,Site,28,Mensuelle,12.00,2.80,2,0
+18,Réseaux sociaux,22,Hebdomadaire,40.60,5.60,1,0
+35,Partenaire,38,Mensuelle,3.60,0.90,1,0
+45,Site,3,Bimensuelle,34.10,8.00,2,0
+48,Partenaire,1,Hebdomadaire,31.80,4.10,2,0
+27,Jeu concours,19,Mensuelle,16.10,2.10,0,0
+48,Partenaire,46,Hebdomadaire,7.90,1.00,0,0
+34,Jeu concours,10,Bimensuelle,14.90,2.40,1,0
+18,Site,45,Bimensuelle,0.00,0.00,0,0
+31,Site,13,Bimensuelle,35.40,4.30,1,0
+39,Site,28,Hebdomadaire,46.30,10.00,1,0
+41,Jeu concours,39,Bimensuelle,24.90,4.80,0,0
+18,Partenaire,29,Hebdomadaire,44.10,6.20,1,0
+50,Réseaux sociaux,37,Hebdomadaire,21.60,4.40,1,0
+39,Partenaire,35,Hebdomadaire,38.00,5.90,2,0
+69,Jeu concours,34,Mensuelle,37.80,7.50,0,0
+31,Site,11,Bimensuelle,47.40,10.50,1,0
+37,Jeu concours,19,Hebdomadaire,35.10,6.00,1,0
+54,Réseaux sociaux,36,Hebdomadaire,16.10,3.00,1,0
+33,Site,6,Hebdomadaire,21.70,4.60,0,0
+54,Réseaux sociaux,42,Hebdomadaire,49.50,6.20,1,0
+56,Jeu concours,10,Mensuelle,0.00,0.00,0,1
+28,Site,7,Bimensuelle,42.50,3.30,1,0
+28,Site,5,Hebdomadaire,67.10,10.40,0,0
+35,Jeu concours,13,Hebdomadaire,10.80,0.20,0,0
+39,Site,15,Hebdomadaire,23.70,2.80,1,0
+52,Jeu concours,41,Hebdomadaire,22.60,4.40,1,1
+30,Site,38,Hebdomadaire,39.70,6.20,0,0
+35,Réseaux sociaux,19,Mensuelle,39.00,5.30,2,0
+38,Site,20,Mensuelle,0.00,0.00,0,0
+47,Site,20,Hebdomadaire,16.00,3.30,0,0
+38,Salon,29,Mensuelle,27.00,5.50,1,0
+36,Partenaire,19,Mensuelle,38.10,6.20,3,0
+33,Site,17,Bimensuelle,41.30,4.30,1,0
+48,Site,19,Bimensuelle,37.70,8.30,2,0
+54,Salon,28,Bimensuelle,31.60,2.90,1,0
+48,Réseaux sociaux,35,Mensuelle,41.30,7.80,2,0
+43,Site,35,Mensuelle,33.70,1.90,2,0
+41,Site,35,Hebdomadaire,12.50,1.60,0,0
+52,Jeu concours,3,Hebdomadaire,36.40,4.30,0,0
+18,Site,42,Hebdomadaire,25.80,5.50,0,0
+39,Site,2,Hebdomadaire,47.30,7.00,2,0
+47,Site,9,Hebdomadaire,21.40,4.50,3,0
+43,Partenaire,2,Hebdomadaire,35.80,3.70,1,0
+44,Jeu concours,17,Bimensuelle,37.50,6.40,1,0
+56,Site,6,Hebdomadaire,0.00,0.00,0,0
+38,Site,40,Hebdomadaire,23.40,5.00,1,0
+30,Site,44,Hebdomadaire,4.70,0.80,0,0
+37,Site,1,Hebdomadaire,39.90,9.10,0,0
+55,Site,5,Mensuelle,26.00,3.60,1,0
+42,Réseaux sociaux,14,Hebdomadaire,27.50,2.40,1,0
+21,Salon,18,Hebdomadaire,19.90,5.90,1,0
+36,Site,22,Hebdomadaire,42.40,9.30,0,0
+36,Jeu concours,20,Hebdomadaire,15.80,1.40,0,0
+36,Jeu concours,2,Hebdomadaire,64.10,19.50,5,0
+46,Site,45,Hebdomadaire,2.10,0.40,1,1
+26,Salon,40,Hebdomadaire,27.00,5.50,0,0
+33,Site,41,Bimensuelle,46.70,10.20,0,0
+31,Site,25,Mensuelle,27.90,7.80,0,0
+40,Site,6,Hebdomadaire,44.50,9.10,0,0
+36,Partenaire,41,Hebdomadaire,0.00,0.00,0,1
+39,Jeu concours,24,Hebdomadaire,40.70,8.40,2,0
+46,Partenaire,38,Bimensuelle,22.40,6.30,1,0
+26,Partenaire,16,Hebdomadaire,39.00,10.00,0,0
+18,Site,4,Mensuelle,41.10,8.00,0,0
+27,Site,33,Hebdomadaire,0.00,0.00,1,0
+18,Partenaire,18,Mensuelle,24.20,2.30,1,1
+23,Réseaux sociaux,36,Bimensuelle,17.80,4.10,2,0
+25,Site,33,Hebdomadaire,20.70,4.30,2,0
+26,Site,36,Mensuelle,32.70,5.30,1,0
+55,Site,25,Hebdomadaire,35.10,7.50,2,0
+37,Site,20,Hebdomadaire,27.80,5.00,2,0
+57,Site,38,Hebdomadaire,9.60,2.20,1,0
+24,Réseaux sociaux,5,Mensuelle,21.90,3.30,0,0
+18,Site,30,Mensuelle,13.70,4.00,0,0
+50,Jeu concours,27,Hebdomadaire,12.10,1.40,1,0
+36,Réseaux sociaux,39,Bimensuelle,18.70,2.90,2,0
+34,Réseaux sociaux,40,Hebdomadaire,24.20,6.60,2,0
+32,Site,9,Bimensuelle,15.00,3.20,1,0
+56,Site,5,Mensuelle,31.00,9.00,0,0
+34,Réseaux sociaux,2,Bimensuelle,47.90,7.70,0,0
+46,Site,28,Bimensuelle,19.70,3.70,0,0
+31,Site,40,Hebdomadaire,37.00,4.50,0,0
+29,Jeu concours,29,Hebdomadaire,17.90,2.70,2,1
+47,Réseaux sociaux,23,Hebdomadaire,52.80,2.30,0,0
+18,Site,23,Mensuelle,21.00,3.00,0,0
+25,Site,39,Mensuelle,33.50,4.00,1,0
+33,Partenaire,47,Bimensuelle,37.80,3.10,2,0
+18,Partenaire,41,Bimensuelle,42.60,9.00,0,0
+37,Réseaux sociaux,41,Bimensuelle,11.40,3.20,2,0
+40,Partenaire,40,Bimensuelle,11.50,0.70,4,0
+35,Salon,28,Hebdomadaire,17.70,2.20,0,1
+59,Site,14,Hebdomadaire,27.20,3.40,1,1
+39,Salon,10,Hebdomadaire,47.80,11.70,3,0
+30,Partenaire,35,Bimensuelle,16.80,4.70,1,0
+43,Partenaire,21,Bimensuelle,34.20,6.90,2,0
+18,Site,30,Mensuelle,10.40,2.60,0,0
+53,Partenaire,20,Bimensuelle,20.60,1.80,0,0
+45,Site,43,Hebdomadaire,9.00,2.40,1,0
+36,Jeu concours,3,Mensuelle,50.90,7.60,0,0
+36,Partenaire,18,Mensuelle,19.00,5.00,0,0
+46,Site,11,Hebdomadaire,36.40,9.00,2,0
+44,Partenaire,41,Mensuelle,4.20,0.80,0,0
+34,Site,33,Hebdomadaire,32.10,10.10,0,0
+18,Site,38,Hebdomadaire,20.80,4.10,1,0
+33,Site,30,Mensuelle,6.80,1.20,0,0
+29,Salon,34,Hebdomadaire,39.50,8.20,1,0
+53,Site,37,Mensuelle,0.20,0.00,1,0
+31,Salon,39,Bimensuelle,13.30,1.30,1,0
+42,Jeu concours,39,Bimensuelle,13.20,3.00,1,0
+42,Réseaux sociaux,2,Bimensuelle,38.10,7.60,1,0
+44,Jeu concours,26,Hebdomadaire,26.50,5.70,2,1
+33,Salon,6,Hebdomadaire,49.20,8.10,0,0
+23,Jeu concours,2,Mensuelle,26.60,6.50,0,0
+19,Site,25,Hebdomadaire,42.30,10.40,1,0
+47,Partenaire,27,Hebdomadaire,34.60,6.90,0,0
+36,Site,18,Mensuelle,44.30,5.20,2,0
+31,Réseaux sociaux,33,Bimensuelle,36.80,2.90,1,0
+45,Jeu concours,4,Bimensuelle,54.00,10.50,1,0
+18,Site,5,Hebdomadaire,31.40,7.10,2,0
+18,Jeu concours,25,Hebdomadaire,5.80,0.90,0,1
+34,Site,32,Hebdomadaire,16.70,3.90,0,0
+46,Jeu concours,1,Hebdomadaire,40.50,8.00,0,0
+29,Site,28,Bimensuelle,31.30,4.60,0,0
+32,Site,46,Mensuelle,5.50,1.00,0,0
+44,Site,40,Hebdomadaire,15.70,2.20,0,0
+30,Site,37,Bimensuelle,20.20,5.10,0,1
+25,Site,38,Hebdomadaire,53.80,4.80,0,0
+42,Réseaux sociaux,42,Hebdomadaire,20.40,2.30,0,0
+43,Site,39,Hebdomadaire,21.40,5.40,0,0
+34,Réseaux sociaux,39,Hebdomadaire,24.30,3.20,2,0
+29,Site,32,Mensuelle,0.00,0.00,1,0
+27,Salon,12,Bimensuelle,51.40,5.90,1,0
+42,Réseaux sociaux,18,Hebdomadaire,29.10,5.70,0,0
+67,Site,14,Mensuelle,37.10,8.50,0,0
+41,Site,26,Hebdomadaire,27.70,4.30,0,0
+26,Jeu concours,5,Bimensuelle,14.70,3.60,1,0
+52,Site,41,Bimensuelle,27.80,7.20,3,0
+67,Site,15,Hebdomadaire,31.00,7.50,1,0
+25,Jeu concours,4,Hebdomadaire,52.10,8.20,2,0
+49,Partenaire,8,Hebdomadaire,35.30,8.90,0,0
+32,Site,39,Hebdomadaire,17.80,3.00,1,0
+18,Réseaux sociaux,8,Hebdomadaire,42.70,3.60,1,0
+37,Site,20,Bimensuelle,17.20,4.70,0,0
+20,Site,15,Mensuelle,39.40,2.20,0,0
+58,Jeu concours,17,Mensuelle,10.10,1.90,0,1
+66,Réseaux sociaux,10,Hebdomadaire,26.30,5.00,1,0
+44,Site,8,Hebdomadaire,24.30,6.30,1,0
+29,Jeu concours,33,Mensuelle,34.20,5.90,0,0
+42,Réseaux sociaux,2,Mensuelle,10.60,1.00,1,1
+31,Site,41,Mensuelle,38.10,8.90,1,0
+42,Jeu concours,41,Mensuelle,9.80,1.70,0,0
+35,Site,46,Mensuelle,30.60,1.70,0,0
+53,Partenaire,26,Hebdomadaire,20.20,1.80,0,0
+26,Partenaire,11,Hebdomadaire,34.50,7.20,2,0
+42,Site,25,Hebdomadaire,27.90,2.60,1,1
+26,Jeu concours,9,Hebdomadaire,10.00,1.50,0,1
+35,Site,33,Hebdomadaire,40.40,6.80,0,0
+29,Site,11,Hebdomadaire,41.10,10.10,0,0
+38,Site,45,Bimensuelle,24.80,4.60,2,0
+36,Réseaux sociaux,43,Hebdomadaire,0.00,0.00,1,0
+43,Site,12,Bimensuelle,37.50,11.00,1,0
+44,Salon,22,Bimensuelle,17.20,3.50,0,0
+58,Réseaux sociaux,29,Hebdomadaire,0.00,0.00,0,1
+33,Jeu concours,9,Hebdomadaire,27.90,6.50,0,0
+61,Jeu concours,40,Hebdomadaire,0.00,0.00,0,0
+46,Site,42,Bimensuelle,0.00,0.00,0,0
+27,Site,34,Bimensuelle,0.00,0.00,0,0
+44,Site,8,Hebdomadaire,48.40,11.50,3,0
+47,Jeu concours,20,Hebdomadaire,24.40,4.80,1,0
+31,Partenaire,20,Hebdomadaire,29.50,6.50,2,0
+18,Réseaux sociaux,10,Bimensuelle,46.50,5.40,0,0
+39,Site,36,Mensuelle,2.50,0.50,0,0
+30,Partenaire,20,Hebdomadaire,51.10,6.80,1,0
+19,Réseaux sociaux,36,Mensuelle,32.60,4.80,1,0
+36,Jeu concours,43,Hebdomadaire,7.00,1.50,0,1
+41,Site,1,Hebdomadaire,55.30,13.10,0,0
+18,Partenaire,2,Mensuelle,26.30,5.90,2,0
+18,Site,25,Bimensuelle,1.10,0.10,0,0
+29,Salon,33,Hebdomadaire,40.40,4.30,0,0
+56,Salon,24,Hebdomadaire,31.00,5.30,0,0
+53,Site,8,Mensuelle,38.30,8.60,3,0
+41,Site,16,Mensuelle,50.40,11.60,3,0
+35,Site,7,Bimensuelle,31.90,6.00,1,0
+37,Réseaux sociaux,45,Hebdomadaire,48.30,7.90,1,0
+52,Réseaux sociaux,4,Hebdomadaire,66.00,9.00,4,0
+29,Jeu concours,17,Mensuelle,11.00,2.60,1,1
+47,Partenaire,9,Bimensuelle,48.20,11.00,2,0
+29,Site,30,Mensuelle,28.40,6.00,1,0
+43,Salon,33,Bimensuelle,29.70,4.50,0,0
+50,Jeu concours,40,Mensuelle,23.70,3.40,0,0
+58,Site,31,Bimensuelle,36.00,10.50,0,0
+46,Site,18,Bimensuelle,13.10,2.80,1,0
+39,Site,34,Hebdomadaire,13.70,1.50,0,0
+44,Site,28,Hebdomadaire,25.10,5.40,2,0
+33,Réseaux sociaux,32,Mensuelle,18.30,1.90,1,0
+34,Jeu concours,38,Hebdomadaire,15.70,2.30,1,0
+31,Site,17,Hebdomadaire,32.50,6.80,1,0
+31,Site,21,Hebdomadaire,41.20,10.30,3,0
+31,Site,25,Bimensuelle,16.40,2.20,1,0
+44,Site,2,Mensuelle,35.10,8.10,0,0
+57,Salon,10,Hebdomadaire,68.60,8.10,2,0
+48,Site,30,Hebdomadaire,33.50,4.60,1,0
+37,Salon,4,Mensuelle,34.60,7.80,1,0
+50,Site,44,Bimensuelle,29.10,5.50,0,0
+52,Jeu concours,44,Bimensuelle,0.00,0.00,0,1
+37,Salon,28,Bimensuelle,29.20,3.70,1,0
+36,Jeu concours,47,Bimensuelle,2.90,0.50,0,0
+59,Salon,31,Hebdomadaire,29.70,5.10,0,0
+46,Jeu concours,2,Hebdomadaire,0.00,0.00,1,1
+24,Site,16,Hebdomadaire,14.80,1.80,0,0
+23,Jeu concours,8,Hebdomadaire,31.80,4.20,0,0
+18,Site,26,Hebdomadaire,50.50,7.80,1,0
+34,Jeu concours,27,Bimensuelle,4.90,1.40,0,0
+29,Site,9,Mensuelle,27.50,5.80,1,0
+33,Salon,29,Mensuelle,36.00,5.80,2,0
+34,Partenaire,15,Mensuelle,3.80,0.50,0,0
+41,Réseaux sociaux,15,Hebdomadaire,37.70,10.70,2,0
+36,Jeu concours,12,Bimensuelle,62.40,8.50,0,0
+48,Salon,25,Hebdomadaire,44.50,7.40,0,0
+38,Site,42,Hebdomadaire,18.60,6.20,1,0
+22,Partenaire,8,Bimensuelle,44.90,9.40,0,0
+18,Partenaire,44,Hebdomadaire,19.30,2.40,0,0
+24,Site,5,Mensuelle,64.30,15.10,2,0
+48,Salon,24,Bimensuelle,30.90,9.00,0,0
+54,Site,15,Hebdomadaire,37.30,5.80,0,0
+28,Salon,26,Hebdomadaire,45.70,7.50,1,0
+51,Jeu concours,41,Hebdomadaire,19.70,2.00,0,0
+50,Partenaire,4,Hebdomadaire,39.20,8.70,0,0
+18,Réseaux sociaux,36,Hebdomadaire,20.00,5.80,2,0
+37,Site,47,Hebdomadaire,0.00,0.00,0,0
+50,Site,1,Mensuelle,58.30,7.90,1,0
+30,Salon,36,Hebdomadaire,20.90,3.90,0,0
+29,Site,17,Bimensuelle,27.30,4.70,1,0
+51,Réseaux sociaux,29,Bimensuelle,41.20,8.50,0,0
+29,Partenaire,36,Bimensuelle,58.10,13.30,1,0
+37,Partenaire,7,Bimensuelle,47.10,7.90,0,0
+46,Site,27,Hebdomadaire,45.10,8.20,0,0
+57,Site,3,Hebdomadaire,28.30,4.10,0,0
+48,Jeu concours,5,Bimensuelle,15.80,2.10,0,0
+59,Réseaux sociaux,46,Hebdomadaire,18.90,4.50,1,0
+54,Jeu concours,7,Hebdomadaire,42.60,8.80,3,0
+18,Jeu concours,3,Bimensuelle,0.90,0.10,1,1
+49,Site,43,Bimensuelle,38.50,5.90,0,0
+24,Salon,38,Bimensuelle,16.70,4.10,2,0
+51,Réseaux sociaux,5,Bimensuelle,34.50,7.90,1,0
+54,Site,18,Bimensuelle,47.40,8.90,2,0
+37,Réseaux sociaux,26,Hebdomadaire,38.50,5.20,0,0
+39,Site,47,Bimensuelle,41.30,8.70,0,0
+66,Site,47,Hebdomadaire,23.30,3.90,1,0
+35,Jeu concours,28,Bimensuelle,27.10,4.60,0,0
+42,Site,6,Hebdomadaire,38.90,8.70,0,0
+39,Jeu concours,37,Hebdomadaire,7.90,0.50,0,1
+26,Partenaire,7,Bimensuelle,48.00,5.60,2,0
+36,Réseaux sociaux,8,Hebdomadaire,46.00,3.90,1,0
+19,Site,36,Hebdomadaire,15.40,2.40,0,1
+63,Site,12,Hebdomadaire,19.10,3.60,0,1
+20,Jeu concours,3,Hebdomadaire,18.60,4.70,2,1
+25,Réseaux sociaux,45,Hebdomadaire,7.70,1.70,0,1
+26,Partenaire,20,Hebdomadaire,32.70,9.80,3,0
+54,Site,24,Bimensuelle,40.30,3.70,0,0
+29,Partenaire,41,Mensuelle,0.00,0.00,1,0
+77,Site,34,Hebdomadaire,23.30,3.30,0,0
+31,Site,15,Bimensuelle,50.50,7.40,0,0
+44,Réseaux sociaux,3,Hebdomadaire,21.00,3.20,0,0
+39,Réseaux sociaux,29,Hebdomadaire,37.40,8.50,0,0
+24,Jeu concours,11,Bimensuelle,6.70,0.60,0,0
+65,Jeu concours,11,Hebdomadaire,8.00,1.70,1,1
+30,Partenaire,44,Mensuelle,15.80,4.00,1,0
+48,Site,4,Bimensuelle,56.80,9.50,2,0
+19,Site,45,Hebdomadaire,31.20,6.60,1,0
+36,Partenaire,31,Hebdomadaire,29.90,2.30,0,0
+30,Site,18,Hebdomadaire,26.70,5.90,1,0
+37,Site,6,Mensuelle,40.10,1.20,0,0
+77,Site,22,Hebdomadaire,35.30,6.50,0,0
+42,Réseaux sociaux,7,Hebdomadaire,29.10,2.50,2,0
+50,Site,4,Mensuelle,6.10,1.00,2,1
+29,Site,23,Mensuelle,22.50,3.30,1,1
+21,Réseaux sociaux,6,Hebdomadaire,46.70,8.80,1,0
+18,Jeu concours,34,Bimensuelle,25.90,5.70,1,1
+38,Site,8,Hebdomadaire,27.80,7.60,0,0
+34,Réseaux sociaux,22,Hebdomadaire,19.60,3.60,0,0
+55,Site,14,Bimensuelle,8.30,1.00,0,0
+32,Salon,42,Hebdomadaire,38.60,5.80,1,0
+21,Jeu concours,2,Hebdomadaire,25.10,7.20,0,1
+37,Site,14,Bimensuelle,34.00,9.00,0,0
+34,Site,2,Bimensuelle,43.00,10.40,2,0
+25,Site,6,Hebdomadaire,40.30,8.60,2,0
+45,Site,24,Hebdomadaire,21.30,4.60,2,0
+23,Salon,27,Bimensuelle,40.90,5.50,1,0
+47,Site,13,Bimensuelle,30.90,6.00,1,0
+49,Partenaire,8,Bimensuelle,42.50,8.50,0,0
+46,Jeu concours,9,Hebdomadaire,24.50,5.30,0,1
+22,Jeu concours,18,Hebdomadaire,6.60,1.50,1,0
+46,Jeu concours,2,Bimensuelle,26.00,3.70,1,0
+54,Site,3,Mensuelle,33.80,5.70,2,0
+29,Site,2,Mensuelle,40.90,5.20,0,0
+47,Jeu concours,47,Hebdomadaire,33.20,6.90,1,1
+50,Site,16,Bimensuelle,12.40,2.60,0,0
+34,Site,37,Hebdomadaire,36.60,9.10,2,0
+35,Partenaire,19,Hebdomadaire,22.70,5.20,0,1
+51,Salon,4,Hebdomadaire,39.30,8.20,3,0
+30,Site,12,Hebdomadaire,23.00,7.10,2,0
+54,Partenaire,17,Mensuelle,36.60,7.80,2,0
+41,Site,18,Hebdomadaire,17.70,4.50,0,0
+30,Site,39,Hebdomadaire,0.00,0.00,0,1
+21,Jeu concours,15,Hebdomadaire,25.30,5.90,0,1
+33,Jeu concours,21,Bimensuelle,11.80,2.10,0,0
+50,Site,30,Bimensuelle,25.60,4.50,1,1
+50,Site,5,Bimensuelle,35.00,3.20,0,0
+18,Site,41,Bimensuelle,3.50,0.70,1,0
+76,Site,12,Hebdomadaire,41.80,9.50,0,0
+37,Site,20,Bimensuelle,21.80,3.40,0,0
+32,Site,6,Bimensuelle,23.50,5.60,1,0
+52,Site,33,Hebdomadaire,0.00,0.00,0,0
+29,Partenaire,22,Hebdomadaire,50.70,5.30,0,0
+45,Réseaux sociaux,6,Hebdomadaire,28.30,3.40,1,1
+37,Site,21,Hebdomadaire,44.10,7.10,2,0
+26,Réseaux sociaux,31,Bimensuelle,60.10,12.40,1,0
+33,Jeu concours,26,Hebdomadaire,8.00,1.90,2,0
+45,Réseaux sociaux,11,Hebdomadaire,26.60,4.40,0,0
+36,Site,21,Bimensuelle,23.60,4.70,3,0
+35,Réseaux sociaux,33,Hebdomadaire,52.30,8.80,1,0
+26,Jeu concours,11,Hebdomadaire,41.70,10.10,1,0
+64,Site,3,Bimensuelle,43.10,7.00,1,0
+54,Réseaux sociaux,28,Mensuelle,23.10,3.90,1,0
+38,Jeu concours,10,Mensuelle,22.30,4.60,2,0
+39,Salon,14,Bimensuelle,27.40,3.40,1,0
+31,Site,43,Hebdomadaire,33.40,3.40,0,0
+31,Réseaux sociaux,6,Bimensuelle,40.00,4.90,0,0
+18,Réseaux sociaux,4,Bimensuelle,24.20,5.30,1,0
+33,Jeu concours,9,Mensuelle,13.80,2.10,0,0
+32,Site,28,Bimensuelle,20.20,2.70,0,0
+46,Partenaire,19,Bimensuelle,37.40,6.00,0,0
+45,Jeu concours,47,Bimensuelle,25.40,7.00,0,0
+48,Jeu concours,5,Bimensuelle,27.40,3.70,0,0
+39,Jeu concours,45,Bimensuelle,19.50,3.90,2,0
+18,Site,39,Bimensuelle,27.40,4.90,2,0
+18,Site,15,Hebdomadaire,63.50,3.50,1,0
+30,Réseaux sociaux,39,Hebdomadaire,5.90,0.80,2,1
+38,Réseaux sociaux,35,Hebdomadaire,7.50,1.60,1,0
+36,Site,7,Bimensuelle,41.30,1.90,0,0
+57,Site,22,Bimensuelle,26.80,5.50,0,0
+24,Site,37,Hebdomadaire,18.50,3.20,1,0
+54,Site,11,Bimensuelle,48.70,7.10,0,0
+56,Partenaire,2,Hebdomadaire,30.20,9.80,1,0
+37,Partenaire,19,Hebdomadaire,2.20,0.40,0,1
+36,Site,7,Bimensuelle,35.80,3.50,0,0
+64,Réseaux sociaux,33,Hebdomadaire,25.90,4.50,3,0
+20,Réseaux sociaux,23,Bimensuelle,41.10,12.10,1,0
+23,Site,17,Mensuelle,53.60,12.70,2,0
+47,Salon,17,Mensuelle,53.60,7.70,0,0
+38,Site,7,Bimensuelle,54.10,11.40,1,0
+40,Réseaux sociaux,32,Bimensuelle,37.00,2.90,0,0
+21,Site,38,Hebdomadaire,24.10,4.70,1,0
+19,Partenaire,34,Bimensuelle,28.40,4.10,0,0
+49,Site,44,Bimensuelle,0.00,0.00,0,1
+44,Réseaux sociaux,46,Hebdomadaire,15.60,1.80,1,0
+18,Jeu concours,30,Bimensuelle,27.10,3.10,1,0
+30,Jeu concours,11,Bimensuelle,35.80,8.00,1,0
+30,Salon,10,Hebdomadaire,2.70,0.40,0,0
+46,Partenaire,32,Hebdomadaire,23.80,6.10,0,0
+29,Partenaire,8,Hebdomadaire,38.70,8.00,0,0
+56,Site,28,Bimensuelle,20.30,5.30,0,0
+34,Site,24,Hebdomadaire,22.30,0.50,1,0
+36,Site,16,Hebdomadaire,18.50,4.90,2,0
+18,Site,41,Mensuelle,27.70,3.70,0,1
+36,Jeu concours,12,Hebdomadaire,40.50,9.20,1,0
+30,Site,46,Bimensuelle,8.90,1.50,1,0
+18,Salon,10,Hebdomadaire,8.40,1.40,2,0
+55,Jeu concours,11,Bimensuelle,24.40,3.00,1,0
+20,Site,34,Hebdomadaire,16.00,1.80,0,0
+52,Site,3,Bimensuelle,28.80,3.60,1,1
+35,Partenaire,10,Mensuelle,63.10,12.30,1,0
+18,Site,40,Bimensuelle,18.10,4.70,0,0
+44,Site,5,Mensuelle,19.40,3.10,1,0
+64,Site,28,Bimensuelle,18.50,4.40,1,0
+18,Jeu concours,46,Hebdomadaire,0.00,0.00,1,0
+62,Partenaire,11,Bimensuelle,19.20,4.30,0,0
+33,Réseaux sociaux,15,Bimensuelle,49.00,8.30,1,0
+44,Site,43,Mensuelle,23.10,2.40,1,0
+37,Site,25,Mensuelle,47.00,7.40,0,0
+26,Réseaux sociaux,29,Hebdomadaire,29.20,3.70,2,0
+48,Site,18,Hebdomadaire,0.00,0.00,1,0
+18,Jeu concours,47,Bimensuelle,0.00,0.00,2,0
+48,Site,33,Bimensuelle,21.00,3.10,0,0
+40,Jeu concours,43,Bimensuelle,11.00,2.00,0,0
+18,Jeu concours,47,Bimensuelle,9.40,1.80,1,0
+39,Site,32,Hebdomadaire,15.10,2.20,2,1
+21,Site,27,Bimensuelle,16.60,4.50,0,0
+59,Réseaux sociaux,37,Mensuelle,36.30,11.70,1,0
+38,Partenaire,2,Hebdomadaire,0.00,0.00,0,1
+54,Réseaux sociaux,16,Hebdomadaire,17.40,4.10,0,0
+32,Site,33,Mensuelle,26.00,5.30,1,0
+43,Réseaux sociaux,10,Bimensuelle,16.60,4.40,0,0
+26,Site,9,Mensuelle,8.70,0.70,0,1
+65,Jeu concours,14,Mensuelle,0.00,0.00,1,0
+35,Site,38,Hebdomadaire,15.40,1.60,1,0
+52,Site,40,Mensuelle,0.00,0.00,0,1
+65,Jeu concours,5,Bimensuelle,8.10,0.90,0,0
+55,Site,43,Hebdomadaire,26.80,5.30,1,0
+42,Site,5,Bimensuelle,42.20,6.80,0,0
+25,Partenaire,46,Hebdomadaire,38.10,4.70,1,0
+53,Site,10,Hebdomadaire,42.90,8.50,2,0
+31,Jeu concours,29,Bimensuelle,0.00,0.00,1,1
+32,Jeu concours,20,Hebdomadaire,3.10,0.40,1,1
+23,Partenaire,14,Bimensuelle,54.60,6.30,0,0
+43,Salon,34,Mensuelle,23.90,3.00,1,0
+25,Réseaux sociaux,31,Bimensuelle,50.20,12.90,0,0
+38,Réseaux sociaux,14,Mensuelle,1.10,0.20,0,1
+18,Jeu concours,43,Hebdomadaire,26.60,2.50,1,0
+18,Partenaire,16,Hebdomadaire,23.50,4.80,0,0
+30,Site,14,Hebdomadaire,6.80,0.80,0,0
+18,Jeu concours,4,Bimensuelle,41.60,9.50,1,0
+44,Réseaux sociaux,36,Hebdomadaire,6.90,1.70,1,1
+40,Jeu concours,1,Bimensuelle,42.70,9.70,1,0
+30,Site,38,Hebdomadaire,18.00,3.50,1,0
+36,Site,45,Hebdomadaire,23.30,3.70,1,0
+35,Partenaire,34,Bimensuelle,0.00,0.00,0,0
+30,Partenaire,42,Mensuelle,7.50,1.30,0,0
+24,Site,3,Hebdomadaire,40.30,10.80,0,0
+40,Site,42,Bimensuelle,2.80,0.30,3,0
+30,Réseaux sociaux,9,Bimensuelle,18.10,1.40,2,0
+40,Jeu concours,37,Bimensuelle,3.80,0.60,1,0
+31,Réseaux sociaux,20,Bimensuelle,21.00,2.50,0,0
+39,Salon,2,Hebdomadaire,41.60,4.20,0,0
+46,Réseaux sociaux,11,Bimensuelle,43.00,9.40,1,0
+21,Réseaux sociaux,9,Mensuelle,21.50,4.10,0,0
+22,Réseaux sociaux,19,Bimensuelle,44.00,5.50,1,0
+53,Site,12,Bimensuelle,36.10,9.60,0,0
+32,Réseaux sociaux,4,Mensuelle,37.00,3.10,0,0
+39,Site,43,Hebdomadaire,20.50,4.80,0,0
+51,Réseaux sociaux,13,Hebdomadaire,23.20,2.80,2,1
+57,Partenaire,3,Bimensuelle,44.60,7.60,2,0
+43,Site,21,Bimensuelle,12.10,2.10,1,0
+35,Site,27,Mensuelle,43.80,10.50,2,0
+24,Partenaire,23,Bimensuelle,15.30,2.30,0,1
+41,Site,46,Mensuelle,14.40,2.30,0,0
+29,Réseaux sociaux,10,Hebdomadaire,8.30,1.10,1,1
+66,Site,29,Hebdomadaire,28.80,6.50,1,0
+54,Réseaux sociaux,14,Bimensuelle,45.20,9.40,1,0
+30,Partenaire,25,Hebdomadaire,7.70,2.00,0,1
+39,Salon,23,Hebdomadaire,62.80,7.60,0,0
+28,Jeu concours,20,Hebdomadaire,25.20,4.50,0,0
+18,Site,18,Mensuelle,44.00,6.50,0,0
+33,Site,13,Hebdomadaire,24.60,3.80,0,1
+47,Réseaux sociaux,45,Hebdomadaire,32.60,9.60,0,0
+48,Site,15,Hebdomadaire,20.00,5.00,1,0
+40,Site,36,Hebdomadaire,48.50,6.80,1,0
+36,Réseaux sociaux,39,Hebdomadaire,11.00,2.10,1,0
+37,Jeu concours,31,Bimensuelle,8.00,1.80,1,0
+34,Partenaire,44,Hebdomadaire,25.50,5.00,2,0
+42,Réseaux sociaux,40,Bimensuelle,29.60,5.10,0,0
+38,Jeu concours,12,Mensuelle,34.00,10.10,1,0
+43,Jeu concours,46,Mensuelle,0.00,0.00,1,1
+35,Site,34,Mensuelle,25.10,4.50,2,0
+24,Jeu concours,16,Hebdomadaire,36.90,10.60,0,0
+29,Salon,18,Hebdomadaire,47.40,7.30,2,0
+24,Site,19,Bimensuelle,45.00,7.70,1,0
+20,Site,20,Mensuelle,27.90,5.00,1,0
+34,Site,3,Hebdomadaire,18.70,4.20,0,0
+25,Réseaux sociaux,6,Mensuelle,48.20,11.00,0,0
+29,Partenaire,42,Bimensuelle,17.90,4.30,0,0
+40,Réseaux sociaux,11,Hebdomadaire,41.40,9.20,0,1
+40,Réseaux sociaux,41,Hebdomadaire,33.00,6.80,2,0
+64,Partenaire,23,Mensuelle,22.50,4.80,0,0
+50,Site,3,Mensuelle,52.20,7.60,0,0
+26,Jeu concours,5,Hebdomadaire,40.80,5.30,1,1
+52,Site,11,Mensuelle,23.00,2.90,0,0
+32,Site,19,Bimensuelle,44.60,3.10,0,0
+39,Site,23,Bimensuelle,45.90,8.80,0,0
+37,Partenaire,8,Hebdomadaire,29.70,7.30,1,1
+32,Salon,26,Hebdomadaire,41.00,4.00,1,0
+61,Salon,9,Bimensuelle,26.10,5.80,2,0
+26,Réseaux sociaux,28,Mensuelle,44.70,7.10,2,0
+42,Site,24,Bimensuelle,21.40,5.00,0,0
+34,Jeu concours,23,Hebdomadaire,17.50,2.00,1,0
+33,Partenaire,2,Mensuelle,16.00,4.80,0,0
+36,Réseaux sociaux,24,Bimensuelle,27.40,4.30,0,0
+48,Site,35,Bimensuelle,4.00,0.60,1,0
+42,Site,22,Hebdomadaire,11.80,2.40,2,0
+19,Partenaire,29,Hebdomadaire,49.70,8.10,0,0
+48,Site,31,Bimensuelle,21.30,2.70,0,0
+37,Jeu concours,6,Bimensuelle,40.30,6.30,0,0
+49,Jeu concours,19,Mensuelle,0.00,0.00,1,1
+45,Site,36,Bimensuelle,31.40,5.80,1,0
+34,Réseaux sociaux,42,Hebdomadaire,0.00,0.00,0,1
+38,Jeu concours,22,Hebdomadaire,16.40,2.20,2,0
+40,Site,9,Mensuelle,68.10,14.20,0,0
+39,Site,15,Hebdomadaire,21.80,5.70,0,0
+36,Salon,41,Hebdomadaire,41.10,4.60,2,0
+50,Partenaire,4,Bimensuelle,55.20,5.20,1,0
+29,Jeu concours,18,Mensuelle,0.00,0.00,0,1
+26,Salon,19,Hebdomadaire,48.70,8.90,1,0
+62,Jeu concours,15,Hebdomadaire,29.30,4.00,1,0
+22,Site,7,Hebdomadaire,24.90,5.20,1,0
+42,Site,1,Mensuelle,50.30,10.50,0,0
+42,Site,17,Bimensuelle,27.60,5.30,1,0
+37,Jeu concours,8,Bimensuelle,24.60,4.50,0,0
+31,Site,14,Hebdomadaire,48.30,13.10,1,1
+32,Jeu concours,5,Hebdomadaire,12.90,2.00,0,0
+48,Site,2,Bimensuelle,33.30,6.40,0,0
+36,Salon,11,Hebdomadaire,17.10,2.40,0,0
+40,Site,15,Hebdomadaire,14.20,2.80,0,0
+48,Site,31,Mensuelle,19.30,5.40,0,0
+45,Jeu concours,36,Mensuelle,20.80,3.10,1,0
+46,Site,9,Hebdomadaire,41.20,11.60,0,0
+18,Réseaux sociaux,4,Hebdomadaire,36.60,10.20,0,0
+51,Site,31,Bimensuelle,18.40,1.60,0,1
+46,Réseaux sociaux,44,Bimensuelle,24.50,3.60,1,0
+18,Site,26,Mensuelle,8.00,0.50,0,0
+44,Site,3,Hebdomadaire,15.30,3.00,1,1
+44,Site,32,Mensuelle,1.60,0.20,1,0
+35,Réseaux sociaux,1,Hebdomadaire,29.40,7.70,2,0
+18,Réseaux sociaux,2,Mensuelle,25.90,5.30,3,0
+38,Site,19,Mensuelle,30.00,8.20,0,0
+43,Site,10,Hebdomadaire,40.90,6.10,4,0
+27,Jeu concours,15,Hebdomadaire,0.00,0.00,1,1
+46,Partenaire,26,Hebdomadaire,16.70,2.30,0,0
+32,Site,6,Bimensuelle,40.20,4.30,2,0
+45,Jeu concours,22,Mensuelle,25.70,2.30,1,0
+39,Site,27,Hebdomadaire,35.30,10.70,0,0
+36,Réseaux sociaux,33,Hebdomadaire,0.00,0.00,0,0
+47,Site,25,Bimensuelle,35.20,11.00,1,0
+39,Réseaux sociaux,19,Hebdomadaire,31.10,3.50,2,0
+27,Site,41,Bimensuelle,0.00,0.00,0,0
+33,Site,10,Hebdomadaire,34.60,5.10,1,0
+33,Partenaire,30,Bimensuelle,17.90,2.40,0,0
+61,Salon,40,Mensuelle,27.50,6.70,0,0
+25,Site,18,Hebdomadaire,34.00,3.50,0,0
+33,Site,25,Mensuelle,44.90,9.40,1,0
+45,Site,28,Bimensuelle,8.70,1.60,0,0
+35,Site,37,Bimensuelle,14.40,3.50,1,0
+41,Jeu concours,20,Bimensuelle,0.00,0.00,0,1
+46,Réseaux sociaux,26,Mensuelle,32.50,4.70,1,0
+55,Site,45,Hebdomadaire,22.30,5.60,0,0
+38,Salon,30,Hebdomadaire,14.20,0.70,0,0
+34,Réseaux sociaux,14,Hebdomadaire,27.80,3.30,0,0
+53,Salon,2,Bimensuelle,26.90,3.70,3,0
+18,Site,21,Hebdomadaire,36.30,8.60,0,0
+43,Site,3,Hebdomadaire,33.10,5.20,1,1
+37,Site,11,Hebdomadaire,31.60,7.70,1,0
+31,Réseaux sociaux,12,Hebdomadaire,27.50,4.80,0,0
+37,Partenaire,43,Hebdomadaire,11.80,1.40,0,0
+34,Réseaux sociaux,22,Hebdomadaire,12.70,2.20,1,1
+34,Site,14,Bimensuelle,28.60,7.80,0,0
+37,Salon,31,Hebdomadaire,34.60,8.60,0,0
+55,Site,35,Hebdomadaire,17.90,4.00,1,0
+23,Site,3,Hebdomadaire,42.40,3.20,0,0
+47,Jeu concours,1,Bimensuelle,13.70,2.20,0,1
+42,Réseaux sociaux,33,Mensuelle,31.50,6.30,0,0
+68,Partenaire,7,Bimensuelle,17.70,3.20,0,0
+46,Site,8,Hebdomadaire,29.10,5.50,0,0
+20,Site,30,Bimensuelle,23.20,4.80,1,0
+18,Salon,27,Hebdomadaire,27.80,6.30,0,1
+33,Salon,14,Bimensuelle,32.10,7.20,0,0
+27,Site,42,Mensuelle,5.80,1.40,1,0
+40,Partenaire,27,Hebdomadaire,41.30,9.20,0,0
+40,Réseaux sociaux,4,Hebdomadaire,38.30,9.20,0,0
+26,Site,7,Bimensuelle,70.00,14.70,0,0
+41,Site,14,Bimensuelle,32.30,5.60,0,0
+53,Site,6,Bimensuelle,35.70,7.10,2,0
+48,Jeu concours,35,Hebdomadaire,11.70,2.50,3,0
+57,Réseaux sociaux,23,Hebdomadaire,52.90,8.10,1,0
+38,Salon,43,Hebdomadaire,32.90,4.80,0,0
+18,Site,41,Bimensuelle,5.20,0.40,1,0
+43,Site,27,Hebdomadaire,7.30,0.80,2,0
+48,Jeu concours,8,Hebdomadaire,0.00,0.00,1,1
+35,Site,14,Hebdomadaire,7.30,2.10,1,0
+28,Site,24,Hebdomadaire,0.00,0.00,1,0
+18,Partenaire,20,Bimensuelle,14.50,3.50,1,0
+28,Partenaire,23,Hebdomadaire,56.30,9.20,1,0
+39,Jeu concours,46,Bimensuelle,0.10,0.00,1,0
+31,Jeu concours,37,Hebdomadaire,0.00,0.00,0,1
+41,Jeu concours,17,Hebdomadaire,29.40,4.60,2,1
+37,Site,36,Bimensuelle,18.20,3.90,1,1
+20,Réseaux sociaux,29,Bimensuelle,12.70,3.20,0,0
+50,Site,15,Mensuelle,29.00,7.80,0,0
+37,Site,15,Hebdomadaire,31.70,5.60,1,0
+41,Réseaux sociaux,33,Bimensuelle,49.90,7.00,1,0
+49,Site,28,Hebdomadaire,27.50,5.40,0,0
+28,Site,24,Hebdomadaire,38.80,8.70,1,0
+42,Partenaire,37,Hebdomadaire,31.20,5.50,0,0
+24,Site,45,Hebdomadaire,31.50,5.90,0,0
+29,Salon,16,Hebdomadaire,52.20,14.50,1,0
+37,Réseaux sociaux,30,Bimensuelle,24.60,5.70,1,0
+51,Réseaux sociaux,7,Bimensuelle,39.70,5.90,0,0
+44,Partenaire,46,Hebdomadaire,42.20,6.10,0,0
+27,Réseaux sociaux,7,Bimensuelle,31.50,6.30,1,0
+60,Réseaux sociaux,44,Hebdomadaire,29.80,3.60,1,0
+29,Jeu concours,29,Mensuelle,16.60,3.50,0,0
+34,Partenaire,29,Hebdomadaire,39.50,6.90,0,0
+49,Réseaux sociaux,34,Bimensuelle,25.60,2.50,1,0
+50,Site,28,Mensuelle,30.30,4.50,0,0
+49,Réseaux sociaux,26,Bimensuelle,31.40,5.20,1,0
+32,Site,17,Hebdomadaire,34.20,6.00,0,0
+58,Site,29,Hebdomadaire,22.50,5.40,2,0
+54,Jeu concours,22,Bimensuelle,0.00,0.00,1,1
+36,Site,25,Bimensuelle,25.60,3.00,1,0
+34,Partenaire,3,Hebdomadaire,3.40,0.60,2,1
+40,Site,8,Hebdomadaire,9.00,1.70,0,1
+53,Site,19,Hebdomadaire,11.70,1.30,0,0
+38,Site,47,Hebdomadaire,32.30,6.40,0,0
+24,Site,26,Hebdomadaire,0.00,0.00,0,1
+34,Jeu concours,22,Bimensuelle,42.60,3.80,0,0
+41,Site,36,Hebdomadaire,12.40,2.40,2,0
+50,Site,7,Hebdomadaire,50.40,9.70,0,0
+27,Site,34,Hebdomadaire,21.50,4.60,0,0
+25,Site,31,Hebdomadaire,1.60,0.30,0,1
+28,Réseaux sociaux,1,Hebdomadaire,52.80,9.40,0,0
+36,Site,29,Hebdomadaire,33.20,3.60,1,0
+31,Salon,17,Bimensuelle,46.90,4.80,0,0
+31,Jeu concours,19,Hebdomadaire,16.30,4.10,0,0
+26,Réseaux sociaux,8,Hebdomadaire,50.30,7.70,0,0
+51,Réseaux sociaux,41,Bimensuelle,26.20,4.60,3,0
+51,Site,23,Mensuelle,38.60,8.00,0,0
+51,Réseaux sociaux,47,Bimensuelle,21.00,3.20,1,0
+38,Jeu concours,13,Bimensuelle,3.80,0.80,0,1
+47,Site,13,Hebdomadaire,33.40,7.10,1,0
+65,Salon,12,Hebdomadaire,49.20,7.30,0,0
+26,Réseaux sociaux,36,Hebdomadaire,28.40,5.00,2,0
+18,Site,26,Hebdomadaire,42.70,4.50,0,0
+32,Jeu concours,28,Mensuelle,18.50,2.30,1,1
+48,Site,28,Hebdomadaire,28.70,7.00,1,0
+58,Site,5,Bimensuelle,58.10,10.60,1,0
+35,Site,18,Mensuelle,35.50,7.80,1,0
+39,Site,26,Bimensuelle,36.70,5.20,2,0
+49,Partenaire,9,Mensuelle,46.60,12.80,1,0
+24,Salon,17,Bimensuelle,16.50,2.10,3,0
+47,Site,32,Hebdomadaire,20.20,5.90,1,0
+32,Jeu concours,46,Hebdomadaire,0.00,0.00,1,1
+43,Réseaux sociaux,28,Hebdomadaire,26.10,4.90,0,0
+41,Site,42,Hebdomadaire,27.70,7.30,0,0
+18,Site,4,Mensuelle,4.00,0.70,2,1
+20,Jeu concours,12,Hebdomadaire,14.70,3.30,0,1
+33,Salon,2,Bimensuelle,56.40,12.00,0,0
+19,Site,42,Hebdomadaire,32.90,2.40,0,0
+24,Site,42,Bimensuelle,19.30,3.60,0,0
+51,Jeu concours,47,Hebdomadaire,0.00,0.00,0,1
+38,Site,24,Hebdomadaire,47.80,5.70,0,0
+46,Site,40,Mensuelle,19.90,2.60,1,0
+44,Site,27,Hebdomadaire,17.30,3.60,0,0
+29,Réseaux sociaux,11,Hebdomadaire,35.20,2.20,0,0
+33,Jeu concours,27,Hebdomadaire,34.90,6.60,3,0
+44,Site,24,Bimensuelle,32.70,5.10,1,0
+43,Salon,29,Hebdomadaire,33.70,6.90,0,0
+39,Site,44,Hebdomadaire,29.70,6.90,1,0
+33,Jeu concours,31,Hebdomadaire,36.20,3.40,1,0
+46,Site,1,Hebdomadaire,43.30,11.20,0,0
+39,Jeu concours,7,Bimensuelle,23.20,2.20,0,0
+18,Jeu concours,40,Hebdomadaire,0.00,0.00,0,1
+18,Réseaux sociaux,11,Bimensuelle,57.10,5.40,2,0
+32,Jeu concours,43,Hebdomadaire,25.20,5.40,0,0
+37,Réseaux sociaux,2,Hebdomadaire,42.10,10.60,0,0
+35,Réseaux sociaux,43,Mensuelle,0.00,0.00,0,0
+31,Site,5,Hebdomadaire,41.10,12.00,2,0
+32,Salon,11,Bimensuelle,67.90,10.70,1,0
+33,Site,16,Hebdomadaire,30.40,4.90,0,0
+39,Site,39,Bimensuelle,3.60,0.60,0,0
+27,Site,16,Hebdomadaire,2.90,0.50,0,1
+20,Jeu concours,18,Bimensuelle,32.90,7.80,1,1
+47,Réseaux sociaux,28,Hebdomadaire,21.10,2.40,0,0
+33,Partenaire,9,Hebdomadaire,36.80,7.50,1,0
+48,Partenaire,1,Bimensuelle,75.70,10.50,3,0
+51,Jeu concours,22,Mensuelle,0.00,0.00,0,1
+28,Partenaire,25,Hebdomadaire,43.80,5.60,2,0
+24,Site,1,Bimensuelle,40.60,8.70,2,0
+29,Site,17,Hebdomadaire,34.70,6.10,3,0
+36,Site,12,Mensuelle,38.90,4.00,0,0
+59,Site,8,Hebdomadaire,45.90,10.80,1,0
+42,Réseaux sociaux,33,Hebdomadaire,18.90,1.20,0,0
+52,Réseaux sociaux,2,Mensuelle,18.50,2.40,0,0
+44,Site,36,Hebdomadaire,19.10,1.60,0,0
+44,Site,24,Hebdomadaire,36.10,8.00,0,0
+35,Jeu concours,31,Hebdomadaire,0.00,0.00,0,1
+38,Site,4,Hebdomadaire,50.90,13.50,1,1
+40,Salon,23,Bimensuelle,28.20,2.60,0,0
+37,Site,21,Mensuelle,26.30,2.20,0,0
+29,Réseaux sociaux,30,Bimensuelle,55.10,15.00,0,0
+18,Réseaux sociaux,47,Hebdomadaire,2.50,0.30,0,0
+26,Jeu concours,6,Mensuelle,11.80,2.00,1,0
+28,Site,6,Bimensuelle,61.90,9.50,0,0
+52,Jeu concours,28,Hebdomadaire,24.30,3.90,3,0
+36,Jeu concours,31,Bimensuelle,17.40,4.20,1,0
+45,Site,37,Hebdomadaire,18.60,4.90,0,0
+54,Salon,46,Hebdomadaire,11.50,2.60,0,0
+25,Réseaux sociaux,17,Hebdomadaire,30.30,6.00,2,0
+18,Site,13,Hebdomadaire,24.40,7.90,0,0
+39,Site,40,Bimensuelle,36.90,4.20,1,0
+40,Réseaux sociaux,42,Hebdomadaire,41.90,7.10,0,0
+29,Site,10,Hebdomadaire,46.30,8.20,0,0
+49,Réseaux sociaux,11,Bimensuelle,23.30,6.10,0,0
+66,Jeu concours,25,Bimensuelle,15.90,3.00,1,0
+40,Réseaux sociaux,28,Hebdomadaire,23.10,4.00,0,0
+40,Réseaux sociaux,11,Bimensuelle,32.50,6.60,0,0
+35,Site,30,Mensuelle,0.00,0.00,1,0
+40,Réseaux sociaux,35,Mensuelle,17.10,2.10,0,0
+47,Site,44,Mensuelle,17.00,3.20,0,0
+18,Jeu concours,36,Mensuelle,13.90,1.60,0,1
+18,Jeu concours,46,Bimensuelle,21.30,3.40,0,0
+39,Réseaux sociaux,6,Bimensuelle,15.60,1.80,0,0
+44,Site,16,Hebdomadaire,9.70,2.10,0,0
+31,Site,32,Bimensuelle,16.50,2.00,0,1
+54,Jeu concours,40,Hebdomadaire,14.80,4.00,0,0
+28,Site,29,Hebdomadaire,37.70,4.70,0,0
+44,Réseaux sociaux,12,Hebdomadaire,18.60,2.60,2,0
+43,Site,24,Mensuelle,9.60,1.60,0,0
+24,Site,24,Mensuelle,35.60,5.60,0,0
+30,Site,15,Hebdomadaire,44.50,10.30,1,0
+80,Site,1,Hebdomadaire,28.30,3.90,0,0
+47,Salon,41,Hebdomadaire,28.50,2.30,0,0
+30,Jeu concours,36,Hebdomadaire,8.70,1.40,1,0
+53,Partenaire,12,Mensuelle,41.20,6.50,1,0
+33,Site,8,Bimensuelle,41.10,7.50,1,0
+22,Site,7,Bimensuelle,46.40,9.70,1,0
+31,Site,30,Hebdomadaire,0.00,0.00,1,0
+56,Site,7,Bimensuelle,8.60,1.80,2,0
+21,Site,33,Hebdomadaire,35.50,4.00,1,0
+52,Site,24,Hebdomadaire,30.60,3.70,1,0
+40,Jeu concours,28,Bimensuelle,0.00,0.00,0,1
+46,Site,27,Hebdomadaire,23.70,2.80,1,0
+29,Jeu concours,44,Hebdomadaire,33.80,6.50,2,1
+41,Jeu concours,24,Hebdomadaire,6.90,1.50,0,1
+36,Site,13,Hebdomadaire,37.40,8.50,1,0
+31,Site,30,Hebdomadaire,22.20,5.00,0,0
+24,Réseaux sociaux,43,Mensuelle,33.50,5.40,0,0
+47,Site,37,Hebdomadaire,48.30,6.60,0,0
+43,Jeu concours,6,Bimensuelle,21.80,3.90,2,0
+38,Réseaux sociaux,41,Bimensuelle,18.80,0.80,2,0
+25,Jeu concours,30,Bimensuelle,22.60,2.00,0,0
+44,Site,44,Hebdomadaire,37.10,2.10,2,0
+32,Site,3,Hebdomadaire,40.90,7.30,1,0
+30,Salon,36,Bimensuelle,31.10,5.30,1,0
+44,Site,11,Bimensuelle,15.80,4.10,0,0
+54,Site,24,Hebdomadaire,20.60,3.50,0,0
+46,Site,32,Bimensuelle,13.90,2.30,0,0
+35,Réseaux sociaux,24,Mensuelle,40.30,11.10,1,0
+27,Réseaux sociaux,1,Bimensuelle,36.20,8.60,1,0
+60,Site,36,Hebdomadaire,23.30,3.90,0,0
+26,Réseaux sociaux,33,Hebdomadaire,31.30,3.10,0,0
+32,Réseaux sociaux,47,Bimensuelle,20.00,4.00,0,0
+23,Site,31,Hebdomadaire,54.80,9.00,1,0
+24,Site,17,Hebdomadaire,28.90,6.70,1,0
+22,Réseaux sociaux,5,Mensuelle,26.70,5.50,0,0
+46,Jeu concours,9,Hebdomadaire,15.10,4.20,0,1
+34,Salon,41,Hebdomadaire,15.00,2.10,1,0
+42,Site,45,Bimensuelle,41.00,13.20,0,0
+59,Site,18,Mensuelle,30.10,9.40,0,0
+64,Site,19,Hebdomadaire,16.60,3.00,0,0
+51,Jeu concours,44,Mensuelle,10.80,1.80,0,0
+23,Salon,26,Bimensuelle,49.30,7.80,0,0
+38,Site,15,Hebdomadaire,22.60,5.90,0,0
+27,Partenaire,33,Hebdomadaire,20.20,4.50,3,0
+18,Site,31,Bimensuelle,44.00,2.30,0,0
+45,Site,4,Hebdomadaire,47.30,8.00,3,0
+43,Partenaire,3,Bimensuelle,61.30,11.70,0,0
+34,Site,43,Hebdomadaire,19.00,2.40,1,0
+40,Salon,20,Hebdomadaire,18.80,3.50,1,0
+54,Partenaire,13,Bimensuelle,10.40,1.90,1,0
+49,Site,27,Mensuelle,47.00,6.10,2,0
+47,Réseaux sociaux,7,Bimensuelle,48.60,7.70,2,0
+21,Partenaire,20,Hebdomadaire,10.00,1.90,0,0
+60,Site,45,Bimensuelle,7.00,2.30,1,0
+19,Site,30,Bimensuelle,70.00,12.30,2,0
+29,Jeu concours,40,Bimensuelle,5.10,0.40,0,1
+31,Partenaire,43,Hebdomadaire,49.90,12.80,0,0
+45,Site,42,Hebdomadaire,8.40,1.70,0,0
+28,Réseaux sociaux,6,Hebdomadaire,29.10,2.80,3,1
+18,Site,42,Mensuelle,0.00,0.00,0,0
+36,Site,2,Mensuelle,56.70,10.00,1,0
+19,Site,28,Hebdomadaire,31.70,5.30,1,0
+36,Partenaire,38,Mensuelle,4.50,0.60,0,0
+63,Site,45,Bimensuelle,57.20,9.80,0,0
+39,Réseaux sociaux,4,Hebdomadaire,44.70,13.00,1,0
+18,Réseaux sociaux,18,Hebdomadaire,37.50,5.00,1,0
+50,Site,31,Hebdomadaire,2.60,0.10,0,0
+24,Jeu concours,44,Bimensuelle,9.70,2.20,1,0
+42,Site,11,Hebdomadaire,36.00,5.10,0,0
+55,Site,45,Hebdomadaire,22.10,3.20,0,0
+36,Site,31,Hebdomadaire,23.90,4.80,1,1
+46,Site,28,Mensuelle,31.00,4.80,0,0
+35,Site,28,Mensuelle,18.40,2.90,1,0
+75,Site,4,Hebdomadaire,65.50,20.90,3,0
+18,Jeu concours,28,Hebdomadaire,27.00,6.80,3,0
+54,Site,42,Hebdomadaire,28.60,1.80,0,0
+28,Salon,11,Bimensuelle,61.60,10.80,0,0
+41,Jeu concours,36,Bimensuelle,34.50,7.60,1,1
+36,Réseaux sociaux,14,Hebdomadaire,23.30,4.80,0,1
+18,Jeu concours,42,Bimensuelle,1.00,0.20,0,0
+42,Jeu concours,21,Hebdomadaire,0.00,0.00,0,0
+34,Partenaire,42,Bimensuelle,0.00,0.00,0,0
+48,Partenaire,22,Mensuelle,0.00,0.00,1,0
+45,Partenaire,4,Mensuelle,39.80,8.20,1,0
+31,Site,6,Mensuelle,11.00,1.00,1,0
+46,Réseaux sociaux,4,Bimensuelle,52.20,12.90,1,0
+42,Site,12,Bimensuelle,23.30,3.90,0,0
+43,Salon,14,Mensuelle,47.60,7.10,0,0
+37,Jeu concours,2,Bimensuelle,33.20,7.50,0,0
+36,Salon,39,Hebdomadaire,11.10,2.40,0,0
+48,Site,8,Bimensuelle,52.60,9.20,1,0
+57,Jeu concours,3,Hebdomadaire,19.20,1.70,0,1
+18,Site,8,Mensuelle,26.90,5.80,0,0
+59,Réseaux sociaux,28,Hebdomadaire,14.40,1.60,0,0
+30,Réseaux sociaux,16,Bimensuelle,12.50,1.10,0,1
+56,Réseaux sociaux,15,Bimensuelle,21.50,1.90,0,0
+25,Site,1,Mensuelle,23.80,4.90,0,0
+52,Jeu concours,35,Hebdomadaire,10.80,1.90,0,0
+51,Site,35,Bimensuelle,16.80,3.20,2,0
+49,Site,16,Hebdomadaire,41.70,6.40,1,0
+27,Site,10,Mensuelle,36.10,5.60,0,0
+39,Site,23,Mensuelle,36.50,10.40,2,0
+31,Site,33,Mensuelle,19.20,2.30,0,0
+36,Réseaux sociaux,11,Bimensuelle,11.90,3.30,1,0
+61,Site,14,Bimensuelle,39.60,10.30,1,0
+49,Site,37,Bimensuelle,0.70,0.10,0,0
+59,Site,35,Hebdomadaire,28.10,5.20,0,0
+32,Site,29,Bimensuelle,10.80,2.50,0,0
+44,Partenaire,41,Hebdomadaire,3.60,0.30,0,1
+35,Jeu concours,22,Bimensuelle,33.80,4.70,2,0
+50,Réseaux sociaux,13,Hebdomadaire,18.60,4.20,2,0
+29,Site,29,Hebdomadaire,0.00,0.00,1,0
+21,Partenaire,19,Bimensuelle,20.20,4.10,0,0
+55,Site,1,Bimensuelle,38.50,6.40,2,0
+48,Salon,34,Bimensuelle,27.10,6.90,1,0
+53,Réseaux sociaux,40,Bimensuelle,17.50,3.40,0,0
+25,Site,36,Mensuelle,29.20,7.60,1,0
+26,Site,31,Bimensuelle,32.70,6.50,3,0
+37,Jeu concours,15,Bimensuelle,0.00,0.00,0,0
+45,Jeu concours,32,Hebdomadaire,1.30,0.30,0,1
+38,Site,2,Hebdomadaire,48.10,13.40,4,0
+40,Jeu concours,25,Bimensuelle,0.00,0.00,1,0
+18,Réseaux sociaux,13,Bimensuelle,13.30,1.50,0,1
+51,Site,18,Hebdomadaire,55.60,15.90,1,0
+52,Salon,4,Bimensuelle,19.40,2.70,0,0
+41,Jeu concours,38,Hebdomadaire,0.00,0.00,0,1
+33,Site,44,Mensuelle,15.20,4.60,0,0
+45,Jeu concours,28,Hebdomadaire,12.10,2.60,0,0
+32,Partenaire,6,Hebdomadaire,42.20,7.70,0,0
+59,Site,29,Hebdomadaire,36.80,7.70,3,0
+36,Jeu concours,15,Hebdomadaire,36.50,6.00,0,1
+37,Site,29,Bimensuelle,22.40,2.90,0,0
+42,Jeu concours,36,Hebdomadaire,17.60,5.00,1,0
+63,Partenaire,33,Bimensuelle,8.70,1.70,0,0
+50,Partenaire,29,Hebdomadaire,21.40,4.20,2,0
+31,Site,9,Hebdomadaire,5.10,0.90,0,1
+49,Site,44,Mensuelle,8.40,2.10,1,1
+53,Jeu concours,2,Hebdomadaire,6.90,1.20,1,1
+41,Site,33,Hebdomadaire,23.80,5.00,1,0
+54,Partenaire,45,Hebdomadaire,11.00,2.10,0,0
+56,Réseaux sociaux,43,Hebdomadaire,29.60,1.10,0,0
+28,Site,22,Bimensuelle,40.40,5.80,0,0
+61,Site,4,Mensuelle,42.70,8.60,1,0
+50,Site,47,Hebdomadaire,3.80,0.60,0,1
+39,Partenaire,7,Bimensuelle,39.10,6.80,0,0
+24,Salon,25,Mensuelle,37.70,8.30,0,0
+32,Réseaux sociaux,45,Hebdomadaire,9.50,2.70,0,1
+19,Site,12,Bimensuelle,0.00,0.00,0,0
+51,Salon,32,Mensuelle,20.20,3.90,1,0
+54,Réseaux sociaux,42,Hebdomadaire,11.90,2.80,1,0
+40,Jeu concours,27,Bimensuelle,43.80,8.30,0,0
+28,Salon,33,Hebdomadaire,30.20,5.80,3,0
+47,Site,9,Bimensuelle,28.00,5.40,0,0
+74,Site,47,Hebdomadaire,11.00,1.90,1,0
+43,Jeu concours,39,Mensuelle,2.80,0.50,0,0
+18,Salon,9,Hebdomadaire,41.30,3.30,0,0
+55,Site,1,Bimensuelle,43.90,6.80,0,0
+59,Jeu concours,46,Mensuelle,14.80,3.90,1,0
+38,Site,6,Bimensuelle,16.60,3.30,0,0
+45,Jeu concours,26,Hebdomadaire,48.10,8.80,1,0
+54,Salon,18,Hebdomadaire,33.90,7.00,0,0
+29,Partenaire,40,Bimensuelle,34.40,0.70,0,0
+18,Jeu concours,37,Hebdomadaire,17.00,3.10,0,0
+36,Salon,13,Hebdomadaire,35.90,5.90,0,0
+27,Salon,24,Hebdomadaire,38.40,3.80,0,0
+52,Réseaux sociaux,25,Bimensuelle,42.80,14.20,1,0
+67,Site,3,Hebdomadaire,30.90,6.70,2,0
+37,Site,25,Hebdomadaire,29.60,7.60,0,0
+38,Salon,33,Hebdomadaire,31.00,6.00,1,0
+37,Site,8,Hebdomadaire,27.30,3.30,0,0
+52,Réseaux sociaux,26,Hebdomadaire,19.70,2.10,0,0
+26,Jeu concours,4,Hebdomadaire,42.00,8.80,0,0
+31,Jeu concours,34,Hebdomadaire,0.50,0.10,0,1
+54,Réseaux sociaux,41,Hebdomadaire,13.90,2.90,1,0
+42,Jeu concours,39,Mensuelle,0.00,0.00,0,1
+59,Site,39,Bimensuelle,10.00,1.40,1,0
+32,Réseaux sociaux,37,Hebdomadaire,22.10,5.00,1,0
+18,Réseaux sociaux,13,Hebdomadaire,42.40,6.70,1,0
+51,Site,9,Hebdomadaire,25.60,1.00,1,0
+43,Site,24,Bimensuelle,25.90,4.90,1,0
+27,Site,1,Mensuelle,45.80,8.10,2,0
+32,Réseaux sociaux,13,Mensuelle,45.90,12.20,2,0
+56,Réseaux sociaux,43,Mensuelle,31.80,2.10,0,0
+55,Site,4,Hebdomadaire,16.80,1.60,0,0
+55,Réseaux sociaux,10,Hebdomadaire,36.90,9.70,2,0
+40,Réseaux sociaux,24,Bimensuelle,24.60,3.30,0,0
+22,Salon,24,Hebdomadaire,22.00,5.30,0,0
+59,Site,28,Hebdomadaire,13.10,3.00,0,1
+56,Salon,38,Mensuelle,8.70,1.00,1,0
+18,Partenaire,33,Hebdomadaire,22.90,5.70,0,1
+43,Partenaire,33,Mensuelle,32.60,8.30,0,0
+69,Réseaux sociaux,41,Mensuelle,21.60,4.60,1,0
+25,Réseaux sociaux,13,Mensuelle,29.40,6.40,2,0
+23,Site,46,Bimensuelle,33.70,8.70,1,0
+42,Réseaux sociaux,22,Bimensuelle,23.90,4.90,0,0
+40,Site,35,Hebdomadaire,6.50,0.20,0,1
+37,Site,5,Bimensuelle,17.80,3.90,0,0
+55,Site,9,Hebdomadaire,32.80,4.50,0,0
+31,Site,41,Hebdomadaire,30.50,7.20,0,0
+46,Partenaire,26,Bimensuelle,16.90,3.70,2,0
+65,Réseaux sociaux,25,Hebdomadaire,17.80,4.40,2,0
+21,Site,41,Hebdomadaire,32.40,9.30,1,0
+21,Jeu concours,43,Hebdomadaire,11.50,1.50,0,1
+39,Site,6,Bimensuelle,34.80,8.70,1,0
+36,Site,17,Bimensuelle,49.60,13.60,3,0
+29,Réseaux sociaux,28,Hebdomadaire,19.30,2.00,0,0
+27,Réseaux sociaux,27,Hebdomadaire,20.20,2.30,0,0
+39,Jeu concours,30,Hebdomadaire,22.70,6.20,1,0
+40,Site,30,Hebdomadaire,5.00,1.40,1,1
+64,Jeu concours,21,Bimensuelle,12.50,1.70,2,0
+47,Site,18,Bimensuelle,20.10,4.20,0,0
+28,Salon,16,Hebdomadaire,35.30,6.90,1,0
+41,Partenaire,11,Hebdomadaire,15.30,3.80,0,0
+28,Jeu concours,24,Hebdomadaire,0.00,0.00,0,0
+53,Réseaux sociaux,41,Mensuelle,22.50,3.50,2,0
+32,Salon,26,Bimensuelle,49.70,7.80,0,0
+40,Salon,3,Hebdomadaire,56.50,9.80,1,0
+27,Partenaire,47,Bimensuelle,10.70,1.30,0,0
+35,Site,27,Hebdomadaire,20.10,3.00,0,0
+19,Site,29,Hebdomadaire,38.00,7.00,0,0
+46,Jeu concours,39,Hebdomadaire,3.80,0.40,0,0
+45,Site,16,Mensuelle,0.00,0.00,0,0
+41,Site,17,Bimensuelle,30.70,5.80,0,0
+44,Site,4,Mensuelle,20.80,3.10,2,0
+18,Partenaire,38,Hebdomadaire,9.90,2.40,1,0
+57,Réseaux sociaux,3,Hebdomadaire,47.50,6.90,0,0
+22,Réseaux sociaux,32,Bimensuelle,29.20,7.90,0,0
+18,Jeu concours,5,Hebdomadaire,33.40,5.30,0,0
+44,Salon,18,Bimensuelle,46.00,3.30,0,0
+54,Site,3,Mensuelle,34.70,6.50,2,0
+63,Partenaire,8,Hebdomadaire,55.30,1.30,0,0
+20,Réseaux sociaux,14,Bimensuelle,46.60,8.70,1,0
+18,Jeu concours,25,Bimensuelle,18.30,3.60,1,0
+45,Jeu concours,27,Mensuelle,30.50,6.90,1,1
+57,Réseaux sociaux,13,Hebdomadaire,41.20,4.50,0,0
+56,Réseaux sociaux,29,Hebdomadaire,20.50,5.50,0,0
+39,Réseaux sociaux,45,Hebdomadaire,20.50,3.20,1,0
+18,Réseaux sociaux,9,Mensuelle,35.40,7.30,1,0
+32,Site,34,Hebdomadaire,20.60,3.10,2,0
+53,Site,11,Bimensuelle,34.50,3.10,1,0
+61,Site,7,Mensuelle,39.10,7.50,1,0
+36,Partenaire,38,Mensuelle,38.60,5.60,2,0
+29,Site,34,Bimensuelle,14.00,1.90,1,1
+23,Réseaux sociaux,44,Hebdomadaire,37.00,9.10,0,0
+22,Site,29,Hebdomadaire,41.50,1.40,0,0
+18,Réseaux sociaux,39,Bimensuelle,33.50,3.10,0,0
+58,Site,41,Mensuelle,40.50,6.60,0,0
+65,Réseaux sociaux,21,Hebdomadaire,23.20,3.30,0,0
+18,Site,44,Bimensuelle,30.00,2.60,1,0
+21,Salon,21,Mensuelle,41.90,5.50,0,0
+39,Réseaux sociaux,35,Hebdomadaire,43.10,9.10,0,0
+31,Partenaire,12,Bimensuelle,17.50,2.90,1,0
+41,Réseaux sociaux,30,Bimensuelle,8.30,2.00,1,0
+40,Réseaux sociaux,40,Hebdomadaire,35.60,7.10,0,0
+40,Site,28,Hebdomadaire,23.60,4.80,0,0
+35,Site,45,Hebdomadaire,27.50,4.60,1,0
+38,Site,32,Mensuelle,28.40,5.40,1,0
+48,Site,23,Hebdomadaire,0.00,0.00,1,1
+31,Salon,45,Hebdomadaire,36.60,5.20,3,0
+38,Réseaux sociaux,37,Mensuelle,7.40,1.40,0,0
+22,Réseaux sociaux,5,Hebdomadaire,17.60,3.50,0,0
+26,Site,25,Bimensuelle,51.90,6.80,0,0
+49,Site,10,Hebdomadaire,22.50,4.30,0,0
+18,Jeu concours,15,Hebdomadaire,42.60,8.10,1,0
+48,Partenaire,14,Mensuelle,22.50,3.30,0,0
+42,Site,43,Mensuelle,30.60,4.90,1,0
+50,Site,13,Mensuelle,19.70,1.60,0,0
+22,Réseaux sociaux,24,Hebdomadaire,25.30,8.70,1,0
+25,Salon,1,Hebdomadaire,39.90,3.20,0,0
+18,Partenaire,29,Bimensuelle,19.40,3.60,0,0
+28,Site,20,Mensuelle,20.80,4.50,0,0
+24,Site,40,Hebdomadaire,36.10,7.80,0,0
+47,Salon,44,Mensuelle,34.50,5.20,0,0
+18,Site,2,Mensuelle,42.40,7.00,0,0
+41,Réseaux sociaux,42,Hebdomadaire,0.00,0.00,1,0
+38,Jeu concours,41,Bimensuelle,10.80,2.60,0,0
+33,Réseaux sociaux,45,Hebdomadaire,0.00,0.00,0,0
+35,Site,20,Bimensuelle,45.00,3.80,2,0
+43,Partenaire,39,Hebdomadaire,21.10,3.60,1,1
+40,Jeu concours,24,Hebdomadaire,0.00,0.00,0,0
+28,Jeu concours,11,Bimensuelle,0.00,0.00,1,1
+40,Site,14,Bimensuelle,9.00,1.50,1,0
+25,Site,13,Hebdomadaire,49.00,9.00,0,0
+29,Site,26,Bimensuelle,0.00,0.00,3,0
+46,Jeu concours,15,Hebdomadaire,12.80,3.10,1,1
+61,Site,19,Hebdomadaire,21.30,3.80,0,0
+26,Site,39,Bimensuelle,16.30,3.70,0,0
+33,Site,3,Hebdomadaire,34.50,6.70,0,0
+71,Jeu concours,42,Hebdomadaire,27.10,5.70,1,0
+21,Réseaux sociaux,26,Hebdomadaire,2.90,0.40,0,1
+34,Jeu concours,39,Hebdomadaire,7.20,1.60,0,0
+42,Site,36,Bimensuelle,3.20,0.60,2,0
+34,Réseaux sociaux,37,Bimensuelle,31.80,4.50,0,0
+29,Site,17,Bimensuelle,37.10,9.90,0,0
+21,Jeu concours,17,Bimensuelle,12.00,2.00,1,0
+34,Jeu concours,10,Hebdomadaire,17.20,4.20,1,1
+23,Site,32,Bimensuelle,36.90,10.70,4,0
+68,Réseaux sociaux,16,Hebdomadaire,26.40,6.80,0,0
+18,Jeu concours,14,Bimensuelle,18.90,2.80,2,0
+29,Site,10,Hebdomadaire,45.20,6.70,0,0
+19,Partenaire,19,Hebdomadaire,25.90,4.70,0,0
+18,Site,2,Hebdomadaire,34.80,6.80,0,0
+34,Site,8,Bimensuelle,61.40,16.50,3,0
+34,Partenaire,24,Mensuelle,20.20,2.70,0,0
+39,Réseaux sociaux,45,Hebdomadaire,15.50,2.50,0,0
+18,Salon,40,Hebdomadaire,0.00,0.00,1,1
+39,Site,21,Hebdomadaire,53.20,13.10,1,0
+21,Site,30,Bimensuelle,29.00,4.30,0,1
+22,Réseaux sociaux,5,Hebdomadaire,30.80,2.10,0,0
+18,Site,4,Bimensuelle,28.20,6.40,1,0
+37,Site,46,Hebdomadaire,20.00,3.30,2,0
+41,Salon,29,Hebdomadaire,36.30,4.20,1,0
+52,Salon,15,Mensuelle,1.80,0.30,0,0
+47,Site,29,Hebdomadaire,34.70,9.40,0,0
+41,Site,13,Hebdomadaire,29.40,2.90,0,1
+36,Jeu concours,25,Hebdomadaire,24.40,4.20,2,0
+39,Site,32,Mensuelle,31.40,6.10,0,0
+26,Site,10,Hebdomadaire,43.50,7.20,1,0
+46,Site,23,Bimensuelle,46.80,11.60,1,0
+30,Site,22,Mensuelle,29.90,6.90,1,0
+69,Partenaire,22,Hebdomadaire,52.00,5.80,1,0
+23,Salon,22,Hebdomadaire,51.30,7.80,1,0
+40,Site,45,Hebdomadaire,15.40,2.20,2,0
+38,Site,17,Hebdomadaire,16.70,4.40,0,0
+30,Jeu concours,34,Bimensuelle,24.80,3.40,0,0
+34,Site,35,Mensuelle,5.60,1.00,0,0
+47,Site,46,Hebdomadaire,6.50,0.70,0,1
+31,Partenaire,35,Mensuelle,31.10,5.00,1,0
+21,Site,23,Bimensuelle,14.50,2.70,0,0
+49,Partenaire,10,Bimensuelle,6.20,0.90,1,0
+52,Salon,10,Hebdomadaire,25.80,2.70,0,0
+55,Partenaire,45,Hebdomadaire,37.40,0.60,0,0
+63,Jeu concours,45,Bimensuelle,8.30,0.80,0,0
+19,Jeu concours,4,Hebdomadaire,18.00,1.40,0,1
+45,Jeu concours,28,Hebdomadaire,14.90,2.60,0,1
+18,Jeu concours,18,Mensuelle,46.50,8.70,2,0
+40,Site,22,Bimensuelle,20.80,3.60,0,0
+42,Jeu concours,42,Mensuelle,5.70,1.40,0,0
+45,Site,8,Hebdomadaire,77.50,16.30,4,0
+29,Site,11,Hebdomadaire,23.90,6.30,1,0
+57,Site,37,Bimensuelle,0.00,0.00,0,0
+43,Site,35,Mensuelle,50.20,6.70,1,0
+37,Réseaux sociaux,27,Mensuelle,19.10,3.70,0,0
+23,Site,8,Hebdomadaire,54.10,9.80,1,0
+33,Salon,3,Bimensuelle,25.90,4.40,0,0
+52,Site,38,Bimensuelle,15.10,2.50,0,1
+29,Site,35,Hebdomadaire,27.90,2.60,0,0
+50,Site,17,Mensuelle,3.30,0.70,0,1
+42,Réseaux sociaux,36,Bimensuelle,18.00,3.30,0,0
+22,Réseaux sociaux,7,Hebdomadaire,1.90,0.30,1,1
+18,Site,46,Bimensuelle,1.00,0.20,0,0
+48,Site,35,Bimensuelle,13.60,2.10,0,0
+39,Site,13,Mensuelle,39.60,5.50,0,0
+33,Jeu concours,44,Hebdomadaire,18.30,4.40,0,0
+49,Site,30,Hebdomadaire,14.50,2.40,0,0
+49,Site,41,Hebdomadaire,14.30,1.00,0,1
+19,Réseaux sociaux,7,Hebdomadaire,42.80,10.60,1,0
+35,Site,23,Mensuelle,45.20,9.60,1,0
+23,Partenaire,22,Mensuelle,22.50,5.30,2,0
+41,Réseaux sociaux,8,Hebdomadaire,28.40,4.80,0,0
+18,Réseaux sociaux,23,Mensuelle,37.60,9.60,1,0
+18,Partenaire,44,Hebdomadaire,44.30,9.30,2,0
+51,Jeu concours,16,Bimensuelle,43.30,6.50,0,0
+33,Réseaux sociaux,2,Hebdomadaire,46.80,8.80,0,1
+49,Réseaux sociaux,44,Hebdomadaire,4.50,0.70,1,0
+23,Salon,11,Mensuelle,42.90,9.00,2,0
+34,Salon,25,Hebdomadaire,31.90,5.00,1,0
+59,Réseaux sociaux,31,Hebdomadaire,5.50,0.70,1,0
+23,Site,21,Bimensuelle,32.90,7.10,1,0
+53,Site,27,Hebdomadaire,27.80,6.40,0,0
+48,Site,4,Hebdomadaire,23.90,1.70,0,0
+39,Partenaire,10,Mensuelle,31.10,4.50,1,0
+67,Réseaux sociaux,35,Bimensuelle,39.70,4.80,1,0
+31,Réseaux sociaux,29,Bimensuelle,0.00,0.00,0,1
+41,Site,11,Mensuelle,37.50,7.10,2,0
+68,Site,40,Bimensuelle,36.40,7.40,1,0
+40,Site,24,Bimensuelle,42.70,8.50,2,0
+27,Site,3,Bimensuelle,6.10,0.80,0,0
+55,Site,17,Bimensuelle,28.70,7.50,2,0
+55,Réseaux sociaux,24,Bimensuelle,22.30,2.50,1,1
+59,Site,30,Hebdomadaire,43.30,9.90,1,0
+40,Partenaire,18,Hebdomadaire,41.10,9.90,2,0
+18,Site,32,Mensuelle,6.90,1.10,0,0
+41,Partenaire,1,Bimensuelle,21.90,6.40,1,0
+49,Partenaire,8,Mensuelle,8.70,1.50,1,0
+53,Partenaire,21,Mensuelle,20.60,3.80,0,0
+37,Site,46,Bimensuelle,27.00,4.30,1,0
+34,Jeu concours,40,Mensuelle,0.00,0.00,0,1
+34,Réseaux sociaux,38,Hebdomadaire,36.70,5.10,1,0
+24,Site,11,Hebdomadaire,62.10,6.10,1,0
+26,Partenaire,41,Mensuelle,26.00,5.20,0,0
+40,Réseaux sociaux,6,Hebdomadaire,0.00,0.00,1,1
+39,Site,26,Bimensuelle,22.80,4.40,1,0
+38,Site,27,Mensuelle,0.00,0.00,0,0
+37,Jeu concours,24,Bimensuelle,13.20,3.20,0,0
+43,Site,35,Bimensuelle,33.10,8.70,1,0
+52,Partenaire,1,Hebdomadaire,40.20,10.10,0,0
+27,Partenaire,35,Hebdomadaire,6.90,1.00,0,0
+56,Site,43,Bimensuelle,17.10,3.30,0,0
+44,Site,24,Bimensuelle,48.70,13.80,0,0
+30,Site,2,Hebdomadaire,45.00,9.70,0,0
+34,Partenaire,9,Hebdomadaire,45.80,9.50,1,0
+58,Jeu concours,35,Mensuelle,27.50,1.90,0,0
+29,Partenaire,42,Bimensuelle,38.90,4.50,0,0
+37,Réseaux sociaux,11,Bimensuelle,57.50,9.60,0,0
+28,Réseaux sociaux,40,Bimensuelle,28.60,6.80,1,0
+48,Site,15,Bimensuelle,21.40,4.70,0,0
+40,Jeu concours,2,Mensuelle,0.00,0.00,0,0
+24,Partenaire,8,Hebdomadaire,4.00,0.50,0,1
+48,Site,10,Hebdomadaire,38.30,9.90,0,0
+57,Site,38,Mensuelle,25.90,4.90,0,0
+65,Site,24,Hebdomadaire,54.30,14.20,0,0
+28,Jeu concours,36,Bimensuelle,20.10,3.60,1,0
+37,Partenaire,23,Mensuelle,31.40,5.70,0,0
+28,Partenaire,40,Mensuelle,36.70,5.00,0,0
+72,Jeu concours,13,Bimensuelle,19.60,3.40,0,0
+43,Site,30,Mensuelle,16.40,2.40,2,0
+35,Jeu concours,10,Bimensuelle,27.50,6.50,3,0
+48,Réseaux sociaux,43,Bimensuelle,35.00,7.60,3,1
+48,Site,30,Bimensuelle,27.50,3.10,2,0
+20,Site,38,Hebdomadaire,34.90,5.70,0,0
+18,Site,37,Bimensuelle,27.10,6.00,1,0
+19,Site,10,Hebdomadaire,25.60,4.60,0,1
+19,Réseaux sociaux,38,Bimensuelle,31.40,4.50,0,0
+18,Site,9,Hebdomadaire,9.10,1.60,1,1
+28,Jeu concours,3,Mensuelle,22.50,6.20,0,1
+22,Jeu concours,9,Mensuelle,19.20,4.00,1,0
+43,Réseaux sociaux,43,Bimensuelle,19.50,3.90,0,0
+41,Jeu concours,28,Hebdomadaire,10.70,2.20,1,0
+28,Site,40,Bimensuelle,21.70,5.20,0,0
+43,Partenaire,9,Hebdomadaire,43.10,12.30,3,0
+35,Site,10,Hebdomadaire,33.70,6.60,0,0
+27,Site,22,Bimensuelle,18.80,3.50,1,0
+24,Réseaux sociaux,6,Bimensuelle,39.40,8.20,2,0
+31,Salon,39,Hebdomadaire,37.40,12.10,0,0
+32,Site,35,Hebdomadaire,3.60,0.20,0,0
+18,Réseaux sociaux,12,Hebdomadaire,30.40,5.80,1,1
+33,Salon,32,Bimensuelle,20.50,4.50,0,0
+18,Salon,32,Hebdomadaire,30.10,4.10,1,0
+44,Site,32,Hebdomadaire,7.30,0.60,1,0
+18,Réseaux sociaux,16,Hebdomadaire,2.10,0.10,1,0
+40,Site,34,Hebdomadaire,33.00,6.90,0,0
+36,Site,43,Hebdomadaire,21.90,5.10,0,0
+30,Jeu concours,32,Hebdomadaire,14.50,2.70,1,0
+48,Jeu concours,22,Bimensuelle,30.10,5.50,1,0
+27,Site,1,Bimensuelle,11.70,2.20,0,1
+53,Salon,3,Hebdomadaire,50.20,7.70,0,0
+34,Site,20,Hebdomadaire,19.30,3.80,1,0
+31,Réseaux sociaux,2,Hebdomadaire,29.40,4.10,0,0
+34,Réseaux sociaux,27,Bimensuelle,41.10,3.40,0,0
+43,Site,47,Hebdomadaire,7.80,1.40,0,0
+41,Site,22,Hebdomadaire,40.30,7.50,1,0
+35,Salon,21,Hebdomadaire,19.80,4.30,2,1
+30,Salon,19,Hebdomadaire,34.20,3.60,0,0
+46,Jeu concours,12,Bimensuelle,33.00,6.00,1,0
+45,Réseaux sociaux,33,Mensuelle,8.00,2.00,1,0
+34,Site,47,Mensuelle,26.70,4.40,0,0
+35,Site,44,Hebdomadaire,28.70,4.00,1,0
+48,Jeu concours,31,Mensuelle,17.60,3.80,0,0
+37,Réseaux sociaux,33,Hebdomadaire,45.50,9.70,0,0
+30,Jeu concours,21,Hebdomadaire,33.70,5.40,2,0
+35,Site,44,Mensuelle,26.40,3.80,0,0
+56,Site,6,Hebdomadaire,54.20,1.70,0,0
+28,Salon,26,Mensuelle,42.30,10.40,2,0
+18,Réseaux sociaux,35,Hebdomadaire,13.80,1.80,1,0
+31,Site,25,Hebdomadaire,39.70,8.40,1,0
+18,Partenaire,15,Hebdomadaire,40.20,10.00,0,0
+26,Partenaire,11,Bimensuelle,29.20,4.80,1,0
+32,Site,34,Bimensuelle,27.80,5.50,1,0
+18,Site,34,Hebdomadaire,13.20,3.40,0,0
+31,Site,36,Bimensuelle,12.70,3.80,0,0
+30,Réseaux sociaux,3,Mensuelle,43.40,7.90,3,0
+47,Site,30,Bimensuelle,21.90,2.30,0,0
+47,Site,36,Hebdomadaire,16.30,0.90,1,0
+43,Réseaux sociaux,37,Mensuelle,41.30,8.60,2,0
+47,Partenaire,2,Bimensuelle,37.30,8.40,1,0
+43,Site,1,Hebdomadaire,44.30,10.60,0,0
+32,Jeu concours,39,Hebdomadaire,9.80,2.20,0,1
+48,Site,30,Mensuelle,40.80,5.00,0,0
+19,Partenaire,14,Bimensuelle,60.30,3.80,0,0
+40,Site,31,Hebdomadaire,38.80,6.70,1,0
+47,Site,39,Hebdomadaire,28.30,3.20,0,0
+23,Réseaux sociaux,44,Mensuelle,12.40,2.70,0,1
+43,Jeu concours,22,Mensuelle,10.20,2.60,1,0
+41,Réseaux sociaux,10,Mensuelle,31.20,6.40,2,0
+34,Réseaux sociaux,28,Mensuelle,3.30,0.80,0,1
+24,Réseaux sociaux,7,Bimensuelle,55.40,10.40,0,0
+26,Site,11,Hebdomadaire,47.20,10.50,1,0
+32,Site,15,Bimensuelle,1.40,0.10,0,1
+34,Site,17,Mensuelle,49.10,6.30,0,0
+37,Site,13,Bimensuelle,27.70,3.90,1,0
+57,Site,3,Hebdomadaire,45.90,8.50,1,0
+51,Site,26,Bimensuelle,24.60,4.80,1,0
+41,Jeu concours,12,Hebdomadaire,16.70,2.70,4,0
+21,Jeu concours,28,Mensuelle,13.40,3.40,1,0
+36,Site,12,Hebdomadaire,49.80,5.30,1,0
+50,Jeu concours,22,Bimensuelle,8.50,1.90,2,0
+53,Réseaux sociaux,27,Hebdomadaire,32.40,6.80,1,1
+31,Salon,40,Hebdomadaire,23.90,5.10,1,0
+56,Site,34,Mensuelle,24.80,2.70,0,0
+48,Site,39,Bimensuelle,19.60,3.10,0,0
+47,Réseaux sociaux,40,Bimensuelle,4.00,0.80,0,0
+21,Site,13,Bimensuelle,5.30,1.40,1,0
+56,Site,12,Hebdomadaire,45.00,5.20,1,0
+30,Site,11,Hebdomadaire,18.90,2.00,2,1
+48,Salon,20,Bimensuelle,29.90,7.00,0,0
+31,Partenaire,28,Mensuelle,24.30,4.50,0,0
+35,Partenaire,5,Hebdomadaire,42.00,3.40,1,0
+31,Jeu concours,26,Mensuelle,25.40,4.20,0,0
+31,Site,32,Bimensuelle,38.10,10.90,0,0
+41,Site,46,Mensuelle,30.90,5.50,1,0
+24,Partenaire,36,Mensuelle,37.10,4.70,0,0
+37,Site,4,Hebdomadaire,29.50,7.80,0,1
+39,Site,43,Hebdomadaire,29.20,3.20,0,0
+35,Jeu concours,3,Hebdomadaire,22.80,4.90,0,1
+35,Site,43,Bimensuelle,35.50,4.20,1,0
+38,Site,16,Bimensuelle,19.90,2.60,0,0
+21,Salon,42,Hebdomadaire,15.60,2.10,0,0
+57,Site,44,Hebdomadaire,31.30,1.40,1,0
+42,Site,13,Hebdomadaire,23.80,3.40,1,0
+19,Salon,45,Hebdomadaire,18.80,3.80,0,0
+28,Site,18,Bimensuelle,24.40,3.90,1,0
+18,Site,10,Mensuelle,31.50,2.60,0,0
+47,Jeu concours,10,Mensuelle,0.00,0.00,0,1
+41,Site,37,Mensuelle,37.20,1.10,1,0
+40,Site,12,Bimensuelle,34.40,5.40,2,0
+62,Réseaux sociaux,17,Mensuelle,33.60,7.10,0,0
+44,Jeu concours,33,Hebdomadaire,9.70,1.80,0,0
+29,Réseaux sociaux,12,Hebdomadaire,41.50,8.20,2,0
+30,Site,46,Bimensuelle,4.60,0.60,0,0
+56,Site,3,Hebdomadaire,60.00,11.00,3,0
+50,Site,34,Bimensuelle,14.90,1.90,0,0
+35,Site,14,Mensuelle,35.10,9.00,0,0
+32,Site,11,Hebdomadaire,30.10,5.10,1,0
+38,Jeu concours,28,Hebdomadaire,8.70,1.20,0,0
+42,Jeu concours,25,Hebdomadaire,2.60,0.50,0,1
+39,Site,22,Hebdomadaire,44.40,8.50,0,0
+18,Réseaux sociaux,24,Hebdomadaire,54.40,10.30,0,0
+40,Jeu concours,26,Hebdomadaire,0.00,0.00,0,1
+36,Jeu concours,35,Mensuelle,5.50,0.40,0,1
+40,Partenaire,7,Bimensuelle,56.10,10.90,1,0
+43,Jeu concours,40,Hebdomadaire,24.10,5.10,0,0
+35,Site,5,Hebdomadaire,49.70,10.40,2,0
+51,Jeu concours,45,Hebdomadaire,19.70,2.30,3,1
+27,Réseaux sociaux,12,Mensuelle,19.90,3.40,1,0
+48,Partenaire,44,Hebdomadaire,31.80,6.10,1,0
+36,Partenaire,13,Bimensuelle,5.50,0.80,0,0
+44,Réseaux sociaux,37,Hebdomadaire,30.30,4.90,0,0
+18,Site,11,Bimensuelle,50.00,8.80,1,0
+46,Réseaux sociaux,19,Hebdomadaire,28.80,5.30,0,0
+30,Site,22,Hebdomadaire,7.50,2.00,0,1
+47,Partenaire,27,Bimensuelle,16.90,3.70,0,0
+36,Partenaire,28,Bimensuelle,37.20,9.50,1,0
+29,Réseaux sociaux,22,Hebdomadaire,34.30,4.30,1,0
+34,Site,11,Hebdomadaire,27.50,5.10,1,0
+21,Jeu concours,17,Hebdomadaire,25.20,6.00,0,1
+62,Partenaire,42,Bimensuelle,46.50,10.50,1,0
+23,Jeu concours,4,Hebdomadaire,21.40,7.80,0,0
+51,Site,1,Hebdomadaire,15.20,2.30,1,0
+36,Salon,34,Bimensuelle,44.80,10.10,3,0
+46,Site,8,Mensuelle,34.40,6.90,1,0
+65,Salon,43,Bimensuelle,8.00,2.00,1,0
+28,Site,3,Hebdomadaire,33.70,5.30,0,0
+34,Jeu concours,45,Hebdomadaire,25.10,2.30,0,0
+29,Site,36,Mensuelle,29.20,2.00,0,0
+44,Réseaux sociaux,43,Hebdomadaire,0.00,0.00,1,0
+38,Site,1,Mensuelle,33.60,7.00,1,0
+28,Site,42,Hebdomadaire,0.00,0.00,1,0
+57,Site,17,Hebdomadaire,28.30,7.30,2,0
+36,Site,45,Hebdomadaire,34.50,7.50,1,0
+18,Site,44,Hebdomadaire,27.70,2.70,1,0
+40,Jeu concours,35,Hebdomadaire,0.00,0.00,0,1
+41,Site,43,Hebdomadaire,9.30,1.70,0,0
+32,Salon,6,Hebdomadaire,31.20,6.90,1,0
+41,Site,34,Hebdomadaire,36.00,8.00,2,0
+38,Jeu concours,1,Mensuelle,13.40,1.20,0,0
+28,Site,32,Bimensuelle,4.20,0.80,1,0
+30,Salon,35,Mensuelle,24.90,3.90,1,0
+61,Réseaux sociaux,42,Hebdomadaire,0.00,0.00,1,0
+40,Salon,40,Mensuelle,32.90,3.80,0,0
+46,Partenaire,40,Bimensuelle,2.30,0.20,1,0
+47,Jeu concours,33,Hebdomadaire,0.00,0.00,1,1
+27,Site,22,Hebdomadaire,0.00,0.00,1,0
+26,Réseaux sociaux,14,Bimensuelle,42.50,9.60,1,0
+32,Réseaux sociaux,34,Hebdomadaire,7.20,1.40,0,1
+34,Jeu concours,19,Hebdomadaire,15.80,3.80,1,0
+44,Réseaux sociaux,23,Bimensuelle,36.70,11.70,0,0
+65,Site,6,Bimensuelle,55.90,7.90,1,0
+41,Réseaux sociaux,26,Mensuelle,28.10,8.30,1,0
+31,Site,27,Bimensuelle,52.50,8.10,0,0
+27,Réseaux sociaux,26,Hebdomadaire,39.00,9.80,1,0
+38,Site,2,Bimensuelle,24.30,4.30,0,1
+23,Site,45,Hebdomadaire,12.60,1.90,0,0
+39,Site,12,Mensuelle,49.90,4.90,1,0
+48,Partenaire,43,Hebdomadaire,34.50,7.00,1,0
+51,Site,14,Bimensuelle,36.80,9.50,0,0
+46,Réseaux sociaux,20,Bimensuelle,34.50,6.30,0,0
+24,Partenaire,40,Hebdomadaire,13.80,2.10,0,0
+27,Salon,15,Hebdomadaire,17.60,4.90,0,1
+29,Réseaux sociaux,30,Hebdomadaire,24.70,5.90,1,1
+52,Site,21,Mensuelle,28.90,3.70,2,0
+42,Salon,16,Bimensuelle,36.90,4.80,0,0
+30,Site,34,Hebdomadaire,50.50,8.40,2,0
+48,Partenaire,21,Hebdomadaire,41.00,11.00,3,0
+58,Site,32,Hebdomadaire,21.90,1.60,0,0
+30,Partenaire,9,Hebdomadaire,0.00,0.00,0,0
+50,Réseaux sociaux,41,Hebdomadaire,28.80,2.80,1,0
+45,Site,21,Bimensuelle,31.80,4.10,0,1
+42,Jeu concours,37,Bimensuelle,19.60,2.10,0,0
+54,Partenaire,14,Bimensuelle,25.00,6.90,1,0
+53,Partenaire,14,Hebdomadaire,57.30,5.10,2,0
+28,Réseaux sociaux,26,Mensuelle,20.50,2.00,0,0
+44,Réseaux sociaux,20,Hebdomadaire,54.80,10.40,0,0
+24,Partenaire,12,Hebdomadaire,26.70,7.10,0,0
+56,Partenaire,46,Bimensuelle,53.10,9.60,2,0
+54,Site,5,Hebdomadaire,35.20,5.90,0,0
+18,Réseaux sociaux,28,Mensuelle,2.40,0.70,0,1
+31,Réseaux sociaux,6,Mensuelle,52.10,9.70,0,0
+58,Réseaux sociaux,13,Bimensuelle,43.10,9.80,0,0
+43,Réseaux sociaux,9,Mensuelle,24.30,3.40,0,0
+42,Jeu concours,11,Mensuelle,25.80,3.30,0,0
+48,Réseaux sociaux,46,Hebdomadaire,26.50,1.60,0,0
+41,Réseaux sociaux,44,Hebdomadaire,11.20,2.20,0,0
+56,Réseaux sociaux,14,Hebdomadaire,1.90,0.40,0,1
+23,Partenaire,27,Bimensuelle,37.10,5.00,1,0
+26,Jeu concours,6,Hebdomadaire,15.80,3.10,0,1
+20,Site,42,Hebdomadaire,0.00,0.00,0,0
+29,Site,13,Hebdomadaire,51.10,9.60,3,0
+30,Site,8,Bimensuelle,46.30,5.20,1,0
+37,Site,23,Mensuelle,37.30,5.90,0,0
+59,Partenaire,37,Bimensuelle,39.60,7.30,2,0
+35,Site,24,Hebdomadaire,25.40,3.80,1,0
+41,Jeu concours,44,Bimensuelle,5.70,0.90,1,0
+51,Jeu concours,18,Hebdomadaire,31.10,4.30,0,0
+18,Site,18,Bimensuelle,39.40,6.80,1,0
+35,Jeu concours,30,Bimensuelle,21.00,3.30,0,0
+44,Site,7,Bimensuelle,39.60,2.90,2,0
+30,Site,15,Hebdomadaire,44.00,3.60,1,1
+47,Site,47,Hebdomadaire,9.10,1.50,1,1
+35,Salon,26,Hebdomadaire,41.60,5.30,1,0
+59,Partenaire,12,Hebdomadaire,34.40,5.00,0,0
+56,Réseaux sociaux,30,Hebdomadaire,15.90,3.10,0,0
+54,Site,22,Mensuelle,11.20,1.90,0,0
+32,Site,20,Mensuelle,37.80,6.30,2,0
+38,Réseaux sociaux,12,Hebdomadaire,27.60,5.40,0,0
+43,Site,1,Bimensuelle,23.00,4.10,3,0
+18,Site,9,Bimensuelle,50.10,14.10,0,0
+41,Réseaux sociaux,12,Bimensuelle,27.80,3.60,1,0
+31,Site,6,Mensuelle,33.70,9.30,1,0
+18,Site,8,Bimensuelle,47.30,16.60,5,0
+29,Réseaux sociaux,42,Bimensuelle,18.40,2.30,0,0
+27,Site,22,Mensuelle,24.00,4.60,0,0
+53,Partenaire,22,Bimensuelle,19.50,6.60,0,0
+63,Jeu concours,5,Hebdomadaire,0.00,0.00,1,1
+39,Site,18,Hebdomadaire,27.00,3.30,0,1
+45,Salon,39,Hebdomadaire,16.90,2.00,0,0
+32,Partenaire,33,Hebdomadaire,24.10,5.80,0,0
+49,Jeu concours,9,Bimensuelle,0.00,0.00,1,1
+35,Jeu concours,13,Mensuelle,4.70,0.80,0,0
+49,Jeu concours,40,Hebdomadaire,20.90,1.40,1,1
+32,Salon,41,Hebdomadaire,25.20,5.40,0,0
+53,Jeu concours,42,Hebdomadaire,0.00,0.00,0,1
+46,Réseaux sociaux,8,Hebdomadaire,41.50,6.60,1,0
+18,Site,16,Mensuelle,35.20,5.90,3,0
+43,Réseaux sociaux,38,Mensuelle,32.20,3.60,1,0
+27,Site,16,Hebdomadaire,37.90,7.10,1,0
+53,Site,12,Mensuelle,26.50,6.70,0,0
+46,Site,16,Mensuelle,26.90,5.60,1,0
+51,Partenaire,35,Hebdomadaire,40.70,7.60,1,0
+47,Site,31,Hebdomadaire,54.20,11.80,0,0
+45,Réseaux sociaux,35,Hebdomadaire,34.00,3.20,0,0
+41,Jeu concours,46,Bimensuelle,0.00,0.00,0,1
+56,Site,23,Hebdomadaire,29.90,3.10,0,1
+48,Site,21,Hebdomadaire,49.90,8.70,3,0
+18,Réseaux sociaux,36,Mensuelle,17.70,3.20,0,0
+25,Site,25,Mensuelle,0.90,0.20,0,1
+22,Réseaux sociaux,23,Mensuelle,20.60,3.20,0,0
+50,Réseaux sociaux,38,Hebdomadaire,6.80,1.40,0,0
+18,Réseaux sociaux,15,Hebdomadaire,39.50,2.40,0,0
+38,Réseaux sociaux,39,Hebdomadaire,23.10,3.80,3,0
+38,Jeu concours,40,Hebdomadaire,23.60,3.60,0,1
+45,Salon,42,Hebdomadaire,33.30,7.50,0,0
+71,Site,16,Bimensuelle,50.00,4.40,1,0
+30,Site,18,Hebdomadaire,37.80,7.20,0,0
+27,Réseaux sociaux,44,Hebdomadaire,5.10,1.00,0,0
+18,Jeu concours,45,Bimensuelle,0.00,0.00,0,0
+45,Site,22,Hebdomadaire,24.10,5.80,2,1
+47,Jeu concours,33,Hebdomadaire,42.30,7.40,1,1
+36,Jeu concours,30,Hebdomadaire,0.00,0.00,0,1
+70,Salon,11,Bimensuelle,47.20,6.70,0,0
+18,Jeu concours,43,Mensuelle,37.50,5.50,0,0
+36,Site,41,Bimensuelle,18.20,4.10,0,0
+23,Partenaire,18,Hebdomadaire,38.80,8.80,3,0
+40,Jeu concours,24,Hebdomadaire,2.50,0.40,1,1
+18,Site,47,Mensuelle,13.10,2.40,0,0
+42,Jeu concours,42,Hebdomadaire,6.60,0.40,0,0
+38,Réseaux sociaux,6,Mensuelle,0.00,0.00,0,1
+43,Jeu concours,36,Mensuelle,0.00,0.00,0,0
+51,Site,46,Bimensuelle,20.70,2.50,0,0
+58,Jeu concours,46,Hebdomadaire,10.00,1.40,0,1
+39,Jeu concours,13,Hebdomadaire,25.50,6.40,0,0
+20,Site,20,Bimensuelle,14.90,3.20,1,0
+66,Partenaire,14,Hebdomadaire,29.10,7.60,1,0
+44,Salon,7,Bimensuelle,62.20,9.00,0,0
+18,Site,14,Mensuelle,17.70,2.80,0,0
+43,Site,44,Mensuelle,4.80,1.10,1,0
+46,Jeu concours,36,Mensuelle,23.70,3.90,2,0
+36,Salon,11,Mensuelle,24.50,4.60,1,0
+58,Site,13,Hebdomadaire,33.10,5.10,2,0
+25,Partenaire,19,Bimensuelle,15.00,3.60,3,0
+49,Réseaux sociaux,45,Bimensuelle,34.50,7.70,3,0
+35,Site,34,Mensuelle,15.80,4.30,2,0
+23,Site,2,Bimensuelle,9.80,1.70,0,0
+45,Salon,19,Hebdomadaire,34.20,6.20,0,0
+48,Jeu concours,31,Bimensuelle,16.20,3.70,1,1
+45,Réseaux sociaux,24,Hebdomadaire,29.70,3.90,0,0
+19,Salon,9,Hebdomadaire,29.10,6.60,1,0
+43,Site,20,Bimensuelle,45.90,7.50,1,0
+22,Jeu concours,47,Hebdomadaire,2.00,0.30,1,1
+26,Site,16,Mensuelle,46.30,7.90,0,0
+35,Site,16,Hebdomadaire,10.20,1.50,1,1
+35,Site,11,Bimensuelle,23.40,6.50,0,0
+36,Réseaux sociaux,31,Hebdomadaire,25.40,4.20,0,0
+42,Site,20,Bimensuelle,18.90,5.10,0,0
+31,Site,12,Bimensuelle,11.00,2.00,0,0
+51,Jeu concours,18,Bimensuelle,0.60,0.20,0,1
+45,Partenaire,18,Bimensuelle,43.60,3.20,0,0
+36,Salon,17,Hebdomadaire,37.80,3.60,0,0
+28,Réseaux sociaux,40,Bimensuelle,50.30,12.10,2,0
+23,Réseaux sociaux,10,Mensuelle,22.80,2.30,0,0
+75,Partenaire,29,Bimensuelle,22.70,1.30,0,0
+35,Site,11,Hebdomadaire,39.70,8.10,4,0
+51,Salon,28,Hebdomadaire,30.40,5.90,1,0
+43,Site,34,Hebdomadaire,10.30,1.00,0,1
+32,Partenaire,22,Hebdomadaire,4.80,1.00,0,1
+44,Site,28,Bimensuelle,46.80,6.60,1,0
+30,Jeu concours,9,Bimensuelle,14.80,0.80,2,0
+67,Réseaux sociaux,15,Hebdomadaire,33.60,5.00,0,0
+21,Site,27,Bimensuelle,18.30,2.70,2,0
+56,Jeu concours,36,Hebdomadaire,15.00,2.30,0,0
+59,Site,16,Bimensuelle,12.90,3.00,0,0
+54,Site,22,Hebdomadaire,46.80,12.60,2,0
+41,Salon,3,Hebdomadaire,37.90,8.10,1,0
+41,Salon,44,Mensuelle,23.50,4.30,1,0
+41,Site,33,Mensuelle,28.20,2.50,1,0
+53,Site,8,Hebdomadaire,45.60,10.20,1,0
+35,Jeu concours,11,Mensuelle,67.00,0.80,0,0
+23,Salon,6,Mensuelle,37.40,7.60,0,0
+53,Réseaux sociaux,6,Hebdomadaire,31.00,4.50,0,0
+40,Site,15,Mensuelle,36.40,6.60,0,0
+42,Site,2,Hebdomadaire,32.30,5.30,0,0
+51,Partenaire,13,Bimensuelle,26.00,5.20,1,0
+64,Site,31,Hebdomadaire,28.20,6.10,1,0
+41,Site,31,Hebdomadaire,23.10,4.50,1,1
+54,Site,17,Hebdomadaire,0.00,0.00,0,1
+36,Jeu concours,12,Mensuelle,51.00,10.10,1,0
+66,Jeu concours,25,Bimensuelle,15.50,3.20,0,0
+36,Jeu concours,39,Mensuelle,24.50,3.30,0,0
+18,Site,13,Bimensuelle,18.50,4.50,0,0
+55,Site,30,Hebdomadaire,34.00,5.50,1,0
+42,Site,47,Bimensuelle,20.00,5.60,1,0
+40,Jeu concours,39,Bimensuelle,9.90,2.10,1,0
+36,Site,6,Hebdomadaire,48.50,5.80,6,0
+30,Jeu concours,8,Mensuelle,12.00,2.90,0,1
+44,Partenaire,16,Hebdomadaire,17.40,2.00,0,0
+40,Réseaux sociaux,43,Hebdomadaire,0.00,0.00,1,0
+35,Partenaire,27,Mensuelle,34.00,7.70,0,0
+37,Partenaire,2,Mensuelle,34.20,5.90,1,0
+45,Site,3,Hebdomadaire,24.70,5.70,0,0
+63,Partenaire,45,Bimensuelle,34.10,6.20,0,0
+38,Jeu concours,12,Mensuelle,14.00,1.50,2,0
+36,Site,45,Hebdomadaire,10.00,2.30,0,0
+39,Réseaux sociaux,13,Bimensuelle,15.20,3.50,0,0
+29,Réseaux sociaux,3,Mensuelle,36.80,8.80,0,0
+19,Site,35,Bimensuelle,47.00,10.40,2,0
+36,Réseaux sociaux,29,Bimensuelle,36.90,7.10,0,0
+58,Réseaux sociaux,38,Hebdomadaire,35.10,3.90,1,0
+28,Site,4,Bimensuelle,38.10,4.50,1,0
+47,Site,22,Hebdomadaire,48.40,13.50,0,0
+51,Site,42,Hebdomadaire,31.90,8.50,0,0
+66,Site,29,Bimensuelle,44.20,11.60,1,0
+52,Site,33,Bimensuelle,26.60,5.50,0,0
+47,Réseaux sociaux,3,Hebdomadaire,51.10,12.00,3,0
+18,Site,45,Hebdomadaire,24.50,4.30,1,0
+36,Réseaux sociaux,20,Hebdomadaire,36.10,1.30,0,0
+31,Salon,7,Hebdomadaire,35.90,7.50,1,0
+29,Site,27,Bimensuelle,8.70,2.40,0,0
+39,Site,6,Bimensuelle,53.80,7.30,1,0
+20,Partenaire,45,Bimensuelle,4.10,0.70,0,0
+34,Salon,2,Bimensuelle,41.80,9.60,2,0
+38,Site,2,Bimensuelle,25.90,6.30,0,1
+41,Salon,6,Mensuelle,36.50,5.30,0,0
+18,Partenaire,26,Hebdomadaire,29.10,2.40,0,1
+41,Site,21,Bimensuelle,38.00,9.90,0,0
+35,Jeu concours,44,Bimensuelle,14.60,2.50,0,0
+52,Site,22,Bimensuelle,25.90,5.60,1,0
+50,Site,40,Bimensuelle,0.00,0.00,1,1
+18,Site,15,Bimensuelle,27.70,4.80,0,0
+24,Partenaire,5,Hebdomadaire,30.30,3.20,1,0
+49,Site,34,Hebdomadaire,36.20,7.50,2,0
+28,Site,24,Bimensuelle,12.20,2.30,0,1
+36,Site,36,Hebdomadaire,13.50,1.80,2,0
+18,Site,11,Hebdomadaire,30.00,13.40,3,0
+55,Réseaux sociaux,34,Hebdomadaire,12.60,3.40,1,1
+45,Réseaux sociaux,15,Hebdomadaire,40.50,4.60,1,0
+21,Salon,12,Bimensuelle,43.80,14.20,1,0
+35,Site,43,Hebdomadaire,33.60,5.20,0,0
+29,Salon,20,Hebdomadaire,36.40,8.20,0,0
+46,Site,30,Hebdomadaire,32.40,7.90,1,0
+21,Réseaux sociaux,30,Hebdomadaire,23.90,2.70,0,0
+49,Réseaux sociaux,40,Bimensuelle,1.00,0.30,0,0
+37,Jeu concours,44,Hebdomadaire,18.30,2.70,0,1
+33,Réseaux sociaux,34,Hebdomadaire,28.70,4.60,0,0
+47,Jeu concours,33,Bimensuelle,6.00,0.80,0,1
+20,Site,17,Hebdomadaire,6.20,1.30,0,1
+40,Site,31,Bimensuelle,44.60,5.20,0,0
+24,Jeu concours,14,Bimensuelle,23.60,5.20,0,0
+31,Réseaux sociaux,41,Hebdomadaire,34.80,4.80,0,0
+37,Site,10,Bimensuelle,18.50,1.90,1,0
+18,Site,45,Bimensuelle,18.20,2.10,0,0
+69,Salon,16,Bimensuelle,48.00,7.50,0,0
+23,Site,3,Mensuelle,39.30,9.40,0,0
+35,Réseaux sociaux,20,Bimensuelle,36.60,5.30,2,0
+42,Réseaux sociaux,6,Mensuelle,48.70,10.00,2,0
+51,Site,23,Bimensuelle,40.20,4.00,0,0
+18,Site,17,Hebdomadaire,37.60,8.90,3,1
+55,Jeu concours,38,Bimensuelle,15.50,1.40,1,1
+43,Réseaux sociaux,9,Bimensuelle,51.10,1.80,0,0
+27,Site,40,Hebdomadaire,48.20,9.00,1,0
+61,Réseaux sociaux,18,Mensuelle,29.40,3.90,1,0
+18,Partenaire,29,Mensuelle,23.20,5.30,1,0
+36,Site,21,Mensuelle,64.70,13.80,0,0
+53,Salon,6,Hebdomadaire,59.50,13.20,0,1
+75,Site,16,Mensuelle,46.40,10.00,2,0
+48,Site,37,Mensuelle,16.70,1.70,0,0
+31,Jeu concours,3,Hebdomadaire,32.80,6.90,0,1
+58,Site,40,Hebdomadaire,16.20,2.70,2,0
+30,Site,10,Mensuelle,18.30,2.30,0,0
+29,Site,10,Bimensuelle,16.10,4.60,2,0
+55,Jeu concours,10,Mensuelle,24.80,3.70,0,0
+21,Jeu concours,44,Hebdomadaire,0.00,0.00,1,1
+45,Site,15,Mensuelle,69.70,11.90,2,0
+21,Réseaux sociaux,23,Hebdomadaire,26.90,1.60,1,0
+18,Salon,32,Mensuelle,16.50,2.10,1,0
+37,Partenaire,45,Hebdomadaire,4.90,0.90,0,1
+45,Site,6,Bimensuelle,34.40,8.10,0,0
+27,Site,33,Bimensuelle,29.30,5.50,0,0
+43,Site,47,Bimensuelle,0.30,0.00,0,0
+42,Site,27,Mensuelle,34.80,5.40,3,0
+36,Site,18,Bimensuelle,7.80,2.00,1,0
+63,Site,15,Hebdomadaire,18.90,5.00,1,0
+34,Réseaux sociaux,37,Hebdomadaire,1.90,0.40,0,1
+30,Réseaux sociaux,19,Hebdomadaire,30.80,5.80,1,0
+64,Salon,5,Bimensuelle,31.90,10.10,1,0
+28,Site,34,Bimensuelle,35.90,8.60,2,0
+47,Partenaire,5,Hebdomadaire,45.30,7.50,1,0
+39,Site,12,Mensuelle,32.60,5.20,2,0
+52,Jeu concours,34,Hebdomadaire,16.50,2.60,2,1
+58,Site,22,Bimensuelle,23.60,3.60,1,0
+41,Site,34,Hebdomadaire,23.30,6.20,0,0
+55,Jeu concours,18,Bimensuelle,14.50,3.10,2,0
+36,Salon,11,Bimensuelle,23.30,5.40,0,0
+53,Site,47,Hebdomadaire,0.00,0.00,1,0
+46,Jeu concours,42,Mensuelle,8.00,1.90,0,0
+41,Partenaire,30,Hebdomadaire,36.70,8.30,0,0
+26,Partenaire,44,Mensuelle,30.00,3.90,3,0
+42,Site,33,Hebdomadaire,6.70,0.70,2,0
+18,Réseaux sociaux,41,Hebdomadaire,54.60,12.00,0,0
+18,Site,31,Bimensuelle,37.00,6.70,1,0
+25,Site,6,Mensuelle,41.00,7.60,1,0
+28,Site,9,Hebdomadaire,39.30,2.90,0,0
+42,Site,1,Bimensuelle,41.30,12.40,0,0
+48,Réseaux sociaux,8,Hebdomadaire,48.80,8.40,1,0
+32,Partenaire,22,Hebdomadaire,53.50,12.40,1,0
+18,Salon,46,Hebdomadaire,21.70,2.40,0,0
+52,Site,40,Hebdomadaire,6.20,1.40,1,1
+40,Jeu concours,26,Hebdomadaire,34.70,3.90,0,0
+37,Réseaux sociaux,41,Hebdomadaire,22.20,4.10,0,0
+57,Site,3,Hebdomadaire,30.00,8.20,1,0
+31,Partenaire,26,Hebdomadaire,38.40,3.00,1,0
+63,Site,32,Hebdomadaire,22.20,3.90,1,0
+46,Site,26,Hebdomadaire,28.10,1.20,0,0
+24,Site,37,Bimensuelle,20.90,3.70,1,0
+23,Site,4,Bimensuelle,42.50,9.40,1,0
+50,Site,22,Mensuelle,31.20,4.90,2,0
+28,Partenaire,29,Hebdomadaire,15.00,3.20,0,0
+33,Site,18,Bimensuelle,16.60,2.70,0,0
+43,Réseaux sociaux,17,Hebdomadaire,52.50,4.80,0,0
+42,Jeu concours,24,Hebdomadaire,24.00,5.70,3,0
+28,Site,20,Bimensuelle,2.70,0.50,0,0
+39,Réseaux sociaux,40,Bimensuelle,2.10,0.50,0,0
+25,Partenaire,1,Mensuelle,43.00,7.40,1,0
+31,Salon,21,Bimensuelle,2.00,0.30,0,1
+51,Site,12,Hebdomadaire,22.60,3.70,1,0
+23,Jeu concours,45,Bimensuelle,11.60,1.80,0,0
+46,Jeu concours,5,Mensuelle,32.40,7.60,1,0
+48,Site,6,Mensuelle,25.50,5.90,0,0
+62,Site,5,Hebdomadaire,26.60,4.30,1,0
+41,Site,3,Bimensuelle,43.90,9.70,0,0
+35,Salon,21,Mensuelle,37.50,6.10,0,0
+50,Réseaux sociaux,13,Mensuelle,33.60,6.10,1,0
+39,Réseaux sociaux,7,Hebdomadaire,45.60,8.90,0,0
+22,Site,37,Bimensuelle,56.90,12.90,1,0
+30,Site,33,Hebdomadaire,17.70,2.90,1,0
+37,Réseaux sociaux,4,Hebdomadaire,43.60,6.80,0,0
+47,Partenaire,33,Hebdomadaire,0.00,0.00,0,1
+18,Site,21,Hebdomadaire,37.70,5.10,0,0
+42,Site,32,Hebdomadaire,0.00,0.00,0,1
+37,Réseaux sociaux,28,Bimensuelle,24.30,3.00,0,0
+24,Réseaux sociaux,46,Mensuelle,23.60,6.20,1,0
+42,Site,13,Mensuelle,47.70,4.20,0,0
+21,Réseaux sociaux,27,Hebdomadaire,31.30,3.30,1,0
+41,Partenaire,10,Hebdomadaire,43.30,5.70,0,0
+33,Partenaire,34,Hebdomadaire,43.00,5.50,0,0
+28,Site,17,Hebdomadaire,45.80,5.10,0,0
+47,Réseaux sociaux,42,Bimensuelle,16.00,3.00,1,0
+30,Site,34,Hebdomadaire,0.00,0.00,0,1
+30,Jeu concours,34,Hebdomadaire,21.30,3.00,0,1
+28,Jeu concours,29,Hebdomadaire,24.60,3.10,0,0
+26,Site,26,Hebdomadaire,14.30,2.60,4,0
+38,Jeu concours,33,Bimensuelle,13.70,1.60,1,0
+57,Réseaux sociaux,3,Hebdomadaire,45.00,9.60,0,0
+35,Partenaire,14,Bimensuelle,35.60,5.90,0,0
+19,Partenaire,33,Bimensuelle,3.30,0.50,1,0
+20,Réseaux sociaux,33,Mensuelle,16.10,3.90,0,0
+29,Réseaux sociaux,39,Bimensuelle,15.40,1.00,0,0
+18,Site,27,Bimensuelle,21.00,4.60,1,0
+18,Réseaux sociaux,26,Hebdomadaire,45.70,6.20,1,0
+60,Site,18,Hebdomadaire,21.90,5.30,0,0
+25,Réseaux sociaux,16,Bimensuelle,0.00,0.00,1,1
+22,Salon,13,Hebdomadaire,25.80,1.90,0,0
+30,Salon,47,Mensuelle,50.00,9.40,1,0
+46,Partenaire,33,Hebdomadaire,37.40,6.80,3,0
+47,Site,32,Hebdomadaire,20.60,1.80,0,0
+41,Site,23,Hebdomadaire,27.40,4.60,0,0
+30,Salon,15,Hebdomadaire,51.30,12.70,0,0
+44,Partenaire,22,Hebdomadaire,38.40,4.40,0,0
+29,Réseaux sociaux,1,Mensuelle,8.20,1.10,1,0
+61,Site,34,Hebdomadaire,0.00,0.00,0,0
+40,Salon,12,Bimensuelle,45.20,7.30,0,0
+45,Réseaux sociaux,12,Hebdomadaire,14.20,2.70,0,0
+42,Site,25,Hebdomadaire,31.80,3.40,1,0
+43,Réseaux sociaux,16,Bimensuelle,11.30,1.40,0,0
+35,Site,38,Mensuelle,3.50,0.70,1,0
+27,Site,36,Mensuelle,24.10,4.00,0,0
+30,Réseaux sociaux,37,Hebdomadaire,27.00,5.30,1,0
+24,Partenaire,26,Bimensuelle,21.80,4.40,0,0
+48,Salon,36,Bimensuelle,24.50,5.50,0,0
+46,Réseaux sociaux,41,Hebdomadaire,10.00,1.60,0,0
+38,Partenaire,8,Mensuelle,34.20,3.30,0,0
+58,Jeu concours,5,Mensuelle,0.00,0.00,0,1
+30,Salon,2,Hebdomadaire,42.30,7.10,0,0
+29,Partenaire,31,Hebdomadaire,21.10,5.10,0,0
+46,Salon,42,Hebdomadaire,84.10,13.60,3,0
+23,Site,20,Mensuelle,20.70,3.20,0,0
+45,Site,27,Mensuelle,38.60,9.10,1,0
+50,Site,12,Hebdomadaire,31.90,6.10,1,0
+38,Réseaux sociaux,39,Bimensuelle,29.40,5.90,1,0
+30,Salon,36,Bimensuelle,27.80,5.20,0,0
+35,Réseaux sociaux,6,Hebdomadaire,71.00,10.90,2,0
+55,Site,13,Mensuelle,47.60,9.20,0,0
+36,Site,14,Bimensuelle,27.40,2.70,0,0
+41,Site,15,Bimensuelle,32.30,4.90,1,0
+40,Site,43,Bimensuelle,23.40,5.30,0,1
+48,Jeu concours,20,Bimensuelle,35.70,7.10,1,0
+18,Salon,38,Mensuelle,7.00,0.80,1,1
+45,Partenaire,23,Hebdomadaire,13.90,3.20,0,0
+48,Site,12,Mensuelle,15.80,3.80,0,0
+32,Partenaire,11,Hebdomadaire,19.80,5.20,2,1
+43,Jeu concours,14,Bimensuelle,23.70,4.90,2,1
+29,Site,12,Hebdomadaire,35.70,11.10,0,0
+28,Site,37,Hebdomadaire,36.60,2.80,1,0
+41,Jeu concours,3,Hebdomadaire,50.00,4.50,0,0
+40,Salon,30,Hebdomadaire,49.50,10.50,2,0
+49,Site,3,Bimensuelle,36.90,3.70,0,0
+45,Site,34,Bimensuelle,33.40,7.20,1,0
+65,Réseaux sociaux,20,Mensuelle,13.10,2.70,0,0
+26,Jeu concours,47,Bimensuelle,8.80,1.10,1,0
+51,Réseaux sociaux,46,Mensuelle,11.10,2.40,0,0
+48,Jeu concours,3,Hebdomadaire,54.70,11.90,0,0
+42,Réseaux sociaux,15,Hebdomadaire,42.70,9.50,0,0
+59,Réseaux sociaux,12,Hebdomadaire,19.30,3.40,0,0
+33,Site,25,Hebdomadaire,47.20,10.60,2,0
+29,Réseaux sociaux,46,Hebdomadaire,53.20,9.50,1,0
+47,Réseaux sociaux,33,Bimensuelle,32.80,3.70,1,0
+49,Réseaux sociaux,24,Hebdomadaire,28.40,3.60,2,1
+40,Site,46,Hebdomadaire,2.00,0.40,0,1
+18,Site,16,Hebdomadaire,10.60,1.70,1,0
+41,Jeu concours,43,Mensuelle,17.60,2.50,1,0
+18,Partenaire,22,Hebdomadaire,16.60,4.10,0,1
+52,Site,29,Mensuelle,34.80,8.20,1,0
+38,Site,21,Mensuelle,28.50,4.00,1,0
+32,Site,16,Hebdomadaire,36.10,5.30,1,0
+42,Site,21,Hebdomadaire,23.10,3.80,0,0
+51,Site,28,Bimensuelle,29.50,3.30,2,0
+36,Réseaux sociaux,9,Hebdomadaire,47.00,5.30,0,0
+44,Salon,34,Hebdomadaire,48.20,5.70,0,0
+18,Réseaux sociaux,19,Bimensuelle,11.40,2.30,0,1
+52,Site,14,Hebdomadaire,4.30,0.80,0,1
+40,Jeu concours,42,Mensuelle,21.70,5.10,0,1
+34,Site,17,Mensuelle,37.20,9.10,1,0
+34,Jeu concours,14,Bimensuelle,13.40,2.50,0,1
+43,Réseaux sociaux,44,Bimensuelle,13.70,2.10,0,0
+21,Site,44,Hebdomadaire,11.80,2.10,0,1
+30,Réseaux sociaux,37,Mensuelle,16.60,2.10,0,0
+32,Site,14,Bimensuelle,29.30,7.60,2,0
+29,Salon,1,Hebdomadaire,56.80,12.80,2,0
+67,Site,29,Bimensuelle,62.30,16.20,0,0
+43,Jeu concours,11,Hebdomadaire,28.70,4.40,0,0
+41,Partenaire,47,Mensuelle,21.20,1.90,0,1
+20,Jeu concours,29,Hebdomadaire,0.00,0.00,2,1
+37,Jeu concours,24,Mensuelle,16.60,2.90,0,0
+18,Site,40,Hebdomadaire,33.40,4.90,1,0
+44,Jeu concours,25,Bimensuelle,15.40,3.50,1,0
+40,Site,47,Hebdomadaire,13.70,1.70,0,0
+36,Site,36,Hebdomadaire,7.30,0.90,0,1
+46,Site,37,Hebdomadaire,37.20,7.70,0,0
+32,Jeu concours,5,Bimensuelle,3.30,0.70,1,0
+42,Réseaux sociaux,23,Mensuelle,19.10,2.90,0,0
+32,Site,44,Hebdomadaire,34.50,4.90,0,0
+29,Partenaire,24,Bimensuelle,30.10,6.50,3,0
+40,Site,6,Mensuelle,45.80,6.90,1,0
+32,Site,1,Hebdomadaire,48.40,9.20,3,0
+48,Jeu concours,36,Hebdomadaire,3.60,0.60,1,0
+26,Site,32,Bimensuelle,63.10,8.00,0,0
+51,Site,28,Hebdomadaire,34.70,7.40,0,0
+43,Site,29,Mensuelle,35.20,10.90,3,0
+29,Partenaire,32,Bimensuelle,45.30,8.80,2,0
+39,Site,33,Hebdomadaire,4.70,0.70,0,1
+35,Jeu concours,5,Hebdomadaire,15.00,2.60,0,0
+29,Partenaire,7,Hebdomadaire,17.60,2.50,0,1
+30,Salon,29,Bimensuelle,37.40,6.30,0,0
+36,Partenaire,15,Bimensuelle,29.40,3.90,1,0
+25,Site,24,Mensuelle,2.30,0.20,0,0
+47,Site,39,Bimensuelle,4.10,0.90,0,0
+35,Site,24,Hebdomadaire,37.90,2.80,1,0
+48,Site,21,Hebdomadaire,14.20,2.60,0,0
+40,Site,25,Bimensuelle,23.90,4.70,1,0
+56,Réseaux sociaux,24,Hebdomadaire,37.30,8.60,2,0
+61,Jeu concours,29,Hebdomadaire,13.40,2.10,0,0
+40,Jeu concours,26,Hebdomadaire,37.30,12.10,1,0
+60,Salon,38,Hebdomadaire,37.60,3.00,0,0
+36,Site,37,Hebdomadaire,5.60,0.80,0,0
+30,Site,32,Bimensuelle,0.00,0.00,0,0
+33,Site,47,Hebdomadaire,30.90,8.00,1,1
+35,Site,38,Hebdomadaire,37.60,7.70,1,0
+42,Site,28,Mensuelle,2.90,0.90,0,1
+50,Site,30,Bimensuelle,36.90,2.70,0,0
+41,Partenaire,17,Mensuelle,28.10,3.00,1,1
+27,Jeu concours,19,Hebdomadaire,0.00,0.00,0,1
+40,Site,2,Mensuelle,34.50,5.20,3,0
+26,Réseaux sociaux,34,Bimensuelle,9.00,0.90,1,0
+38,Site,24,Hebdomadaire,0.00,0.00,0,0
+46,Site,12,Mensuelle,18.80,3.20,0,0
+27,Site,29,Hebdomadaire,34.70,3.40,0,0
+30,Jeu concours,43,Hebdomadaire,0.00,0.00,0,0
+38,Réseaux sociaux,32,Bimensuelle,58.10,12.50,1,0
+35,Site,35,Hebdomadaire,1.20,0.20,2,1
+40,Réseaux sociaux,43,Mensuelle,16.70,2.40,0,0
+47,Site,13,Hebdomadaire,32.40,4.90,1,0
+38,Site,19,Hebdomadaire,37.00,10.20,0,0
+64,Partenaire,10,Hebdomadaire,45.60,6.80,2,0
+38,Site,3,Mensuelle,52.30,8.70,2,0
+31,Site,31,Bimensuelle,14.90,1.50,0,0
+18,Jeu concours,16,Bimensuelle,54.50,9.60,0,0
+51,Réseaux sociaux,23,Hebdomadaire,24.40,5.10,0,0
+55,Réseaux sociaux,32,Hebdomadaire,14.60,2.10,0,0
+37,Site,39,Hebdomadaire,29.20,5.60,0,0
+69,Réseaux sociaux,42,Mensuelle,15.30,3.50,0,1
+45,Partenaire,15,Hebdomadaire,31.50,2.60,1,0
+32,Partenaire,3,Bimensuelle,12.00,1.40,0,0
+36,Réseaux sociaux,27,Mensuelle,32.20,7.70,1,0
+40,Site,7,Hebdomadaire,32.60,3.20,0,0
+45,Réseaux sociaux,5,Bimensuelle,55.50,7.20,2,0
+22,Réseaux sociaux,35,Hebdomadaire,0.90,0.20,0,0
+66,Jeu concours,1,Hebdomadaire,31.10,9.80,0,0
+18,Réseaux sociaux,10,Bimensuelle,12.10,1.70,1,0
+44,Site,24,Mensuelle,44.10,7.80,0,0
+39,Salon,41,Bimensuelle,48.10,7.90,1,0
+44,Jeu concours,30,Bimensuelle,31.20,6.70,2,1
+38,Réseaux sociaux,19,Hebdomadaire,23.20,3.30,0,0
+34,Jeu concours,21,Mensuelle,32.70,9.40,0,0
+35,Partenaire,26,Mensuelle,55.80,12.40,1,0
+47,Réseaux sociaux,40,Bimensuelle,0.00,0.00,0,0
+40,Jeu concours,22,Hebdomadaire,0.00,0.00,0,1
+18,Site,37,Mensuelle,14.50,3.90,0,0
+29,Site,26,Hebdomadaire,21.80,4.80,1,0
+34,Jeu concours,24,Bimensuelle,11.00,2.40,2,1
+39,Jeu concours,24,Hebdomadaire,15.40,2.10,0,0
+18,Salon,19,Hebdomadaire,40.80,7.20,1,0
+54,Site,25,Bimensuelle,14.20,0.80,0,0
+59,Site,5,Mensuelle,39.20,8.90,2,0
+56,Site,34,Hebdomadaire,28.70,3.50,0,0
+33,Réseaux sociaux,27,Bimensuelle,17.70,3.60,1,0
+34,Site,35,Hebdomadaire,0.00,0.00,1,1
+46,Site,21,Bimensuelle,46.00,11.10,2,0
+42,Réseaux sociaux,13,Hebdomadaire,33.20,8.50,0,0
+31,Site,4,Hebdomadaire,0.00,0.00,0,1
+37,Site,44,Bimensuelle,49.20,8.30,2,0
+23,Site,2,Bimensuelle,19.30,4.00,0,0
+31,Jeu concours,15,Hebdomadaire,25.40,4.90,0,0
+34,Réseaux sociaux,5,Hebdomadaire,47.20,7.80,2,0
+31,Site,34,Hebdomadaire,26.40,7.00,0,0
+53,Site,23,Hebdomadaire,49.90,3.00,0,0
+25,Site,42,Hebdomadaire,16.70,4.00,1,0
+36,Site,41,Hebdomadaire,13.20,2.20,0,0
+57,Site,11,Mensuelle,30.10,6.50,2,0
+29,Salon,45,Hebdomadaire,37.60,4.30,0,0
+44,Site,5,Bimensuelle,63.70,13.90,1,0
+46,Jeu concours,16,Hebdomadaire,49.70,9.40,0,0
+18,Réseaux sociaux,6,Hebdomadaire,21.00,3.40,0,0
+18,Site,40,Bimensuelle,31.30,6.00,0,0
+43,Site,12,Hebdomadaire,49.70,0.40,0,0
+47,Site,22,Mensuelle,15.10,2.90,0,0
+20,Site,30,Hebdomadaire,34.60,5.50,0,0
+28,Salon,35,Hebdomadaire,28.80,5.60,1,0
+33,Site,37,Hebdomadaire,6.60,1.70,0,0
+66,Partenaire,7,Hebdomadaire,16.70,4.10,0,1
+64,Site,19,Mensuelle,50.00,7.70,1,0
+54,Partenaire,13,Bimensuelle,28.00,5.10,0,0
+45,Site,46,Mensuelle,9.90,1.00,0,0
+39,Réseaux sociaux,42,Hebdomadaire,12.60,3.80,1,0
+18,Site,1,Hebdomadaire,42.60,13.60,1,0
+68,Réseaux sociaux,9,Mensuelle,45.10,8.30,0,0
+47,Site,7,Mensuelle,59.40,14.20,1,0
+27,Partenaire,6,Bimensuelle,17.90,2.70,1,0
+43,Partenaire,43,Hebdomadaire,22.70,4.50,0,0
+32,Jeu concours,15,Hebdomadaire,16.40,2.30,0,1
+20,Réseaux sociaux,17,Hebdomadaire,25.30,3.70,0,0
+45,Réseaux sociaux,16,Mensuelle,44.30,6.20,0,0
+56,Réseaux sociaux,38,Bimensuelle,36.90,9.30,0,0
+48,Site,36,Bimensuelle,31.00,6.80,0,0
+20,Site,28,Mensuelle,23.30,2.60,0,0
+42,Site,5,Hebdomadaire,27.50,4.20,0,1
+54,Réseaux sociaux,34,Hebdomadaire,23.70,4.60,1,0
+63,Jeu concours,33,Hebdomadaire,6.10,1.00,1,1
+48,Site,46,Mensuelle,38.60,11.10,3,0
+50,Salon,5,Hebdomadaire,41.60,9.00,0,0
+31,Site,40,Hebdomadaire,0.00,0.00,0,0
+39,Réseaux sociaux,28,Bimensuelle,5.30,0.70,0,1
+26,Jeu concours,25,Mensuelle,14.40,3.30,2,1
+57,Site,37,Hebdomadaire,5.90,0.80,0,1
+40,Jeu concours,27,Hebdomadaire,0.60,0.10,0,1
+30,Réseaux sociaux,14,Hebdomadaire,74.30,16.50,1,0
+34,Partenaire,15,Bimensuelle,12.50,2.80,1,0
+38,Site,9,Mensuelle,63.40,18.50,2,0
+44,Site,2,Hebdomadaire,18.40,2.60,1,1
+32,Réseaux sociaux,16,Hebdomadaire,46.10,14.20,1,0
+56,Site,44,Bimensuelle,2.00,0.20,1,0
+29,Partenaire,10,Bimensuelle,12.90,2.10,0,0
+48,Salon,20,Hebdomadaire,40.50,7.00,1,0
+40,Site,39,Hebdomadaire,38.80,7.00,4,0
+46,Réseaux sociaux,45,Mensuelle,25.40,4.30,0,0
+30,Site,43,Hebdomadaire,28.70,4.60,3,0
+42,Site,8,Hebdomadaire,38.10,8.10,1,0
+55,Réseaux sociaux,5,Mensuelle,40.70,5.40,1,0
+44,Site,27,Mensuelle,16.50,2.50,0,0
+43,Réseaux sociaux,21,Hebdomadaire,57.80,10.90,1,0
+45,Réseaux sociaux,21,Hebdomadaire,24.70,5.10,0,1
+24,Partenaire,9,Hebdomadaire,51.90,10.50,4,0
+38,Site,42,Mensuelle,24.70,6.60,0,0
+18,Site,17,Hebdomadaire,26.40,3.60,0,0
+38,Salon,37,Bimensuelle,54.70,12.60,2,0
+34,Site,45,Hebdomadaire,21.30,3.70,0,0
+35,Site,27,Bimensuelle,46.80,9.90,0,0
+43,Salon,31,Hebdomadaire,40.60,6.20,2,0
+59,Site,6,Mensuelle,41.30,8.80,2,0
+22,Réseaux sociaux,2,Hebdomadaire,15.00,2.50,1,1
+38,Partenaire,17,Bimensuelle,34.30,6.00,2,0
+51,Site,22,Hebdomadaire,27.90,5.60,2,0
+46,Jeu concours,5,Mensuelle,27.80,4.80,1,0
+37,Réseaux sociaux,42,Hebdomadaire,22.10,5.00,1,0
+27,Site,45,Hebdomadaire,28.20,5.90,1,0
+36,Salon,36,Bimensuelle,24.40,3.80,1,0
+67,Site,4,Hebdomadaire,34.50,8.30,3,0
+26,Partenaire,2,Hebdomadaire,2.70,0.50,1,1
+42,Jeu concours,11,Bimensuelle,31.10,4.90,0,1
+42,Jeu concours,37,Hebdomadaire,14.50,1.70,0,0
+41,Site,16,Bimensuelle,1.50,0.30,0,1
+57,Site,2,Bimensuelle,46.20,6.20,0,0
+38,Jeu concours,3,Hebdomadaire,18.50,4.90,1,0
+49,Site,25,Bimensuelle,35.70,5.60,1,0
+59,Réseaux sociaux,27,Bimensuelle,48.50,10.10,4,0
+29,Réseaux sociaux,33,Mensuelle,17.50,2.60,0,1
+33,Site,25,Mensuelle,35.10,6.90,1,0
+35,Réseaux sociaux,2,Bimensuelle,64.90,16.90,3,0
+51,Site,32,Hebdomadaire,32.00,5.00,0,0
+56,Jeu concours,22,Mensuelle,14.90,2.60,1,0
+73,Site,17,Bimensuelle,51.80,6.20,0,0
+48,Réseaux sociaux,6,Hebdomadaire,24.60,3.80,0,0
+29,Site,12,Mensuelle,37.20,6.60,1,0
+43,Réseaux sociaux,2,Bimensuelle,38.20,4.10,1,0
+35,Site,23,Hebdomadaire,32.90,4.00,0,0
+25,Jeu concours,13,Bimensuelle,11.80,2.50,0,0
+63,Site,11,Mensuelle,45.40,10.40,1,0
+18,Site,18,Hebdomadaire,14.00,3.00,0,1
+52,Salon,37,Hebdomadaire,31.70,7.10,0,0
+54,Site,26,Hebdomadaire,0.00,0.00,0,0
+51,Salon,18,Mensuelle,38.30,6.40,0,0
+29,Réseaux sociaux,47,Hebdomadaire,25.80,6.00,0,0
+43,Salon,21,Hebdomadaire,31.80,6.00,1,0
+28,Jeu concours,14,Bimensuelle,0.00,0.00,0,1
+35,Site,36,Hebdomadaire,25.20,2.10,1,0
+18,Salon,24,Bimensuelle,22.00,3.50,1,0
+31,Site,21,Mensuelle,29.70,7.10,0,0
+34,Site,7,Bimensuelle,30.90,0.90,0,0
+48,Site,31,Bimensuelle,45.30,8.90,1,0
+45,Partenaire,2,Hebdomadaire,35.00,5.60,0,0
+52,Réseaux sociaux,4,Hebdomadaire,38.00,8.00,2,0
+55,Jeu concours,8,Bimensuelle,44.60,5.40,2,0
+30,Site,43,Hebdomadaire,24.30,4.40,0,0
+40,Partenaire,44,Hebdomadaire,18.70,3.00,3,0
+73,Réseaux sociaux,35,Mensuelle,35.60,7.50,0,0
+32,Jeu concours,8,Mensuelle,17.00,3.10,3,0
+33,Réseaux sociaux,34,Bimensuelle,7.30,1.30,1,0
+36,Jeu concours,16,Hebdomadaire,15.80,5.00,0,0
+37,Site,17,Bimensuelle,20.20,2.10,0,1
+57,Site,6,Mensuelle,31.00,3.60,0,0
+26,Site,32,Mensuelle,43.40,9.80,1,0
+18,Salon,33,Hebdomadaire,61.80,5.50,1,0
+64,Réseaux sociaux,23,Bimensuelle,37.50,4.20,0,0
+50,Site,16,Hebdomadaire,63.40,11.50,0,0
+37,Partenaire,41,Hebdomadaire,26.10,7.50,1,0
+65,Site,38,Bimensuelle,47.30,9.30,1,0
+37,Réseaux sociaux,30,Bimensuelle,34.00,9.00,1,0
+27,Partenaire,38,Hebdomadaire,30.50,3.40,1,0
+39,Partenaire,1,Mensuelle,60.10,16.20,0,0
+29,Site,45,Mensuelle,7.50,1.50,0,0
+18,Réseaux sociaux,37,Bimensuelle,0.00,0.00,0,1
+45,Jeu concours,4,Hebdomadaire,33.30,7.40,1,0
+34,Partenaire,5,Bimensuelle,38.70,7.20,0,0
+33,Site,22,Bimensuelle,56.70,6.60,2,0
+50,Salon,16,Mensuelle,51.00,9.90,2,0
+28,Site,21,Mensuelle,26.30,3.70,0,0
+28,Partenaire,25,Bimensuelle,46.70,10.00,1,0
+43,Réseaux sociaux,33,Mensuelle,53.70,11.80,0,0
+33,Site,11,Bimensuelle,49.30,14.40,1,0
+43,Jeu concours,5,Hebdomadaire,13.30,3.00,0,0
+62,Site,24,Bimensuelle,2.40,0.30,2,0
+27,Jeu concours,25,Mensuelle,22.40,4.60,0,0
+56,Réseaux sociaux,21,Mensuelle,37.40,6.90,0,0
+24,Site,25,Mensuelle,41.20,9.10,2,0
+47,Réseaux sociaux,37,Mensuelle,45.30,5.20,1,0
+43,Site,38,Hebdomadaire,0.00,0.00,0,0
+36,Site,11,Mensuelle,30.80,9.50,0,0
+32,Réseaux sociaux,6,Mensuelle,36.80,4.40,0,0
+59,Partenaire,10,Mensuelle,40.20,8.30,0,0
+24,Site,40,Bimensuelle,16.40,2.20,0,0
+19,Site,5,Mensuelle,41.90,10.90,0,0
+41,Site,35,Hebdomadaire,29.80,5.50,0,0
+41,Site,24,Mensuelle,31.70,4.70,0,0
+48,Jeu concours,9,Bimensuelle,26.00,4.20,1,0
+47,Site,40,Hebdomadaire,61.30,5.60,2,0
+42,Réseaux sociaux,20,Bimensuelle,9.80,2.20,2,0
+27,Réseaux sociaux,37,Hebdomadaire,20.60,2.80,1,0
+23,Site,6,Bimensuelle,50.90,8.30,0,0
+26,Site,11,Mensuelle,22.70,5.50,1,0
+42,Réseaux sociaux,45,Bimensuelle,36.90,10.60,1,0
+51,Site,14,Bimensuelle,22.00,3.90,1,0
+31,Jeu concours,29,Bimensuelle,15.50,3.60,2,0
+48,Partenaire,25,Hebdomadaire,15.10,2.80,1,1
+37,Site,16,Hebdomadaire,0.00,0.00,0,0
+18,Salon,6,Mensuelle,20.10,4.50,3,0
+55,Site,33,Hebdomadaire,16.00,3.20,0,0
+56,Site,16,Bimensuelle,15.80,2.70,0,0
+26,Site,16,Bimensuelle,36.00,4.40,0,0
+63,Site,45,Bimensuelle,19.10,1.40,0,0
+32,Réseaux sociaux,44,Bimensuelle,1.90,0.20,0,0
+36,Jeu concours,31,Hebdomadaire,23.70,4.00,0,0
+36,Site,17,Bimensuelle,30.50,6.70,0,0
+38,Partenaire,5,Bimensuelle,34.60,6.70,3,0
+44,Site,43,Bimensuelle,27.30,2.80,0,0
+32,Site,15,Hebdomadaire,40.40,7.00,0,0
+34,Site,35,Hebdomadaire,17.00,4.50,1,0
+38,Site,25,Mensuelle,20.40,3.80,2,0
+50,Site,4,Bimensuelle,30.70,3.20,0,0
+21,Partenaire,33,Mensuelle,28.30,5.20,0,0
+59,Salon,7,Hebdomadaire,16.70,3.30,1,0
+51,Site,33,Bimensuelle,19.00,2.90,1,0
+45,Site,1,Bimensuelle,23.80,2.40,0,0
+42,Site,41,Hebdomadaire,39.90,13.60,1,0
+55,Site,21,Bimensuelle,27.00,5.00,0,0
+39,Réseaux sociaux,47,Hebdomadaire,7.20,0.60,0,0
+34,Salon,40,Bimensuelle,3.30,0.70,0,0
+29,Partenaire,34,Hebdomadaire,50.40,8.10,0,0
+35,Site,3,Hebdomadaire,59.50,11.20,1,0
+43,Réseaux sociaux,35,Bimensuelle,20.60,3.40,0,0
+27,Réseaux sociaux,11,Hebdomadaire,34.30,4.20,0,0
+44,Partenaire,18,Mensuelle,32.80,7.80,2,0
+32,Site,15,Hebdomadaire,63.60,12.90,0,0
+37,Site,26,Mensuelle,25.30,3.20,0,0
+38,Site,19,Hebdomadaire,47.30,8.80,4,0
+39,Salon,18,Hebdomadaire,11.30,2.70,0,0
+25,Salon,7,Hebdomadaire,58.00,11.10,0,0
+32,Site,46,Bimensuelle,39.70,4.40,0,0
+46,Site,2,Bimensuelle,30.50,5.00,2,0
+45,Partenaire,20,Hebdomadaire,39.70,5.70,1,0
+55,Partenaire,43,Mensuelle,20.40,4.40,0,0
+35,Site,30,Bimensuelle,45.60,8.90,0,0
+48,Site,36,Hebdomadaire,29.80,5.00,0,0
+57,Site,33,Bimensuelle,3.90,0.80,0,0
+24,Jeu concours,37,Bimensuelle,19.30,2.60,0,0
+30,Site,10,Hebdomadaire,26.30,2.10,0,0
+32,Jeu concours,30,Hebdomadaire,16.70,4.20,1,0
+56,Site,34,Hebdomadaire,59.10,11.70,2,0
+41,Site,44,Mensuelle,13.50,3.20,1,0
+19,Réseaux sociaux,12,Hebdomadaire,31.00,6.30,1,0
+26,Site,11,Hebdomadaire,51.30,10.30,0,0
+26,Partenaire,3,Hebdomadaire,63.90,10.70,3,0
+56,Site,21,Mensuelle,44.60,6.20,0,0
+18,Site,3,Bimensuelle,28.20,4.70,0,0
+39,Partenaire,29,Hebdomadaire,0.00,0.00,0,1
+20,Jeu concours,1,Hebdomadaire,28.20,1.70,1,0
+44,Jeu concours,43,Hebdomadaire,11.60,2.60,0,1
+51,Jeu concours,22,Bimensuelle,29.90,5.10,2,0
+22,Site,3,Hebdomadaire,30.20,9.70,3,0
+27,Réseaux sociaux,29,Hebdomadaire,29.80,7.60,1,0
+26,Réseaux sociaux,44,Bimensuelle,6.70,0.90,1,0
+50,Partenaire,38,Bimensuelle,40.30,5.80,1,0
+66,Site,34,Hebdomadaire,16.40,1.90,0,0
+38,Site,7,Hebdomadaire,50.50,13.50,1,0
+37,Réseaux sociaux,36,Mensuelle,27.50,5.00,2,0
+56,Site,11,Mensuelle,6.70,1.50,3,0
+28,Site,10,Hebdomadaire,24.20,6.90,0,0
+46,Réseaux sociaux,16,Bimensuelle,61.40,16.30,0,0
+24,Site,34,Mensuelle,14.00,2.40,1,0
+46,Salon,45,Hebdomadaire,28.10,4.30,0,0
+49,Réseaux sociaux,19,Mensuelle,22.30,4.70,2,0
+61,Site,39,Hebdomadaire,39.30,6.50,0,0
+52,Jeu concours,30,Bimensuelle,25.30,5.50,2,0
+30,Salon,47,Bimensuelle,17.30,2.40,0,0
+34,Jeu concours,5,Hebdomadaire,25.00,3.90,2,0
+41,Réseaux sociaux,26,Bimensuelle,19.90,2.50,2,0
+39,Site,28,Hebdomadaire,41.30,11.00,2,0
+37,Site,24,Hebdomadaire,38.80,6.60,1,0
+35,Salon,5,Hebdomadaire,29.80,7.60,0,0
+40,Partenaire,7,Bimensuelle,32.50,5.50,0,0
+33,Site,3,Bimensuelle,8.00,1.20,0,0
+47,Site,37,Bimensuelle,14.50,2.40,0,1
+24,Jeu concours,15,Mensuelle,27.00,3.40,1,0
+32,Site,37,Bimensuelle,33.40,8.70,1,0
+53,Salon,17,Hebdomadaire,32.00,3.10,3,0
+43,Réseaux sociaux,23,Hebdomadaire,37.80,8.60,2,0
+18,Jeu concours,12,Hebdomadaire,7.30,0.70,0,1
+35,Site,36,Bimensuelle,12.20,2.40,0,0
+47,Jeu concours,38,Bimensuelle,0.00,0.00,1,1
+46,Jeu concours,41,Mensuelle,24.00,5.50,2,0
+41,Site,17,Mensuelle,47.80,9.10,1,0
+24,Site,43,Mensuelle,27.90,5.90,1,0
+60,Réseaux sociaux,22,Mensuelle,30.10,4.50,2,0
+31,Jeu concours,36,Mensuelle,45.20,5.80,1,0
+54,Partenaire,10,Hebdomadaire,30.10,7.00,2,0
+38,Partenaire,7,Mensuelle,42.50,10.70,1,0
+25,Site,15,Mensuelle,23.70,3.40,0,0
+34,Site,20,Hebdomadaire,45.40,11.10,4,0
+38,Site,42,Bimensuelle,40.20,8.40,2,0
+67,Réseaux sociaux,30,Bimensuelle,3.50,0.60,1,0
+39,Site,42,Hebdomadaire,16.60,3.80,1,0
+19,Réseaux sociaux,23,Hebdomadaire,41.10,9.10,1,0
+33,Site,10,Hebdomadaire,40.60,12.00,2,0
+34,Site,30,Hebdomadaire,60.30,11.80,2,0
+27,Partenaire,14,Hebdomadaire,29.70,8.60,1,0
+19,Jeu concours,8,Hebdomadaire,22.80,4.00,0,1
+39,Site,11,Hebdomadaire,4.30,0.70,2,1
+53,Site,25,Mensuelle,41.70,8.50,0,0
+41,Réseaux sociaux,14,Hebdomadaire,15.50,4.10,0,0
+37,Jeu concours,33,Hebdomadaire,0.00,0.00,0,1
+31,Site,19,Bimensuelle,43.90,10.40,0,0
+28,Partenaire,15,Hebdomadaire,26.90,4.00,0,0
+18,Réseaux sociaux,36,Mensuelle,23.10,3.00,0,0
+18,Réseaux sociaux,14,Hebdomadaire,0.00,0.00,0,1
+40,Salon,31,Hebdomadaire,52.00,15.80,2,0
+30,Salon,39,Hebdomadaire,20.60,4.20,1,0
+40,Site,29,Hebdomadaire,17.40,3.30,1,0
+36,Site,26,Hebdomadaire,34.30,11.30,0,0
+24,Jeu concours,14,Mensuelle,27.10,0.60,1,0
+39,Réseaux sociaux,24,Bimensuelle,19.90,4.10,2,0
+41,Site,7,Bimensuelle,43.40,4.20,1,0
+27,Partenaire,3,Mensuelle,26.60,5.00,1,0

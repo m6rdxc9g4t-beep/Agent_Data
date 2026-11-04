@@ -34,7 +34,7 @@ export interface ModelResult {
   label: string
   hint: string
   metrics: Metric[]
-  score: number // métrique principale (R² ou accuracy)
+  score: number // métrique principale : R² (valeur), AUC (oui / non), taux de bonnes réponses (catégories)
   trainMs: number
   detail: string
 }
@@ -110,7 +110,8 @@ function classificationMetrics(probs: number[][], y: number[], k: number): Metri
     { key: 'accuracy', label: 'Taux de bonnes réponses', value: round(acc), higherIsBetter: true },
     { key: 'f1', label: 'F1 (moyenne des classes)', value: round(f1 / k), higherIsBetter: true },
   ]
-  if (k === 2) metrics.push({ key: 'auc', label: 'AUC', value: round(auc(probs.map((p) => p[1]), y)), higherIsBetter: true })
+  // Cible oui / non : l'AUC devient la métrique principale (insensible au déséquilibre des classes).
+  if (k === 2) metrics.unshift({ key: 'auc', label: 'AUC', value: round(auc(probs.map((p) => p[1]), y)), higherIsBetter: true })
   return metrics
 }
 
@@ -219,10 +220,14 @@ export async function trainModels(db: DatasetDb, profile: Profile, target: strin
   const main = best.metrics[0]
   const top = imp.slice(0, 3).filter((v) => v.drop > 0).map((v) => v.name)
   const summary = task === 'regression'
-    ? `${best.label} retenu pour prédire « ${data.target.name} » : R² ${fr(main.value)} sur le jeu de test (référence : ${fr(base.score)}). ` +
+    ? `Modèle retenu : ${best.label}. Pour prédire « ${data.target.name} », R² de ${fr(main.value)} sur le jeu de test (référence : ${fr(base.score)}). ` +
       `Erreur moyenne ${fr(best.metrics[1].value)}.${top.length ? ` Variables les plus influentes : ${top.join(', ')}.` : ''}`
-    : `${best.label} retenu pour prédire « ${data.target.name} » (${data.target.classes.join(' / ')}) : ${fr(main.value * 100, 1)} % de bonnes réponses ` +
-      `sur le jeu de test (référence : ${fr(base.score * 100, 1)} %).${top.length ? ` Variables les plus influentes : ${top.join(', ')}.` : ''}`
+    : task === 'binary'
+      ? `Modèle retenu : ${best.label}. Pour prédire « ${data.target.name} », AUC de ${fr(main.value)} sur le jeu de test (0,5 = hasard, 1 = parfait), ` +
+        `${fr(best.metrics[1].value * 100, 1)} % de bonnes réponses (référence : ${fr(base.metrics[1].value * 100, 1)} %).` +
+        `${top.length ? ` Variables les plus influentes : ${top.join(', ')}.` : ''}`
+      : `Modèle retenu : ${best.label}. Pour prédire « ${data.target.name} » (${data.target.classes.join(' / ')}), ${fr(main.value * 100, 1)} % de bonnes réponses ` +
+        `sur le jeu de test (référence : ${fr(base.score * 100, 1)} %).${top.length ? ` Variables les plus influentes : ${top.join(', ')}.` : ''}`
 
   return {
     id, target: data.target, task,

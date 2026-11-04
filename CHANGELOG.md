@@ -1,5 +1,15 @@
 # Journal des versions
 
+## 6.4.0 — Jeux d'exemple dans 9 domaines
+
+- 15 jeux d'exemple fictifs mais réalistes : commerce, finance (transactions et fraude, crédit, bourse),
+  marketing (campagnes, newsletter, fidélité), IA & tech (expériences de machine learning, usage d'une API d'IA),
+  RH, énergie, santé, immobilier et logistique. Chacun contient de vrais effets à découvrir et une cible à prédire.
+- Bouton « Jeux d'exemple » dans la barre latérale : la galerie, filtrable par domaine, est accessible à tout moment,
+  plus seulement à l'accueil. Un exemple déjà chargé s'ouvre directement au lieu d'être réimporté.
+- L'Assistant propose des questions adaptées à chaque jeu d'exemple.
+- Catalogue `sample_data/catalog.json` ; les données sont régénérables avec `python3 scripts/generer_exemples.py`.
+
 ## 6.3.0 — Onglet Prédiction
 
 - **Prévoir une variable** : entraîne et compare quatre modèles (référence naïve, régression linéaire ou

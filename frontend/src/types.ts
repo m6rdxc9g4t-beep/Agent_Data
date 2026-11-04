@@ -120,7 +120,16 @@ export interface AppConfig {
   toolLabels: Record<string, string>
 }
 
-export interface Sample { file: string; label: string; hint: string }
+export interface Sample {
+  file: string
+  label: string
+  domain: string
+  rows: number
+  columns: number
+  description: string
+  ideas: string[]
+  datasetId: string | null
+}
 
 export interface EngineChoice { engine: 'ollama' | 'claude'; ollamaModel: string; claudeModel: string; apiKey: string }
 

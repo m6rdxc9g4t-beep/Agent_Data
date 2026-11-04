@@ -29,6 +29,9 @@ Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un
 - **Historique** — jeux de données et analyses enregistrés sur le serveur ; export d'une analyse en page HTML.
 - **Fichiers** — CSV / TSV (encodage et séparateur détectés, format français `;` et virgule décimale),
   Excel (choix de la feuille), JSON, JSON Lines, Parquet ; jusqu'à 200 Mo.
+- **Jeux d'exemple** — 15 jeux fictifs mais réalistes dans 9 domaines (commerce, finance, marketing, IA & tech,
+  RH, énergie, santé, immobilier, logistique), accessibles à tout moment depuis la barre latérale, avec des
+  questions suggérées pour chacun.
 - **Thème** clair, sombre ou celui du système.
 
 ## Moteurs IA
@@ -122,6 +125,9 @@ frontend/src/
 ├── App.tsx            État de l'application, envoi des questions, lecture du flux
 ├── components/        Barre latérale, accueil, Assistant, Exploration, Qualité, Données, graphiques (ECharts)
 └── styles.css         Thème clair / sombre
+sample_data/           Jeux d'exemple + catalog.json (titre, domaine, description, questions suggérées)
+scripts/
+└── generer_exemples.py  Régénère les jeux d'exemple (Python + numpy, graine fixe)
 ```
 
 **Sécurité des requêtes** : chaque jeu de données est chargé dans une base DuckDB en mémoire, puis l'accès

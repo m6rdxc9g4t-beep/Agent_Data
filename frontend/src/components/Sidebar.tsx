@@ -1,6 +1,6 @@
 // Barre latérale : jeux de données, analyses du jeu ouvert, moteur IA et thème.
 import { useRef, useState } from 'react'
-import { Cpu, KeyRound, Monitor, Moon, Plus, RefreshCw, Search, Sun, Trash2, Upload, X } from 'lucide-react'
+import { Cpu, KeyRound, LibraryBig, Monitor, Moon, Plus, RefreshCw, Search, Sun, Trash2, Upload, X } from 'lucide-react'
 
 import { fmtInt, fmtRelative } from '../format'
 import { useTheme, type ThemeMode } from '../theme'
@@ -16,6 +16,7 @@ interface Props {
   engineStatus: { ok: boolean; text: string }
   uploading: number | null
   onUpload: (f: File) => void
+  onOpenSamples: () => void
   onSelectDataset: (id: string) => void
   onSelectConversation: (id: string) => void
   onNewConversation: () => void
@@ -49,6 +50,7 @@ export function Sidebar(p: Props) {
         {p.uploading !== null ? <><span className="progress" style={{ width: `${p.uploading * 100}%` }} /> Import en cours… {Math.round(p.uploading * 100)} %</>
           : <><Upload size={16} /> Importer un fichier</>}
       </button>
+      <button type="button" className="samples-btn" onClick={p.onOpenSamples}><LibraryBig size={16} /> Jeux d’exemple</button>
       <input ref={file} type="file" hidden accept={cfg?.formats.join(',')} onChange={(ev) => { const f = ev.target.files?.[0]; if (f) p.onUpload(f); ev.target.value = '' }} />
 
       <nav className="nav" aria-label="Jeux de données">

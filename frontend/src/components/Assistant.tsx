@@ -124,9 +124,10 @@ interface Props {
   engineLabel: string
   onSend: (text: string, label?: string) => void
   onStop: () => void
+  ideas?: string[]
 }
 
-export function Assistant({ config, conversation, ready, notReadyReason, busy, engineLabel, onSend, onStop }: Props) {
+export function Assistant({ config, conversation, ready, notReadyReason, busy, engineLabel, ideas, onSend, onStop }: Props) {
   const [text, setText] = useState('')
   const area = useRef<HTMLTextAreaElement>(null)
   const thread = useRef<HTMLDivElement>(null)
@@ -173,6 +174,16 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
                 </button>
               ))}
             </div>
+            {ideas && ideas.length > 0 && (
+              <div className="ideas">
+                <span>Questions suggérées pour ce jeu d’exemple</span>
+                <div>
+                  {ideas.map((q) => (
+                    <button key={q} type="button" className="idea" disabled={!ready} onClick={() => onSend(q)}>{q}</button>
+                  ))}
+                </div>
+              </div>
+            )}
             {!ready && <p className="hint-warn"><AlertTriangle size={15} /> {notReadyReason}</p>}
           </section>
         )}

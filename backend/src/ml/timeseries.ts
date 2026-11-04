@@ -198,7 +198,7 @@ export async function forecastSeries(
       rows: future.map((x, i) => [label(x.p), r(x.v), r(x.v - 1.96 * sigma * Math.sqrt(1 + i * 0.15)), r(x.v + 1.96 * sigma * Math.sqrt(1 + i * 0.15))]),
       truncated: false,
     },
-    summary: `${TS_LABELS[best.kind]} retenu (erreur moyenne ${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 2 }).format(best.mae)} sur les ${hold} dernières périodes, ` +
+    summary: `Méthode retenue : ${TS_LABELS[best.kind]} (erreur moyenne ${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 2 }).format(best.mae)} sur les ${hold} dernières périodes, ` +
       `${gain >= 0 ? `${gain} % de mieux` : `${-gain} % de moins bien`} que la référence naïve). ` +
       `Prévision sur ${periods} ${grainLabel[grain]}${periods > 1 && grain !== 'month' ? 's' : ''} à partir de ${pts.length} périodes d'historique.`,
   }

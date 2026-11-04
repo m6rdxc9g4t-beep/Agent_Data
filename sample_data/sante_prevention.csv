@@ -1,0 +1,2001 @@
+age,sexe,imc,activite_physique,tabac,tension_systolique,glycemie_g_l,cholesterol_g_l,risque_cardio
+37,F,22.90,Faible,Non-fumeur,108.00,0.79,1.65,Faible
+62,F,31.00,Faible,Non-fumeur,131.00,1.11,2.06,Élevé
+21,F,29.70,Faible,Non-fumeur,135.00,0.60,1.90,Faible
+35,H,24.70,Faible,Fumeur,144.00,0.77,2.11,Modéré
+60,H,29.50,Modérée,Non-fumeur,153.00,1.00,2.55,Élevé
+33,H,29.30,Modérée,Non-fumeur,138.00,0.93,2.16,Faible
+77,F,26.30,Modérée,Non-fumeur,144.00,0.92,2.29,Élevé
+73,H,32.20,Modérée,Fumeur,139.00,0.98,1.68,Modéré
+38,F,22.70,Faible,Non-fumeur,134.00,0.77,1.83,Faible
+67,H,37.60,Modérée,Ancien fumeur,156.00,0.95,3.06,Élevé
+24,F,18.30,Faible,Non-fumeur,108.00,0.55,1.95,Faible
+51,F,30.20,Faible,Ancien fumeur,154.00,0.85,2.47,Modéré
+53,F,34.50,Modérée,Non-fumeur,160.00,1.00,1.97,Modéré
+60,F,23.50,Modérée,Fumeur,125.00,1.02,2.22,Élevé
+54,H,22.20,Faible,Fumeur,130.00,0.77,2.09,Modéré
+37,H,30.10,Modérée,Non-fumeur,128.00,1.02,2.34,Modéré
+71,F,19.10,Faible,Fumeur,149.00,0.71,,Modéré
+49,H,30.00,Modérée,Fumeur,145.00,1.00,2.30,Élevé
+54,F,33.10,Modérée,Fumeur,150.00,0.97,1.64,Modéré
+52,F,26.70,Faible,Non-fumeur,129.00,1.04,1.72,Modéré
+40,F,30.40,Modérée,Non-fumeur,125.00,1.12,1.72,Faible
+44,H,25.30,Faible,Non-fumeur,101.00,0.95,2.32,Faible
+60,F,28.50,Modérée,Ancien fumeur,145.00,1.04,1.51,Modéré
+79,H,22.70,Modérée,Non-fumeur,141.00,1.09,2.52,Modéré
+59,H,26.40,Faible,Non-fumeur,137.00,1.05,,Modéré
+48,F,28.00,Élevée,Non-fumeur,124.00,1.06,1.88,Faible
+57,H,19.40,Faible,Ancien fumeur,112.00,0.86,1.96,Faible
+50,H,28.20,Modérée,Fumeur,145.00,0.90,1.85,Élevé
+45,F,29.10,Élevée,Ancien fumeur,128.00,0.58,1.93,Faible
+44,F,23.30,Modérée,Non-fumeur,117.00,0.76,1.88,Faible
+52,H,28.80,Modérée,Non-fumeur,148.00,0.98,1.25,Modéré
+37,H,24.90,Faible,Ancien fumeur,121.00,1.06,1.59,Faible
+61,H,29.70,Modérée,Non-fumeur,134.00,1.12,2.30,Modéré
+43,F,40.10,Modérée,Non-fumeur,139.00,0.94,2.00,Modéré
+48,F,23.40,Élevée,Non-fumeur,132.00,0.58,1.89,Faible
+53,F,25.30,Faible,Ancien fumeur,137.00,0.95,2.19,Modéré
+52,H,21.70,Faible,Ancien fumeur,111.00,1.08,1.31,Faible
+66,F,22.30,Faible,Non-fumeur,106.00,0.94,2.13,Modéré
+90,F,28.00,Faible,Non-fumeur,169.00,0.99,2.59,Élevé
+52,H,24.00,Modérée,Non-fumeur,131.00,0.97,2.21,Modéré
+39,H,32.20,Modérée,Fumeur,133.00,0.97,1.99,Élevé
+40,H,29.10,Faible,Non-fumeur,131.00,0.94,1.97,Modéré
+61,H,30.40,Faible,Non-fumeur,143.00,0.94,2.15,Élevé
+61,F,42.20,Modérée,Non-fumeur,139.00,1.09,1.70,Élevé
+38,H,28.20,Modérée,Ancien fumeur,136.00,,1.67,Faible
+38,H,25.30,Élevée,Non-fumeur,125.00,0.91,1.85,Faible
+54,F,23.70,Faible,Fumeur,131.00,0.75,2.26,Faible
+42,H,21.10,Modérée,Ancien fumeur,107.00,0.75,2.00,Faible
+63,F,23.00,Élevée,Non-fumeur,125.00,0.86,2.49,Faible
+51,F,25.90,Faible,Fumeur,133.00,1.00,2.17,Élevé
+55,H,25.70,Faible,Non-fumeur,140.00,0.97,2.16,Modéré
+58,F,29.20,Faible,Ancien fumeur,150.00,0.86,1.73,Modéré
+56,F,31.30,Élevée,Fumeur,137.00,0.82,,Modéré
+64,H,27.70,Faible,Ancien fumeur,143.00,1.00,2.05,Modéré
+40,F,28.60,Faible,Ancien fumeur,119.00,0.88,2.89,Faible
+32,H,25.20,Modérée,Non-fumeur,131.00,0.94,2.00,Faible
+34,H,26.60,Élevée,Non-fumeur,142.00,0.63,1.33,Faible
+29,F,23.10,Modérée,Non-fumeur,115.00,0.93,2.19,Faible
+73,F,32.50,Modérée,Non-fumeur,153.00,1.05,1.86,Élevé
+47,H,25.80,Modérée,Ancien fumeur,122.00,0.90,1.42,Faible
+25,H,27.40,Modérée,Non-fumeur,126.00,0.75,2.19,Faible
+43,H,18.80,Faible,Non-fumeur,111.00,0.89,1.26,Faible
+81,H,22.90,Modérée,Non-fumeur,133.00,0.96,1.81,Modéré
+53,F,27.40,Élevée,Non-fumeur,130.00,0.91,2.06,Faible
+35,H,19.40,Faible,Non-fumeur,106.00,0.68,1.78,Faible
+52,H,18.30,Élevée,Fumeur,150.00,0.80,2.59,Faible
+49,H,23.80,Faible,Fumeur,128.00,0.70,1.17,Faible
+61,F,28.40,Modérée,Non-fumeur,122.00,0.85,3.01,Faible
+73,F,29.80,Modérée,Non-fumeur,155.00,1.21,2.20,Élevé
+74,H,28.80,Élevée,Fumeur,159.00,0.94,2.32,Élevé
+61,H,24.10,Modérée,Non-fumeur,143.00,0.88,1.56,Modéré
+42,F,27.30,Faible,Fumeur,131.00,1.03,1.99,Élevé
+61,F,34.50,Élevée,Ancien fumeur,137.00,1.03,2.16,Modéré
+48,F,24.30,Faible,Non-fumeur,129.00,0.87,1.72,Modéré
+19,F,29.40,Modérée,Non-fumeur,130.00,1.02,2.15,Modéré
+43,H,32.20,Modérée,Ancien fumeur,143.00,0.88,2.46,Modéré
+34,F,25.10,Faible,Fumeur,128.00,0.80,2.30,Faible
+47,H,27.60,Faible,Non-fumeur,114.00,1.00,2.16,Modéré
+53,H,31.30,Faible,Fumeur,125.00,1.03,2.17,Modéré
+35,H,31.10,Faible,Fumeur,136.00,1.13,2.62,Modéré
+77,H,28.20,Modérée,Ancien fumeur,157.00,0.98,2.16,Élevé
+48,F,24.50,Faible,Fumeur,135.00,,1.82,Modéré
+49,F,32.00,Faible,Non-fumeur,129.00,0.98,2.21,Modéré
+34,F,27.70,Modérée,Non-fumeur,154.00,0.89,1.34,Faible
+27,F,19.20,Élevée,Fumeur,128.00,0.78,1.73,Faible
+70,F,24.00,Faible,Non-fumeur,122.00,1.00,1.86,Modéré
+67,F,25.10,Modérée,Fumeur,153.00,1.11,2.85,Élevé
+56,H,23.80,Faible,Non-fumeur,127.00,1.03,2.26,Modéré
+46,H,24.70,Élevée,Non-fumeur,133.00,0.81,,Faible
+38,H,27.00,Faible,Non-fumeur,117.00,0.86,1.71,Faible
+75,F,24.90,Faible,Ancien fumeur,142.00,0.94,2.18,Élevé
+75,F,33.20,Élevée,Non-fumeur,127.00,1.01,2.51,Modéré
+84,H,22.20,Faible,Non-fumeur,155.00,0.96,2.00,Élevé
+46,F,31.30,Modérée,Fumeur,148.00,0.87,1.85,Élevé
+68,H,28.10,Faible,Non-fumeur,138.00,1.00,2.10,Modéré
+45,H,23.00,Élevée,Fumeur,126.00,0.87,1.65,Faible
+45,H,29.30,Modérée,Non-fumeur,113.00,0.95,1.65,Faible
+61,F,22.10,Élevée,Non-fumeur,129.00,0.89,1.97,Faible
+30,F,27.70,Modérée,Non-fumeur,126.00,0.82,2.24,Faible
+75,F,27.20,Modérée,Fumeur,153.00,0.94,2.24,Élevé
+60,H,27.70,Modérée,Non-fumeur,147.00,0.90,2.64,Modéré
+45,F,26.40,Faible,Fumeur,125.00,0.84,1.88,Faible
+50,H,23.50,Modérée,Ancien fumeur,122.00,0.80,2.03,Modéré
+55,F,29.30,Faible,Non-fumeur,146.00,1.02,1.91,Modéré
+79,F,27.50,Modérée,Fumeur,158.00,1.12,1.77,Élevé
+43,F,25.90,Modérée,Non-fumeur,135.00,0.96,2.48,Modéré
+28,F,22.50,Faible,Fumeur,126.00,0.81,1.62,Faible
+57,F,23.20,Élevée,Fumeur,147.00,0.87,2.18,Modéré
+55,F,25.20,Modérée,Non-fumeur,125.00,,1.36,Faible
+58,F,31.40,Élevée,Non-fumeur,155.00,0.91,1.91,Modéré
+39,F,33.50,Faible,Fumeur,132.00,0.95,2.41,Modéré
+56,F,26.50,Modérée,Non-fumeur,134.00,1.00,2.17,Faible
+66,H,34.50,Élevée,Non-fumeur,160.00,1.19,2.42,Élevé
+58,H,31.40,Modérée,Ancien fumeur,145.00,1.13,2.31,Élevé
+52,H,31.10,Faible,Ancien fumeur,136.00,1.04,2.38,Modéré
+42,H,33.20,Élevée,Non-fumeur,142.00,1.10,2.33,Modéré
+90,H,21.60,Faible,Fumeur,146.00,0.92,2.27,Élevé
+19,F,32.90,Modérée,Fumeur,150.00,0.98,2.38,Modéré
+64,H,29.20,Modérée,Non-fumeur,163.00,0.94,1.75,Élevé
+46,H,26.80,Faible,Ancien fumeur,140.00,0.80,2.08,Faible
+47,F,27.00,Faible,Ancien fumeur,137.00,1.04,2.05,Faible
+43,F,22.20,Modérée,Non-fumeur,139.00,0.73,1.86,Faible
+44,F,23.70,Élevée,Fumeur,148.00,0.67,2.35,Faible
+46,F,31.00,Élevée,Non-fumeur,135.00,1.03,2.19,Faible
+37,F,23.50,Élevée,Ancien fumeur,126.00,0.66,2.01,Faible
+52,H,26.70,Modérée,Ancien fumeur,130.00,0.87,1.72,Modéré
+47,F,17.10,Faible,Non-fumeur,104.00,0.76,2.15,Faible
+39,H,29.50,Modérée,Non-fumeur,158.00,0.85,1.97,Faible
+42,F,24.90,Modérée,Non-fumeur,121.00,0.99,2.39,Modéré
+43,H,25.40,Élevée,Non-fumeur,132.00,0.70,2.09,Faible
+47,H,26.20,Faible,Ancien fumeur,151.00,1.13,1.90,Élevé
+55,H,24.50,Modérée,Non-fumeur,164.00,0.96,2.16,Modéré
+38,H,29.90,Faible,Non-fumeur,127.00,1.16,1.50,Modéré
+32,F,19.60,Élevée,Ancien fumeur,124.00,0.51,2.19,Faible
+76,F,28.10,Faible,Non-fumeur,157.00,1.12,1.92,Élevé
+44,H,27.10,Faible,Ancien fumeur,102.00,0.91,2.26,Modéré
+18,H,17.80,Modérée,Ancien fumeur,100.00,0.65,2.04,Faible
+45,F,27.70,Modérée,Non-fumeur,118.00,0.87,2.13,Faible
+71,F,23.70,Modérée,Non-fumeur,128.00,1.24,2.44,Élevé
+78,H,24.00,Modérée,Non-fumeur,147.00,1.14,,Élevé
+81,F,27.40,Élevée,Non-fumeur,136.00,0.97,2.75,Modéré
+36,F,16.00,Modérée,Non-fumeur,132.00,0.78,1.52,Faible
+47,F,26.90,Modérée,Non-fumeur,142.00,1.14,2.29,Modéré
+65,H,23.90,Modérée,Non-fumeur,135.00,0.98,2.67,Modéré
+48,F,23.20,Faible,Non-fumeur,136.00,0.93,2.24,Modéré
+58,H,29.00,Élevée,Non-fumeur,142.00,1.15,2.36,Modéré
+60,F,31.90,Faible,Non-fumeur,149.00,0.94,1.83,Modéré
+49,F,28.70,Faible,Non-fumeur,160.00,1.07,,Élevé
+42,H,27.60,Modérée,Ancien fumeur,129.00,0.77,1.97,Faible
+52,F,26.40,Faible,Non-fumeur,143.00,1.16,1.84,Modéré
+51,H,27.00,Modérée,Fumeur,148.00,0.92,1.72,Modéré
+65,F,30.90,Faible,Non-fumeur,141.00,1.05,2.27,Élevé
+57,H,24.20,Élevée,Non-fumeur,134.00,0.78,1.94,Faible
+49,F,37.40,Élevée,Ancien fumeur,125.00,0.92,2.15,Modéré
+52,H,24.10,Faible,Non-fumeur,142.00,1.11,2.06,Modéré
+67,H,30.20,Faible,Non-fumeur,127.00,1.08,2.23,Élevé
+74,H,26.90,Modérée,Non-fumeur,156.00,1.05,2.11,Élevé
+40,F,25.80,Faible,Non-fumeur,131.00,0.87,2.20,Faible
+55,H,27.20,Modérée,Ancien fumeur,132.00,0.94,2.50,Modéré
+68,F,31.10,Faible,Fumeur,146.00,1.16,1.93,Élevé
+68,F,20.90,Faible,Ancien fumeur,118.00,0.86,2.50,Modéré
+74,F,28.60,Faible,Fumeur,144.00,1.03,2.48,Élevé
+69,F,31.40,Modérée,Non-fumeur,126.00,1.19,2.71,Élevé
+37,F,25.10,Modérée,Fumeur,133.00,0.71,,Faible
+48,H,26.70,Faible,Non-fumeur,118.00,0.85,2.25,Faible
+53,F,31.30,Élevée,Non-fumeur,130.00,0.94,2.55,Faible
+62,H,21.30,Élevée,Non-fumeur,133.00,0.88,2.03,Modéré
+45,H,27.60,Élevée,Fumeur,147.00,0.83,1.66,Modéré
+68,F,29.10,Modérée,Non-fumeur,152.00,0.93,2.18,Élevé
+70,H,21.90,Modérée,Non-fumeur,128.00,0.80,2.03,Modéré
+58,F,41.30,Modérée,Non-fumeur,136.00,1.27,2.37,Élevé
+47,F,33.60,Élevée,Ancien fumeur,127.00,1.00,2.49,Faible
+39,H,22.60,Élevée,Non-fumeur,122.00,0.90,2.32,Faible
+18,H,31.50,Faible,Ancien fumeur,112.00,0.74,2.47,Faible
+59,F,24.70,Élevée,Ancien fumeur,114.00,0.88,1.96,Faible
+70,H,31.20,Modérée,Non-fumeur,149.00,0.84,2.07,Modéré
+32,F,35.70,Modérée,Non-fumeur,133.00,0.94,2.10,Faible
+41,H,22.40,Modérée,Non-fumeur,136.00,0.84,1.72,Faible
+54,F,20.50,Modérée,Ancien fumeur,141.00,0.95,1.91,Faible
+57,H,28.20,Faible,Non-fumeur,140.00,0.88,2.17,Élevé
+34,H,33.70,Modérée,Non-fumeur,130.00,1.04,1.81,Faible
+26,F,25.10,Élevée,Non-fumeur,104.00,0.81,2.41,Faible
+47,F,21.40,Modérée,Non-fumeur,133.00,0.82,2.17,Faible
+58,H,16.00,Faible,Non-fumeur,104.00,0.85,1.95,Faible
+57,F,30.10,Modérée,Non-fumeur,116.00,0.85,2.33,Faible
+34,F,31.80,Modérée,Non-fumeur,137.00,0.80,2.14,Modéré
+41,H,20.10,Élevée,Non-fumeur,132.00,0.95,1.95,Faible
+72,F,28.60,Modérée,Non-fumeur,154.00,0.87,1.45,Élevé
+56,F,28.80,Faible,Non-fumeur,130.00,1.07,1.92,Faible
+73,H,18.40,Élevée,Fumeur,146.00,0.72,2.34,Faible
+44,H,27.30,Modérée,Non-fumeur,132.00,0.90,,Modéré
+38,H,23.80,Modérée,Non-fumeur,116.00,0.90,1.80,Faible
+36,H,26.00,Faible,Non-fumeur,110.00,0.96,2.25,Faible
+80,H,20.20,Modérée,Non-fumeur,138.00,,2.12,Modéré
+55,H,29.10,Modérée,Non-fumeur,150.00,0.88,2.49,Élevé
+48,F,29.40,Élevée,Fumeur,143.00,0.68,2.19,Faible
+79,F,25.40,Faible,Non-fumeur,146.00,1.10,2.18,Modéré
+32,H,27.00,Modérée,Fumeur,138.00,0.81,2.05,Faible
+48,H,29.10,Faible,Non-fumeur,134.00,0.64,1.50,Faible
+57,H,33.90,Modérée,Non-fumeur,152.00,0.86,2.49,Modéré
+53,F,38.30,Faible,Non-fumeur,128.00,0.92,2.77,Élevé
+65,H,19.20,Modérée,Fumeur,166.00,1.20,2.23,Élevé
+51,H,25.40,Modérée,Ancien fumeur,131.00,0.94,2.38,Modéré
+39,H,24.30,Élevée,Non-fumeur,125.00,0.92,1.71,Faible
+55,F,26.60,Faible,Fumeur,133.00,0.80,1.94,Modéré
+62,F,24.60,Modérée,Non-fumeur,138.00,,2.14,Modéré
+55,F,33.20,Modérée,Non-fumeur,128.00,0.92,1.88,Modéré
+41,H,24.60,Faible,Ancien fumeur,132.00,0.86,1.27,Faible
+84,H,21.10,Élevée,Non-fumeur,147.00,0.85,2.12,Modéré
+71,F,16.00,Modérée,Non-fumeur,133.00,,2.28,Modéré
+46,H,27.80,Élevée,Non-fumeur,141.00,0.92,1.46,Faible
+32,F,24.40,Élevée,Non-fumeur,121.00,0.83,1.82,Faible
+47,F,28.60,Élevée,Non-fumeur,137.00,0.80,2.10,Faible
+72,F,28.30,Modérée,Non-fumeur,140.00,1.01,1.81,Élevé
+60,F,32.00,Modérée,Fumeur,142.00,1.03,2.39,Élevé
+26,F,25.50,Modérée,Non-fumeur,110.00,0.67,2.26,Faible
+53,F,36.30,Faible,Non-fumeur,144.00,1.12,2.88,Élevé
+45,H,27.30,Faible,Non-fumeur,129.00,1.07,2.12,Faible
+71,F,20.80,Faible,Fumeur,129.00,1.02,1.72,Élevé
+34,H,16.00,Faible,Fumeur,100.00,0.80,2.07,Faible
+53,H,28.20,Modérée,Fumeur,150.00,0.87,1.79,Modéré
+55,H,32.10,Faible,Fumeur,172.00,0.89,2.51,Élevé
+54,F,30.90,Modérée,Non-fumeur,157.00,0.96,1.73,Modéré
+41,F,23.90,Modérée,Non-fumeur,124.00,0.97,2.11,Faible
+51,F,27.70,Faible,Non-fumeur,141.00,0.96,2.11,Modéré
+41,H,25.10,Modérée,Non-fumeur,121.00,0.76,1.75,Faible
+80,H,28.50,Élevée,Ancien fumeur,137.00,0.79,,Modéré
+79,F,23.80,Faible,Non-fumeur,146.00,1.01,2.16,Modéré
+62,H,28.90,Élevée,Non-fumeur,157.00,0.92,2.07,Modéré
+34,H,25.50,Élevée,Non-fumeur,127.00,0.68,2.26,Faible
+78,F,20.00,Faible,Non-fumeur,131.00,1.12,2.36,Modéré
+46,H,25.20,Faible,Non-fumeur,118.00,0.80,2.36,Faible
+56,H,28.70,Élevée,Non-fumeur,125.00,1.01,2.23,Faible
+62,H,22.60,Modérée,Non-fumeur,124.00,0.83,2.36,Modéré
+27,F,25.20,Modérée,Non-fumeur,108.00,0.75,1.50,Faible
+62,F,28.60,Faible,Ancien fumeur,127.00,0.85,1.79,Faible
+59,H,20.50,Faible,Fumeur,136.00,0.84,1.93,Modéré
+68,F,29.90,Élevée,Ancien fumeur,115.00,0.84,2.61,Modéré
+43,H,26.20,Modérée,Non-fumeur,117.00,0.83,1.77,Faible
+52,F,27.20,Faible,Non-fumeur,151.00,1.20,2.29,Élevé
+80,F,24.10,Modérée,Non-fumeur,145.00,,2.35,Élevé
+52,F,23.10,Modérée,Fumeur,123.00,0.75,1.89,Faible
+27,F,26.90,Élevée,Non-fumeur,144.00,0.95,2.40,Faible
+59,F,26.60,Faible,Fumeur,149.00,0.85,2.41,Élevé
+58,H,24.60,Modérée,Non-fumeur,152.00,0.82,1.92,Modéré
+68,F,20.20,Modérée,Ancien fumeur,137.00,0.75,1.87,Modéré
+60,F,22.70,Faible,Non-fumeur,150.00,1.01,2.45,Modéré
+27,F,34.00,Faible,Non-fumeur,138.00,0.95,1.52,Faible
+58,H,23.40,Élevée,Non-fumeur,122.00,0.69,2.29,Faible
+68,H,24.40,Faible,Ancien fumeur,136.00,0.90,1.83,Modéré
+37,F,27.50,Modérée,Fumeur,143.00,0.64,1.78,Faible
+50,H,22.30,Élevée,Fumeur,142.00,0.72,1.68,Faible
+27,H,27.70,Élevée,Fumeur,125.00,0.95,,Faible
+60,H,20.80,Faible,Fumeur,143.00,1.00,1.87,Faible
+47,H,24.30,Modérée,Non-fumeur,120.00,0.88,2.31,Faible
+68,F,29.20,Modérée,Ancien fumeur,146.00,1.17,1.99,Élevé
+80,H,22.00,Modérée,Non-fumeur,145.00,1.10,2.53,Élevé
+40,F,23.30,Faible,Non-fumeur,123.00,0.96,2.28,Faible
+67,F,28.60,Modérée,Fumeur,160.00,1.21,2.14,Élevé
+72,H,24.20,Élevée,Ancien fumeur,125.00,0.94,2.04,Modéré
+43,F,32.70,Faible,Non-fumeur,134.00,0.96,2.45,Élevé
+59,H,19.50,Modérée,Fumeur,145.00,0.64,2.14,Modéré
+25,F,28.50,Faible,Non-fumeur,117.00,0.76,1.77,Faible
+40,F,31.90,Faible,Non-fumeur,90.00,0.88,2.53,Faible
+41,H,28.50,Faible,Fumeur,131.00,0.91,1.88,Modéré
+38,H,19.70,Modérée,Non-fumeur,128.00,0.83,2.45,Faible
+55,F,20.80,Modérée,Non-fumeur,132.00,0.87,2.03,Faible
+61,H,17.40,Modérée,Ancien fumeur,127.00,0.87,1.88,Faible
+39,F,31.20,Modérée,Fumeur,116.00,0.98,1.66,Faible
+47,F,31.00,Élevée,Non-fumeur,146.00,0.99,2.41,Modéré
+50,H,26.20,Élevée,Fumeur,137.00,0.95,1.94,Modéré
+53,H,23.00,Modérée,Ancien fumeur,123.00,0.81,2.69,Faible
+66,F,19.60,Modérée,Non-fumeur,144.00,1.04,1.97,Modéré
+56,H,27.90,Élevée,Fumeur,160.00,1.02,2.20,Élevé
+77,H,25.20,Modérée,Non-fumeur,160.00,1.23,1.50,Élevé
+63,H,21.80,Faible,Non-fumeur,129.00,1.03,1.68,Faible
+54,H,19.60,Élevée,Ancien fumeur,128.00,1.00,1.60,Faible
+41,F,30.00,Modérée,Non-fumeur,156.00,0.94,2.52,Modéré
+45,H,19.40,Modérée,Non-fumeur,119.00,0.90,2.25,Faible
+72,H,25.60,Modérée,Non-fumeur,144.00,0.93,1.82,Modéré
+46,H,19.70,Faible,Non-fumeur,127.00,1.03,1.28,Faible
+59,F,30.90,Modérée,Ancien fumeur,154.00,1.04,1.93,Élevé
+52,F,29.60,Modérée,Non-fumeur,137.00,0.85,2.79,Élevé
+60,H,26.60,Faible,Non-fumeur,127.00,0.96,2.05,Modéré
+73,F,26.80,Faible,Non-fumeur,136.00,0.97,1.97,Modéré
+39,F,27.50,Élevée,Non-fumeur,129.00,1.02,2.02,Faible
+40,H,25.80,Modérée,Non-fumeur,115.00,1.01,2.36,Faible
+48,F,22.20,Faible,Ancien fumeur,131.00,0.93,1.99,Faible
+44,H,16.00,Faible,Ancien fumeur,125.00,0.84,2.15,Faible
+51,H,28.20,Faible,Ancien fumeur,122.00,1.25,1.85,Modéré
+47,H,24.70,Modérée,Ancien fumeur,124.00,0.81,1.62,Faible
+56,F,25.30,Modérée,Ancien fumeur,151.00,0.89,2.03,Faible
+53,F,17.50,Élevée,Ancien fumeur,124.00,0.82,2.29,Faible
+59,F,25.60,Faible,Non-fumeur,111.00,0.80,2.24,Faible
+46,F,21.80,Faible,Non-fumeur,133.00,0.67,2.54,Faible
+49,H,21.20,Faible,Non-fumeur,140.00,0.85,2.23,Faible
+56,H,26.40,Modérée,Non-fumeur,123.00,0.86,2.21,Modéré
+39,F,24.90,Élevée,Non-fumeur,120.00,0.83,2.29,Faible
+65,H,22.80,Modérée,Non-fumeur,150.00,0.83,2.08,Modéré
+70,F,21.90,Modérée,Fumeur,132.00,1.14,2.27,Élevé
+42,H,31.40,Modérée,Non-fumeur,137.00,1.00,2.16,Modéré
+46,H,25.90,Élevée,Ancien fumeur,109.00,0.74,2.71,Faible
+56,H,27.00,Élevée,Non-fumeur,120.00,0.94,2.09,Faible
+45,F,24.40,Faible,Fumeur,126.00,0.75,2.20,Faible
+73,F,29.30,Élevée,Non-fumeur,156.00,1.00,2.13,Élevé
+54,F,29.20,Modérée,Non-fumeur,105.00,1.07,1.88,Modéré
+68,F,16.00,Faible,Non-fumeur,140.00,0.60,2.41,Faible
+55,H,32.00,Faible,Non-fumeur,127.00,0.93,2.26,Modéré
+47,H,22.90,Modérée,Non-fumeur,125.00,0.87,2.07,Faible
+73,F,28.00,Élevée,Ancien fumeur,140.00,1.05,2.29,Élevé
+58,F,27.20,Faible,Fumeur,122.00,0.93,1.97,Modéré
+30,H,28.00,Faible,Fumeur,127.00,0.96,1.97,Faible
+62,H,30.40,Élevée,Ancien fumeur,124.00,1.06,2.10,Élevé
+51,F,25.70,Modérée,Ancien fumeur,133.00,0.98,1.59,Faible
+63,F,27.20,Élevée,Non-fumeur,138.00,0.83,2.40,Modéré
+52,F,33.80,Faible,Ancien fumeur,133.00,1.18,2.25,Modéré
+38,H,30.80,Modérée,Non-fumeur,109.00,0.68,2.17,Faible
+44,F,23.20,Modérée,Non-fumeur,116.00,0.98,2.16,Faible
+42,H,24.00,Modérée,Ancien fumeur,115.00,0.85,2.04,Faible
+55,F,24.80,Élevée,Non-fumeur,146.00,0.78,2.20,Modéré
+66,F,27.70,Modérée,Non-fumeur,144.00,0.93,1.95,Modéré
+70,F,23.80,Faible,Non-fumeur,139.00,0.81,1.83,Modéré
+69,H,32.30,Modérée,Non-fumeur,149.00,1.16,1.98,Modéré
+25,F,20.10,Faible,Non-fumeur,103.00,0.63,1.74,Faible
+52,H,27.60,Faible,Non-fumeur,138.00,0.92,1.70,Faible
+51,H,21.90,Faible,Non-fumeur,131.00,0.76,1.90,Faible
+56,H,31.00,Faible,Non-fumeur,137.00,1.01,2.47,Modéré
+73,H,23.40,Faible,Non-fumeur,136.00,0.86,2.91,Modéré
+69,F,29.30,Faible,Ancien fumeur,127.00,,2.37,Modéré
+62,F,26.30,Élevée,Ancien fumeur,124.00,0.95,2.00,Faible
+72,F,30.60,Faible,Ancien fumeur,151.00,1.10,2.04,Modéré
+39,H,25.40,Modérée,Non-fumeur,145.00,0.86,2.29,Faible
+52,H,25.70,Faible,Non-fumeur,127.00,1.14,2.22,Modéré
+29,F,20.00,Modérée,Non-fumeur,117.00,0.85,1.97,Faible
+31,H,30.60,Modérée,Ancien fumeur,122.00,0.84,1.86,Faible
+77,H,25.30,Faible,Fumeur,130.00,1.16,2.15,Élevé
+35,H,21.60,Modérée,Non-fumeur,129.00,0.96,1.82,Faible
+64,H,28.60,Faible,Non-fumeur,142.00,0.86,2.55,Élevé
+36,F,27.10,Faible,Ancien fumeur,112.00,0.91,1.67,Faible
+51,H,25.70,Modérée,Non-fumeur,135.00,0.90,2.10,Modéré
+52,H,18.50,Modérée,Non-fumeur,133.00,0.72,1.60,Faible
+54,F,22.00,Faible,Non-fumeur,117.00,0.82,2.03,Faible
+27,H,23.70,Faible,Non-fumeur,133.00,0.80,2.25,Faible
+61,H,25.60,Faible,Fumeur,136.00,0.76,1.94,Modéré
+29,F,24.50,Faible,Fumeur,130.00,0.70,1.85,Faible
+62,F,19.30,Élevée,Ancien fumeur,131.00,0.80,2.15,Faible
+57,F,29.70,Faible,Non-fumeur,145.00,1.04,2.68,Élevé
+84,H,26.20,Modérée,Ancien fumeur,153.00,0.99,2.31,Élevé
+54,F,28.20,Faible,Non-fumeur,124.00,0.90,2.39,Modéré
+38,H,21.60,Faible,Fumeur,107.00,0.82,1.73,Faible
+57,H,18.80,Faible,Non-fumeur,143.00,0.82,2.31,Faible
+47,F,21.90,Faible,Fumeur,130.00,0.91,2.18,Faible
+44,H,30.40,Élevée,Fumeur,144.00,,1.70,Modéré
+54,F,21.30,Modérée,Non-fumeur,124.00,1.07,2.22,Faible
+78,F,26.20,Élevée,Non-fumeur,135.00,0.87,1.92,Modéré
+37,F,33.60,Faible,Non-fumeur,126.00,,2.83,Modéré
+48,H,30.60,Modérée,Non-fumeur,141.00,0.83,1.81,Faible
+46,H,25.50,Modérée,Non-fumeur,119.00,0.84,2.16,Faible
+44,H,29.60,Élevée,Non-fumeur,118.00,1.13,2.55,Faible
+70,H,30.40,Faible,Fumeur,150.00,0.98,2.61,Élevé
+72,F,28.70,Faible,Non-fumeur,144.00,0.96,2.55,Élevé
+43,H,25.10,Faible,Ancien fumeur,102.00,0.72,1.89,Faible
+54,F,29.80,Faible,Ancien fumeur,127.00,1.26,1.94,Élevé
+44,F,26.10,Modérée,Non-fumeur,102.00,0.65,2.00,Faible
+68,H,24.40,Faible,Non-fumeur,142.00,0.97,2.05,Élevé
+26,F,24.90,Modérée,Non-fumeur,125.00,,1.70,Faible
+87,H,22.90,Élevée,Fumeur,168.00,0.82,2.16,Élevé
+35,H,27.90,Modérée,Non-fumeur,126.00,0.78,1.58,Faible
+42,H,35.30,Modérée,Fumeur,152.00,1.00,2.05,Élevé
+57,H,18.50,Modérée,Non-fumeur,109.00,0.90,1.25,Faible
+32,H,20.20,Élevée,Non-fumeur,95.00,0.98,2.05,Faible
+68,H,29.30,Modérée,Ancien fumeur,155.00,0.87,,Élevé
+66,F,27.00,Faible,Non-fumeur,142.00,0.75,2.01,Modéré
+53,H,29.70,Modérée,Non-fumeur,136.00,1.08,2.28,Élevé
+72,H,23.30,Faible,Non-fumeur,133.00,,1.68,Modéré
+87,H,34.90,Modérée,Non-fumeur,168.00,1.10,1.83,Élevé
+59,H,16.90,Faible,Non-fumeur,111.00,0.82,2.41,Faible
+55,F,43.70,Modérée,Fumeur,148.00,1.14,2.09,Élevé
+65,H,16.00,Faible,Non-fumeur,129.00,0.79,2.05,Faible
+61,F,22.10,Élevée,Non-fumeur,122.00,0.90,2.54,Faible
+64,F,31.80,Modérée,Fumeur,152.00,0.86,2.17,Élevé
+45,H,29.80,Faible,Non-fumeur,137.00,0.90,2.39,Faible
+52,H,23.50,Élevée,Non-fumeur,119.00,0.86,2.09,Faible
+66,H,22.80,Faible,Non-fumeur,149.00,,2.03,Faible
+48,F,27.90,Faible,Non-fumeur,126.00,0.85,2.28,Faible
+67,F,18.20,Modérée,Fumeur,131.00,0.92,2.11,Modéré
+51,H,27.20,Modérée,Non-fumeur,127.00,0.84,1.67,Faible
+49,F,26.90,Faible,Non-fumeur,137.00,0.91,2.28,Faible
+50,H,32.20,Modérée,Ancien fumeur,135.00,1.02,2.52,Modéré
+39,F,35.80,Faible,Non-fumeur,126.00,0.78,2.07,Modéré
+58,H,16.30,Modérée,Fumeur,143.00,0.71,1.63,Faible
+59,F,16.00,Faible,Non-fumeur,117.00,1.13,2.40,Faible
+18,H,33.80,Faible,Ancien fumeur,132.00,0.86,2.36,Faible
+62,H,28.60,Modérée,Non-fumeur,148.00,1.04,2.38,Élevé
+75,H,24.60,Modérée,Ancien fumeur,142.00,1.09,2.00,Élevé
+58,H,23.30,Faible,Non-fumeur,120.00,0.96,1.60,Modéré
+38,H,29.70,Modérée,Ancien fumeur,127.00,0.82,1.50,Faible
+41,H,28.20,Modérée,Fumeur,125.00,0.85,1.57,Faible
+29,H,24.20,Élevée,Non-fumeur,118.00,0.76,1.98,Faible
+56,F,19.10,Modérée,Non-fumeur,114.00,1.04,2.15,Faible
+37,H,27.70,Faible,Non-fumeur,124.00,0.90,2.27,Faible
+60,F,23.00,Faible,Non-fumeur,135.00,,1.99,Faible
+61,F,25.10,Modérée,Fumeur,158.00,0.89,2.05,Élevé
+57,H,29.00,Faible,Non-fumeur,147.00,0.96,2.04,Modéré
+50,F,28.90,Modérée,Fumeur,148.00,,1.95,Modéré
+71,H,24.70,Faible,Ancien fumeur,138.00,1.12,2.05,Modéré
+85,F,29.30,Élevée,Non-fumeur,156.00,1.05,2.00,Élevé
+32,F,22.10,Faible,Fumeur,137.00,0.89,1.91,Faible
+46,H,33.60,Modérée,Non-fumeur,139.00,0.99,1.31,Modéré
+65,F,16.00,Modérée,Non-fumeur,142.00,0.98,2.19,Modéré
+53,F,31.40,Faible,Non-fumeur,147.00,1.00,1.95,Modéré
+59,H,30.00,Élevée,Fumeur,142.00,1.04,1.99,Élevé
+69,F,24.70,Élevée,Ancien fumeur,134.00,0.96,1.83,Modéré
+67,F,27.00,Faible,Non-fumeur,123.00,0.75,1.77,Faible
+41,H,25.70,Modérée,Ancien fumeur,141.00,0.96,2.16,Faible
+75,F,25.10,Faible,Fumeur,143.00,0.95,2.03,Modéré
+84,H,25.40,Modérée,Ancien fumeur,133.00,0.90,2.41,Élevé
+51,H,21.30,Modérée,Fumeur,145.00,0.98,2.28,Modéré
+90,F,31.00,Élevée,Ancien fumeur,144.00,1.04,2.05,Élevé
+18,H,29.50,Faible,Ancien fumeur,118.00,0.73,1.71,Faible
+68,F,29.80,Faible,Ancien fumeur,133.00,1.06,1.99,Modéré
+20,F,26.40,Modérée,Non-fumeur,120.00,1.10,0.84,Faible
+67,F,27.50,Élevée,Non-fumeur,141.00,0.89,2.35,Modéré
+44,F,34.00,Modérée,Ancien fumeur,133.00,0.98,2.55,Élevé
+69,H,18.60,Faible,Fumeur,142.00,1.17,1.88,Modéré
+18,H,22.90,Modérée,Non-fumeur,110.00,0.71,1.87,Faible
+45,H,30.00,Modérée,Non-fumeur,149.00,1.05,1.94,Modéré
+37,F,26.30,Modérée,Non-fumeur,137.00,0.87,2.16,Modéré
+72,F,30.80,Faible,Non-fumeur,128.00,1.17,2.54,Élevé
+25,H,25.60,Modérée,Ancien fumeur,114.00,0.77,1.94,Faible
+25,H,24.20,Modérée,Fumeur,127.00,0.80,1.74,Faible
+52,H,33.30,Élevée,Non-fumeur,132.00,1.10,2.02,Modéré
+47,F,23.30,Élevée,Non-fumeur,134.00,0.83,2.13,Modéré
+52,H,24.70,Modérée,Fumeur,135.00,0.86,1.79,Modéré
+49,H,30.40,Modérée,Fumeur,147.00,1.03,2.24,Modéré
+59,H,32.90,Élevée,Non-fumeur,135.00,1.01,2.36,Élevé
+75,F,23.30,Élevée,Ancien fumeur,153.00,0.92,2.55,Élevé
+59,F,28.40,Faible,Non-fumeur,141.00,1.21,2.15,Élevé
+18,H,27.40,Modérée,Non-fumeur,126.00,0.87,1.50,Faible
+47,H,22.60,Modérée,Non-fumeur,121.00,0.68,2.58,Faible
+55,F,30.00,Élevée,Non-fumeur,136.00,1.03,,Modéré
+53,H,29.90,Modérée,Non-fumeur,139.00,0.85,2.37,Faible
+45,F,37.40,Modérée,Non-fumeur,136.00,0.99,2.33,Élevé
+41,F,19.20,Élevée,Ancien fumeur,108.00,0.77,2.06,Faible
+77,F,33.00,Modérée,Ancien fumeur,153.00,0.97,2.71,Élevé
+56,H,25.80,Faible,Ancien fumeur,133.00,0.85,1.59,Faible
+40,F,20.90,Modérée,Ancien fumeur,126.00,0.83,2.28,Faible
+49,H,27.10,Élevée,Non-fumeur,144.00,0.88,1.55,Faible
+36,H,28.50,Faible,Ancien fumeur,137.00,1.13,,Faible
+34,F,22.70,Modérée,Non-fumeur,119.00,0.49,1.84,Faible
+31,H,27.20,Faible,Non-fumeur,117.00,0.70,1.89,Faible
+51,H,29.00,Faible,Non-fumeur,135.00,1.06,1.59,Modéré
+40,F,27.60,Modérée,Fumeur,134.00,1.11,2.22,Modéré
+63,H,24.10,Élevée,Non-fumeur,138.00,,2.76,Modéré
+49,H,28.30,Modérée,Non-fumeur,138.00,0.89,2.30,Faible
+51,F,22.60,Modérée,Ancien fumeur,129.00,0.72,,Faible
+72,H,26.00,Faible,Non-fumeur,137.00,1.02,,Modéré
+66,H,21.00,Élevée,Non-fumeur,138.00,0.89,2.11,Modéré
+37,H,23.20,Modérée,Non-fumeur,131.00,0.62,,Faible
+43,H,34.80,Modérée,Ancien fumeur,130.00,1.14,1.82,Modéré
+62,F,34.10,Faible,Non-fumeur,151.00,1.01,2.39,Élevé
+35,H,20.80,Faible,Ancien fumeur,124.00,0.69,2.06,Faible
+64,F,29.20,Faible,Non-fumeur,129.00,0.94,2.34,Faible
+42,F,22.30,Faible,Fumeur,137.00,0.80,1.61,Élevé
+64,F,24.10,Modérée,Fumeur,166.00,1.19,2.26,Élevé
+51,F,23.30,Élevée,Ancien fumeur,146.00,0.96,2.15,Faible
+63,F,23.40,Modérée,Non-fumeur,110.00,0.82,1.93,Faible
+47,F,27.00,Modérée,Non-fumeur,129.00,0.75,2.45,Faible
+64,H,29.70,Modérée,Fumeur,135.00,1.13,2.58,Élevé
+28,H,25.40,Élevée,Ancien fumeur,120.00,0.75,1.87,Faible
+65,F,31.80,Élevée,Fumeur,169.00,0.92,3.05,Élevé
+45,F,31.40,Faible,Ancien fumeur,125.00,0.90,2.14,Modéré
+62,H,21.60,Élevée,Non-fumeur,122.00,1.00,1.90,Faible
+84,F,22.80,Modérée,Non-fumeur,164.00,1.28,2.66,Élevé
+52,F,31.60,Élevée,Fumeur,144.00,0.84,2.02,Modéré
+38,H,19.50,Modérée,Non-fumeur,112.00,0.76,1.64,Faible
+56,H,32.70,Faible,Non-fumeur,140.00,0.98,2.65,Modéré
+49,H,25.20,Faible,Non-fumeur,136.00,0.86,1.97,Modéré
+62,H,32.10,Modérée,Ancien fumeur,130.00,0.99,2.04,Modéré
+48,F,24.90,Faible,Non-fumeur,135.00,0.96,1.91,Faible
+56,H,32.10,Faible,Non-fumeur,157.00,1.08,,Élevé
+44,F,21.20,Élevée,Fumeur,136.00,0.97,2.10,Faible
+53,H,17.60,Élevée,Non-fumeur,114.00,0.70,1.85,Faible
+46,H,25.70,Modérée,Ancien fumeur,137.00,1.00,2.10,Modéré
+43,F,25.40,Élevée,Non-fumeur,139.00,0.81,1.74,Faible
+71,F,26.10,Faible,Ancien fumeur,164.00,1.12,2.52,Élevé
+18,F,25.40,Faible,Non-fumeur,107.00,0.64,1.31,Faible
+55,F,22.90,Faible,Non-fumeur,147.00,0.91,1.81,Modéré
+40,F,24.80,Faible,Non-fumeur,130.00,1.02,,Faible
+61,F,28.80,Faible,Non-fumeur,150.00,0.96,2.08,Modéré
+42,F,25.60,Modérée,Non-fumeur,125.00,0.91,1.59,Faible
+57,H,23.30,Faible,Non-fumeur,118.00,0.93,1.83,Faible
+64,F,28.00,Modérée,Non-fumeur,143.00,0.91,2.61,Modéré
+44,H,35.00,Élevée,Non-fumeur,133.00,0.98,1.29,Faible
+41,F,29.00,Modérée,Fumeur,123.00,0.72,2.28,Faible
+61,F,21.50,Modérée,Non-fumeur,153.00,0.66,2.24,Modéré
+44,F,27.60,Faible,Fumeur,134.00,0.92,1.55,Élevé
+90,F,26.80,Faible,Non-fumeur,178.00,1.02,,Élevé
+51,H,21.90,Modérée,Non-fumeur,126.00,,2.53,Faible
+61,F,19.30,Faible,Non-fumeur,114.00,0.92,1.87,Faible
+52,F,26.00,Modérée,Ancien fumeur,145.00,0.95,2.23,Faible
+48,H,37.50,Faible,Non-fumeur,138.00,1.07,2.35,Modéré
+79,H,21.90,Faible,Fumeur,148.00,0.98,2.42,Élevé
+69,H,24.90,Faible,Non-fumeur,148.00,1.09,2.56,Élevé
+18,F,27.50,Élevée,Non-fumeur,112.00,0.86,2.27,Faible
+32,H,28.40,Modérée,Non-fumeur,134.00,1.14,2.22,Faible
+63,H,36.10,Élevée,Non-fumeur,158.00,1.13,2.23,Élevé
+39,H,21.70,Modérée,Ancien fumeur,116.00,0.92,1.69,Faible
+40,F,17.80,Faible,Ancien fumeur,122.00,0.49,2.04,Faible
+61,F,34.30,Modérée,Non-fumeur,148.00,1.06,2.22,Élevé
+44,F,17.40,Modérée,Non-fumeur,103.00,0.91,2.04,Faible
+36,F,23.90,Faible,Non-fumeur,126.00,0.68,2.13,Faible
+40,F,35.10,Modérée,Non-fumeur,138.00,0.87,2.58,Élevé
+36,H,22.40,Modérée,Non-fumeur,114.00,1.00,1.63,Faible
+46,H,23.60,Faible,Non-fumeur,127.00,0.87,2.04,Faible
+36,F,28.00,Modérée,Non-fumeur,115.00,0.82,1.91,Faible
+38,F,21.10,Faible,Non-fumeur,119.00,0.86,1.83,Faible
+49,H,36.00,Modérée,Fumeur,130.00,1.26,2.38,Élevé
+42,H,27.00,Modérée,Non-fumeur,105.00,0.73,1.77,Faible
+70,H,26.20,Faible,Non-fumeur,155.00,1.03,2.09,Élevé
+49,H,23.70,Modérée,Non-fumeur,120.00,0.88,2.49,Faible
+22,F,33.30,Faible,Ancien fumeur,113.00,0.77,2.11,Faible
+71,H,26.50,Modérée,Fumeur,154.00,1.03,2.15,Élevé
+48,H,28.10,Modérée,Non-fumeur,121.00,0.96,,Faible
+83,F,19.70,Faible,Ancien fumeur,147.00,0.94,2.04,Modéré
+65,H,29.10,Faible,Ancien fumeur,141.00,0.94,1.99,Élevé
+57,F,18.40,Faible,Fumeur,131.00,1.01,2.04,Faible
+29,F,37.20,Modérée,Fumeur,149.00,0.80,1.92,Modéré
+74,H,27.50,Élevée,Non-fumeur,135.00,1.10,2.59,Élevé
+72,F,21.90,Modérée,Fumeur,150.00,0.86,2.20,Modéré
+60,H,40.80,Élevée,Non-fumeur,130.00,1.03,2.25,Élevé
+18,F,29.50,Modérée,Non-fumeur,119.00,0.89,2.23,Faible
+31,F,25.50,Faible,Ancien fumeur,118.00,1.02,1.91,Faible
+51,F,27.70,Modérée,Fumeur,123.00,0.93,2.14,Modéré
+70,H,29.00,Élevée,Non-fumeur,140.00,0.84,2.25,Modéré
+67,F,32.10,Faible,Ancien fumeur,141.00,1.16,2.26,Modéré
+57,H,23.20,Élevée,Ancien fumeur,137.00,1.12,1.89,Faible
+76,H,24.90,Faible,Ancien fumeur,142.00,1.01,2.31,Modéré
+41,F,22.90,Modérée,Non-fumeur,129.00,0.97,2.58,Modéré
+84,F,36.60,Modérée,Non-fumeur,163.00,0.91,2.16,Élevé
+65,H,36.70,Faible,Ancien fumeur,181.00,0.86,1.98,Élevé
+52,H,29.30,Modérée,Non-fumeur,148.00,0.90,2.11,Élevé
+48,F,24.60,Élevée,Ancien fumeur,131.00,0.88,,Faible
+45,F,23.50,Modérée,Fumeur,125.00,0.84,1.20,Faible
+56,F,26.90,Modérée,Non-fumeur,134.00,1.00,2.51,Modéré
+36,F,35.30,Faible,Non-fumeur,124.00,0.91,2.07,Modéré
+44,H,24.80,Modérée,Ancien fumeur,124.00,0.84,1.63,Faible
+55,H,26.00,Faible,Non-fumeur,133.00,0.95,1.42,Modéré
+60,F,22.60,Élevée,Fumeur,140.00,0.89,,Modéré
+50,H,28.40,Faible,Non-fumeur,123.00,0.87,1.78,Faible
+63,F,24.00,Modérée,Ancien fumeur,122.00,0.87,1.98,Faible
+55,F,26.80,Faible,Fumeur,152.00,0.96,2.21,Élevé
+53,H,25.60,Élevée,Non-fumeur,150.00,0.81,2.34,Faible
+51,H,31.00,Faible,Fumeur,156.00,0.89,2.04,Élevé
+73,H,33.50,Modérée,Fumeur,156.00,1.15,1.82,Élevé
+48,H,31.50,Modérée,Fumeur,161.00,0.84,1.46,Modéré
+68,H,26.10,Élevée,Fumeur,137.00,,1.67,Modéré
+58,F,27.90,Modérée,Fumeur,140.00,0.88,,Élevé
+45,H,23.40,Faible,Non-fumeur,129.00,1.04,2.28,Faible
+79,H,28.20,Modérée,Fumeur,155.00,1.10,2.54,Élevé
+41,F,33.00,Faible,Ancien fumeur,162.00,0.73,1.88,Modéré
+24,H,37.30,Modérée,Ancien fumeur,131.00,0.97,1.98,Faible
+55,F,26.60,Élevée,Non-fumeur,153.00,0.89,2.39,Modéré
+61,H,27.50,Modérée,Ancien fumeur,127.00,1.13,2.24,Modéré
+59,F,20.80,Modérée,Non-fumeur,135.00,1.04,2.17,Modéré
+63,F,23.80,Modérée,Fumeur,142.00,1.10,2.18,Modéré
+48,H,23.30,Modérée,Ancien fumeur,139.00,0.99,2.41,Modéré
+21,F,28.40,Élevée,Non-fumeur,119.00,0.73,2.22,Faible
+49,F,20.40,Modérée,Non-fumeur,128.00,,2.26,Faible
+47,H,25.30,Modérée,Non-fumeur,142.00,0.94,1.46,Faible
+81,H,30.50,Faible,Ancien fumeur,156.00,1.21,2.35,Élevé
+53,F,23.80,Modérée,Fumeur,146.00,0.80,2.68,Modéré
+58,F,19.60,Élevée,Non-fumeur,130.00,0.81,1.63,Faible
+69,F,22.50,Élevée,Non-fumeur,144.00,0.98,2.12,Modéré
+40,H,21.40,Élevée,Non-fumeur,125.00,0.74,2.18,Faible
+55,F,23.60,Modérée,Ancien fumeur,139.00,0.88,1.77,Modéré
+26,H,17.20,Modérée,Fumeur,125.00,0.83,1.60,Faible
+47,H,28.00,Modérée,Non-fumeur,119.00,0.83,2.27,Faible
+59,H,19.70,Modérée,Non-fumeur,125.00,0.86,2.20,Faible
+41,H,23.80,Modérée,Non-fumeur,131.00,0.95,2.11,Faible
+72,H,33.10,Faible,Non-fumeur,148.00,1.21,2.70,Élevé
+68,H,28.80,Faible,Ancien fumeur,165.00,0.93,2.20,Élevé
+69,H,25.00,Modérée,Ancien fumeur,128.00,0.89,2.54,Modéré
+46,F,28.10,Faible,Non-fumeur,144.00,0.91,2.66,Modéré
+52,F,22.70,Modérée,Fumeur,132.00,0.95,1.95,Faible
+49,H,19.70,Faible,Non-fumeur,137.00,0.69,2.56,Faible
+51,F,32.50,Modérée,Ancien fumeur,122.00,1.27,2.03,Élevé
+51,F,26.20,Modérée,Non-fumeur,131.00,0.73,2.15,Modéré
+55,F,24.50,Élevée,Non-fumeur,117.00,0.84,2.03,Faible
+31,H,28.10,Faible,Non-fumeur,122.00,0.98,2.15,Faible
+49,H,29.50,Élevée,Fumeur,152.00,0.87,1.97,Modéré
+72,H,39.40,Modérée,Non-fumeur,144.00,1.05,2.25,Élevé
+66,H,23.50,Faible,Non-fumeur,148.00,1.02,1.67,Modéré
+65,F,21.80,Modérée,Fumeur,135.00,0.80,1.90,Modéré
+68,H,32.70,Élevée,Ancien fumeur,154.00,1.12,2.00,Élevé
+59,H,36.90,Faible,Ancien fumeur,151.00,0.88,1.88,Modéré
+71,F,22.90,Élevée,Non-fumeur,133.00,1.07,,Élevé
+73,H,19.50,Faible,Fumeur,149.00,0.99,2.11,Modéré
+28,F,20.20,Faible,Ancien fumeur,122.00,,2.16,Faible
+48,H,31.40,Modérée,Non-fumeur,139.00,1.17,2.57,Élevé
+34,H,18.90,Modérée,Fumeur,126.00,0.94,1.87,Faible
+52,H,18.60,Modérée,Non-fumeur,128.00,0.84,2.62,Modéré
+55,H,31.30,Élevée,Non-fumeur,154.00,0.82,2.15,Modéré
+50,H,20.70,Élevée,Non-fumeur,111.00,0.86,1.92,Faible
+32,H,21.70,Élevée,Ancien fumeur,120.00,0.74,1.69,Faible
+34,H,25.40,Faible,Fumeur,128.00,1.10,1.87,Faible
+83,H,28.30,Élevée,Ancien fumeur,162.00,0.79,2.42,Élevé
+37,F,31.20,Modérée,Ancien fumeur,134.00,1.00,1.82,Faible
+73,F,36.80,Modérée,Non-fumeur,164.00,1.16,2.28,Élevé
+43,F,29.80,Faible,Fumeur,133.00,0.87,2.59,Modéré
+36,H,39.20,Faible,Fumeur,152.00,1.19,2.63,Élevé
+78,F,35.80,Modérée,Ancien fumeur,166.00,1.24,2.57,Élevé
+50,F,27.20,Modérée,Non-fumeur,120.00,0.75,1.68,Faible
+42,F,31.80,Élevée,Fumeur,144.00,0.97,2.27,Modéré
+55,F,25.30,Faible,Non-fumeur,132.00,0.65,2.61,Faible
+67,H,22.40,Élevée,Ancien fumeur,137.00,0.87,,Modéré
+55,F,27.20,Modérée,Fumeur,145.00,0.65,2.19,Modéré
+18,F,29.20,Modérée,Non-fumeur,121.00,0.72,2.22,Faible
+45,F,32.20,Faible,Non-fumeur,136.00,0.76,2.33,Faible
+55,F,20.40,Modérée,Fumeur,129.00,0.85,2.32,Modéré
+18,H,31.00,Modérée,Non-fumeur,113.00,0.67,1.65,Faible
+53,H,28.10,Modérée,Non-fumeur,129.00,0.92,2.00,Modéré
+45,H,26.40,Modérée,Fumeur,162.00,0.72,2.32,Modéré
+76,H,23.50,Faible,Ancien fumeur,140.00,0.94,2.18,Modéré
+57,F,23.20,Modérée,Ancien fumeur,140.00,0.81,2.45,Faible
+37,H,23.10,Faible,Non-fumeur,128.00,0.81,1.67,Faible
+73,H,29.90,Élevée,Non-fumeur,132.00,0.97,1.92,Modéré
+34,F,16.00,Élevée,Fumeur,116.00,0.60,1.96,Faible
+60,H,32.00,Modérée,Fumeur,158.00,1.12,2.12,Élevé
+53,F,32.30,Modérée,Non-fumeur,136.00,,2.09,Faible
+40,H,31.10,Faible,Non-fumeur,136.00,0.83,2.08,Faible
+72,H,34.90,Élevée,Non-fumeur,147.00,0.90,,Élevé
+63,H,28.20,Faible,Non-fumeur,138.00,0.99,2.14,Élevé
+56,F,25.60,Modérée,Non-fumeur,142.00,1.03,1.73,Modéré
+51,F,26.30,Faible,Non-fumeur,122.00,0.99,2.38,Faible
+79,H,23.70,Faible,Non-fumeur,139.00,0.97,2.07,Élevé
+45,H,33.90,Modérée,Ancien fumeur,130.00,0.85,2.77,Modéré
+18,H,24.60,Modérée,Fumeur,119.00,0.68,1.54,Faible
+43,F,30.00,Modérée,Non-fumeur,122.00,0.94,1.91,Modéré
+26,H,26.00,Modérée,Non-fumeur,104.00,0.90,1.53,Faible
+32,F,35.10,Modérée,Fumeur,146.00,0.82,1.95,Modéré
+53,F,35.50,Faible,Fumeur,152.00,0.94,1.93,Élevé
+50,H,31.30,Élevée,Non-fumeur,145.00,1.06,2.21,Faible
+36,H,26.00,Faible,Ancien fumeur,130.00,1.01,,Modéré
+51,F,21.70,Faible,Non-fumeur,134.00,0.79,1.78,Faible
+37,F,35.50,Modérée,Ancien fumeur,136.00,1.23,2.26,Modéré
+34,H,16.00,Modérée,Ancien fumeur,131.00,0.77,1.69,Faible
+39,F,27.60,Modérée,Non-fumeur,118.00,0.89,2.22,Modéré
+58,H,16.00,Faible,Non-fumeur,127.00,0.63,1.87,Faible
+46,H,17.40,Faible,Ancien fumeur,125.00,0.88,2.06,Faible
+55,F,31.90,Élevée,Fumeur,139.00,0.80,,Modéré
+49,F,31.10,Modérée,Ancien fumeur,120.00,1.17,2.26,Élevé
+43,F,30.30,Faible,Non-fumeur,131.00,1.00,2.23,Modéré
+68,H,26.20,Modérée,Fumeur,147.00,0.90,2.40,Élevé
+78,F,28.50,Modérée,Fumeur,153.00,1.05,2.40,Élevé
+18,H,24.30,Faible,Ancien fumeur,124.00,0.83,2.10,Faible
+57,F,27.60,Élevée,Ancien fumeur,123.00,1.01,2.01,Élevé
+44,F,27.30,Faible,Non-fumeur,105.00,1.09,1.90,Faible
+43,H,31.90,Élevée,Fumeur,168.00,0.80,2.22,Modéré
+38,H,27.50,Faible,Non-fumeur,116.00,0.70,2.09,Faible
+25,H,21.40,Modérée,Non-fumeur,108.00,0.71,1.45,Faible
+73,H,23.30,Modérée,Ancien fumeur,141.00,1.04,1.90,Élevé
+33,H,20.20,Modérée,Ancien fumeur,100.00,0.80,1.75,Faible
+71,H,21.90,Faible,Non-fumeur,129.00,0.93,2.14,Modéré
+65,F,26.90,Élevée,Ancien fumeur,131.00,1.07,2.27,Élevé
+55,F,22.90,Élevée,Non-fumeur,118.00,0.96,2.17,Faible
+59,H,25.20,Faible,Non-fumeur,146.00,0.88,2.31,Modéré
+77,H,35.60,Élevée,Non-fumeur,143.00,1.06,2.31,Élevé
+22,H,29.30,Modérée,Fumeur,127.00,0.93,2.06,Faible
+67,H,28.30,Élevée,Non-fumeur,155.00,0.95,2.44,Élevé
+84,H,26.60,Modérée,Non-fumeur,138.00,1.04,2.26,Élevé
+55,H,22.80,Modérée,Fumeur,145.00,1.03,1.98,Modéré
+66,H,32.70,Élevée,Ancien fumeur,150.00,1.27,2.47,Élevé
+52,F,26.30,Élevée,Fumeur,115.00,,2.58,Faible
+33,F,30.70,Modérée,Ancien fumeur,114.00,0.97,2.61,Modéré
+83,F,29.90,Faible,Non-fumeur,142.00,1.01,2.38,Élevé
+41,H,26.80,Élevée,Ancien fumeur,125.00,0.61,1.77,Faible
+43,F,24.50,Modérée,Non-fumeur,114.00,0.80,2.41,Faible
+26,H,28.70,Faible,Non-fumeur,105.00,0.91,1.87,Faible
+74,F,22.80,Faible,Non-fumeur,154.00,1.09,2.41,Élevé
+41,H,30.00,Modérée,Fumeur,113.00,0.92,2.01,Modéré
+46,H,25.20,Modérée,Non-fumeur,125.00,0.66,,Faible
+47,F,32.10,Modérée,Fumeur,123.00,1.06,1.28,Modéré
+51,F,30.50,Élevée,Fumeur,171.00,0.74,1.72,Modéré
+60,H,28.50,Faible,Non-fumeur,145.00,0.81,2.03,Modéré
+38,F,31.10,Faible,Fumeur,123.00,0.92,1.76,Élevé
+53,H,16.00,Modérée,Ancien fumeur,126.00,0.91,1.65,Faible
+56,F,23.80,Élevée,Fumeur,149.00,0.57,,Modéré
+49,F,26.00,Modérée,Fumeur,142.00,0.95,1.86,Modéré
+18,F,28.30,Élevée,Fumeur,122.00,0.66,2.09,Faible
+41,F,29.30,Modérée,Non-fumeur,120.00,1.06,2.16,Modéré
+34,F,22.30,Faible,Non-fumeur,120.00,0.72,1.46,Faible
+25,F,25.80,Faible,Fumeur,124.00,0.74,2.08,Faible
+77,H,30.60,Faible,Fumeur,157.00,1.08,2.09,Élevé
+31,H,32.10,Élevée,Non-fumeur,120.00,0.93,1.98,Faible
+90,F,24.30,Modérée,Non-fumeur,134.00,1.03,2.40,Élevé
+63,H,31.60,Faible,Non-fumeur,149.00,0.95,,Modéré
+35,F,28.40,Faible,Non-fumeur,119.00,0.85,2.25,Faible
+60,H,27.40,Faible,Non-fumeur,127.00,0.82,1.65,Faible
+65,F,18.60,Modérée,Non-fumeur,130.00,1.05,1.96,Faible
+43,H,19.50,Faible,Non-fumeur,109.00,0.65,1.68,Faible
+40,H,18.10,Modérée,Ancien fumeur,139.00,0.62,1.96,Faible
+55,F,20.00,Modérée,Non-fumeur,122.00,0.90,1.51,Faible
+38,H,30.20,Faible,Fumeur,147.00,0.87,1.59,Modéré
+36,H,23.80,Modérée,Non-fumeur,142.00,0.96,1.88,Modéré
+45,H,30.60,Modérée,Non-fumeur,143.00,0.77,2.51,Faible
+26,H,17.10,Élevée,Non-fumeur,109.00,0.60,1.73,Faible
+73,H,23.70,Élevée,Non-fumeur,136.00,0.98,1.95,Modéré
+59,F,28.80,Faible,Non-fumeur,152.00,0.93,2.32,Modéré
+58,F,23.10,Élevée,Non-fumeur,150.00,0.83,2.26,Faible
+63,H,31.10,Faible,Ancien fumeur,139.00,0.98,1.90,Modéré
+61,F,32.30,Faible,Non-fumeur,152.00,1.10,2.05,Modéré
+61,F,20.30,Élevée,Ancien fumeur,129.00,0.78,1.76,Faible
+54,H,27.20,Modérée,Ancien fumeur,155.00,0.76,1.45,Faible
+40,H,28.80,Modérée,Ancien fumeur,139.00,0.94,2.10,Faible
+49,F,23.20,Faible,Ancien fumeur,133.00,0.63,2.30,Faible
+58,H,37.90,Élevée,Non-fumeur,126.00,1.16,2.65,Élevé
+72,F,17.60,Élevée,Ancien fumeur,121.00,0.78,1.88,Faible
+51,F,30.50,Faible,Non-fumeur,113.00,0.97,2.33,Faible
+87,H,20.30,Faible,Ancien fumeur,150.00,0.92,2.42,Élevé
+57,H,26.00,Faible,Fumeur,129.00,0.89,2.43,Modéré
+54,H,31.10,Modérée,Non-fumeur,136.00,1.10,2.04,Modéré
+73,H,27.20,Faible,Ancien fumeur,137.00,1.10,2.28,Élevé
+34,H,20.70,Faible,Ancien fumeur,128.00,0.80,2.25,Faible
+26,H,23.60,Modérée,Non-fumeur,118.00,0.81,2.57,Faible
+61,H,27.30,Modérée,Non-fumeur,129.00,0.81,1.81,Modéré
+66,F,28.20,Élevée,Non-fumeur,150.00,1.05,,Élevé
+38,H,27.40,Modérée,Fumeur,148.00,0.92,,Modéré
+57,H,33.20,Faible,Non-fumeur,130.00,1.14,2.54,Élevé
+37,H,29.00,Élevée,Non-fumeur,138.00,0.77,2.17,Faible
+50,F,29.30,Modérée,Ancien fumeur,144.00,0.79,1.73,Faible
+51,H,31.30,Modérée,Non-fumeur,141.00,1.06,1.98,Élevé
+29,H,25.70,Faible,Fumeur,136.00,0.94,1.37,Faible
+57,F,35.00,Faible,Non-fumeur,153.00,0.92,2.26,Modéré
+52,H,28.40,Modérée,Non-fumeur,138.00,0.84,2.13,Faible
+47,H,23.60,Modérée,Non-fumeur,137.00,0.80,1.95,Faible
+42,F,28.90,Modérée,Non-fumeur,137.00,0.70,2.19,Faible
+40,H,26.90,Faible,Non-fumeur,127.00,0.77,2.38,Faible
+86,H,31.90,Modérée,Ancien fumeur,149.00,0.98,2.94,Élevé
+53,F,26.80,Modérée,Ancien fumeur,138.00,0.80,,Modéré
+32,F,32.50,Faible,Fumeur,106.00,0.95,2.39,Faible
+45,F,25.50,Faible,Non-fumeur,128.00,0.59,1.77,Faible
+70,F,25.20,Faible,Non-fumeur,141.00,0.91,2.12,Élevé
+50,F,28.40,Faible,Fumeur,124.00,1.08,2.12,Modéré
+40,F,20.50,Modérée,Non-fumeur,115.00,0.69,1.51,Faible
+65,H,28.90,Modérée,Non-fumeur,155.00,1.13,1.68,Élevé
+72,F,23.70,Faible,Non-fumeur,141.00,0.98,1.86,Modéré
+57,F,35.50,Élevée,Non-fumeur,147.00,0.88,2.62,Modéré
+29,F,24.70,Élevée,Fumeur,132.00,0.69,2.35,Faible
+44,H,22.40,Faible,Fumeur,126.00,1.18,2.12,Modéré
+60,F,31.60,Faible,Non-fumeur,130.00,1.15,2.45,Élevé
+32,H,29.90,Faible,Ancien fumeur,133.00,0.87,1.71,Faible
+53,H,19.90,Élevée,Fumeur,143.00,0.86,2.37,Faible
+61,H,26.30,Élevée,Non-fumeur,133.00,1.00,2.08,Modéré
+52,H,21.00,Élevée,Non-fumeur,149.00,0.92,2.49,Faible
+48,H,35.30,Modérée,Non-fumeur,134.00,0.96,,Élevé
+32,F,24.40,Modérée,Non-fumeur,128.00,0.71,2.34,Faible
+58,H,24.40,Élevée,Non-fumeur,138.00,,2.13,Faible
+42,H,37.60,Faible,Fumeur,148.00,0.94,2.57,Élevé
+58,H,29.20,Modérée,Non-fumeur,138.00,0.69,2.75,Modéré
+85,F,24.80,Modérée,Fumeur,139.00,0.96,2.79,Élevé
+32,F,30.80,Modérée,Non-fumeur,127.00,0.95,2.68,Faible
+56,F,29.00,Faible,Non-fumeur,134.00,1.15,2.28,Modéré
+67,F,29.90,Élevée,Fumeur,142.00,0.98,2.10,Modéré
+62,F,27.30,Élevée,Fumeur,126.00,1.02,1.82,Modéré
+39,H,31.50,Modérée,Non-fumeur,127.00,1.01,2.47,Modéré
+40,F,20.80,Faible,Non-fumeur,125.00,0.69,2.07,Faible
+60,F,23.60,Faible,Non-fumeur,135.00,0.88,,Faible
+53,H,30.80,Faible,Non-fumeur,110.00,1.10,2.01,Modéré
+35,F,28.10,Élevée,Non-fumeur,129.00,0.62,2.21,Faible
+87,F,22.70,Modérée,Non-fumeur,133.00,1.10,1.77,Modéré
+42,H,22.40,Élevée,Ancien fumeur,112.00,0.79,2.22,Faible
+36,H,34.30,Modérée,Non-fumeur,130.00,0.85,1.57,Faible
+48,F,22.50,Modérée,Non-fumeur,128.00,0.63,1.81,Faible
+60,F,25.70,Faible,Non-fumeur,119.00,0.79,2.38,Faible
+69,F,26.90,Faible,Ancien fumeur,144.00,0.96,2.32,Modéré
+57,F,33.40,Élevée,Non-fumeur,136.00,0.86,2.10,Modéré
+46,H,28.90,Élevée,Non-fumeur,139.00,0.91,2.55,Modéré
+54,F,25.30,Modérée,Non-fumeur,129.00,0.85,2.46,Modéré
+41,F,25.30,Faible,Ancien fumeur,132.00,0.74,2.05,Faible
+81,H,32.00,Modérée,Ancien fumeur,133.00,1.06,1.63,Modéré
+46,F,24.30,Faible,Non-fumeur,131.00,,2.43,Modéré
+60,F,28.60,Modérée,Non-fumeur,144.00,0.92,2.41,Modéré
+26,F,27.10,Modérée,Fumeur,130.00,0.97,1.86,Faible
+49,H,27.70,Modérée,Ancien fumeur,128.00,0.76,2.09,Faible
+84,F,20.90,Modérée,Ancien fumeur,138.00,0.96,2.46,Élevé
+30,F,20.00,Élevée,Non-fumeur,121.00,0.56,,Faible
+46,H,31.10,Modérée,Ancien fumeur,127.00,0.80,1.84,Faible
+39,F,24.60,Modérée,Non-fumeur,112.00,,2.04,Faible
+30,H,25.70,Modérée,Non-fumeur,126.00,0.89,1.42,Faible
+61,F,25.40,Faible,Fumeur,142.00,1.04,1.95,Modéré
+18,H,27.60,Élevée,Non-fumeur,119.00,0.74,2.41,Faible
+73,F,31.00,Faible,Fumeur,148.00,0.97,2.92,Élevé
+51,H,22.70,Modérée,Ancien fumeur,134.00,0.93,1.86,Faible
+57,H,23.40,Élevée,Non-fumeur,114.00,0.76,2.04,Modéré
+44,F,26.90,Élevée,Fumeur,129.00,0.70,1.95,Faible
+46,H,25.00,Modérée,Ancien fumeur,155.00,0.72,2.43,Faible
+65,H,28.60,Faible,Non-fumeur,133.00,,,Élevé
+42,H,27.60,Faible,Fumeur,143.00,0.90,2.14,Élevé
+72,H,23.00,Modérée,Non-fumeur,108.00,,2.18,Modéré
+71,F,28.30,Faible,Ancien fumeur,149.00,1.18,2.39,Élevé
+60,H,19.40,Modérée,Ancien fumeur,133.00,0.94,2.10,Faible
+38,H,19.40,Élevée,Fumeur,116.00,0.75,1.60,Faible
+90,H,30.30,Modérée,Ancien fumeur,147.00,,1.87,Élevé
+41,H,22.00,Faible,Non-fumeur,121.00,1.03,1.79,Faible
+30,H,34.90,Faible,Fumeur,135.00,0.73,2.36,Modéré
+43,F,32.30,Modérée,Non-fumeur,127.00,1.20,2.58,Élevé
+31,F,25.50,Modérée,Ancien fumeur,139.00,0.87,,Modéré
+32,H,25.30,Faible,Non-fumeur,121.00,1.03,1.75,Faible
+61,F,23.30,Faible,Non-fumeur,120.00,0.75,2.50,Faible
+73,F,28.20,Faible,Ancien fumeur,130.00,0.89,1.71,Élevé
+34,F,30.40,Élevée,Non-fumeur,131.00,0.88,2.02,Faible
+46,F,32.40,Modérée,Non-fumeur,135.00,0.91,2.19,Faible
+34,H,34.60,Modérée,Non-fumeur,112.00,0.90,2.13,Faible
+32,F,28.90,Faible,Non-fumeur,139.00,0.81,1.31,Faible
+58,H,16.00,Faible,Non-fumeur,118.00,0.81,2.02,Faible
+60,H,21.50,Modérée,Ancien fumeur,129.00,0.86,2.14,Faible
+66,H,23.90,Modérée,Non-fumeur,118.00,0.73,2.00,Faible
+49,H,33.70,Modérée,Non-fumeur,139.00,1.23,1.80,Modéré
+36,H,18.70,Faible,Non-fumeur,134.00,0.92,1.99,Faible
+37,H,24.80,Modérée,Non-fumeur,127.00,0.89,1.83,Modéré
+53,H,22.00,Modérée,Non-fumeur,131.00,1.02,1.81,Faible
+85,H,21.50,Faible,Fumeur,135.00,0.83,,Élevé
+35,F,30.20,Faible,Fumeur,129.00,1.05,2.03,Modéré
+45,H,28.90,Faible,Ancien fumeur,124.00,0.87,1.78,Faible
+50,F,22.90,Modérée,Fumeur,146.00,1.00,1.98,Modéré
+35,H,24.10,Modérée,Non-fumeur,131.00,0.86,2.24,Faible
+42,H,18.80,Modérée,Fumeur,146.00,0.96,1.55,Faible
+56,H,32.00,Faible,Fumeur,151.00,0.83,1.65,Modéré
+70,F,32.10,Élevée,Non-fumeur,145.00,0.87,2.35,Modéré
+80,F,38.20,Faible,Ancien fumeur,147.00,1.27,2.76,Élevé
+59,H,23.60,Modérée,Non-fumeur,154.00,1.02,1.91,Élevé
+50,F,25.50,Modérée,Ancien fumeur,127.00,0.97,2.01,Modéré
+47,F,29.80,Faible,Fumeur,138.00,0.95,2.16,Modéré
+52,H,25.60,Modérée,Fumeur,148.00,1.06,1.50,Modéré
+44,F,35.00,Modérée,Fumeur,148.00,0.87,1.83,Modéré
+23,H,20.30,Modérée,Non-fumeur,92.00,0.77,2.14,Faible
+55,F,30.30,Modérée,Non-fumeur,144.00,1.18,1.94,Élevé
+60,F,26.40,Faible,Ancien fumeur,130.00,1.00,2.29,Modéré
+57,H,32.80,Élevée,Non-fumeur,135.00,0.93,1.69,Modéré
+58,F,26.50,Modérée,Ancien fumeur,134.00,1.04,2.30,Modéré
+49,H,19.80,Modérée,Non-fumeur,109.00,0.90,1.71,Faible
+60,F,22.50,Faible,Ancien fumeur,133.00,1.11,1.82,Modéré
+65,F,22.90,Faible,Non-fumeur,130.00,0.85,2.31,Modéré
+50,H,22.90,Modérée,Ancien fumeur,110.00,0.63,1.77,Faible
+54,H,28.60,Faible,Non-fumeur,142.00,,2.39,Modéré
+35,F,28.40,Modérée,Fumeur,138.00,0.82,1.95,Faible
+30,F,30.10,Faible,Fumeur,123.00,0.84,2.15,Faible
+64,F,28.60,Faible,Fumeur,130.00,0.88,2.37,Modéré
+76,H,24.00,Modérée,Ancien fumeur,126.00,1.03,2.42,Modéré
+50,F,19.00,Modérée,Ancien fumeur,120.00,0.78,2.17,Faible
+65,H,31.10,Modérée,Non-fumeur,132.00,1.12,1.92,Élevé
+29,H,25.60,Élevée,Non-fumeur,125.00,0.66,1.97,Faible
+58,H,25.90,Modérée,Ancien fumeur,130.00,1.03,2.17,Modéré
+39,H,18.70,Faible,Fumeur,87.00,0.63,2.21,Faible
+53,F,24.40,Modérée,Non-fumeur,132.00,0.86,2.22,Faible
+50,H,28.40,Élevée,Non-fumeur,144.00,0.84,2.09,Faible
+88,F,28.50,Modérée,Non-fumeur,174.00,1.07,2.05,Élevé
+63,F,34.60,Élevée,Fumeur,153.00,1.26,2.31,Élevé
+38,H,34.00,Élevée,Ancien fumeur,141.00,0.93,2.25,Modéré
+61,H,27.80,Faible,Non-fumeur,144.00,0.97,1.93,Faible
+58,F,25.30,Modérée,Non-fumeur,138.00,0.82,2.27,Faible
+51,F,19.90,Faible,Non-fumeur,103.00,0.82,2.17,Faible
+90,H,17.10,Modérée,Ancien fumeur,139.00,0.75,1.53,Élevé
+59,F,33.30,Modérée,Non-fumeur,129.00,0.91,2.13,Modéré
+48,H,23.20,Faible,Non-fumeur,147.00,0.78,1.92,Modéré
+63,F,30.10,Modérée,Non-fumeur,138.00,0.97,1.85,Élevé
+57,F,26.20,Modérée,Non-fumeur,166.00,0.84,2.30,Élevé
+53,F,23.30,Faible,Non-fumeur,143.00,1.00,1.91,Modéré
+27,H,20.20,Faible,Ancien fumeur,128.00,0.72,2.06,Faible
+18,F,25.40,Faible,Non-fumeur,100.00,0.77,1.70,Faible
+46,F,31.40,Élevée,Fumeur,142.00,0.78,2.44,Modéré
+83,F,16.00,Modérée,Ancien fumeur,119.00,0.67,2.22,Faible
+24,F,29.20,Faible,Ancien fumeur,119.00,0.96,1.65,Faible
+35,H,24.30,Faible,Fumeur,136.00,0.72,1.67,Modéré
+58,H,33.80,Faible,Ancien fumeur,151.00,1.02,2.06,Élevé
+53,H,33.90,Modérée,Non-fumeur,158.00,1.04,2.12,Modéré
+31,H,23.50,Modérée,Non-fumeur,126.00,0.76,1.81,Faible
+18,H,22.90,Faible,Non-fumeur,133.00,0.75,1.87,Faible
+64,H,30.20,Faible,Ancien fumeur,148.00,1.14,2.58,Élevé
+66,H,24.00,Modérée,Ancien fumeur,124.00,1.13,2.39,Modéré
+69,H,30.70,Modérée,Fumeur,142.00,1.09,2.28,Élevé
+43,H,25.90,Modérée,Fumeur,131.00,0.95,1.77,Modéré
+65,H,23.90,Faible,Fumeur,121.00,1.04,2.36,Modéré
+54,H,20.60,Élevée,Fumeur,145.00,0.82,2.40,Modéré
+43,H,17.70,Modérée,Non-fumeur,134.00,0.93,2.11,Faible
+84,H,29.00,Modérée,Non-fumeur,147.00,1.05,1.82,Élevé
+63,H,35.90,Modérée,Ancien fumeur,150.00,0.99,2.24,Modéré
+22,H,22.60,Modérée,Ancien fumeur,100.00,,2.15,Faible
+72,F,25.40,Faible,Ancien fumeur,138.00,0.82,2.62,Modéré
+30,H,20.60,Élevée,Ancien fumeur,118.00,0.49,1.89,Faible
+53,H,38.00,Modérée,Non-fumeur,165.00,1.00,2.13,Élevé
+71,H,25.60,Faible,Non-fumeur,125.00,0.83,1.72,Modéré
+36,H,22.10,Faible,Non-fumeur,121.00,1.01,2.08,Faible
+48,F,34.10,Faible,Non-fumeur,140.00,0.76,2.03,Faible
+70,H,32.50,Élevée,Non-fumeur,167.00,1.03,1.98,Élevé
+48,F,32.30,Modérée,Non-fumeur,130.00,1.01,2.54,Modéré
+31,F,20.60,Élevée,Fumeur,118.00,0.61,2.39,Faible
+38,H,27.80,Faible,Non-fumeur,135.00,0.80,1.85,Modéré
+68,F,17.60,Faible,Non-fumeur,132.00,1.07,2.55,Modéré
+37,H,28.60,Élevée,Fumeur,144.00,0.90,2.05,Faible
+19,F,30.90,Modérée,Ancien fumeur,129.00,0.70,2.21,Faible
+23,F,22.50,Modérée,Fumeur,109.00,0.66,1.37,Faible
+55,H,26.00,Modérée,Ancien fumeur,123.00,0.94,2.63,Faible
+18,F,20.00,Faible,Fumeur,113.00,0.80,1.80,Faible
+45,F,36.70,Modérée,Ancien fumeur,140.00,1.15,2.33,Élevé
+32,H,26.60,Faible,Non-fumeur,124.00,0.73,2.12,Faible
+45,H,25.80,Élevée,Non-fumeur,150.00,0.59,2.74,Faible
+33,F,24.50,Élevée,Non-fumeur,129.00,0.75,1.66,Faible
+72,F,30.50,Faible,Ancien fumeur,138.00,1.27,1.89,Élevé
+72,H,26.40,Modérée,Non-fumeur,129.00,0.98,2.26,Modéré
+39,F,30.10,Faible,Non-fumeur,131.00,0.88,1.94,Faible
+29,F,34.70,Modérée,Non-fumeur,137.00,0.83,,Faible
+60,H,33.00,Modérée,Non-fumeur,136.00,0.96,2.54,Élevé
+74,H,27.10,Faible,Non-fumeur,155.00,1.01,2.20,Modéré
+83,F,25.90,Modérée,Fumeur,151.00,1.08,2.29,Élevé
+69,F,28.50,Modérée,Non-fumeur,153.00,1.29,2.22,Élevé
+49,F,30.20,Faible,Ancien fumeur,131.00,0.99,2.07,Modéré
+47,F,35.00,Faible,Fumeur,143.00,0.94,1.84,Modéré
+40,F,21.80,Élevée,Ancien fumeur,144.00,0.60,2.11,Faible
+59,H,25.90,Modérée,Non-fumeur,125.00,1.11,1.67,Modéré
+49,H,28.40,Modérée,Fumeur,167.00,1.29,2.65,Élevé
+42,H,17.70,Faible,Non-fumeur,134.00,0.62,1.71,Faible
+75,H,23.10,Élevée,Non-fumeur,147.00,1.06,2.63,Élevé
+62,H,22.20,Modérée,Non-fumeur,121.00,0.93,1.94,Modéré
+59,F,27.00,Faible,Fumeur,128.00,0.99,2.20,Modéré
+69,F,26.10,Faible,Ancien fumeur,136.00,0.75,,Modéré
+67,F,25.70,Faible,Non-fumeur,150.00,1.05,,Élevé
+52,F,20.10,Modérée,Fumeur,133.00,0.97,2.09,Faible
+58,F,19.50,Modérée,Non-fumeur,127.00,0.67,1.99,Faible
+31,H,21.40,Faible,Non-fumeur,108.00,0.58,1.84,Faible
+37,F,24.90,Modérée,Fumeur,123.00,0.69,1.56,Faible
+57,F,37.10,Modérée,Non-fumeur,126.00,1.29,1.91,Élevé
+64,H,34.30,Modérée,Ancien fumeur,139.00,1.13,2.31,Élevé
+83,F,28.60,Modérée,Non-fumeur,148.00,1.20,2.51,Élevé
+45,H,22.80,Élevée,Ancien fumeur,136.00,0.81,1.88,Faible
+75,F,32.10,Modérée,Non-fumeur,139.00,1.20,1.99,Élevé
+61,F,18.70,Modérée,Ancien fumeur,122.00,0.87,1.97,Faible
+18,H,36.40,Faible,Non-fumeur,137.00,0.95,1.96,Faible
+47,F,29.00,Modérée,Non-fumeur,131.00,1.11,1.75,Modéré
+62,F,21.80,Modérée,Non-fumeur,147.00,1.01,2.49,Modéré
+18,H,30.10,Faible,Non-fumeur,126.00,0.68,2.17,Faible
+48,H,22.80,Faible,Non-fumeur,113.00,0.72,2.75,Faible
+52,H,34.40,Modérée,Fumeur,130.00,1.24,2.03,Élevé
+66,H,16.00,Élevée,Non-fumeur,131.00,0.98,2.10,Faible
+64,H,19.80,Modérée,Non-fumeur,123.00,1.00,2.07,Modéré
+26,F,27.80,Élevée,Ancien fumeur,117.00,0.67,1.43,Faible
+18,F,25.40,Élevée,Fumeur,125.00,0.61,1.85,Faible
+44,F,23.20,Faible,Non-fumeur,125.00,0.80,1.63,Faible
+40,F,17.10,Modérée,Ancien fumeur,127.00,0.66,2.00,Faible
+66,F,19.10,Faible,Fumeur,119.00,0.89,1.35,Modéré
+50,H,27.70,Modérée,Fumeur,133.00,1.01,1.56,Faible
+57,H,22.30,Faible,Non-fumeur,134.00,0.94,1.90,Modéré
+53,H,20.80,Modérée,Non-fumeur,126.00,0.95,1.76,Faible
+43,H,30.10,Faible,Non-fumeur,131.00,0.97,2.47,Modéré
+58,H,31.50,Faible,Non-fumeur,136.00,0.98,2.12,Faible
+80,H,21.30,Élevée,Ancien fumeur,148.00,0.68,2.24,Modéré
+38,H,23.30,Faible,Ancien fumeur,112.00,0.74,1.84,Faible
+61,H,32.20,Faible,Non-fumeur,112.00,0.93,2.09,Modéré
+57,H,21.60,Modérée,Fumeur,142.00,0.95,1.60,Modéré
+34,H,25.00,Modérée,Non-fumeur,120.00,0.80,2.42,Faible
+70,H,34.40,Faible,Fumeur,159.00,1.06,2.33,Élevé
+59,F,22.60,Faible,Non-fumeur,140.00,0.79,2.36,Faible
+83,F,27.90,Modérée,Non-fumeur,143.00,1.17,2.78,Élevé
+61,F,25.10,Modérée,Non-fumeur,121.00,1.06,2.39,Modéré
+48,H,32.90,Faible,Ancien fumeur,125.00,0.66,2.11,Faible
+90,H,33.70,Faible,Fumeur,176.00,0.98,2.33,Élevé
+34,F,37.40,Élevée,Fumeur,149.00,0.99,1.93,Élevé
+49,F,19.20,Modérée,Non-fumeur,116.00,0.88,2.38,Faible
+66,F,20.60,Faible,Ancien fumeur,125.00,0.73,1.87,Faible
+62,F,25.80,Modérée,Non-fumeur,129.00,1.13,2.32,Modéré
+34,F,23.30,Modérée,Ancien fumeur,102.00,0.66,2.06,Faible
+53,H,25.40,Faible,Non-fumeur,130.00,0.94,1.90,Faible
+47,F,28.10,Modérée,Non-fumeur,131.00,1.09,2.36,Modéré
+64,H,21.50,Modérée,Non-fumeur,142.00,1.04,2.19,Modéré
+62,H,33.00,Élevée,Non-fumeur,139.00,1.09,2.00,Élevé
+70,F,16.00,Élevée,Non-fumeur,147.00,0.73,1.85,Faible
+66,F,29.90,Faible,Fumeur,150.00,1.14,1.87,Élevé
+64,F,29.90,Faible,Non-fumeur,121.00,0.95,2.17,Modéré
+57,F,26.60,Modérée,Fumeur,148.00,1.06,2.00,Modéré
+36,F,25.10,Faible,Fumeur,115.00,0.73,2.16,Modéré
+55,F,27.90,Élevée,Non-fumeur,142.00,0.93,1.93,Faible
+52,F,26.50,Faible,Fumeur,124.00,1.08,2.18,Élevé
+68,H,25.00,Faible,Ancien fumeur,154.00,0.90,2.66,Modéré
+51,H,23.20,Modérée,Ancien fumeur,135.00,0.82,2.06,Modéré
+52,F,24.40,Faible,Non-fumeur,142.00,1.09,,Élevé
+39,F,23.50,Modérée,Non-fumeur,118.00,0.94,2.03,Faible
+32,F,26.60,Modérée,Fumeur,124.00,0.80,1.48,Faible
+74,F,24.90,Modérée,Fumeur,137.00,0.99,,Élevé
+62,F,20.20,Modérée,Non-fumeur,139.00,0.88,2.68,Modéré
+49,H,26.00,Faible,Fumeur,147.00,0.88,1.84,Modéré
+65,H,23.90,Faible,Non-fumeur,154.00,0.80,2.16,Élevé
+65,F,16.00,Élevée,Non-fumeur,140.00,0.79,1.82,Faible
+44,H,30.50,Modérée,Ancien fumeur,140.00,0.91,2.03,Modéré
+27,F,29.20,Faible,Non-fumeur,133.00,0.94,2.08,Faible
+47,F,27.00,Modérée,Ancien fumeur,134.00,0.63,2.11,Modéré
+42,H,32.00,Modérée,Non-fumeur,149.00,0.93,1.69,Faible
+90,H,21.40,Faible,Non-fumeur,167.00,0.94,,Élevé
+60,H,22.50,Modérée,Non-fumeur,145.00,0.94,2.32,Modéré
+55,F,32.20,Modérée,Non-fumeur,136.00,0.85,2.35,Modéré
+82,H,28.40,Faible,Non-fumeur,154.00,1.02,2.28,Élevé
+62,F,18.00,Faible,Non-fumeur,122.00,0.77,1.56,Faible
+47,F,28.20,Élevée,Ancien fumeur,105.00,0.92,2.24,Modéré
+48,H,29.00,Faible,Fumeur,128.00,0.92,1.76,Modéré
+62,F,19.30,Modérée,Non-fumeur,126.00,0.94,1.71,Faible
+41,H,21.00,Faible,Non-fumeur,125.00,0.82,1.93,Modéré
+36,H,28.10,Élevée,Non-fumeur,132.00,0.51,1.93,Faible
+42,F,22.00,Faible,Fumeur,130.00,0.76,2.06,Faible
+70,H,33.20,Élevée,Non-fumeur,149.00,0.95,2.26,Élevé
+47,H,24.30,Faible,Non-fumeur,127.00,0.94,2.56,Modéré
+43,F,28.00,Élevée,Fumeur,144.00,0.92,1.99,Faible
+59,F,22.30,Modérée,Ancien fumeur,121.00,1.08,1.61,Modéré
+49,H,16.50,Modérée,Ancien fumeur,135.00,0.84,1.58,Faible
+79,H,31.10,Modérée,Non-fumeur,147.00,0.99,2.85,Élevé
+47,F,24.40,Modérée,Non-fumeur,115.00,0.74,1.28,Faible
+73,F,24.60,Modérée,Non-fumeur,160.00,0.83,1.91,Modéré
+45,F,23.70,Modérée,Ancien fumeur,126.00,0.95,,Modéré
+31,F,22.80,Modérée,Fumeur,143.00,0.76,1.84,Faible
+43,H,29.30,Faible,Ancien fumeur,126.00,0.82,2.19,Modéré
+51,H,32.70,Modérée,Ancien fumeur,149.00,0.95,2.46,Modéré
+70,H,32.70,Élevée,Non-fumeur,166.00,0.98,2.92,Élevé
+54,H,23.80,Faible,Non-fumeur,113.00,0.90,2.42,Faible
+55,H,31.20,Élevée,Ancien fumeur,133.00,0.98,1.80,Modéré
+74,H,28.00,Modérée,Non-fumeur,145.00,1.07,,Élevé
+61,F,21.60,Modérée,Ancien fumeur,141.00,,2.47,Élevé
+51,F,31.90,Faible,Fumeur,130.00,1.23,2.05,Élevé
+78,F,27.20,Modérée,Non-fumeur,159.00,1.18,,Élevé
+41,F,25.10,Modérée,Fumeur,145.00,0.98,2.38,Élevé
+60,F,23.10,Modérée,Non-fumeur,130.00,1.04,2.37,Modéré
+45,F,25.20,Faible,Ancien fumeur,120.00,0.98,2.06,Faible
+18,H,34.10,Élevée,Non-fumeur,122.00,0.81,1.71,Faible
+52,F,30.60,Élevée,Non-fumeur,136.00,,1.87,Modéré
+54,H,32.40,Faible,Fumeur,129.00,1.15,,Élevé
+18,F,22.60,Élevée,Ancien fumeur,87.00,,1.72,Faible
+44,H,27.80,Faible,Non-fumeur,123.00,1.04,2.38,Modéré
+33,F,27.00,Modérée,Non-fumeur,118.00,0.72,2.51,Faible
+56,F,29.10,Modérée,Ancien fumeur,135.00,0.94,1.94,Modéré
+62,H,22.20,Faible,Non-fumeur,137.00,0.77,2.19,Faible
+46,F,26.80,Modérée,Non-fumeur,132.00,1.09,1.99,Faible
+57,F,26.20,Faible,Ancien fumeur,136.00,1.02,2.03,Modéré
+53,H,26.70,Faible,Non-fumeur,126.00,1.04,2.22,Modéré
+43,F,19.20,Faible,Non-fumeur,103.00,0.83,1.79,Faible
+65,H,22.00,Faible,Ancien fumeur,151.00,0.87,2.10,Modéré
+75,H,26.20,Élevée,Non-fumeur,148.00,0.94,2.33,Modéré
+70,F,28.00,Faible,Non-fumeur,137.00,0.91,2.85,Élevé
+35,F,28.50,Élevée,Ancien fumeur,128.00,0.87,1.73,Faible
+44,H,23.10,Modérée,Non-fumeur,104.00,0.95,1.54,Faible
+51,F,21.20,Faible,Fumeur,130.00,0.72,2.14,Faible
+74,H,26.90,Faible,Non-fumeur,149.00,0.96,2.75,Élevé
+36,F,30.60,Modérée,Fumeur,134.00,0.82,1.77,Faible
+52,F,29.90,Modérée,Non-fumeur,136.00,0.70,2.65,Faible
+65,H,21.60,Modérée,Ancien fumeur,148.00,0.78,2.36,Modéré
+57,H,24.40,Modérée,Non-fumeur,145.00,0.85,2.11,Modéré
+55,F,25.50,Élevée,Non-fumeur,143.00,0.74,2.12,Faible
+55,H,31.40,Élevée,Non-fumeur,155.00,1.03,1.94,Modéré
+54,F,30.70,Modérée,Non-fumeur,135.00,0.88,1.81,Faible
+43,F,34.30,Modérée,Fumeur,139.00,1.08,2.19,Modéré
+47,H,32.60,Faible,Ancien fumeur,135.00,0.89,2.04,Modéré
+25,H,27.70,Modérée,Ancien fumeur,106.00,0.72,1.86,Faible
+63,H,31.90,Élevée,Non-fumeur,151.00,0.97,2.20,Élevé
+44,F,25.60,Faible,Non-fumeur,109.00,0.86,,Faible
+73,F,21.70,Modérée,Non-fumeur,137.00,0.86,2.32,Faible
+37,F,22.30,Faible,Non-fumeur,117.00,1.13,1.81,Faible
+35,F,26.30,Modérée,Non-fumeur,132.00,0.86,2.43,Faible
+40,F,22.80,Élevée,Ancien fumeur,106.00,0.86,1.53,Faible
+61,F,28.70,Faible,Non-fumeur,128.00,1.02,2.05,Faible
+34,F,29.50,Faible,Ancien fumeur,125.00,1.05,2.03,Faible
+43,H,34.70,Faible,Fumeur,137.00,1.18,2.13,Élevé
+52,F,25.90,Élevée,Non-fumeur,142.00,0.89,2.16,Faible
+34,H,20.60,Faible,Non-fumeur,120.00,0.74,1.73,Faible
+56,F,35.40,Élevée,Non-fumeur,161.00,1.10,2.55,Élevé
+39,H,23.20,Faible,Fumeur,119.00,0.99,1.99,Modéré
+61,H,16.00,Modérée,Ancien fumeur,108.00,,,Faible
+81,F,22.60,Modérée,Ancien fumeur,149.00,0.81,1.86,Modéré
+63,F,25.70,Modérée,Ancien fumeur,124.00,0.88,2.27,Modéré
+33,F,16.00,Modérée,Fumeur,135.00,0.55,1.81,Faible
+73,H,20.80,Modérée,Ancien fumeur,136.00,0.94,2.47,Modéré
+81,F,26.60,Faible,Non-fumeur,136.00,,2.41,Élevé
+50,F,27.80,Modérée,Non-fumeur,123.00,1.06,2.25,Modéré
+18,F,31.20,Modérée,Ancien fumeur,121.00,0.86,1.85,Faible
+18,F,26.10,Modérée,Ancien fumeur,115.00,0.52,,Faible
+72,H,26.20,Faible,Non-fumeur,137.00,0.99,2.34,Modéré
+53,H,23.90,Modérée,Fumeur,128.00,0.99,1.70,Faible
+53,F,25.40,Faible,Fumeur,152.00,0.66,1.55,Modéré
+75,H,25.00,Faible,Non-fumeur,138.00,0.84,,Modéré
+30,H,24.30,Modérée,Ancien fumeur,120.00,0.82,2.26,Faible
+47,H,25.80,Élevée,Fumeur,124.00,0.97,1.90,Faible
+60,F,27.20,Faible,Fumeur,134.00,1.05,2.07,Élevé
+63,H,25.70,Élevée,Ancien fumeur,137.00,0.83,1.53,Faible
+84,H,27.40,Élevée,Non-fumeur,148.00,0.74,1.83,Modéré
+61,H,21.90,Modérée,Fumeur,126.00,0.76,2.22,Modéré
+56,F,34.90,Faible,Ancien fumeur,162.00,0.85,2.44,Élevé
+40,F,22.50,Faible,Non-fumeur,128.00,0.80,1.48,Faible
+33,H,20.50,Faible,Non-fumeur,94.00,,1.38,Faible
+30,H,26.80,Élevée,Fumeur,110.00,0.78,2.03,Faible
+80,H,18.90,Modérée,Ancien fumeur,141.00,1.05,1.52,Élevé
+66,H,25.70,Faible,Fumeur,161.00,0.84,2.08,Élevé
+68,H,23.50,Faible,Ancien fumeur,159.00,0.82,2.73,Élevé
+61,F,22.00,Faible,Ancien fumeur,125.00,0.75,1.83,Modéré
+53,F,25.10,Élevée,Ancien fumeur,121.00,1.04,2.09,Modéré
+64,H,27.80,Élevée,Non-fumeur,155.00,0.99,1.89,Modéré
+60,H,19.70,Faible,Non-fumeur,113.00,0.90,1.66,Faible
+41,H,20.00,Modérée,Fumeur,129.00,0.94,1.95,Modéré
+51,F,16.00,Faible,Fumeur,134.00,0.64,2.13,Faible
+35,H,32.20,Modérée,Non-fumeur,136.00,1.06,1.87,Faible
+53,H,23.60,Faible,Ancien fumeur,129.00,0.84,1.80,Faible
+55,H,23.40,Modérée,Non-fumeur,128.00,,2.55,Modéré
+50,H,29.50,Élevée,Non-fumeur,127.00,0.90,1.69,Faible
+39,F,24.30,Faible,Fumeur,141.00,0.84,2.63,Faible
+36,H,25.70,Modérée,Fumeur,138.00,1.03,2.32,Faible
+23,H,29.50,Modérée,Non-fumeur,118.00,0.82,1.34,Faible
+39,F,31.30,Modérée,Non-fumeur,134.00,0.80,2.16,Faible
+39,F,32.40,Modérée,Non-fumeur,134.00,0.87,1.68,Faible
+71,F,25.30,Faible,Non-fumeur,149.00,0.95,2.40,Modéré
+57,F,31.00,Faible,Fumeur,127.00,1.16,,Élevé
+56,H,29.30,Faible,Non-fumeur,154.00,0.81,1.58,Modéré
+38,F,28.80,Modérée,Ancien fumeur,123.00,0.99,1.97,Faible
+40,H,26.70,Faible,Non-fumeur,129.00,0.72,2.05,Faible
+49,H,19.30,Faible,Ancien fumeur,129.00,0.85,2.00,Faible
+49,F,22.70,Élevée,Non-fumeur,133.00,0.75,1.93,Faible
+48,H,28.60,Modérée,Non-fumeur,127.00,0.97,1.82,Faible
+27,H,32.40,Élevée,Non-fumeur,126.00,0.97,1.59,Faible
+66,F,33.70,Élevée,Fumeur,157.00,0.99,1.97,Élevé
+53,H,34.60,Modérée,Non-fumeur,131.00,,2.22,Élevé
+18,H,28.30,Faible,Non-fumeur,132.00,0.82,1.62,Faible
+42,F,28.00,Modérée,Non-fumeur,133.00,1.06,1.49,Faible
+52,F,33.30,Élevée,Ancien fumeur,140.00,1.06,1.79,Modéré
+55,F,22.20,Modérée,Fumeur,159.00,0.84,2.10,Modéré
+31,F,21.20,Modérée,Non-fumeur,114.00,0.82,1.99,Faible
+38,H,27.80,Modérée,Non-fumeur,118.00,0.89,,Faible
+52,H,28.70,Faible,Fumeur,155.00,0.67,2.11,Faible
+61,H,21.90,Élevée,Non-fumeur,149.00,1.04,1.64,Faible
+46,H,31.50,Modérée,Non-fumeur,146.00,1.16,2.18,Élevé
+55,H,30.70,Faible,Ancien fumeur,153.00,0.83,2.32,Modéré
+55,F,24.90,Modérée,Non-fumeur,132.00,0.74,1.81,Faible
+34,F,31.90,Faible,Ancien fumeur,141.00,1.11,2.26,Modéré
+61,H,28.00,Modérée,Ancien fumeur,142.00,0.99,2.26,Élevé
+45,H,17.10,Modérée,Non-fumeur,113.00,0.67,1.97,Faible
+29,F,26.70,Modérée,Ancien fumeur,121.00,0.73,2.11,Faible
+46,H,29.50,Modérée,Non-fumeur,144.00,1.17,2.10,Élevé
+60,H,29.10,Faible,Non-fumeur,153.00,1.13,2.36,Élevé
+62,F,30.00,Faible,Fumeur,146.00,0.97,1.60,Élevé
+56,H,35.80,Modérée,Fumeur,144.00,1.15,,Élevé
+64,F,28.70,Faible,Non-fumeur,130.00,1.01,1.91,Modéré
+52,F,33.20,Modérée,Ancien fumeur,131.00,0.80,2.25,Modéré
+55,F,25.10,Faible,Non-fumeur,151.00,0.89,1.87,Modéré
+75,F,32.30,Élevée,Fumeur,155.00,1.30,1.45,Élevé
+50,F,18.60,Élevée,Non-fumeur,135.00,,1.88,Faible
+45,H,30.90,Modérée,Ancien fumeur,147.00,1.16,2.21,Élevé
+41,F,21.00,Faible,Ancien fumeur,136.00,0.55,1.76,Faible
+49,F,18.90,Élevée,Non-fumeur,116.00,0.74,2.32,Faible
+45,F,19.70,Modérée,Non-fumeur,136.00,0.93,2.02,Faible
+69,H,28.20,Modérée,Ancien fumeur,147.00,1.04,1.92,Élevé
+48,F,21.90,Modérée,Fumeur,142.00,0.94,2.27,Modéré
+54,F,21.20,Faible,Fumeur,144.00,0.88,2.08,Modéré
+46,H,34.80,Modérée,Ancien fumeur,147.00,1.03,1.86,Élevé
+62,H,26.40,Modérée,Ancien fumeur,135.00,0.89,2.43,Modéré
+45,H,21.50,Modérée,Fumeur,133.00,0.67,1.68,Faible
+43,F,26.10,Élevée,Non-fumeur,132.00,0.68,1.69,Faible
+44,F,30.00,Faible,Ancien fumeur,112.00,0.92,1.95,Modéré
+45,F,30.10,Faible,Fumeur,129.00,0.80,2.92,Faible
+39,H,21.00,Élevée,Non-fumeur,133.00,0.60,1.87,Faible
+37,F,26.80,Faible,Ancien fumeur,126.00,0.97,2.07,Faible
+66,H,26.20,Modérée,Fumeur,148.00,1.06,2.39,Modéré
+39,H,27.70,Modérée,Non-fumeur,128.00,0.81,2.33,Faible
+41,H,27.60,Élevée,Ancien fumeur,138.00,1.05,2.10,Modéré
+50,H,25.60,Élevée,Non-fumeur,138.00,0.73,,Faible
+34,H,24.50,Modérée,Non-fumeur,127.00,0.75,2.09,Faible
+55,H,37.00,Élevée,Ancien fumeur,140.00,0.91,2.49,Modéré
+53,F,21.80,Faible,Ancien fumeur,134.00,0.73,2.17,Modéré
+47,F,24.10,Élevée,Ancien fumeur,130.00,0.96,1.88,Faible
+54,F,23.90,Faible,Non-fumeur,140.00,0.85,1.72,Modéré
+75,H,29.80,Élevée,Ancien fumeur,160.00,0.97,2.29,Élevé
+20,H,26.70,Élevée,Non-fumeur,111.00,0.76,2.05,Faible
+37,F,26.50,Faible,Ancien fumeur,119.00,,2.01,Faible
+52,F,23.60,Faible,Non-fumeur,141.00,1.01,1.98,Modéré
+70,H,28.50,Élevée,Ancien fumeur,140.00,1.01,2.22,Élevé
+64,H,29.80,Élevée,Non-fumeur,124.00,0.96,2.39,Modéré
+60,H,21.70,Faible,Fumeur,148.00,0.71,2.64,Modéré
+24,H,29.00,Faible,Non-fumeur,122.00,1.09,2.69,Faible
+64,H,16.00,Faible,Ancien fumeur,150.00,0.87,1.77,Modéré
+60,H,19.70,Modérée,Fumeur,118.00,,,Modéré
+66,H,29.80,Modérée,Non-fumeur,133.00,1.04,1.82,Élevé
+36,F,23.40,Modérée,Fumeur,115.00,0.92,2.00,Faible
+84,H,26.80,Faible,Ancien fumeur,148.00,1.00,1.69,Élevé
+67,H,24.00,Modérée,Non-fumeur,140.00,0.97,2.19,Modéré
+82,H,21.20,Modérée,Non-fumeur,140.00,0.92,2.09,Modéré
+18,F,23.90,Faible,Ancien fumeur,138.00,0.75,2.05,Faible
+63,H,31.60,Élevée,Fumeur,146.00,0.89,2.74,Modéré
+69,H,40.30,Élevée,Non-fumeur,142.00,1.27,2.43,Élevé
+29,H,21.60,Modérée,Fumeur,123.00,0.87,2.30,Faible
+59,F,31.90,Faible,Non-fumeur,127.00,0.74,2.12,Modéré
+48,H,24.40,Faible,Non-fumeur,104.00,0.84,1.89,Faible
+62,F,31.40,Modérée,Ancien fumeur,142.00,1.08,2.29,Élevé
+61,H,25.90,Faible,Fumeur,139.00,0.78,1.95,Modéré
+54,H,27.00,Faible,Non-fumeur,128.00,0.95,2.25,Faible
+54,F,25.40,Modérée,Ancien fumeur,140.00,0.91,2.28,Modéré
+36,H,26.80,Élevée,Fumeur,116.00,0.99,1.75,Faible
+39,H,20.40,Modérée,Ancien fumeur,117.00,0.81,2.67,Faible
+58,F,31.00,Élevée,Fumeur,147.00,0.92,1.80,Faible
+62,F,42.30,Faible,Fumeur,168.00,1.14,2.75,Élevé
+42,F,26.70,Élevée,Fumeur,155.00,1.01,1.91,Modéré
+62,F,22.60,Élevée,Non-fumeur,123.00,1.04,2.04,Faible
+58,F,22.30,Faible,Non-fumeur,127.00,0.97,2.80,Modéré
+39,H,19.10,Modérée,Non-fumeur,128.00,0.81,1.94,Faible
+36,F,21.40,Modérée,Non-fumeur,137.00,0.77,1.72,Faible
+42,H,25.70,Élevée,Ancien fumeur,143.00,0.93,2.22,Faible
+64,H,21.90,Faible,Non-fumeur,130.00,0.97,2.33,Modéré
+45,F,27.30,Faible,Ancien fumeur,110.00,1.01,2.41,Faible
+43,H,28.70,Faible,Ancien fumeur,137.00,0.92,2.22,Élevé
+55,F,23.80,Faible,Fumeur,129.00,1.06,1.88,Élevé
+72,H,16.00,Faible,Fumeur,165.00,1.05,1.97,Modéré
+36,H,24.30,Modérée,Fumeur,150.00,0.84,1.87,Modéré
+61,H,26.30,Modérée,Non-fumeur,129.00,0.89,2.60,Modéré
+70,F,29.00,Modérée,Non-fumeur,149.00,1.06,2.46,Élevé
+49,F,29.50,Modérée,Non-fumeur,122.00,0.78,2.03,Modéré
+27,F,25.20,Faible,Non-fumeur,140.00,0.76,2.00,Faible
+84,H,19.60,Modérée,Fumeur,139.00,0.92,2.56,Élevé
+45,F,19.10,Faible,Fumeur,121.00,0.82,2.22,Modéré
+54,H,24.40,Élevée,Non-fumeur,130.00,0.68,1.71,Modéré
+79,F,27.90,Faible,Fumeur,159.00,1.03,2.17,Élevé
+50,H,29.50,Modérée,Non-fumeur,124.00,0.93,2.19,Modéré
+45,F,28.40,Élevée,Non-fumeur,139.00,0.91,2.29,Modéré
+74,H,25.30,Faible,Non-fumeur,134.00,1.13,2.05,Élevé
+63,H,30.60,Modérée,Non-fumeur,156.00,1.08,1.92,Élevé
+44,H,27.60,Faible,Non-fumeur,124.00,0.95,1.96,Faible
+39,F,32.40,Faible,Non-fumeur,123.00,1.06,1.87,Faible
+59,H,28.30,Faible,Non-fumeur,137.00,1.01,1.89,Modéré
+60,H,28.50,Modérée,Fumeur,149.00,1.09,2.39,Élevé
+34,H,28.40,Modérée,Fumeur,130.00,0.83,1.38,Faible
+49,H,27.20,Élevée,Non-fumeur,132.00,0.87,1.90,Modéré
+45,H,26.60,Modérée,Non-fumeur,131.00,0.84,1.75,Faible
+75,H,26.80,Modérée,Fumeur,168.00,0.95,2.62,Élevé
+46,H,28.50,Faible,Ancien fumeur,134.00,0.81,2.15,Faible
+50,H,35.80,Modérée,Non-fumeur,150.00,1.00,2.06,Élevé
+53,H,27.60,Faible,Non-fumeur,124.00,0.81,2.13,Faible
+49,F,26.30,Modérée,Ancien fumeur,125.00,0.91,1.96,Faible
+88,H,23.60,Modérée,Fumeur,136.00,0.98,1.97,Élevé
+53,H,28.00,Modérée,Non-fumeur,128.00,0.96,2.55,Modéré
+69,H,22.90,Modérée,Non-fumeur,120.00,1.00,1.64,Faible
+33,H,23.80,Modérée,Fumeur,130.00,0.84,2.19,Modéré
+77,F,29.60,Faible,Ancien fumeur,151.00,0.91,2.25,Élevé
+68,H,25.00,Modérée,Non-fumeur,151.00,1.00,2.33,Modéré
+61,H,30.20,Modérée,Non-fumeur,145.00,1.09,2.12,Modéré
+46,H,24.40,Élevée,Non-fumeur,150.00,0.72,1.81,Faible
+60,H,30.90,Faible,Ancien fumeur,137.00,1.01,2.09,Faible
+54,F,32.10,Modérée,Non-fumeur,131.00,0.87,2.24,Élevé
+63,H,30.50,Modérée,Non-fumeur,144.00,1.00,2.58,Élevé
+53,H,18.10,Faible,Non-fumeur,145.00,0.75,1.92,Faible
+54,H,33.30,Faible,Fumeur,139.00,1.06,1.91,Élevé
+51,F,22.60,Faible,Non-fumeur,143.00,1.02,1.69,Modéré
+45,F,25.00,Faible,Ancien fumeur,127.00,1.04,,Modéré
+43,F,31.50,Modérée,Non-fumeur,149.00,1.05,1.40,Modéré
+54,H,20.10,Faible,Fumeur,135.00,0.80,1.95,Faible
+49,F,29.10,Faible,Non-fumeur,138.00,1.02,2.12,Faible
+35,F,20.30,Modérée,Non-fumeur,135.00,0.88,1.77,Faible
+34,H,28.30,Modérée,Fumeur,140.00,0.93,1.60,Faible
+65,F,27.20,Élevée,Non-fumeur,125.00,0.87,2.19,Modéré
+54,H,27.00,Modérée,Non-fumeur,128.00,1.13,1.92,Modéré
+39,F,21.10,Faible,Ancien fumeur,119.00,0.98,1.98,Modéré
+45,H,31.80,Modérée,Ancien fumeur,135.00,0.84,2.49,Modéré
+37,H,16.00,Faible,Fumeur,125.00,0.90,1.41,Faible
+58,F,19.30,Élevée,Fumeur,128.00,0.87,2.06,Modéré
+42,F,26.70,Faible,Non-fumeur,108.00,0.95,1.65,Faible
+32,F,17.40,Modérée,Non-fumeur,133.00,0.87,1.75,Faible
+33,F,28.40,Modérée,Non-fumeur,135.00,1.02,1.84,Faible
+44,H,32.70,Élevée,Ancien fumeur,128.00,0.86,2.09,Faible
+22,F,28.60,Modérée,Non-fumeur,128.00,1.12,1.72,Modéré
+37,H,30.40,Modérée,Non-fumeur,137.00,0.85,2.12,Faible
+34,F,17.90,Faible,Non-fumeur,105.00,,1.58,Faible
+50,F,31.00,Faible,Ancien fumeur,139.00,1.07,2.23,Modéré
+55,H,22.10,Faible,Non-fumeur,123.00,0.86,2.04,Faible
+60,F,22.50,Modérée,Non-fumeur,140.00,1.01,2.18,Modéré
+63,F,35.90,Faible,Non-fumeur,155.00,1.11,1.86,Élevé
+45,F,34.00,Modérée,Non-fumeur,136.00,1.03,2.15,Modéré
+58,F,23.00,Faible,Non-fumeur,128.00,0.89,2.09,Modéré
+66,H,29.80,Modérée,Ancien fumeur,119.00,1.00,2.52,Modéré
+45,H,32.60,Élevée,Non-fumeur,148.00,0.80,1.88,Modéré
+56,F,25.80,Faible,Non-fumeur,145.00,0.89,2.36,Modéré
+53,F,16.10,Élevée,Non-fumeur,114.00,0.81,2.12,Faible
+63,F,29.90,Modérée,Non-fumeur,140.00,0.80,2.40,Modéré
+70,F,28.10,Faible,Fumeur,156.00,1.01,2.38,Élevé
+36,H,32.40,Faible,Non-fumeur,143.00,,2.38,Modéré
+34,F,22.90,Élevée,Fumeur,138.00,0.61,1.83,Faible
+45,H,23.00,Modérée,Ancien fumeur,117.00,0.86,2.43,Faible
+74,H,29.60,Modérée,Ancien fumeur,175.00,1.09,2.18,Élevé
+68,H,33.40,Modérée,Fumeur,157.00,1.32,2.07,Élevé
+50,F,24.00,Faible,Non-fumeur,123.00,0.80,1.99,Faible
+56,F,23.00,Modérée,Ancien fumeur,151.00,0.93,1.50,Modéré
+43,F,26.00,Faible,Ancien fumeur,121.00,0.84,1.47,Faible
+47,H,27.40,Faible,Non-fumeur,135.00,1.00,2.53,Modéré
+52,H,23.50,Faible,Non-fumeur,131.00,0.67,2.43,Faible
+43,F,28.10,Modérée,Non-fumeur,124.00,0.84,2.00,Faible
+66,H,20.50,Faible,Non-fumeur,133.00,0.68,1.66,Faible
+49,H,29.50,Faible,Non-fumeur,132.00,0.74,2.25,Modéré
+28,H,32.30,Élevée,Non-fumeur,119.00,0.88,2.03,Faible
+54,F,27.10,Faible,Non-fumeur,139.00,0.94,2.29,Modéré
+36,F,25.70,Modérée,Non-fumeur,127.00,1.11,1.54,Faible
+55,H,27.00,Modérée,Fumeur,133.00,1.07,,Élevé
+65,H,17.30,Élevée,Fumeur,141.00,0.85,1.98,Faible
+83,F,25.00,Modérée,Non-fumeur,153.00,1.00,2.47,Élevé
+31,H,16.00,Faible,Ancien fumeur,112.00,0.56,1.88,Faible
+63,H,30.40,Modérée,Ancien fumeur,128.00,0.81,2.41,Modéré
+51,H,29.60,Modérée,Non-fumeur,146.00,0.90,1.78,Modéré
+51,H,30.60,Modérée,Fumeur,138.00,0.98,2.61,Élevé
+38,F,27.60,Modérée,Non-fumeur,118.00,0.96,1.68,Modéré
+52,H,21.00,Faible,Non-fumeur,133.00,1.01,1.93,Modéré
+41,H,36.30,Modérée,Ancien fumeur,130.00,1.15,1.82,Modéré
+35,H,35.40,Élevée,Non-fumeur,148.00,0.84,1.68,Faible
+48,H,33.40,Faible,Ancien fumeur,144.00,0.83,2.15,Faible
+27,H,21.20,Faible,Ancien fumeur,108.00,0.79,2.33,Faible
+35,F,23.10,Élevée,Non-fumeur,120.00,0.53,2.14,Faible
+57,F,29.90,Faible,Non-fumeur,156.00,,2.37,Élevé
+55,H,23.70,Modérée,Non-fumeur,128.00,1.15,2.20,Faible
+41,H,31.60,Modérée,Non-fumeur,131.00,0.96,1.93,Modéré
+43,F,28.10,Faible,Fumeur,133.00,0.74,2.12,Modéré
+66,F,23.30,Modérée,Ancien fumeur,140.00,1.03,2.07,Modéré
+40,H,24.80,Faible,Fumeur,132.00,1.05,2.11,Faible
+39,F,27.30,Modérée,Fumeur,150.00,1.03,2.26,Élevé
+60,H,33.50,Faible,Fumeur,148.00,1.12,2.26,Élevé
+30,F,23.80,Modérée,Ancien fumeur,127.00,0.54,1.93,Faible
+64,H,22.20,Élevée,Non-fumeur,135.00,0.86,1.95,Faible
+25,H,20.20,Élevée,Non-fumeur,103.00,0.59,2.30,Faible
+29,F,22.20,Modérée,Non-fumeur,120.00,0.68,1.98,Faible
+44,F,32.30,Faible,Non-fumeur,129.00,0.96,1.80,Faible
+30,F,26.40,Faible,Ancien fumeur,117.00,0.80,2.14,Faible
+32,H,26.90,Modérée,Ancien fumeur,116.00,0.82,1.73,Faible
+50,H,19.60,Modérée,Fumeur,135.00,0.63,1.65,Faible
+42,H,30.50,Modérée,Fumeur,127.00,0.96,2.26,Modéré
+50,F,23.20,Faible,Fumeur,150.00,0.79,1.65,Modéré
+55,H,28.10,Modérée,Fumeur,140.00,0.87,,Modéré
+47,F,35.50,Faible,Fumeur,145.00,0.76,1.88,Élevé
+32,H,22.30,Faible,Non-fumeur,111.00,1.15,1.90,Faible
+56,F,37.80,Faible,Non-fumeur,141.00,0.91,2.53,Élevé
+35,F,26.20,Élevée,Non-fumeur,118.00,0.80,1.79,Faible
+37,F,30.30,Élevée,Non-fumeur,134.00,0.79,2.17,Faible
+80,F,31.50,Élevée,Non-fumeur,138.00,1.22,2.28,Élevé
+59,F,29.90,Élevée,Ancien fumeur,123.00,0.95,2.41,Modéré
+23,H,31.70,Modérée,Ancien fumeur,120.00,0.73,2.34,Faible
+64,H,34.70,Élevée,Fumeur,142.00,1.12,2.30,Élevé
+24,H,21.60,Modérée,Non-fumeur,104.00,0.72,1.88,Faible
+90,F,26.20,Modérée,Non-fumeur,160.00,1.11,2.78,Élevé
+74,H,25.50,Modérée,Fumeur,151.00,0.91,,Élevé
+84,H,18.70,Faible,Ancien fumeur,133.00,1.14,2.24,Élevé
+37,H,16.00,Faible,Non-fumeur,111.00,0.72,1.82,Faible
+42,F,24.90,Modérée,Non-fumeur,119.00,0.99,1.51,Faible
+34,H,32.90,Élevée,Fumeur,125.00,0.78,1.40,Faible
+59,H,23.10,Élevée,Non-fumeur,137.00,0.79,2.29,Modéré
+34,F,29.40,Modérée,Ancien fumeur,130.00,0.92,2.19,Faible
+60,F,22.80,Faible,Non-fumeur,134.00,1.11,2.82,Modéré
+66,F,25.40,Faible,Ancien fumeur,135.00,0.84,3.03,Modéré
+35,H,33.80,Modérée,Fumeur,140.00,1.06,2.27,Modéré
+18,F,40.80,Faible,Non-fumeur,130.00,0.83,1.94,Faible
+54,F,33.60,Faible,Non-fumeur,150.00,0.98,1.57,Modéré
+68,H,21.90,Modérée,Ancien fumeur,137.00,0.90,2.05,Modéré
+44,H,23.40,Faible,Fumeur,136.00,0.73,2.56,Faible
+54,F,25.10,Modérée,Fumeur,142.00,0.93,1.94,Modéré
+48,H,28.60,Modérée,Fumeur,138.00,0.91,2.11,Faible
+71,F,16.40,Élevée,Fumeur,128.00,0.87,1.93,Modéré
+56,F,33.10,Faible,Non-fumeur,131.00,0.84,2.13,Modéré
+22,H,23.30,Modérée,Fumeur,131.00,0.77,2.07,Faible
+55,F,23.40,Faible,Fumeur,128.00,0.97,1.76,Faible
+55,H,20.30,Faible,Fumeur,130.00,1.03,1.90,Modéré
+76,H,29.80,Faible,Ancien fumeur,120.00,1.05,2.87,Modéré
+70,F,20.60,Faible,Ancien fumeur,134.00,0.85,,Modéré
+52,H,30.80,Modérée,Non-fumeur,143.00,1.03,1.72,Modéré
+55,F,37.40,Faible,Fumeur,133.00,0.92,2.27,Élevé
+72,F,16.00,Modérée,Fumeur,130.00,0.98,2.56,Modéré
+25,F,29.30,Faible,Ancien fumeur,128.00,0.81,2.37,Faible
+43,F,28.70,Modérée,Non-fumeur,154.00,1.06,2.37,Modéré
+43,H,22.30,Modérée,Ancien fumeur,143.00,0.91,2.50,Faible
+41,F,19.60,Faible,Ancien fumeur,112.00,0.90,2.22,Faible
+35,F,25.80,Modérée,Non-fumeur,129.00,1.17,1.45,Modéré
+53,H,25.90,Faible,Non-fumeur,157.00,1.05,2.66,Modéré
+70,H,32.40,Faible,Non-fumeur,142.00,1.28,2.46,Élevé
+48,F,16.60,Faible,Fumeur,120.00,0.60,1.87,Faible
+46,H,28.60,Faible,Non-fumeur,135.00,0.89,1.99,Élevé
+72,H,35.50,Élevée,Non-fumeur,149.00,1.02,2.03,Modéré
+21,F,26.30,Faible,Ancien fumeur,132.00,0.80,2.01,Faible
+59,F,22.00,Modérée,Ancien fumeur,132.00,0.82,1.76,Faible
+47,F,29.60,Faible,Non-fumeur,126.00,1.08,1.63,Faible
+64,F,16.00,Modérée,Ancien fumeur,132.00,0.44,2.00,Faible
+45,F,36.00,Modérée,Fumeur,147.00,0.97,1.95,Modéré
+62,H,29.00,Modérée,Non-fumeur,125.00,1.18,2.29,Élevé
+74,H,38.10,Modérée,Ancien fumeur,152.00,1.10,2.47,Élevé
+31,F,32.30,Élevée,Ancien fumeur,131.00,0.82,1.88,Faible
+65,F,25.60,Faible,Non-fumeur,129.00,0.67,2.00,Modéré
+33,F,36.60,Élevée,Ancien fumeur,120.00,1.03,1.68,Faible
+70,F,25.40,Faible,Non-fumeur,139.00,1.19,2.40,Élevé
+58,F,27.00,Faible,Non-fumeur,140.00,0.92,2.28,Élevé
+36,F,30.70,Faible,Fumeur,128.00,0.64,1.63,Faible
+28,H,24.90,Modérée,Ancien fumeur,106.00,0.69,2.35,Faible
+59,F,17.80,Modérée,Non-fumeur,134.00,0.80,2.17,Faible
+61,H,28.50,Élevée,Non-fumeur,142.00,1.06,2.22,Modéré
+50,F,17.90,Modérée,Ancien fumeur,99.00,0.86,2.32,Faible
+61,F,30.80,Modérée,Fumeur,126.00,0.90,1.98,Élevé
+81,F,28.10,Modérée,Non-fumeur,146.00,0.99,2.01,Modéré
+63,F,21.10,Modérée,Non-fumeur,131.00,0.73,2.54,Modéré
+48,H,25.70,Modérée,Non-fumeur,142.00,0.95,2.48,Modéré
+56,F,32.90,Faible,Ancien fumeur,160.00,1.15,2.00,Élevé
+42,H,29.60,Faible,Non-fumeur,123.00,1.18,1.96,Modéré
+48,F,32.50,Modérée,Non-fumeur,151.00,1.11,1.91,Élevé
+70,H,22.80,Faible,Non-fumeur,145.00,1.05,1.97,Modéré
+70,H,28.70,Élevée,Ancien fumeur,139.00,1.00,2.54,Modéré
+47,F,27.30,Faible,Non-fumeur,122.00,1.00,2.33,Faible
+44,F,24.90,Élevée,Non-fumeur,110.00,0.72,1.85,Faible
+61,H,24.70,Faible,Fumeur,137.00,0.74,1.78,Modéré
+40,F,24.00,Élevée,Non-fumeur,114.00,0.84,,Faible
+26,H,26.90,Faible,Fumeur,136.00,0.60,1.82,Faible
+49,F,28.30,Faible,Non-fumeur,142.00,0.68,2.16,Faible
+51,H,26.50,Faible,Non-fumeur,140.00,0.93,2.02,Faible
+34,H,32.40,Élevée,Non-fumeur,140.00,1.02,,Modéré
+49,H,28.20,Modérée,Ancien fumeur,126.00,1.13,1.87,Modéré
+48,H,27.50,Modérée,Non-fumeur,141.00,1.05,2.37,Modéré
+60,F,23.90,Modérée,Non-fumeur,128.00,0.94,,Modéré
+35,F,34.10,Élevée,Non-fumeur,124.00,0.94,1.46,Faible
+52,H,29.00,Modérée,Ancien fumeur,138.00,1.04,1.83,Modéré
+60,F,23.60,Élevée,Fumeur,122.00,1.10,2.35,Élevé
+30,H,29.10,Faible,Non-fumeur,121.00,,2.02,Faible
+66,H,25.10,Faible,Ancien fumeur,151.00,1.10,1.61,Élevé
+59,H,20.20,Faible,Fumeur,119.00,0.79,2.04,Modéré
+51,F,24.60,Modérée,Non-fumeur,121.00,0.85,1.79,Faible
+55,F,24.50,Modérée,Ancien fumeur,122.00,0.79,1.74,Faible
+33,H,20.60,Faible,Ancien fumeur,115.00,0.74,2.43,Faible
+61,F,26.60,Modérée,Non-fumeur,122.00,0.90,2.36,Modéré
+38,H,28.30,Élevée,Non-fumeur,117.00,0.90,1.39,Faible
+39,F,43.10,Élevée,Non-fumeur,138.00,1.04,1.75,Modéré
+43,F,30.60,Élevée,Ancien fumeur,119.00,1.06,2.21,Faible
+57,F,29.40,Faible,Non-fumeur,136.00,0.80,2.34,Faible
+38,F,21.80,Élevée,Fumeur,138.00,0.67,2.03,Faible
+34,H,26.70,Élevée,Non-fumeur,115.00,0.59,2.48,Faible
+66,F,36.50,Faible,Non-fumeur,140.00,1.00,2.09,Élevé
+42,F,31.50,Modérée,Non-fumeur,136.00,0.91,1.69,Modéré
+59,F,21.30,Élevée,Non-fumeur,152.00,0.90,2.38,Faible
+45,H,16.10,Faible,Non-fumeur,111.00,0.86,1.69,Faible
+50,H,29.50,Élevée,Ancien fumeur,131.00,1.08,2.84,Modéré
+56,F,25.30,Faible,Non-fumeur,115.00,0.94,2.28,Faible
+60,F,26.20,Modérée,Non-fumeur,145.00,0.90,2.37,Modéré
+51,F,30.00,Modérée,Non-fumeur,139.00,0.82,1.84,Élevé
+39,F,29.90,Faible,Non-fumeur,144.00,1.02,2.03,Faible
+18,H,24.10,Élevée,Non-fumeur,124.00,0.83,2.01,Faible
+49,F,30.30,Modérée,Ancien fumeur,133.00,1.09,1.65,Modéré
+54,H,30.50,Faible,Non-fumeur,124.00,1.11,1.66,Modéré
+36,H,23.70,Élevée,Fumeur,137.00,0.83,2.68,Élevé
+74,F,26.70,Modérée,Non-fumeur,137.00,1.10,2.36,Élevé
+65,F,24.40,Élevée,Non-fumeur,135.00,0.95,2.36,Modéré
+52,F,28.00,Modérée,Non-fumeur,125.00,0.89,2.33,Faible
+55,H,21.60,Élevée,Non-fumeur,141.00,0.58,1.56,Faible
+51,F,39.50,Élevée,Fumeur,153.00,1.15,2.66,Élevé
+59,H,19.70,Élevée,Non-fumeur,110.00,0.88,,Faible
+54,F,26.30,Modérée,Non-fumeur,127.00,0.95,2.55,Faible
+19,F,16.80,Modérée,Non-fumeur,111.00,0.93,2.06,Faible
+30,H,26.00,Faible,Non-fumeur,133.00,0.84,1.50,Faible
+58,H,29.00,Élevée,Non-fumeur,151.00,0.67,2.37,Modéré
+72,H,28.00,Modérée,Ancien fumeur,152.00,1.23,2.17,Élevé
+68,H,22.80,Modérée,Non-fumeur,144.00,1.02,2.46,Modéré
+46,H,17.90,Modérée,Non-fumeur,113.00,0.89,1.79,Faible
+60,H,35.50,Modérée,Fumeur,150.00,0.96,2.29,Élevé
+36,F,23.20,Élevée,Non-fumeur,122.00,0.74,1.86,Faible
+70,F,19.80,Faible,Non-fumeur,129.00,1.16,1.84,Faible
+50,F,22.50,Modérée,Fumeur,129.00,0.81,1.98,Faible
+37,H,24.90,Modérée,Ancien fumeur,118.00,0.78,2.08,Faible
+75,F,21.60,Modérée,Ancien fumeur,153.00,1.19,2.15,Élevé
+52,H,31.50,Faible,Non-fumeur,136.00,,1.81,Modéré
+46,H,25.30,Modérée,Ancien fumeur,145.00,0.90,2.11,Modéré
+28,H,29.10,Élevée,Fumeur,127.00,0.86,1.64,Faible
+60,H,28.80,Faible,Fumeur,140.00,0.97,2.02,Modéré
+72,F,31.90,Élevée,Ancien fumeur,156.00,1.24,2.20,Élevé
+33,H,29.80,Faible,Non-fumeur,131.00,0.97,,Modéré
+33,F,18.30,Élevée,Fumeur,105.00,0.74,2.15,Faible
+72,F,23.30,Modérée,Fumeur,153.00,0.96,2.31,Élevé
+45,F,20.90,Élevée,Fumeur,130.00,,2.05,Faible
+66,H,18.60,Modérée,Non-fumeur,140.00,0.74,1.34,Faible
+40,F,18.40,Modérée,Non-fumeur,121.00,0.83,2.06,Faible
+66,H,35.00,Faible,Fumeur,165.00,1.10,2.14,Élevé
+48,H,32.20,Modérée,Non-fumeur,140.00,0.73,1.92,Faible
+65,F,26.60,Faible,Non-fumeur,124.00,0.96,2.04,Faible
+45,F,27.00,Modérée,Non-fumeur,123.00,0.84,2.09,Faible
+53,F,20.30,Faible,Non-fumeur,125.00,1.00,2.21,Faible
+85,F,28.00,Faible,Non-fumeur,174.00,1.02,2.38,Élevé
+78,H,21.40,Faible,Fumeur,146.00,0.96,2.51,Élevé
+65,F,26.70,Modérée,Non-fumeur,139.00,1.01,1.92,Modéré
+42,F,25.40,Modérée,Non-fumeur,141.00,0.95,1.88,Faible
+58,F,26.30,Modérée,Non-fumeur,112.00,0.96,1.52,Modéré
+20,F,26.10,Faible,Fumeur,128.00,0.99,2.01,Faible
+32,F,26.90,Élevée,Non-fumeur,124.00,0.83,1.75,Faible
+55,H,23.00,Modérée,Non-fumeur,135.00,0.66,1.67,Faible
+48,F,22.90,Élevée,Ancien fumeur,140.00,0.80,,Faible
+57,H,16.00,Élevée,Ancien fumeur,144.00,0.86,2.38,Faible
+32,F,29.90,Modérée,Non-fumeur,122.00,0.83,2.49,Faible
+68,H,29.20,Modérée,Non-fumeur,141.00,1.10,1.87,Élevé
+48,F,30.10,Élevée,Non-fumeur,117.00,0.76,2.33,Faible
+57,F,18.70,Modérée,Fumeur,127.00,0.78,2.18,Élevé
+70,F,20.80,Faible,Non-fumeur,113.00,0.91,1.94,Modéré
+41,F,22.90,Modérée,Fumeur,104.00,0.81,1.79,Faible
+56,H,27.90,Modérée,Ancien fumeur,137.00,0.83,2.34,Faible
+38,H,27.00,Faible,Fumeur,145.00,0.85,1.33,Faible
+48,F,25.30,Modérée,Non-fumeur,121.00,0.91,2.24,Faible
+55,H,29.80,Élevée,Non-fumeur,147.00,1.07,1.91,Faible
+54,F,24.10,Modérée,Non-fumeur,138.00,0.97,2.03,Modéré
+35,H,16.00,Modérée,Non-fumeur,122.00,0.78,1.31,Faible
+90,H,34.10,Modérée,Non-fumeur,146.00,1.18,2.09,Élevé
+37,H,19.10,Faible,Non-fumeur,107.00,0.92,1.87,Faible
+35,F,23.20,Élevée,Non-fumeur,123.00,0.43,1.33,Faible
+57,F,27.90,Faible,Fumeur,144.00,1.20,2.26,Élevé
+34,H,26.60,Faible,Non-fumeur,131.00,0.86,1.79,Faible
+42,H,23.60,Élevée,Non-fumeur,94.00,0.91,1.90,Faible
+49,H,26.90,Élevée,Non-fumeur,123.00,0.83,2.25,Faible
+49,F,16.20,Modérée,Non-fumeur,107.00,0.81,1.88,Faible
+60,F,31.50,Modérée,Ancien fumeur,147.00,0.82,1.83,Modéré
+34,F,36.10,Élevée,Non-fumeur,138.00,0.86,2.13,Faible
+47,H,33.50,Modérée,Fumeur,144.00,1.17,1.76,Élevé
+34,H,28.60,Élevée,Non-fumeur,129.00,0.81,1.61,Faible
+54,H,25.20,Faible,Non-fumeur,135.00,0.91,,Modéré
+18,H,27.90,Modérée,Ancien fumeur,105.00,0.75,2.27,Faible
+61,F,34.40,Modérée,Non-fumeur,146.00,1.02,2.13,Élevé
+54,F,23.10,Élevée,Non-fumeur,111.00,,1.88,Faible
+30,H,26.50,Modérée,Fumeur,121.00,1.01,2.06,Faible
+49,H,24.70,Élevée,Ancien fumeur,146.00,0.86,2.27,Modéré
+51,F,20.30,Modérée,Fumeur,127.00,0.64,1.90,Faible
+44,H,27.10,Faible,Non-fumeur,131.00,0.67,2.22,Faible
+43,F,33.10,Modérée,Fumeur,133.00,0.82,2.13,Modéré
+56,H,34.30,Élevée,Ancien fumeur,140.00,0.93,2.48,Élevé
+54,H,26.00,Faible,Non-fumeur,129.00,0.93,1.37,Modéré
+90,F,35.80,Modérée,Non-fumeur,176.00,1.20,2.04,Élevé
+52,F,24.20,Modérée,Ancien fumeur,128.00,1.07,1.80,Modéré
+57,H,34.30,Modérée,Ancien fumeur,131.00,0.98,2.33,Modéré
+65,F,27.00,Modérée,Non-fumeur,129.00,0.99,,Faible
+51,H,24.60,Faible,Non-fumeur,133.00,0.88,1.88,Faible
+51,F,24.20,Faible,Ancien fumeur,129.00,1.13,1.47,Faible
+36,F,27.50,Faible,Fumeur,119.00,0.92,1.74,Faible
+25,H,22.20,Faible,Ancien fumeur,100.00,0.94,1.39,Faible
+64,F,22.90,Modérée,Non-fumeur,162.00,0.74,2.42,Modéré
+43,H,31.90,Faible,Non-fumeur,125.00,1.15,1.77,Modéré
+52,F,27.60,Modérée,Ancien fumeur,146.00,0.99,2.01,Modéré
+32,H,27.40,Faible,Non-fumeur,128.00,0.94,1.81,Faible
+45,H,23.90,Modérée,Non-fumeur,121.00,0.99,2.03,Faible
+57,H,28.30,Faible,Ancien fumeur,156.00,0.87,2.09,Modéré
+35,H,25.10,Modérée,Ancien fumeur,131.00,0.79,2.47,Faible
+60,H,16.00,Élevée,Non-fumeur,125.00,0.60,2.12,Faible
+45,H,23.50,Modérée,Fumeur,126.00,1.03,2.63,Modéré
+70,F,30.20,Élevée,Fumeur,162.00,1.01,1.98,Élevé
+57,F,26.30,Modérée,Ancien fumeur,142.00,1.03,2.50,Modéré
+52,H,21.10,Faible,Non-fumeur,117.00,0.88,2.30,Faible
+38,H,31.20,Faible,Non-fumeur,117.00,1.03,2.24,Faible
+36,F,23.50,Faible,Ancien fumeur,124.00,0.80,1.82,Faible
+56,H,31.00,Faible,Fumeur,140.00,,2.41,Élevé
+64,H,23.40,Modérée,Non-fumeur,147.00,1.08,2.27,Modéré
+58,H,22.90,Modérée,Fumeur,135.00,1.03,2.01,Élevé
+67,H,20.50,Modérée,Fumeur,134.00,1.03,2.13,Élevé
+60,H,25.50,Faible,Ancien fumeur,128.00,,1.63,Faible
+66,F,25.70,Modérée,Fumeur,135.00,0.75,,Élevé
+64,H,21.30,Faible,Non-fumeur,125.00,0.84,2.10,Faible
+81,H,25.40,Élevée,Non-fumeur,132.00,1.17,2.07,Modéré
+55,F,25.20,Élevée,Non-fumeur,117.00,0.96,2.45,Faible
+67,H,24.80,Modérée,Non-fumeur,130.00,1.06,1.94,Modéré
+59,F,30.20,Modérée,Non-fumeur,141.00,1.07,1.92,Élevé
+77,F,27.60,Modérée,Non-fumeur,154.00,0.90,2.42,Élevé
+54,F,20.00,Faible,Non-fumeur,135.00,0.99,1.55,Modéré
+85,F,29.30,Faible,Fumeur,142.00,0.99,1.85,Élevé
+27,F,29.50,Faible,Ancien fumeur,102.00,,1.69,Faible
+37,F,25.90,Faible,Fumeur,144.00,0.75,1.58,Faible
+54,F,29.50,Modérée,Fumeur,165.00,1.03,1.93,Élevé
+65,H,16.30,Modérée,Fumeur,131.00,0.68,2.20,Modéré
+30,F,33.80,Modérée,Non-fumeur,129.00,1.02,2.04,Modéré
+43,F,27.60,Élevée,Non-fumeur,116.00,0.78,2.07,Faible
+53,H,27.20,Modérée,Non-fumeur,134.00,0.83,2.34,Modéré
+27,F,27.40,Faible,Non-fumeur,122.00,1.01,2.05,Faible
+51,H,25.00,Faible,Non-fumeur,148.00,0.89,1.84,Faible
+46,H,25.30,Modérée,Non-fumeur,131.00,1.03,1.71,Élevé
+74,F,28.10,Modérée,Fumeur,153.00,0.91,2.26,Élevé
+78,H,23.60,Modérée,Non-fumeur,134.00,1.13,1.80,Élevé
+64,H,31.60,Modérée,Ancien fumeur,136.00,1.02,2.58,Élevé
+49,H,26.30,Modérée,Non-fumeur,143.00,0.94,2.20,Élevé
+49,H,28.90,Faible,Ancien fumeur,144.00,0.86,1.80,Faible
+29,H,32.70,Faible,Non-fumeur,127.00,0.79,1.81,Faible
+51,F,22.80,Faible,Non-fumeur,110.00,0.68,2.02,Faible
+72,H,19.90,Modérée,Non-fumeur,134.00,0.77,1.80,Modéré
+26,F,27.40,Élevée,Ancien fumeur,120.00,0.82,1.86,Faible
+43,H,29.90,Élevée,Non-fumeur,140.00,0.74,2.02,Faible
+25,F,25.00,Modérée,Non-fumeur,125.00,0.91,1.97,Faible
+71,H,29.90,Modérée,Non-fumeur,142.00,1.13,1.83,Élevé
+40,F,28.90,Modérée,Non-fumeur,129.00,0.96,1.95,Faible
+63,F,26.80,Modérée,Ancien fumeur,128.00,1.01,1.93,Modéré
+65,F,16.00,Faible,Ancien fumeur,125.00,0.95,2.33,Faible
+55,H,27.70,Modérée,Non-fumeur,103.00,0.92,2.04,Faible
+18,F,20.50,Faible,Non-fumeur,122.00,,1.68,Faible
+48,F,18.60,Faible,Non-fumeur,119.00,0.72,2.58,Faible
+45,F,25.30,Faible,Non-fumeur,142.00,0.97,2.23,Faible
+58,H,25.70,Élevée,Ancien fumeur,140.00,0.88,1.59,Modéré
+42,H,25.10,Faible,Non-fumeur,121.00,0.92,2.33,Faible
+79,H,18.30,Faible,Non-fumeur,161.00,0.96,2.40,Modéré
+51,H,28.50,Modérée,Non-fumeur,145.00,0.94,2.97,Modéré
+82,F,29.30,Modérée,Non-fumeur,142.00,1.06,2.41,Élevé
+61,F,31.00,Élevée,Non-fumeur,141.00,0.75,2.26,Élevé
+52,F,22.30,Modérée,Non-fumeur,138.00,0.92,2.08,Faible
+35,H,22.50,Faible,Non-fumeur,112.00,0.83,2.02,Faible
+18,H,26.00,Modérée,Fumeur,100.00,0.74,1.84,Faible
+43,H,25.40,Modérée,Non-fumeur,140.00,0.80,1.79,Faible
+69,H,20.90,Modérée,Ancien fumeur,131.00,0.83,1.98,Élevé
+58,F,30.30,Faible,Fumeur,134.00,0.94,1.94,Modéré
+58,H,32.00,Faible,Non-fumeur,150.00,1.04,2.42,Modéré
+33,F,30.40,Modérée,Non-fumeur,137.00,0.82,1.96,Faible
+37,F,23.40,Modérée,Non-fumeur,118.00,0.75,2.07,Faible
+54,H,22.70,Faible,Non-fumeur,122.00,0.67,2.28,Modéré
+53,H,30.20,Faible,Non-fumeur,137.00,0.98,2.29,Faible
+28,H,21.70,Faible,Non-fumeur,116.00,0.89,2.19,Faible
+41,H,29.20,Faible,Non-fumeur,116.00,0.80,,Faible
+27,H,23.40,Modérée,Ancien fumeur,107.00,0.94,1.85,Faible
+35,F,32.40,Modérée,Fumeur,141.00,1.04,1.95,Élevé
+67,F,28.50,Élevée,Ancien fumeur,139.00,0.93,1.54,Modéré
+59,H,25.30,Faible,Fumeur,145.00,0.74,2.10,Modéré
+61,H,20.00,Faible,Ancien fumeur,126.00,0.82,2.14,Faible
+53,H,28.40,Faible,Ancien fumeur,130.00,1.26,2.39,Modéré
+54,F,28.40,Modérée,Fumeur,151.00,0.97,2.33,Élevé
+72,H,31.90,Modérée,Non-fumeur,142.00,1.01,2.38,Modéré
+49,F,23.40,Faible,Non-fumeur,162.00,0.80,1.68,Modéré
+30,F,22.50,Élevée,Ancien fumeur,117.00,0.70,2.00,Faible
+58,F,26.00,Faible,Non-fumeur,135.00,0.76,1.44,Faible
+73,H,23.40,Modérée,Non-fumeur,147.00,1.02,2.52,Élevé
+55,H,29.20,Faible,Fumeur,140.00,0.76,2.62,Modéré
+40,F,31.80,Faible,Fumeur,121.00,0.88,2.65,Modéré
+73,F,27.80,Faible,Fumeur,145.00,0.83,2.01,Élevé
+29,F,25.10,Modérée,Non-fumeur,126.00,0.64,2.05,Faible
+40,H,25.90,Faible,Non-fumeur,127.00,0.78,1.98,Faible
+89,F,28.40,Élevée,Non-fumeur,168.00,1.15,2.07,Élevé
+66,F,31.00,Faible,Fumeur,147.00,1.08,2.65,Élevé
+53,F,26.60,Élevée,Non-fumeur,111.00,1.04,1.80,Faible
+55,F,31.40,Faible,Non-fumeur,144.00,1.11,2.48,Modéré
+52,H,28.50,Modérée,Ancien fumeur,127.00,0.80,2.37,Faible
+32,H,28.40,Faible,Non-fumeur,131.00,0.88,1.91,Faible
+81,H,27.40,Faible,Non-fumeur,133.00,0.93,2.78,Modéré
+60,F,32.20,Élevée,Non-fumeur,142.00,0.92,1.58,Modéré
+52,H,26.50,Faible,Non-fumeur,129.00,0.62,2.01,Faible
+31,F,28.40,Modérée,Non-fumeur,119.00,0.92,1.73,Faible
+54,F,23.40,Faible,Non-fumeur,120.00,0.85,1.68,Faible
+44,H,25.30,Modérée,Non-fumeur,120.00,1.08,2.16,Faible
+55,H,23.10,Faible,Fumeur,144.00,0.96,1.97,Modéré
+71,F,23.20,Modérée,Non-fumeur,153.00,0.96,1.72,Élevé
+28,H,32.80,Élevée,Non-fumeur,135.00,0.85,2.03,Modéré
+66,F,24.90,Élevée,Ancien fumeur,145.00,0.90,2.26,Faible
+63,H,22.90,Faible,Fumeur,126.00,1.06,2.12,Modéré
+68,F,23.40,Faible,Non-fumeur,124.00,0.98,2.18,Modéré
+56,H,27.60,Élevée,Ancien fumeur,128.00,0.66,1.88,Faible
+65,F,16.00,Faible,Non-fumeur,131.00,0.68,2.30,Faible
+65,F,30.20,Élevée,Non-fumeur,142.00,0.95,2.54,Modéré
+49,F,28.80,Faible,Non-fumeur,158.00,0.87,2.03,Modéré
+37,H,24.90,Faible,Fumeur,117.00,0.84,1.75,Faible
+56,F,22.20,Faible,Non-fumeur,131.00,0.97,1.79,Faible
+35,H,22.30,Élevée,Non-fumeur,133.00,0.79,2.07,Faible
+53,H,25.80,Modérée,Non-fumeur,144.00,1.09,2.17,Modéré
+43,F,22.10,Faible,Non-fumeur,115.00,0.77,2.06,Faible
+67,F,31.20,Élevée,Non-fumeur,159.00,1.09,2.08,Élevé
+57,F,24.40,Faible,Fumeur,142.00,0.89,2.47,Élevé
+58,H,25.00,Modérée,Ancien fumeur,147.00,0.73,2.00,Modéré
+44,H,22.50,Élevée,Non-fumeur,132.00,0.81,1.98,Faible
+43,F,33.40,Élevée,Fumeur,131.00,0.94,2.10,Modéré
+54,F,28.90,Faible,Non-fumeur,134.00,0.79,1.57,Modéré
+41,H,19.20,Élevée,Ancien fumeur,113.00,0.79,1.68,Faible
+35,F,30.40,Modérée,Non-fumeur,124.00,1.09,1.49,Modéré
+74,H,29.20,Modérée,Ancien fumeur,134.00,1.05,2.33,Élevé
+55,F,25.00,Faible,Non-fumeur,123.00,1.03,1.93,Modéré
+51,F,30.70,Élevée,Fumeur,164.00,0.91,2.46,Élevé
+73,H,28.90,Modérée,Non-fumeur,154.00,1.21,2.25,Élevé
+52,F,30.40,Élevée,Fumeur,146.00,0.78,2.08,Modéré
+52,H,30.30,Modérée,Non-fumeur,132.00,0.98,2.34,Modéré
+65,H,26.30,Faible,Non-fumeur,133.00,,2.57,Élevé
+46,F,18.70,Modérée,Fumeur,108.00,,1.74,Faible
+54,F,26.90,Faible,Non-fumeur,133.00,0.87,2.15,Faible
+73,F,20.40,Faible,Non-fumeur,118.00,0.93,2.39,Faible
+40,F,31.50,Faible,Non-fumeur,143.00,0.71,2.33,Modéré
+30,H,16.60,Modérée,Fumeur,115.00,0.55,1.70,Faible
+30,H,26.30,Élevée,Ancien fumeur,136.00,0.77,2.25,Faible
+40,F,36.90,Faible,Ancien fumeur,138.00,,1.92,Modéré
+61,F,22.40,Modérée,Fumeur,160.00,0.72,2.23,Modéré
+56,F,27.90,Élevée,Fumeur,135.00,0.83,2.15,Faible
+39,H,27.40,Modérée,Non-fumeur,113.00,0.88,1.91,Faible
+37,H,30.00,Élevée,Fumeur,141.00,0.89,2.07,Modéré
+50,F,28.60,Modérée,Fumeur,160.00,0.68,2.66,Élevé
+60,H,22.00,Faible,Ancien fumeur,134.00,0.95,1.96,Faible
+73,F,31.40,Faible,Non-fumeur,154.00,1.27,2.89,Élevé
+46,H,23.70,Modérée,Non-fumeur,117.00,0.88,1.90,Faible
+70,F,30.10,Faible,Non-fumeur,137.00,1.13,2.06,Élevé
+66,F,30.40,Modérée,Fumeur,142.00,1.05,2.19,Élevé
+50,F,20.50,Modérée,Non-fumeur,130.00,0.84,1.73,Faible
+54,H,34.80,Modérée,Non-fumeur,140.00,0.92,2.14,Élevé
+63,F,24.80,Faible,Ancien fumeur,144.00,,,Modéré
+56,H,33.20,Modérée,Fumeur,164.00,1.01,2.19,Élevé
+43,F,31.70,Faible,Non-fumeur,133.00,1.03,1.94,Faible
+51,F,18.90,Modérée,Non-fumeur,93.00,0.70,2.09,Faible
+49,H,24.40,Faible,Non-fumeur,131.00,0.87,2.07,Faible
+24,F,29.80,Modérée,Ancien fumeur,135.00,0.90,2.23,Faible
+74,F,26.90,Modérée,Non-fumeur,150.00,0.93,1.80,Élevé
+55,H,27.50,Modérée,Ancien fumeur,163.00,0.94,2.11,Modéré
+39,F,29.30,Modérée,Non-fumeur,134.00,0.89,1.99,Modéré
+40,F,32.50,Élevée,Ancien fumeur,142.00,0.89,2.74,Faible
+73,H,31.00,Modérée,Ancien fumeur,154.00,0.86,,Élevé
+48,H,27.00,Faible,Non-fumeur,115.00,0.81,1.85,Faible
+56,F,22.40,Modérée,Non-fumeur,147.00,0.89,1.99,Modéré
+60,F,23.00,Modérée,Non-fumeur,126.00,0.86,1.92,Faible
+71,F,24.30,Faible,Fumeur,138.00,1.17,2.31,Élevé
+34,H,35.80,Modérée,Non-fumeur,128.00,1.03,2.19,Modéré
+51,H,27.40,Élevée,Non-fumeur,141.00,0.81,2.07,Faible
+20,F,30.00,Faible,Ancien fumeur,111.00,0.91,1.85,Faible
+69,H,30.80,Modérée,Fumeur,139.00,1.13,2.17,Élevé
+58,H,21.50,Modérée,Non-fumeur,138.00,0.62,2.56,Faible
+78,H,26.80,Élevée,Non-fumeur,152.00,1.11,1.95,Modéré
+49,H,26.90,Modérée,Non-fumeur,125.00,0.91,1.65,Faible
+58,F,32.60,Élevée,Non-fumeur,140.00,1.21,2.20,Élevé
+35,H,29.40,Modérée,Non-fumeur,123.00,0.92,1.83,Faible
+63,H,22.20,Faible,Ancien fumeur,161.00,1.01,2.47,Élevé
+59,H,21.70,Modérée,Ancien fumeur,125.00,0.89,2.24,Faible
+49,H,22.70,Élevée,Ancien fumeur,139.00,0.78,2.16,Faible
+52,H,24.10,Faible,Ancien fumeur,133.00,0.74,2.25,Faible
+31,H,27.40,Modérée,Ancien fumeur,116.00,0.96,2.19,Faible
+49,F,16.70,Faible,Non-fumeur,136.00,0.73,2.14,Faible
+48,H,28.80,Faible,Non-fumeur,118.00,0.83,2.00,Faible
+65,F,26.40,Faible,Non-fumeur,101.00,0.87,1.67,Modéré
+56,H,24.00,Faible,Non-fumeur,142.00,1.05,2.05,Modéré
+65,F,26.00,Modérée,Ancien fumeur,126.00,0.82,2.19,Modéré
+25,F,18.60,Faible,Non-fumeur,128.00,0.73,1.56,Faible
+77,H,29.90,Modérée,Ancien fumeur,126.00,1.22,2.10,Modéré
+61,H,21.30,Modérée,Fumeur,128.00,0.77,2.19,Faible
+47,H,30.30,Faible,Non-fumeur,116.00,1.07,1.89,Modéré
+46,F,23.40,Modérée,Non-fumeur,131.00,1.00,,Faible
+49,H,27.50,Faible,Non-fumeur,128.00,0.85,1.88,Modéré
+58,H,24.90,Faible,Non-fumeur,129.00,1.04,1.36,Modéré
+66,H,30.50,Modérée,Ancien fumeur,137.00,1.11,2.48,Élevé
+44,H,32.10,Modérée,Non-fumeur,137.00,0.92,2.09,Modéré
+48,H,25.00,Modérée,Non-fumeur,137.00,0.86,1.33,Modéré
+85,H,34.80,Modérée,Non-fumeur,157.00,1.09,1.92,Élevé
+64,H,30.40,Faible,Non-fumeur,135.00,0.98,2.09,Modéré
+39,F,31.20,Faible,Non-fumeur,137.00,0.77,1.61,Faible
+47,H,25.50,Faible,Non-fumeur,119.00,0.92,,Faible
+48,F,24.30,Faible,Non-fumeur,143.00,0.56,1.66,Faible
+56,H,26.40,Faible,Non-fumeur,129.00,1.21,1.86,Élevé
+53,F,30.70,Modérée,Ancien fumeur,170.00,0.99,2.38,Modéré
+25,F,26.20,Modérée,Non-fumeur,109.00,0.91,1.83,Faible
+80,F,21.50,Faible,Non-fumeur,124.00,,2.38,Modéré
+24,H,28.40,Faible,Non-fumeur,128.00,0.79,,Faible
+70,H,28.10,Faible,Non-fumeur,169.00,0.95,2.29,Élevé
+73,F,22.60,Élevée,Non-fumeur,129.00,0.89,1.77,Faible
+41,H,27.90,Modérée,Ancien fumeur,117.00,0.77,1.89,Faible
+34,F,25.80,Faible,Ancien fumeur,119.00,0.71,2.23,Faible
+76,H,22.80,Modérée,Fumeur,132.00,0.90,2.30,Élevé
+43,H,31.90,Faible,Fumeur,128.00,0.85,2.05,Modéré
+52,H,26.60,Faible,Fumeur,120.00,1.11,1.92,Modéré
+52,F,21.50,Modérée,Fumeur,138.00,0.90,1.82,Modéré
+71,H,21.60,Modérée,Ancien fumeur,145.00,0.90,2.39,Élevé
+43,F,27.50,Modérée,Ancien fumeur,134.00,0.85,1.85,Modéré
+54,F,23.10,Modérée,Non-fumeur,121.00,1.08,2.51,Modéré
+52,H,29.20,Modérée,Fumeur,151.00,1.02,2.51,Élevé
+63,F,33.70,Modérée,Fumeur,155.00,1.16,2.34,Élevé
+48,F,25.60,Modérée,Fumeur,130.00,0.85,2.04,Faible
+68,F,16.40,Élevée,Non-fumeur,135.00,0.76,1.81,Modéré
+57,F,25.40,Faible,Non-fumeur,134.00,0.82,1.63,Faible
+74,F,29.30,Faible,Non-fumeur,150.00,0.96,2.33,Élevé
+56,H,23.50,Modérée,Fumeur,141.00,1.07,2.79,Élevé
+32,F,22.50,Modérée,Ancien fumeur,122.00,0.85,2.22,Faible
+27,F,27.10,Faible,Non-fumeur,121.00,0.94,1.95,Faible
+50,H,20.60,Modérée,Non-fumeur,106.00,0.89,1.99,Faible
+33,F,26.50,Modérée,Fumeur,116.00,0.80,1.72,Faible
+53,H,24.50,Faible,Non-fumeur,116.00,0.87,1.81,Faible
+41,F,20.00,Modérée,Non-fumeur,119.00,0.87,2.02,Faible
+63,F,24.70,Modérée,Fumeur,151.00,1.01,2.63,Élevé
+26,H,26.60,Élevée,Non-fumeur,111.00,0.62,1.63,Faible
+68,F,34.70,Faible,Fumeur,157.00,1.21,1.75,Élevé
+72,F,29.90,Faible,Non-fumeur,160.00,1.21,2.21,Élevé
+37,F,31.00,Élevée,Non-fumeur,126.00,,2.25,Modéré
+25,F,17.80,Modérée,Ancien fumeur,99.00,0.51,1.96,Faible
+45,F,16.00,Élevée,Non-fumeur,100.00,0.77,1.72,Faible
+63,H,26.20,Élevée,Ancien fumeur,140.00,0.97,1.81,Faible
+44,F,36.90,Faible,Ancien fumeur,141.00,1.09,2.01,Modéré
+88,F,22.00,Faible,Ancien fumeur,163.00,0.79,2.22,Élevé
+53,F,24.10,Faible,Non-fumeur,133.00,0.83,1.89,Faible
+44,H,24.90,Modérée,Non-fumeur,139.00,0.81,1.78,Faible
+63,H,25.00,Modérée,Ancien fumeur,153.00,0.97,1.43,Modéré
+64,H,25.60,Modérée,Non-fumeur,138.00,1.23,1.84,Modéré
+41,F,23.10,Élevée,Non-fumeur,120.00,0.85,1.61,Faible
+30,F,21.10,Modérée,Fumeur,123.00,0.62,1.82,Faible
+58,F,33.40,Élevée,Ancien fumeur,146.00,0.88,2.95,Modéré
+35,H,25.60,Élevée,Non-fumeur,120.00,,2.34,Faible
+57,H,22.00,Faible,Non-fumeur,116.00,0.76,1.97,Faible
+57,H,29.40,Modérée,Fumeur,131.00,0.95,2.12,Élevé
+20,F,24.40,Élevée,Fumeur,131.00,0.56,2.49,Faible
+28,H,19.50,Faible,Non-fumeur,105.00,0.64,1.91,Faible
+43,H,31.70,Modérée,Non-fumeur,152.00,1.02,1.65,Modéré
+52,H,26.70,Élevée,Non-fumeur,149.00,0.96,2.10,Modéré
+42,H,30.90,Élevée,Non-fumeur,130.00,0.80,2.67,Faible
+51,F,25.10,Modérée,Non-fumeur,124.00,1.01,1.84,Faible
+27,H,20.60,Modérée,Fumeur,133.00,0.74,1.50,Faible
+36,F,19.80,Faible,Non-fumeur,127.00,0.64,1.70,Faible
+60,H,26.70,Faible,Non-fumeur,143.00,1.21,1.91,Élevé
+46,F,29.90,Élevée,Non-fumeur,145.00,0.78,2.31,Modéré
+78,H,26.10,Modérée,Non-fumeur,127.00,,3.13,Élevé
+52,F,28.40,Faible,Non-fumeur,120.00,1.00,2.01,Modéré
+53,H,25.90,Modérée,Ancien fumeur,132.00,0.77,,Faible
+73,F,27.50,Faible,Non-fumeur,147.00,1.01,1.80,Élevé
+38,H,30.90,Faible,Non-fumeur,130.00,1.17,1.84,Faible
+77,F,18.90,Modérée,Non-fumeur,130.00,0.90,2.35,Modéré
+44,H,33.50,Faible,Fumeur,135.00,1.08,2.39,Élevé
+62,H,33.70,Modérée,Ancien fumeur,144.00,1.15,2.32,Élevé
+42,H,25.30,Faible,Non-fumeur,122.00,0.81,2.21,Faible
+34,H,24.40,Modérée,Non-fumeur,141.00,0.90,2.02,Faible
+35,F,19.30,Élevée,Non-fumeur,133.00,0.53,2.18,Faible
+40,H,28.90,Modérée,Non-fumeur,128.00,,1.97,Modéré
+78,H,25.30,Faible,Non-fumeur,151.00,1.02,2.20,Élevé
+56,H,27.50,Modérée,Ancien fumeur,129.00,0.98,1.84,Modéré
+40,F,36.40,Faible,Ancien fumeur,153.00,0.89,1.95,Modéré
+42,F,29.60,Faible,Fumeur,140.00,0.89,2.02,Modéré
+72,F,28.70,Modérée,Non-fumeur,135.00,0.94,1.81,Modéré
+58,F,28.30,Élevée,Ancien fumeur,128.00,0.66,2.53,Faible
+72,H,24.00,Modérée,Ancien fumeur,147.00,0.96,2.35,Élevé
+54,F,29.10,Faible,Fumeur,149.00,1.11,2.23,Élevé
+33,F,25.40,Modérée,Fumeur,121.00,0.86,1.92,Modéré
+46,F,20.90,Modérée,Ancien fumeur,138.00,0.83,1.86,Modéré
+59,H,21.40,Faible,Fumeur,122.00,1.03,,Modéré
+42,F,16.00,Modérée,Non-fumeur,122.00,0.85,1.86,Faible
+27,H,32.00,Faible,Non-fumeur,112.00,1.01,2.15,Faible
+49,F,22.20,Faible,Non-fumeur,103.00,0.81,,Faible
+45,F,33.00,Faible,Ancien fumeur,129.00,0.95,1.81,Modéré
+52,H,21.40,Élevée,Fumeur,126.00,0.94,2.06,Modéré
+48,F,34.70,Modérée,Non-fumeur,142.00,1.01,2.10,Modéré
+65,F,21.20,Modérée,Non-fumeur,133.00,0.80,1.87,Faible
+50,F,22.90,Modérée,Non-fumeur,116.00,0.86,2.21,Faible
+45,F,30.80,Faible,Non-fumeur,128.00,0.79,1.58,Faible
+40,H,29.40,Modérée,Fumeur,121.00,0.68,,Faible
+61,F,19.30,Élevée,Fumeur,125.00,0.78,1.95,Faible
+18,F,27.20,Élevée,Non-fumeur,118.00,0.82,1.41,Faible
+56,F,22.60,Faible,Non-fumeur,140.00,0.98,2.13,Faible
+41,H,26.40,Élevée,Non-fumeur,126.00,0.82,1.82,Faible
+23,H,28.20,Modérée,Non-fumeur,137.00,1.00,1.74,Faible
+40,H,28.70,Modérée,Fumeur,135.00,0.84,1.62,Modéré
+58,F,27.30,Modérée,Fumeur,163.00,0.94,1.92,Élevé
+71,F,27.20,Modérée,Non-fumeur,143.00,1.05,1.84,Élevé
+37,H,26.30,Modérée,Non-fumeur,125.00,0.70,2.09,Faible
+57,F,25.90,Modérée,Ancien fumeur,133.00,0.97,1.88,Modéré
+49,F,22.00,Élevée,Non-fumeur,133.00,0.90,2.20,Faible
+46,F,30.80,Modérée,Ancien fumeur,129.00,1.11,2.31,Modéré
+51,H,25.40,Élevée,Ancien fumeur,135.00,0.83,1.90,Faible
+68,H,28.50,Faible,Fumeur,169.00,0.76,1.95,Élevé
+77,H,22.70,Faible,Non-fumeur,139.00,0.91,2.31,Modéré
+29,F,20.80,Modérée,Non-fumeur,126.00,0.85,,Faible
+51,F,29.90,Élevée,Non-fumeur,131.00,0.85,1.59,Faible
+31,F,17.20,Élevée,Fumeur,116.00,0.79,1.35,Faible
+46,F,18.30,Faible,Ancien fumeur,109.00,0.82,2.01,Faible
+44,F,37.40,Faible,Non-fumeur,123.00,,2.27,Modéré
+66,F,26.10,Modérée,Non-fumeur,142.00,0.70,2.06,Faible
+33,F,29.10,Élevée,Ancien fumeur,108.00,0.78,2.16,Faible
+36,F,23.90,Modérée,Non-fumeur,125.00,0.74,1.52,Faible
+47,F,23.40,Modérée,Non-fumeur,112.00,0.90,1.67,Modéré
+47,H,29.50,Modérée,Non-fumeur,134.00,0.99,2.09,Modéré
+44,F,24.30,Faible,Non-fumeur,133.00,0.70,1.97,Faible
+46,F,16.30,Faible,Non-fumeur,133.00,0.77,1.90,Faible
+60,H,23.30,Faible,Ancien fumeur,153.00,1.07,2.26,Modéré
+76,F,24.40,Faible,Fumeur,149.00,0.85,1.94,Élevé
+53,F,35.10,Modérée,Fumeur,159.00,1.18,2.26,Élevé
+78,F,30.20,Modérée,Non-fumeur,140.00,1.05,2.29,Élevé
+33,F,26.10,Élevée,Non-fumeur,137.00,0.62,2.20,Faible
+82,H,17.90,Modérée,Non-fumeur,136.00,1.07,2.22,Élevé
+32,H,26.30,Faible,Fumeur,117.00,1.12,1.60,Faible
+81,H,29.30,Modérée,Non-fumeur,146.00,1.12,2.17,Élevé
+78,H,36.60,Faible,Non-fumeur,179.00,1.11,1.99,Élevé
+42,F,40.50,Élevée,Ancien fumeur,141.00,0.79,2.22,Faible
+29,H,27.50,Élevée,Non-fumeur,121.00,0.58,,Faible
+68,H,34.90,Modérée,Non-fumeur,145.00,0.93,2.49,Élevé
+32,H,16.00,Élevée,Fumeur,100.00,0.65,1.84,Faible
+38,F,23.00,Élevée,Non-fumeur,118.00,0.62,1.55,Faible
+67,F,34.00,Élevée,Non-fumeur,162.00,0.80,1.57,Modéré
+51,H,29.00,Modérée,Fumeur,139.00,1.24,2.26,Élevé
+85,H,24.30,Élevée,Ancien fumeur,144.00,1.12,2.25,Modéré
+50,F,29.50,Modérée,Non-fumeur,153.00,0.94,,Modéré
+61,H,23.80,Élevée,Non-fumeur,137.00,0.95,1.90,Modéré
+46,F,26.10,Modérée,Ancien fumeur,125.00,0.93,1.66,Faible
+31,H,19.40,Élevée,Ancien fumeur,111.00,0.75,1.90,Faible
+67,F,29.90,Modérée,Non-fumeur,125.00,1.04,1.90,Modéré
+48,F,23.40,Modérée,Fumeur,138.00,0.88,2.04,Modéré
+47,H,24.20,Modérée,Non-fumeur,152.00,0.83,1.59,Modéré
+76,F,27.90,Faible,Non-fumeur,145.00,1.16,1.74,Élevé
+59,H,28.20,Faible,Non-fumeur,152.00,0.97,2.40,Modéré
+48,F,21.50,Faible,Fumeur,124.00,0.92,,Modéré
+90,F,25.00,Modérée,Non-fumeur,143.00,1.16,2.60,Élevé
+60,H,19.90,Modérée,Ancien fumeur,126.00,0.92,2.59,Modéré
+60,H,21.90,Modérée,Non-fumeur,132.00,0.81,2.01,Modéré
+25,F,26.00,Faible,Fumeur,111.00,0.75,2.10,Faible
+49,F,21.70,Faible,Ancien fumeur,121.00,0.83,1.77,Faible
+25,H,24.90,Faible,Ancien fumeur,122.00,0.80,1.45,Faible
+39,H,17.70,Faible,Fumeur,122.00,0.79,1.74,Faible
+53,F,20.40,Modérée,Non-fumeur,120.00,0.94,1.97,Faible
+52,H,22.60,Modérée,Ancien fumeur,113.00,0.82,1.72,Faible
+60,F,33.20,Modérée,Non-fumeur,160.00,1.23,2.58,Élevé
+52,F,20.60,Faible,Ancien fumeur,142.00,0.74,,Modéré
+54,F,26.40,Modérée,Fumeur,135.00,0.89,2.05,Modéré
+60,H,26.10,Modérée,Non-fumeur,134.00,1.00,2.49,Modéré
+45,F,29.00,Élevée,Non-fumeur,128.00,0.85,1.96,Faible
+58,H,31.00,Faible,Non-fumeur,139.00,0.91,2.83,Modéré
+63,H,24.80,Modérée,Ancien fumeur,144.00,1.00,,Élevé
+63,H,16.00,Modérée,Non-fumeur,120.00,1.00,1.87,Faible
+60,H,25.10,Élevée,Fumeur,113.00,0.94,2.29,Faible
+62,H,34.10,Modérée,Non-fumeur,145.00,1.12,1.74,Élevé
+45,F,31.80,Modérée,Non-fumeur,138.00,0.93,2.34,Modéré
+43,H,22.50,Faible,Fumeur,122.00,0.95,2.06,Modéré
+32,H,24.80,Faible,Ancien fumeur,112.00,0.78,1.90,Faible
+47,H,20.30,Faible,Non-fumeur,127.00,0.89,2.11,Faible
+55,F,16.50,Modérée,Non-fumeur,129.00,0.90,1.86,Faible
+50,F,22.60,Faible,Fumeur,131.00,0.69,1.96,Faible
+34,H,16.00,Faible,Non-fumeur,92.00,0.70,1.67,Faible
+34,F,37.00,Modérée,Fumeur,122.00,1.10,2.20,Élevé
+46,H,23.70,Faible,Ancien fumeur,122.00,0.85,1.95,Faible
+51,F,26.40,Faible,Ancien fumeur,127.00,1.12,1.95,Modéré
+72,F,24.30,Modérée,Ancien fumeur,146.00,1.09,2.03,Élevé
+69,H,27.70,Faible,Non-fumeur,128.00,1.04,,Faible
+50,F,25.60,Modérée,Non-fumeur,122.00,0.82,2.32,Modéré
+72,F,29.20,Modérée,Non-fumeur,142.00,,2.04,Modéré
+56,F,21.70,Modérée,Ancien fumeur,112.00,1.03,2.06,Faible
+82,H,16.40,Modérée,Ancien fumeur,147.00,0.82,1.39,Modéré
+50,H,25.80,Faible,Non-fumeur,142.00,1.12,2.28,Modéré
+44,H,26.30,Faible,Non-fumeur,117.00,0.91,1.90,Modéré
+59,H,23.80,Faible,Ancien fumeur,128.00,0.81,2.08,Faible
+53,F,32.30,Modérée,Non-fumeur,156.00,1.05,1.73,Élevé
+41,H,26.70,Modérée,Non-fumeur,126.00,1.10,1.93,Faible
+28,H,23.80,Élevée,Fumeur,142.00,,1.62,Faible
+48,F,26.70,Faible,Non-fumeur,125.00,1.20,1.69,Modéré
+32,F,31.70,Faible,Non-fumeur,126.00,0.96,2.09,Faible
+69,H,26.80,Élevée,Ancien fumeur,154.00,0.90,2.58,Modéré
+49,H,25.40,Élevée,Fumeur,143.00,0.74,2.11,Faible
+45,H,22.00,Modérée,Non-fumeur,128.00,0.77,1.93,Faible
+90,H,34.40,Modérée,Fumeur,194.00,1.09,2.49,Élevé
+60,H,23.80,Modérée,Ancien fumeur,126.00,1.04,2.47,Modéré
+58,F,28.20,Faible,Non-fumeur,138.00,0.83,2.01,Faible
+43,H,28.90,Élevée,Non-fumeur,128.00,0.64,2.33,Faible
+45,F,22.80,Faible,Fumeur,118.00,0.80,2.30,Faible
+55,H,32.90,Modérée,Non-fumeur,160.00,1.00,2.53,Élevé
+52,F,27.50,Modérée,Non-fumeur,142.00,,1.78,Modéré
+63,H,29.00,Modérée,Non-fumeur,147.00,1.03,2.69,Élevé
+63,F,24.80,Faible,Non-fumeur,120.00,0.76,2.07,Faible
+27,H,30.00,Faible,Non-fumeur,120.00,0.89,1.94,Faible
+18,F,26.10,Faible,Non-fumeur,123.00,0.60,2.22,Faible
+77,H,30.40,Élevée,Fumeur,149.00,0.92,2.83,Élevé
+49,F,23.00,Modérée,Non-fumeur,125.00,0.80,2.02,Faible
+31,F,26.50,Faible,Ancien fumeur,144.00,0.84,,Faible
+50,F,24.10,Modérée,Ancien fumeur,103.00,,2.07,Faible
+37,H,26.30,Faible,Non-fumeur,138.00,0.90,1.82,Faible
+55,H,29.40,Modérée,Fumeur,161.00,1.05,1.76,Élevé
+50,F,25.70,Faible,Ancien fumeur,121.00,0.92,2.23,Modéré
+50,H,19.40,Modérée,Ancien fumeur,136.00,0.71,1.27,Faible
+49,F,35.50,Élevée,Non-fumeur,121.00,0.92,2.65,Modéré
+35,F,25.80,Élevée,Ancien fumeur,117.00,0.71,1.81,Faible
+43,F,20.20,Modérée,Non-fumeur,126.00,0.79,2.04,Faible
+52,F,19.50,Modérée,Non-fumeur,124.00,0.79,2.21,Faible
+61,H,29.00,Élevée,Non-fumeur,144.00,0.89,2.24,Modéré
+55,F,21.20,Modérée,Fumeur,144.00,0.79,1.80,Modéré
+59,F,21.90,Modérée,Ancien fumeur,128.00,0.86,1.99,Faible
+36,H,41.00,Modérée,Ancien fumeur,141.00,0.92,2.10,Modéré
+64,H,25.40,Faible,Fumeur,154.00,0.80,1.75,Modéré
+65,H,27.70,Modérée,Non-fumeur,158.00,0.90,2.24,Élevé
+66,F,33.60,Faible,Non-fumeur,151.00,0.97,1.81,Élevé
+70,H,27.40,Faible,Non-fumeur,149.00,1.15,2.07,Élevé
+59,F,26.80,Modérée,Non-fumeur,131.00,0.96,2.84,Modéré
+48,F,25.10,Élevée,Ancien fumeur,123.00,0.84,1.80,Faible
+70,H,38.70,Élevée,Ancien fumeur,128.00,1.09,2.39,Modéré
+39,F,25.90,Modérée,Ancien fumeur,113.00,0.97,1.88,Faible
+42,F,34.10,Faible,Non-fumeur,136.00,0.77,2.49,Modéré
+52,H,28.70,Élevée,Fumeur,133.00,0.84,2.16,Modéré
+50,H,25.00,Faible,Non-fumeur,160.00,1.03,1.99,Modéré
+57,H,28.20,Faible,Ancien fumeur,130.00,1.17,1.71,Faible
+62,F,33.30,Modérée,Non-fumeur,160.00,1.03,,Élevé
+39,F,19.90,Modérée,Non-fumeur,109.00,0.60,1.59,Faible
+46,F,28.50,Faible,Non-fumeur,121.00,0.71,1.97,Faible
+23,F,20.20,Faible,Non-fumeur,118.00,0.66,1.21,Faible
+62,F,26.70,Faible,Non-fumeur,140.00,0.90,2.31,Modéré
+29,H,30.40,Modérée,Non-fumeur,130.00,,1.85,Faible
+40,F,32.20,Faible,Non-fumeur,135.00,0.83,2.88,Modéré
+63,F,40.10,Élevée,Non-fumeur,135.00,1.19,2.49,Élevé
+29,H,27.50,Modérée,Non-fumeur,118.00,0.85,2.38,Modéré
+49,H,26.80,Faible,Fumeur,135.00,0.90,1.95,Élevé
+61,H,30.30,Faible,Non-fumeur,138.00,1.07,1.99,Modéré
+41,F,32.70,Faible,Ancien fumeur,118.00,0.86,2.04,Faible
+59,F,28.70,Modérée,Non-fumeur,130.00,1.01,2.37,Modéré
+47,F,33.90,Modérée,Non-fumeur,144.00,0.72,2.46,Modéré
+45,F,16.00,Élevée,Non-fumeur,135.00,0.90,2.22,Faible
+60,H,28.70,Modérée,Ancien fumeur,128.00,0.90,2.49,Modéré
+50,H,32.70,Modérée,Non-fumeur,126.00,1.10,2.26,Modéré
+37,F,21.30,Modérée,Non-fumeur,135.00,0.69,2.20,Faible
+30,H,32.50,Faible,Non-fumeur,126.00,1.01,2.33,Modéré
+57,H,32.10,Faible,Fumeur,154.00,1.02,2.19,Élevé
+68,F,31.10,Modérée,Fumeur,141.00,1.03,3.03,Élevé
+38,F,30.40,Faible,Non-fumeur,116.00,0.71,2.13,Faible
+55,F,23.10,Modérée,Non-fumeur,107.00,1.01,2.47,Modéré
+60,H,22.60,Modérée,Fumeur,119.00,0.83,1.86,Faible
+63,F,20.20,Modérée,Ancien fumeur,156.00,0.91,1.98,Modéré
+54,F,29.30,Élevée,Ancien fumeur,143.00,0.92,2.13,Faible
+68,F,25.50,Faible,Non-fumeur,129.00,1.22,1.47,Élevé
+83,H,21.10,Modérée,Non-fumeur,138.00,1.07,1.97,Élevé
+59,H,22.90,Modérée,Non-fumeur,148.00,0.83,1.72,Modéré
+40,H,16.00,Faible,Fumeur,112.00,0.64,2.08,Faible
+72,H,28.20,Faible,Non-fumeur,143.00,1.12,2.66,Élevé
+38,H,30.20,Faible,Non-fumeur,120.00,0.82,,Faible
+61,H,21.40,Modérée,Non-fumeur,139.00,0.63,1.63,Faible
+41,F,23.60,Faible,Ancien fumeur,115.00,0.79,1.82,Faible

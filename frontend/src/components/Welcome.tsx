@@ -1,16 +1,18 @@
 // Écran d'accueil : importer un fichier ou partir d'un jeu d'exemple.
 import { useRef } from 'react'
-import { FileSpreadsheet, Upload } from 'lucide-react'
+import { Upload } from 'lucide-react'
 
 import type { Sample } from '../types'
+import { SampleGallery } from './SampleGallery'
 
-export function Welcome({ samples, formats, maxUploadMb, onUpload, onSample, busy }: {
+export function Welcome({ samples, formats, maxUploadMb, onUpload, onSample, busy, busyFile }: {
   samples: Sample[]
   formats: string[]
   maxUploadMb: number
   onUpload: (f: File) => void
-  onSample: (file: string) => void
+  onSample: (s: Sample) => void
   busy: boolean
+  busyFile: string | null
 }) {
   const input = useRef<HTMLInputElement>(null)
   return (
@@ -29,15 +31,10 @@ export function Welcome({ samples, formats, maxUploadMb, onUpload, onSample, bus
         </button>
         <input ref={input} type="file" hidden accept={formats.join(',')} onChange={(e) => { const f = e.target.files?.[0]; if (f) onUpload(f); e.target.value = '' }} />
 
-        <div className="samples">
-          <p>Pas de fichier sous la main ? Essayez un exemple :</p>
-          <div className="sample-row">{samples.map((s) => (
-            <button key={s.file} type="button" className="sample" onClick={() => onSample(s.file)} disabled={busy}>
-              <FileSpreadsheet size={18} />
-              <span><strong>{s.label}</strong><small>{s.hint}</small></span>
-            </button>
-          ))}</div>
-        </div>
+        <section className="samples">
+          <h2>Ou partez d’un exemple</h2>
+          <SampleGallery samples={samples} onPick={onSample} busyFile={busyFile} />
+        </section>
 
         <dl className="how">
           <div><dt>Vos fichiers restent sur le serveur</dt><dd>Les données sont stockées sur ce serveur et interrogées sur place, en lecture seule.</dd></div>

@@ -117,21 +117,24 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     }
   })
 
+  // Jeux d'exemple : catalogue sample_data/catalog.json (titre, domaine, description, idées d'analyse).
+  interface SampleEntry { file: string; label: string; domain: string; rows: number; columns: number; description: string; ideas: string[] }
+  const catalog: SampleEntry[] = JSON.parse(await readFile(join(config.samplesDir, 'catalog.json'), 'utf8').catch(() => '[]'))
+
   app.get('/api/samples', async () => {
-    const files = ['ventes.csv', 'demo_complet.csv']
-    return files.map((f) => ({
-      file: f,
-      label: f === 'ventes.csv' ? 'Ventes' : 'Clients',
-      hint: f === 'ventes.csv' ? '30 commandes · produits, régions' : '400 clients · canaux, dépenses, churn',
-    }))
+    const loaded = new Map((await store.listDatasets()).filter((d) => d.sample).map((d) => [d.fileName, d.id]))
+    return catalog.map((c) => ({ ...c, datasetId: loaded.get(c.file) ?? null }))
   })
 
   app.post<{ Params: { file: string } }>('/api/samples/:file', async (req) => {
-    const file = req.params.file
-    if (!['ventes.csv', 'demo_complet.csv'].includes(file)) throw new HttpError(404, 'Exemple inconnu.')
-    const existing = (await store.listDatasets()).find((d) => d.sample && d.fileName === file)
+    const entry = catalog.find((c) => c.file === req.params.file)
+    if (!entry) throw new HttpError(404, 'Exemple inconnu.')
+    const existing = (await store.listDatasets()).find((d) => d.sample && d.fileName === entry.file)
     if (existing) return existing
-    return importFile(store, join(config.samplesDir, file), file, { sample: true })
+    const meta = await importFile(store, join(config.samplesDir, entry.file), entry.file, { sample: true })
+    meta.name = entry.label
+    await store.saveDataset(meta)
+    return meta
   })
 
   app.get<{ Params: { id: string } }>('/api/datasets/:id', async (req) => {

@@ -7,6 +7,7 @@ import { DataView } from './components/DataView'
 import { Exploration } from './components/Exploration'
 import { Prediction } from './components/Prediction'
 import { Quality } from './components/Quality'
+import { SampleDialog } from './components/SampleGallery'
 import { Sidebar } from './components/Sidebar'
 import { Welcome } from './components/Welcome'
 import { fmtBytes, fmtInt, fmtPct, plural } from './format'
@@ -39,6 +40,8 @@ export default function App() {
   const [uploading, setUploading] = useState<number | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [dragging, setDragging] = useState(false)
+  const [showSamples, setShowSamples] = useState(false)
+  const [sampleBusy, setSampleBusy] = useState<string | null>(null)
   const abort = useRef<AbortController | null>(null)
 
   const fail = (e: unknown) => setToast(e instanceof Error ? e.message : String(e))
@@ -58,7 +61,7 @@ export default function App() {
 
   useEffect(() => {
     loadConfig()
-    api.samples().then(setSamples).catch(() => {})
+    refreshSamples()
     api.datasets().then(setDatasets).catch((e) => { setDatasets([]); fail(e) })
   }, [loadConfig])
 
@@ -115,9 +118,17 @@ export default function App() {
     }
   }
 
-  const loadSample = (file: string) => {
-    setUploading(1)
-    api.loadSample(file).then(addDataset).catch(fail).finally(() => setUploading(null))
+  const refreshSamples = () => api.samples().then(setSamples).catch(() => {})
+  const loadSample = (s: Sample) => {
+    if (busy) return
+    setShowSamples(false)
+    if (s.datasetId && datasets?.some((d) => d.id === s.datasetId)) {
+      setActiveId(s.datasetId)
+      setTab('assistant')
+      return
+    }
+    setSampleBusy(s.file)
+    api.loadSample(s.file).then((meta) => { addDataset(meta); refreshSamples() }).catch(fail).finally(() => setSampleBusy(null))
   }
 
   const deleteDataset = async () => {
@@ -125,6 +136,7 @@ export default function App() {
     await api.deleteDataset(dataset.id).catch(fail)
     setDatasets((list) => (list ?? []).filter((d) => d.id !== dataset.id))
     setActiveId(null)
+    refreshSamples()
   }
 
   const changeSheet = async (sheet: string) => {
@@ -249,13 +261,14 @@ export default function App() {
       <Sidebar
         config={config} datasets={datasets ?? []} activeId={activeId} conversations={conversations} activeConversation={conversation?.id ?? null}
         engine={engine} engineStatus={engineStatus} uploading={uploading}
-        onUpload={upload} onSelectDataset={(id) => { if (!busy) setActiveId(id) }} onSelectConversation={openConversation}
+        onUpload={upload} onOpenSamples={() => { refreshSamples(); setShowSamples(true) }} onSelectDataset={(id) => { if (!busy) setActiveId(id) }} onSelectConversation={openConversation}
         onNewConversation={newConversation} onDeleteConversation={deleteConversation} onEngine={setEngine} onRefreshConfig={loadConfig}
       />
 
       <main className="main">
         {!activeId && config && datasets && (
-          <Welcome samples={samples} formats={config.formats} maxUploadMb={config.maxUploadMb} onUpload={upload} onSample={loadSample} busy={uploading !== null} />
+          <Welcome samples={samples} formats={config.formats} maxUploadMb={config.maxUploadMb} onUpload={upload} onSample={loadSample}
+            busy={uploading !== null || sampleBusy !== null} busyFile={sampleBusy} />
         )}
 
         {activeId && !dataset && <div className="loading-page"><span className="spinner" /> Ouverture du jeu de données…</div>}
@@ -302,6 +315,7 @@ export default function App() {
                 config={config} conversation={conversation} ready={ready} busy={busy}
                 notReadyReason={engineStatus.ok ? '' : engineStatus.text}
                 engineLabel={engineStatus.text}
+                ideas={dataset.sample ? samples.find((s) => s.file === dataset.fileName)?.ideas : undefined}
                 onSend={send} onStop={() => abort.current?.abort()}
               />
             </div>
@@ -322,6 +336,7 @@ export default function App() {
         )}
       </main>
 
+      {showSamples && <SampleDialog samples={samples} onPick={loadSample} onClose={() => setShowSamples(false)} busyFile={sampleBusy} />}
       {dragging && <div className="drop-overlay"><div>Déposez le fichier pour l’importer</div></div>}
       {toast && (
         <div className="toast" role="alert">

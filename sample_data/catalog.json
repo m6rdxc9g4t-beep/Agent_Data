@@ -1,0 +1,209 @@
+[
+ {
+  "file": "ventes.csv",
+  "label": "Petites ventes",
+  "domain": "Commerce",
+  "rows": 30,
+  "columns": 8,
+  "description": "30 commandes de matériel informatique : produits, régions, montants, satisfaction. Idéal pour un premier essai.",
+  "ideas": [
+   "Quelle région vend le plus ?",
+   "Produits les mieux notés"
+  ]
+ },
+ {
+  "file": "ecommerce_commandes.csv",
+  "label": "Boutique en ligne",
+  "domain": "Commerce",
+  "rows": 3200,
+  "columns": 12,
+  "description": "3 200 commandes d'un e-commerce sur deux ans : catégories, remises, délais de livraison, avis et retours.",
+  "ideas": [
+   "Quelles catégories rapportent le plus après remises ?",
+   "Les délais de livraison font-ils baisser les notes ?",
+   "Prédire les retours de commande",
+   "Prévoir le chiffre d'affaires mensuel"
+  ]
+ },
+ {
+  "file": "finance_transactions.csv",
+  "label": "Transactions bancaires",
+  "domain": "Finance",
+  "rows": 5000,
+  "columns": 9,
+  "description": "5 000 opérations bancaires (carte, virement, retrait) avec pays, heure et un indicateur de fraude.",
+  "ideas": [
+   "Quel est le profil des opérations frauduleuses ?",
+   "La fraude varie-t-elle selon l'heure et le pays ?",
+   "Prédire la fraude",
+   "Montant moyen par type d'opération"
+  ]
+ },
+ {
+  "file": "finance_credit.csv",
+  "label": "Demandes de crédit",
+  "domain": "Finance",
+  "rows": 2400,
+  "columns": 11,
+  "description": "2 400 dossiers de prêt : revenus, endettement, situation professionnelle et défaut de remboursement.",
+  "ideas": [
+   "Quels facteurs augmentent le risque de défaut ?",
+   "Prédire le défaut de remboursement",
+   "Taux d'endettement selon la situation professionnelle",
+   "Segmenter les emprunteurs"
+  ]
+ },
+ {
+  "file": "finance_bourse.csv",
+  "label": "Cours de bourse",
+  "domain": "Finance",
+  "rows": 4000,
+  "columns": 5,
+  "description": "Cours quotidiens de quatre sociétés cotées fictives depuis 2023 : ouverture, clôture, volume.",
+  "ideas": [
+   "Quel titre a le mieux performé ?",
+   "Volatilité comparée des titres",
+   "Corrélation entre les titres",
+   "Prévoir le cours de clôture moyen par mois"
+  ]
+ },
+ {
+  "file": "demo_complet.csv",
+  "label": "Clients et fidélité",
+  "domain": "Marketing",
+  "rows": 402,
+  "columns": 12,
+  "description": "402 clients : canal d'acquisition, segment, commandes, dépenses, satisfaction et départ (churn).",
+  "ideas": [
+   "Quel canal amène les meilleurs clients ?",
+   "Prédire le départ des clients",
+   "Segmenter la clientèle"
+  ]
+ },
+ {
+  "file": "marketing_campagnes.csv",
+  "label": "Campagnes publicitaires",
+  "domain": "Marketing",
+  "rows": 3345,
+  "columns": 7,
+  "description": "Résultats quotidiens de cinq canaux d'acquisition sur 22 mois : budget, impressions, clics, conversions, ventes.",
+  "ideas": [
+   "Quel canal a le meilleur retour sur investissement ?",
+   "Taux de clic et de conversion par canal",
+   "Prévoir le chiffre d'affaires des trois prochains mois",
+   "Effet du week-end sur les performances"
+  ]
+ },
+ {
+  "file": "marketing_newsletter.csv",
+  "label": "Abonnés newsletter",
+  "domain": "Marketing",
+  "rows": 4000,
+  "columns": 8,
+  "description": "4 000 abonnés : source d'inscription, fréquence d'envoi, ouvertures, clics, achats et désinscriptions.",
+  "ideas": [
+   "Quelles sources amènent les abonnés les plus engagés ?",
+   "Prédire les désinscriptions",
+   "Lien entre ouvertures et achats",
+   "Segmenter les abonnés"
+  ]
+ },
+ {
+  "file": "ia_experiences.csv",
+  "label": "Expériences de machine learning",
+  "domain": "IA & tech",
+  "rows": 1500,
+  "columns": 10,
+  "description": "1 500 entraînements de modèles : architecture, taille, données, hyperparamètres, GPU, durée, coût et précision obtenue.",
+  "ideas": [
+   "Quels réglages donnent la meilleure précision ?",
+   "Coût moyen par architecture et par GPU",
+   "Prédire la précision d'un entraînement",
+   "Le taux d'apprentissage optimal"
+  ]
+ },
+ {
+  "file": "ia_usage_llm.csv",
+  "label": "Usage d'une API d'IA",
+  "domain": "IA & tech",
+  "rows": 6216,
+  "columns": 10,
+  "description": "Usage quotidien d'un modèle de langage par quatre applications internes : requêtes, tokens, coût, latence, erreurs, satisfaction.",
+  "ideas": [
+   "Quelle application coûte le plus ?",
+   "Coût par requête selon la taille du modèle",
+   "Prévoir le coût mensuel",
+   "La latence pèse-t-elle sur la satisfaction ?"
+  ]
+ },
+ {
+  "file": "rh_employes.csv",
+  "label": "Ressources humaines",
+  "domain": "RH",
+  "rows": 1800,
+  "columns": 11,
+  "description": "1 800 salariés : service, ancienneté, salaire, heures supplémentaires, télétravail, satisfaction et départs.",
+  "ideas": [
+   "Pourquoi les salariés partent-ils ?",
+   "Prédire les départs",
+   "Écarts de salaire entre services",
+   "Le télétravail améliore-t-il la satisfaction ?"
+  ]
+ },
+ {
+  "file": "energie_batiment.csv",
+  "label": "Énergie d'un bâtiment",
+  "domain": "Énergie",
+  "rows": 1400,
+  "columns": 7,
+  "description": "Consommation et production solaire quotidiennes d'un bâtiment tertiaire depuis 2023, avec météo et jours fériés.",
+  "ideas": [
+   "Effet de la température sur la consommation",
+   "Prévoir la consommation des prochains mois",
+   "Part de l'énergie couverte par le solaire",
+   "Prédire la consommation à partir de la météo"
+  ]
+ },
+ {
+  "file": "sante_prevention.csv",
+  "label": "Prévention santé",
+  "domain": "Santé",
+  "rows": 2000,
+  "columns": 9,
+  "description": "2 000 bilans de prévention fictifs : âge, IMC, tension, glycémie, mode de vie et niveau de risque cardiovasculaire.",
+  "ideas": [
+   "Quels facteurs sont liés à un risque élevé ?",
+   "Prédire le niveau de risque",
+   "Tension selon l'âge et le tabac",
+   "Profil des patients à risque"
+  ]
+ },
+ {
+  "file": "immobilier_ventes.csv",
+  "label": "Ventes immobilières",
+  "domain": "Immobilier",
+  "rows": 3000,
+  "columns": 10,
+  "description": "3 000 ventes de logements dans huit grandes villes depuis 2023 : surface, pièces, DPE, parking et prix.",
+  "ideas": [
+   "Prix au m² par ville et par DPE",
+   "Prédire le prix d'un logement",
+   "Évolution des prix depuis 2023",
+   "Combien vaut une place de parking ?"
+  ]
+ },
+ {
+  "file": "logistique_livraisons.csv",
+  "label": "Livraisons de colis",
+  "domain": "Logistique",
+  "rows": 3000,
+  "columns": 9,
+  "description": "3 000 expéditions : transporteur, distance, poids, météo, délai prévu, retard et coût.",
+  "ideas": [
+   "Quel transporteur est le plus fiable ?",
+   "Effet de la météo et des fêtes sur les retards",
+   "Prédire les retards de livraison",
+   "Coût moyen selon le poids et la distance"
+  ]
+ }
+]

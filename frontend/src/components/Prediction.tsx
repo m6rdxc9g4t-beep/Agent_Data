@@ -13,8 +13,8 @@ import { ResultTable } from './ResultTable'
 const TASK_LABEL: Record<Task, string> = { regression: 'valeur', binary: 'oui / non', multiclass: 'catégorie' }
 
 function fmtMetric(key: string, v: number): string {
-  if (key === 'accuracy' || key === 'f1' || key === 'auc') return fmtPct(v)
-  if (key === 'r2') return fmtNumber(Math.round(v * 1000) / 1000)
+  if (key === 'accuracy' || key === 'f1') return fmtPct(v)
+  if (key === 'r2' || key === 'auc') return fmtNumber(Math.round(v * 1000) / 1000)
   return fmtNumber(v)
 }
 

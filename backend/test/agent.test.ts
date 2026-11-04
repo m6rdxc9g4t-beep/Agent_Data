@@ -101,7 +101,7 @@ describe('API', () => {
         opts.onEvent({ type: 'tool_start', id: 'a', name: 'run_sql', input: { sql: 'SELECT count(*) AS n FROM data' } })
         opts.onEvent({ type: 'tool_end', id: 'a', result: out })
         opts.onEvent({ type: 'text', text: '**Synthèse** : 402 clients.' })
-        expect(opts.system).toContain('demo_complet.csv')
+        expect(opts.system).toContain('Clients et fidélité')
         return { inputTokens: 1, outputTokens: 2 }
       },
     })
@@ -135,6 +135,9 @@ describe('API', () => {
     const csv = await app.inject(`/api/datasets/${ds.id}/export.csv`)
     expect(csv.body.split('\r\n')[0]).toContain('date;region')
     expect((await app.inject({ method: 'POST', url: '/api/samples/autre.csv' })).statusCode).toBe(404)
+    const samples = (await app.inject('/api/samples')).json()
+    expect(samples.length).toBeGreaterThanOrEqual(12)
+    expect(samples.find((x: any) => x.file === 'demo_complet.csv').datasetId).toBe(ds.id)
     expect((await app.inject({ method: 'DELETE', url: `/api/datasets/${ds.id}` })).statusCode).toBe(204)
     expect((await app.inject(`/api/datasets/${ds.id}`)).statusCode).toBe(404)
     await app.close()
