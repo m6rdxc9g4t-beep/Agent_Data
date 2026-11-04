@@ -68,10 +68,17 @@ export default function App() {
     store.set('datamind:key', apiKey, sessionStorage)
   }, [engine, config])
 
-  // Jeu de données actif : détail et analyses.
+  // Jeu mémorisé qui n'existe plus (supprimé ailleurs) : on revient à l'accueil.
   useEffect(() => {
-    if (!datasets) return
-    if (activeId && !datasets.some((d) => d.id === activeId)) { setActiveId(null); return }
+    if (datasets && activeId && !datasets.some((d) => d.id === activeId)) setActiveId(null)
+  }, [datasets, activeId])
+
+  // Jeu de données actif : détail et analyses. Ne dépend pas du contenu de la liste
+  // (sa mise à jour à l'ouverture relancerait le chargement en boucle).
+  const listLoaded = datasets !== null
+  useEffect(() => {
+    if (!listLoaded) return
+    if (activeId && !datasets?.some((d) => d.id === activeId)) return // traité par l'effet précédent
     store.set('datamind:dataset', activeId ?? '')
     setDataset(null)
     setConversation(null)
@@ -82,7 +89,7 @@ export default function App() {
       setConversations(list)
       if (list[0]) api.conversation(list[0].id).then(setConversation).catch(fail)
     }).catch(fail)
-  }, [activeId, datasets])
+  }, [activeId, listLoaded])
 
   useEffect(() => {
     if (!toast) return

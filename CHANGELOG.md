@@ -1,5 +1,10 @@
 # Journal des versions
 
+## 6.2.1
+
+- Corrige le clignotement à l'ouverture d'un jeu de données : la mise à jour de sa date d'activité
+  relançait son chargement en boucle (introduit en 6.2.0).
+
 ## 6.2.0 — Historique des jeux de données
 
 - La liste des jeux de données est triée par dernière activité (ouverture ou analyse) ; chaque jeu affiche
