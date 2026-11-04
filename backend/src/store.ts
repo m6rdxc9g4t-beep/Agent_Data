@@ -19,6 +19,8 @@ export interface DatasetMeta {
   sheets: string[]
   sheet: string | null
   sample: boolean
+  /** Dernière ouverture ou analyse : sert à trier la liste. */
+  lastActivityAt?: string
 }
 
 export type Block =
@@ -114,7 +116,8 @@ export class Store {
   async listDatasets(): Promise<DatasetMeta[]> {
     const ids = await readdir(this.datasetsDir).catch(() => [] as string[])
     const metas = await Promise.all(ids.map((id) => readJson<DatasetMeta>(join(this.datasetsDir, id, 'meta.json'))))
-    return metas.filter((m): m is DatasetMeta => !!m).sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    const activity = (m: DatasetMeta) => m.lastActivityAt ?? m.createdAt
+    return metas.filter((m): m is DatasetMeta => !!m).sort((a, b) => activity(b).localeCompare(activity(a)))
   }
 
   getDataset(id: string): Promise<DatasetMeta | null> {
@@ -124,6 +127,15 @@ export class Store {
   async saveDataset(meta: DatasetMeta): Promise<void> {
     await mkdir(this.datasetDir(meta.id), { recursive: true })
     await writeJson(join(this.datasetDir(meta.id), 'meta.json'), meta)
+  }
+
+  /** Note une activité (ouverture, analyse) sur le jeu de données. */
+  async touchDataset(id: string): Promise<DatasetMeta | null> {
+    const meta = await this.getDataset(id).catch(() => null)
+    if (!meta) return null
+    meta.lastActivityAt = new Date().toISOString()
+    await this.saveDataset(meta)
+    return meta
   }
 
   async deleteDataset(id: string): Promise<void> {

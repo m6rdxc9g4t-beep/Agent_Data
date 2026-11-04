@@ -1,5 +1,11 @@
 # Journal des versions
 
+## 6.2.0 — Historique des jeux de données
+
+- La liste des jeux de données est triée par dernière activité (ouverture ou analyse) ; chaque jeu affiche
+  depuis quand on n'y a pas touché. La liste ne bouge pas sous le curseur : le nouvel ordre s'applique au rechargement.
+- Recherche dans la liste au-delà de 6 jeux (sans tenir compte des accents ni des majuscules).
+
 ## 6.1.0 — Claude avec le forfait
 
 - Nouveau moteur « Claude avec ton forfait » : Claude Agent SDK authentifié par l'abonnement Pro / Max

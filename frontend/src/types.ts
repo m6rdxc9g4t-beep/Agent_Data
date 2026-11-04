@@ -14,6 +14,7 @@ export interface DatasetMeta {
   sheets: string[]
   sheet: string | null
   sample: boolean
+  lastActivityAt?: string
 }
 
 export type Kind = 'numeric' | 'datetime' | 'boolean' | 'category' | 'text' | 'id' | 'constant'

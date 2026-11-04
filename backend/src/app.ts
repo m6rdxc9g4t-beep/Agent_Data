@@ -133,7 +133,8 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
 
   app.get<{ Params: { id: string } }>('/api/datasets/:id', async (req) => {
     const meta = await dataset(req.params.id)
-    return { ...meta, profile: await profile(meta.id) }
+    const touched = (await store.touchDataset(meta.id)) ?? meta
+    return { ...touched, profile: await profile(meta.id) }
   })
 
   app.patch<{ Params: { id: string }; Body: { name?: string } }>('/api/datasets/:id', async (req) => {
@@ -314,6 +315,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
       } finally {
         clearInterval(ping)
         await store.saveConversation(conv).catch((e) => app.log.error(e))
+        await store.touchDataset(meta.id).catch(() => null)
         reply.raw.end()
       }
     })

@@ -124,6 +124,14 @@ describe('API', () => {
     expect(saved.turns[0].blocks.map((b: any) => b.kind)).toEqual(['tool', 'text'])
     expect(saved.turns[0].blocks[0].result.table.rows[0][0]).toBe(402)
 
+    // La liste est triée par dernière activité (ouverture ou analyse), pas par date d'import.
+    const other = (await app.inject({ method: 'POST', url: '/api/samples/ventes.csv' })).json()
+    expect((await app.inject('/api/datasets')).json()[0].id).toBe(other.id)
+    await app.inject(`/api/datasets/${ds.id}`)
+    const list = (await app.inject('/api/datasets')).json()
+    expect(list[0].id).toBe(ds.id)
+    expect(list[0].lastActivityAt).toBeTruthy()
+
     const csv = await app.inject(`/api/datasets/${ds.id}/export.csv`)
     expect(csv.body.split('\r\n')[0]).toContain('date;region')
     expect((await app.inject({ method: 'POST', url: '/api/samples/autre.csv' })).statusCode).toBe(404)

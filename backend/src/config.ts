@@ -23,7 +23,7 @@ export const CLAUDE_MODELS = [
 ]
 
 export const config = {
-  version: '6.1.0',
+  version: '6.2.0',
   host: env.HOST ?? '127.0.0.1',
   port: int('PORT', 3600),
   dataDir: resolve(env.DATA_DIR ?? './data'),

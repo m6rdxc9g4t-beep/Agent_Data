@@ -1,6 +1,6 @@
 // Barre latérale : jeux de données, analyses du jeu ouvert, moteur IA et thème.
 import { useRef, useState } from 'react'
-import { Cpu, KeyRound, Monitor, Moon, Plus, RefreshCw, Sun, Trash2, Upload } from 'lucide-react'
+import { Cpu, KeyRound, Monitor, Moon, Plus, RefreshCw, Search, Sun, Trash2, Upload, X } from 'lucide-react'
 
 import { fmtInt, fmtRelative } from '../format'
 import { useTheme, type ThemeMode } from '../theme'
@@ -28,6 +28,10 @@ export function Sidebar(p: Props) {
   const file = useRef<HTMLInputElement>(null)
   const { mode, setMode } = useTheme()
   const [showKey, setShowKey] = useState(false)
+  const [filter, setFilter] = useState('')
+  const norm = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  const shown = filter.trim() ? p.datasets.filter((d) => norm(d.name).includes(norm(filter.trim()))) : p.datasets
+  const searchable = p.datasets.length > 6
   const cfg = p.config
   const e = p.engine
 
@@ -48,14 +52,22 @@ export function Sidebar(p: Props) {
       <input ref={file} type="file" hidden accept={cfg?.formats.join(',')} onChange={(ev) => { const f = ev.target.files?.[0]; if (f) p.onUpload(f); ev.target.value = '' }} />
 
       <nav className="nav" aria-label="Jeux de données">
-        <h3>Jeux de données</h3>
+        <h3>Jeux de données{p.datasets.length > 1 && <span className="count">{p.datasets.length}</span>}</h3>
+        {searchable && (
+          <label className="nav-search">
+            <Search size={14} aria-hidden />
+            <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Rechercher un jeu…" aria-label="Rechercher un jeu de données" />
+            {filter && <button type="button" onClick={() => setFilter('')} aria-label="Effacer la recherche"><X size={13} /></button>}
+          </label>
+        )}
         {p.datasets.length === 0 && <p className="nav-empty">Aucun pour l’instant.</p>}
+        {p.datasets.length > 0 && shown.length === 0 && <p className="nav-empty">Aucun jeu ne contient « {filter.trim()} ».</p>}
         <ul>
-          {p.datasets.map((d) => (
+          {shown.map((d) => (
             <li key={d.id}>
               <button type="button" className={`nav-item${d.id === p.activeId ? ' active' : ''}`} onClick={() => p.onSelectDataset(d.id)} aria-current={d.id === p.activeId}>
                 <span className="fmt">{d.format.slice(0, 4)}</span>
-                <span className="nav-text"><span className="nav-title">{d.name}</span><span className="nav-sub">{fmtInt(d.rows)} lignes, {d.columns.length} colonnes</span></span>
+                <span className="nav-text"><span className="nav-title">{d.name}</span><span className="nav-sub">{fmtInt(d.rows)} lignes, {d.columns.length} col. · {fmtRelative(d.lastActivityAt ?? d.createdAt)}</span></span>
               </button>
               {d.id === p.activeId && (
                 <ul className="convs">

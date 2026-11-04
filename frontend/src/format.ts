@@ -42,7 +42,10 @@ export function fmtRelative(iso: string): string {
   const diff = (Date.now() - d.getTime()) / 1000
   if (diff < 60) return "à l'instant"
   if (diff < 3600) return `il y a ${Math.floor(diff / 60)} min`
-  if (diff < 86400 && new Date().getDate() === d.getDate()) return `aujourd'hui, ${d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`
+  const time = d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+  const day = (x: Date) => x.toDateString()
+  if (day(d) === day(new Date())) return `aujourd'hui, ${time}`
+  if (day(d) === day(new Date(Date.now() - 86400_000))) return `hier, ${time}`
   return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })
 }
 

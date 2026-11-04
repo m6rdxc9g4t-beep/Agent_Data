@@ -41,6 +41,9 @@ export default function App() {
   const abort = useRef<AbortController | null>(null)
 
   const fail = (e: unknown) => setToast(e instanceof Error ? e.message : String(e))
+  // Date de dernière activité mise à jour sur place : la liste ne saute pas sous le curseur, elle se retrie au prochain chargement.
+  const touch = (id: string, at = new Date().toISOString()) =>
+    setDatasets((list) => list && list.map((d) => (d.id === id ? { ...d, lastActivityAt: at } : d)))
 
   const loadConfig = useCallback(() => api.config().then((c) => {
     setConfig(c)
@@ -74,7 +77,7 @@ export default function App() {
     setConversation(null)
     setConversations([])
     if (!activeId) return
-    api.dataset(activeId).then(setDataset).catch(fail)
+    api.dataset(activeId).then((d) => { setDataset(d); touch(d.id, d.lastActivityAt) }).catch(fail)
     api.conversations(activeId).then((list) => {
       setConversations(list)
       if (list[0]) api.conversation(list[0].id).then(setConversation).catch(fail)
@@ -192,6 +195,7 @@ export default function App() {
       }
       updateTurn(turnId, (t) => (t.pending ? { ...t, pending: false, durationMs: Date.now() - started } : t))
       api.conversations(dataset.id).then(setConversations).catch(() => {})
+      touch(dataset.id)
     } catch (e) {
       fail(e)
     } finally {
