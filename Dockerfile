@@ -1,23 +1,36 @@
 # syntax=docker/dockerfile:1
-# DataMind — image autonome.
+# DataMind — image autonome : un seul processus Node sert l'API (Fastify + DuckDB) et l'interface compilée.
 #   docker build -t datamind .
-#   docker run -p 8501:8501 -e OLLAMA_HOST=http://host.docker.internal:11434 datamind
-# Le code écrit par l'IA s'exécute dans ce conteneur, sous un utilisateur sans privilèges.
+#   docker run -p 3600:3600 -v datamind:/data -e OLLAMA_URL=http://host.docker.internal:11434 datamind
 
-FROM python:3.12-slim-bookworm
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
-    MPLCONFIGDIR=/tmp/matplotlib \
-    STREAMLIT_SERVER_ADDRESS=0.0.0.0 \
-    STREAMLIT_SERVER_PORT=8501
-RUN apt-get update && apt-get install -y --no-install-recommends tzdata fonts-dejavu-core \
-    && rm -rf /var/lib/apt/lists/*
+FROM node:22-bookworm-slim AS build
+ENV CI=1
 WORKDIR /app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-COPY . ./
-RUN rm -f .env && useradd --create-home --uid 1000 datamind
-USER datamind
-EXPOSE 8501
-HEALTHCHECK --interval=30s --timeout=5s --start-period=20s \
-  CMD python -c "import os,urllib.request;urllib.request.urlopen(f'http://127.0.0.1:{os.environ[\"STREAMLIT_SERVER_PORT\"]}/_stcore/health',timeout=3)"
-CMD ["streamlit", "run", "app.py"]
+COPY package.json package-lock.json ./
+COPY backend/package.json backend/
+COPY frontend/package.json frontend/
+RUN npm ci --include=dev --no-audit --no-fund
+COPY . .
+RUN npm run build && npm prune --omit=dev --no-audit --no-fund
+
+FROM node:22-bookworm-slim
+ENV NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=3600 \
+    DATA_DIR=/data \
+    STATIC_DIR=/app/frontend/dist \
+    SAMPLES_DIR=/app/sample_data
+WORKDIR /app
+COPY --from=build /app/package.json ./
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/backend/package.json ./backend/
+COPY --from=build /app/backend/dist ./backend/dist
+COPY --from=build /app/frontend/dist ./frontend/dist
+COPY sample_data ./sample_data
+RUN mkdir -p /data && chown node:node /data
+USER node
+VOLUME /data
+EXPOSE 3600
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s \
+  CMD node -e "fetch('http://127.0.0.1:'+process.env.PORT+'/api/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"
+CMD ["node", "backend/dist/server.js"]

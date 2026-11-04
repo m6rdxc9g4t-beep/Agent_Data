@@ -1,28 +1,9 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-build/
+node_modules/
 dist/
-.pytest_cache/
-.ruff_cache/
-
-# Environnements virtuels
-.venv/
-venv/
-
-# Secrets / configuration locale
+data/
+*.log
 .env
 .env.local
-.streamlit/secrets.toml
-
-# Données importées et exports locaux
-uploads/
-exports/
-*.tmp
-
-# OS / éditeurs
 .DS_Store
 .idea/
 .vscode/
-*.swp

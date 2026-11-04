@@ -1,10 +1,12 @@
 # DataMind
 
 **Agent d'analyse de données.** Importez un fichier, posez vos questions en français :
-DataMind écrit du code Python, **l'exécute réellement sur vos données** et vous restitue
-des chiffres vérifiables, des graphiques et des recommandations.
+DataMind écrit des requêtes SQL, les **exécute réellement sur vos données** (DuckDB) et vous répond
+avec des chiffres vérifiables, des graphiques et la trace de chaque étape.
 
-![DataMind — assistant](docs/screenshots/assistant.png)
+Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un seul processus en production.
+
+![Assistant](docs/screenshots/assistant.png)
 
 | Exploration automatique | Qualité des données |
 |---|---|
@@ -12,50 +14,50 @@ des chiffres vérifiables, des graphiques et des recommandations.
 
 ## Fonctionnalités
 
-- **Assistant** — conversation avec un agent qui calcule au lieu d'inventer : chaque chiffre vient
-  de code pandas / scikit-learn exécuté sur `df`. Le code, sa sortie et ses graphiques sont visibles.
-  15 analyses en un clic (vue d'ensemble, audit qualité, corrélations, segmentation, tendances,
-  prévision, modèle prédictif, facteurs d'influence, tableau de bord…).
-- **Exploration** — graphiques automatiques (évolution, comparaison par catégorie, répartition,
-  distribution) et exploration colonne par colonne, sans IA, instantanément.
-- **Qualité** — score sur 100, profil de chaque colonne (type, complétude, cardinalité, min /
-  médiane / max) et recommandations de nettoyage.
-- **Données** — table filtrable, export CSV au format français.
-- **Rapport** — export de la conversation en HTML autonome (graphiques intégrés) ou en Markdown.
-- **Fichiers** — CSV / TSV (encodage et séparateur détectés, format français `;` et `,` décimale),
-  Excel (choix de la feuille), JSON, JSON Lines, Parquet ; dates reconnues automatiquement.
-- **Thèmes clair et sombre** natifs (menu ⋮ › Settings), interface en français.
+- **Assistant** — l'agent dispose de cinq outils : `run_sql` (requête en lecture seule sur la table `data`),
+  `create_chart` (graphique interactif), `segment` (k-means), `predict` (régression linéaire ou logistique,
+  évaluée sur un jeu de test contre une baseline) et `forecast` (tendance + saisonnalité). Chaque étape
+  s'affiche dans une trace numérotée : requête SQL, résultat, graphique. 15 analyses en un clic.
+- **Exploration** — graphiques automatiques (évolution, comparaison, répartition, distribution) et
+  exploration colonne par colonne, sans IA.
+- **Qualité** — score sur 100, profil de chaque colonne, recommandations de nettoyage.
+- **Données** — table paginée côté serveur, recherche, tri, export CSV au format français.
+- **Historique** — jeux de données et analyses enregistrés sur le serveur ; export d'une analyse en page HTML.
+- **Fichiers** — CSV / TSV (encodage et séparateur détectés, format français `;` et virgule décimale),
+  Excel (choix de la feuille), JSON, JSON Lines, Parquet ; jusqu'à 200 Mo.
+- **Thème** clair, sombre ou celui du système.
 
-## Deux moteurs IA
+## Moteurs IA
 
 | Moteur | Coût | Clé | Remarques |
 |---|---|---|---|
-| **Ollama** (défaut) | Gratuit | Aucune | Modèle local. Doit gérer les outils : `llama3.1`, `llama3.2`, `qwen2.5`, `mistral-nemo`. |
-| **Claude** | À l'usage | `ANTHROPIC_API_KEY` | `claude-sonnet-5-5` par défaut ; Opus 5.5 et Haiku 5.5 au choix. |
+| **Ollama** (défaut) | Gratuit | Aucune | Le modèle doit gérer les outils : `llama3.1`, `llama3.2`, `qwen2.5`, `mistral-nemo`. |
+| **Claude** | À l'usage | `ANTHROPIC_API_KEY` sur le serveur, ou saisie dans l'interface (session) | `claude-sonnet-5-5` par défaut ; Opus 5.5 et Haiku 5.5 au choix. |
 
-Les petits modèles locaux n'utilisent pas toujours l'appel d'outil prévu : DataMind exécute aussi
-un appel écrit en JSON dans le texte, ou un bloc ```` ```python ```` proposé sans appel, puis renvoie
-le résultat réel au modèle pour qu'il l'interprète.
+Pour les petits modèles locaux, DataMind rattrape aussi un appel d'outil écrit en JSON dans le texte
+et exécute une requête proposée dans un bloc ` ```sql `, puis renvoie le vrai résultat au modèle.
 
 ## Démarrage
 
 ```bash
 git clone https://github.com/m6rdxc9g4t-beep/Agent_Data.git
 cd Agent_Data
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-ollama pull llama3.1          # moteur local (https://ollama.com)
-streamlit run app.py          # http://localhost:8501
+npm install
+npm run dev          # API sur :3600, interface sur http://localhost:5173
 ```
 
-Pas de fichier sous la main ? Les jeux **Ventes** et **Clients** (`sample_data/`) se chargent en un clic.
+Production :
 
-### Avec Docker
+```bash
+npm run build
+STATIC_DIR=frontend/dist npm start      # http://127.0.0.1:3600
+```
+
+Docker :
 
 ```bash
 docker build -t datamind .
-docker run -p 8501:8501 -e OLLAMA_HOST=http://host.docker.internal:11434 datamind
+docker run -p 3600:3600 -v datamind:/data -e OLLAMA_URL=http://host.docker.internal:11434 datamind
 ```
 
 ### Sur le VPS (suite Atelier)
@@ -69,56 +71,55 @@ cd ~/Ateliers/Atelier_Deploy && sudo ./update.sh datamind
 
 ## Configuration
 
-Variables d'environnement (ou fichier `.env`, voir [`.env.example`](.env.example)) — toutes facultatives :
+Variables d'environnement, toutes facultatives (voir [`.env.example`](.env.example)) :
 
 | Variable | Défaut | Rôle |
 |---|---|---|
-| `DATAMIND_ENGINE` | `ollama` | Moteur affiché au démarrage (`ollama` ou `claude`) |
-| `OLLAMA_HOST` (ou `OLLAMA_URL`) | `http://localhost:11434` | Serveur Ollama |
-| `OLLAMA_MODEL` | `llama3.1` | Modèle Ollama |
+| `HOST`, `PORT` | `127.0.0.1`, `3600` | Adresse d'écoute |
+| `DATA_DIR` | `./data` | Jeux de données (Parquet) et analyses (JSON) |
+| `STATIC_DIR` | — | Interface compilée servie par le backend |
+| `MAX_UPLOAD_MB` | `200` | Taille maximale d'un fichier |
+| `DATAMIND_ENGINE` | `ollama` | Moteur proposé par défaut |
+| `OLLAMA_URL` | `http://127.0.0.1:11434` | Serveur Ollama |
+| `OLLAMA_MODEL` | `llama3.1` | Modèle Ollama préféré |
 | `OLLAMA_TIMEOUT` | `600` | Délai d'une réponse (s) |
-| `ANTHROPIC_API_KEY` | — | Clé Claude côté serveur (sinon saisie dans l'interface, pour la session) |
-| `DATAMIND_CLAUDE_MODEL` | `claude-sonnet-5-5` | Modèle Claude |
-| `DATAMIND_MAX_STEPS` | `12` | Allers-retours modèle ↔ code par question |
-| `DATAMIND_EXEC_TIMEOUT` | `120` | Durée maximale d'une exécution de code (s) |
+| `ANTHROPIC_API_KEY` | — | Clé Claude côté serveur |
+| `DATAMIND_CLAUDE_MODEL` | `claude-sonnet-5-5` | Modèle Claude par défaut |
+| `DATAMIND_MAX_STEPS` | `12` | Allers-retours modèle ↔ outils par question |
+| `DATAMIND_QUERY_TIMEOUT` | `60` | Durée maximale d'une requête (s) |
 | `DATAMIND_INSTANCE_LABEL` | — | Libellé sous le nom de l'app |
 
 ## Architecture
 
 ```
-app.py                  Interface Streamlit (barre latérale, onglets, conversation)
-datamind/
-├── config.py           Réglages (environnement, .env)
-├── loader.py           Lecture des fichiers → DataFrame (encodage, séparateur, dates, feuilles)
-├── executor.py         Outil run_python : exécution, capture des figures, délai maximal
-├── prompts.py          Prompt système + catalogue des 15 analyses rapides
-├── profiling.py        Types de colonnes, score de qualité, recommandations
-├── charts.py           Graphiques automatiques (clair / sombre)
-├── report.py           Export HTML / Markdown
-├── theme.py            Couleurs des graphiques
-└── engines/
-    ├── base.py         Interface commune des moteurs
-    ├── claude.py       API Anthropic (cache du prompt, réflexion adaptative)
-    └── ollama.py       Ollama local (+ replis pour petits modèles)
-assets/                 Logo, styles
-sample_data/            Jeux d'exemple
-tests/                  pytest (moteurs simulés, aucun appel réseau)
+backend/src/
+├── server.ts          Démarrage
+├── app.ts             API REST + réponses de l'agent en flux (SSE), sert l'interface
+├── importer.ts        Fichier → Parquet (encodage, séparateur, feuilles Excel)
+├── db.ts              DuckDB en mémoire par jeu de données, verrouillé en lecture seule
+├── profile.ts         Profil des colonnes, score de qualité, recommandations
+├── charts.ts          Graphiques de l'agent et graphiques automatiques
+├── analysis.ts        k-means, régression linéaire / logistique, prévision
+├── store.ts           Métadonnées et analyses en fichiers JSON
+└── agent/
+    ├── prompts.ts     Prompt système, catalogue des analyses rapides
+    ├── tools.ts       Outils de l'agent (schémas + exécution)
+    └── engines.ts     Boucles Claude et Ollama
+frontend/src/
+├── App.tsx            État de l'application, envoi des questions, lecture du flux
+├── components/        Barre latérale, accueil, Assistant, Exploration, Qualité, Données, graphiques (ECharts)
+└── styles.css         Thème clair / sombre
 ```
 
-Boucle de l'agent : le modèle reçoit le prompt système, un résumé du jeu de données et l'outil
-`run_python` ; il écrit du code, DataMind l'exécute dans un espace de noms persistant (`df`,
-`df_original`, `pd`, `np`, `plt`, `sns`) et renvoie sortie et erreurs, jusqu'à la réponse finale.
+**Sécurité des requêtes** : chaque jeu de données est chargé dans une base DuckDB en mémoire, puis l'accès
+aux fichiers est coupé (`enable_external_access = false`) et la configuration verrouillée. Seules les
+instructions de lecture sont acceptées, une à la fois, avec un délai maximal. Aucun code arbitraire n'est
+exécuté. L'app n'a pas de connexion propre : sur un serveur, placez-la derrière une authentification
+(c'est le rôle du portail dans la suite Atelier).
 
 ## Développement
 
 ```bash
-pip install -r requirements-dev.txt
-ruff check . && pytest
+npm run typecheck
+npm test             # vitest : import, requêtes, analyses, moteurs simulés, API
 ```
-
-## Sécurité
-
-Comme un notebook, l'outil `run_python` exécute du code arbitraire dans le processus de l'app.
-DataMind est fait pour analyser **vos** données : sur un serveur, faites-le tourner dans un
-conteneur (image fournie, utilisateur sans privilèges) et derrière une authentification —
-c'est le cas dans la suite Atelier, où le portail protège `datamind.<domaine>`.
