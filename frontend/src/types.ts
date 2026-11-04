@@ -62,6 +62,7 @@ export interface ChartSpec {
   stacked?: boolean
   xLabel?: string
   yLabel?: string
+  diagonal?: boolean
 }
 
 export interface TableData { columns: Column[]; rows: unknown[][]; truncated: boolean }
@@ -122,3 +123,44 @@ export interface AppConfig {
 export interface Sample { file: string; label: string; hint: string }
 
 export interface EngineChoice { engine: 'ollama' | 'claude'; ollamaModel: string; claudeModel: string; apiKey: string }
+
+// ── Prédiction ────────────────────────────────────────────────────────────────────────────────
+export type Task = 'regression' | 'binary' | 'multiclass'
+
+export interface MlOptions {
+  targets: { name: string; kind: Kind; task: Task }[]
+  features: { name: string; kind: Kind; usable: boolean }[]
+  dates: string[]
+  values: string[]
+}
+
+export interface Metric { key: string; label: string; value: number; higherIsBetter: boolean }
+
+export interface TrainResult {
+  id: string
+  target: { name: string; task: Task; classes: string[] }
+  task: Task
+  rows: { train: number; validation: number; test: number }
+  features: string[]
+  models: { kind: string; label: string; hint: string; metrics: Metric[]; score: number; trainMs: number; detail: string }[]
+  best: string
+  importance: ChartSpec
+  quality: ChartSpec
+  simulator: { name: string; kind: 'num' | 'cat' | 'date'; levels?: string[]; default: string | number }[]
+  summary: string
+  durationMs: number
+}
+
+export interface ForecastResult {
+  date: string
+  value: string
+  agg: string
+  grain: string
+  periods: number
+  history: number
+  models: { kind: string; label: string; hint: string; mae: number; mape: number | null; detail: string }[]
+  best: string
+  chart: ChartSpec
+  table: TableData
+  summary: string
+}

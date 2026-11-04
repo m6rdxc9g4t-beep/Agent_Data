@@ -1,6 +1,7 @@
 // Accès à l'API du backend.
 import type {
-  AppConfig, ChartSpec, ColumnProfile, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, Sample, TableData, ToolOutput,
+  AppConfig, ChartSpec, ColumnProfile, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, ForecastResult, MlOptions, Sample, TableData,
+  ToolOutput, TrainResult,
 } from './types'
 
 export class ApiError extends Error {
@@ -46,6 +47,12 @@ export const api = {
     return request<{ total: number; offset: number; limit: number; columns: TableData['columns']; rows: unknown[][] }>(`/api/datasets/${id}/rows?${qs}`)
   },
   exportUrl: (id: string, q = '') => `/api/datasets/${id}/export.csv${q ? `?q=${encodeURIComponent(q)}` : ''}`,
+  mlOptions: (id: string) => request<MlOptions>(`/api/datasets/${id}/ml/options`),
+  train: (id: string, body: { target: string; features?: string[] }) => request<TrainResult>(`/api/datasets/${id}/ml/train`, json('POST', body)),
+  predictOne: (modelId: string, values: Record<string, unknown>) =>
+    request<{ model: string; value?: number; probabilities?: { label: string; p: number }[] }>(`/api/ml/models/${modelId}/predict`, json('POST', { values })),
+  forecast: (id: string, body: { date: string; value: string; agg: string; grain: string; periods: number }) =>
+    request<ForecastResult>(`/api/datasets/${id}/ml/forecast`, json('POST', body)),
   conversations: (datasetId: string) => request<ConversationSummary[]>(`/api/datasets/${datasetId}/conversations`),
   createConversation: (datasetId: string) => request<Conversation>(`/api/datasets/${datasetId}/conversations`, json('POST')),
   conversation: (id: string) => request<Conversation>(`/api/conversations/${id}`),

@@ -5,14 +5,15 @@ import { api, ask, type StreamEvent } from './api'
 import { Assistant, exportThread, ExportButton } from './components/Assistant'
 import { DataView } from './components/DataView'
 import { Exploration } from './components/Exploration'
+import { Prediction } from './components/Prediction'
 import { Quality } from './components/Quality'
 import { Sidebar } from './components/Sidebar'
 import { Welcome } from './components/Welcome'
 import { fmtBytes, fmtInt, fmtPct, plural } from './format'
 import type { AppConfig, Block, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, EngineChoice, Sample, Turn } from './types'
 
-type Tab = 'assistant' | 'exploration' | 'quality' | 'data'
-const TABS: [Tab, string][] = [['assistant', 'Assistant'], ['exploration', 'Exploration'], ['quality', 'Qualité'], ['data', 'Données']]
+type Tab = 'assistant' | 'exploration' | 'prediction' | 'quality' | 'data'
+const TABS: [Tab, string][] = [['assistant', 'Assistant'], ['exploration', 'Exploration'], ['prediction', 'Prédiction'], ['quality', 'Qualité'], ['data', 'Données']]
 
 const store = {
   get: (k: string, s: Storage = localStorage) => { try { return s.getItem(k) } catch { return null } },
@@ -305,6 +306,9 @@ export default function App() {
               />
             </div>
             {tab === 'exploration' && <div className="tab-panel"><Exploration dataset={dataset} /></div>}
+            <div className="tab-panel" hidden={tab !== 'prediction'}>
+              <Prediction dataset={dataset} onAsk={(prompt, label) => send(prompt, label)} />
+            </div>
             {tab === 'quality' && (
               <div className="tab-panel">
                 <Quality dataset={dataset} canAudit={ready && !busy} onAudit={() => {

@@ -47,6 +47,8 @@ export interface ChartSpec {
   stacked?: boolean
   xLabel?: string
   yLabel?: string
+  /** Trace la diagonale y = x (valeurs réelles contre prédites). */
+  diagonal?: boolean
 }
 
 export interface Turn {

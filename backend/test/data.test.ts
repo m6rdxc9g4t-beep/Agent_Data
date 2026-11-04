@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import * as XLSX from 'xlsx'
 
-import { forecast, kmeans, predictiveModel } from '../src/analysis.js'
+import { kmeans } from '../src/analysis.js'
+import { forecastSeries } from '../src/ml/timeseries.js'
+import { predictOne, trainModels } from '../src/ml/train.js'
 import { autoCharts, buildChart, pickMeasure } from '../src/charts.js'
 import { assertReadOnly, DatasetDb, QueryError } from '../src/db.js'
 import { decodeText, ImportError, importFile, sniffDelimiter } from '../src/importer.js'
@@ -113,22 +115,51 @@ describe('profil, graphiques, analyses', () => {
     await cleanup()
   })
 
-  it('segmente, modélise et prévoit', async () => {
+  it('segmente les clients', async () => {
     const { db, profile, cleanup } = await loadSample('demo_complet.csv')
     const seg = await kmeans(db, profile, ['depenses_totales', 'nb_commandes', 'anciennete_mois'])
     expect(seg.table.rows.length).toBeGreaterThanOrEqual(2)
     expect(seg.summary).toMatch(/silhouette/)
+    await cleanup()
+  })
+})
 
-    const reg = await predictiveModel(db, profile, 'depenses_totales')
-    expect(reg.summary).toMatch(/R²/)
-    const cls = await predictiveModel(db, profile, 'churn')
-    expect(cls.summary).toMatch(/Accuracy/)
-    expect(cls.chart?.data.rows.length).toBeGreaterThan(0)
+describe('apprentissage automatique', () => {
+  it('compare quatre modèles en régression et bat la référence', async () => {
+    const { db, profile, cleanup } = await loadSample('demo_complet.csv')
+    const r = await trainModels(db, profile, 'depenses_totales')
+    expect(r.task).toBe('regression')
+    expect(r.models.map((m) => m.kind)).toEqual(['baseline', 'linear', 'gbm', 'mlp'])
+    const best = r.models.find((m) => m.kind === r.best)!
+    expect(best.score).toBeGreaterThan(0.7) // R² sur le jeu de test
+    expect(r.models[0].score).toBeLessThan(0.1)
+    expect(r.importance.data.rows[0][0]).toBe('panier_moyen')
+    expect(r.quality.type).toBe('scatter')
+    const out = predictOne(r.id, Object.fromEntries(r.simulator.map((f) => [f.name, f.default])))
+    expect(typeof out?.value).toBe('number')
+    await cleanup()
+  })
 
-    const fc = await forecast(db, profile, 'date', 'depenses_totales', { periods: 3 })
-    expect(fc.table.rows.length).toBe(3)
-    expect(fc.chart?.data.columns).toEqual(['période', 'historique', 'prévision'])
-    await expect(forecast(db, profile, 'region', 'age')).rejects.toThrow(/dates/)
+  it('classe en plusieurs catégories avec une matrice de confusion', async () => {
+    const { db, profile, cleanup } = await loadSample('demo_complet.csv')
+    const r = await trainModels(db, profile, 'segment')
+    expect(r.task).toBe('multiclass')
+    expect(r.target.classes).toHaveLength(3)
+    expect(r.models.find((m) => m.kind === r.best)!.score).toBeGreaterThan(0.8)
+    expect(r.quality.type).toBe('heatmap')
+    const out = predictOne(r.id, { panier_moyen: 400, depenses_totales: 8000, nb_commandes: 20 })
+    expect(out?.probabilities?.reduce((s, p) => s + p.p, 0)).toBeCloseTo(1, 2)
+    expect(predictOne('inconnu', {})).toBeNull()
+    await cleanup()
+  })
+
+  it('prévoit une série temporelle en comparant quatre méthodes', async () => {
+    const { db, profile, cleanup } = await loadSample('demo_complet.csv')
+    const f = await forecastSeries(db, profile, 'date', 'depenses_totales', { periods: 3 })
+    expect(f.models.map((m) => m.kind)).toEqual(['naive', 'trend', 'holt', 'neural'])
+    expect(f.table.rows).toHaveLength(3)
+    expect(f.chart.data.columns).toEqual(['période', 'historique', 'prévision', 'borne basse', 'borne haute'])
+    await expect(forecastSeries(db, profile, 'region', 'age')).rejects.toThrow(/dates/)
     await cleanup()
   })
 })

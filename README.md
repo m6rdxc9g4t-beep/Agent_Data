@@ -18,6 +18,10 @@ Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un
   `create_chart` (graphique interactif), `segment` (k-means), `predict` (régression linéaire ou logistique,
   évaluée sur un jeu de test contre une baseline) et `forecast` (tendance + saisonnalité). Chaque étape
   s'affiche dans une trace numérotée : requête SQL, résultat, graphique. 15 analyses en un clic.
+- **Prédiction** — apprentissage automatique sans code. *Prévoir une variable* : quatre modèles comparés sur un
+  jeu de test (référence naïve, régression linéaire ou logistique, gradient boosting d'arbres, réseau de neurones),
+  influence des variables et simulateur. *Prévoir dans le temps* : référence naïve, tendance + saisonnalité,
+  Holt-Winters et réseau de neurones autorégressif, le meilleur prolonge la série. Fonctionne sans moteur IA.
 - **Exploration** — graphiques automatiques (évolution, comparaison, répartition, distribution) et
   exploration colonne par colonne, sans IA.
 - **Qualité** — score sur 100, profil de chaque colonne, recommandations de nettoyage.
@@ -106,7 +110,8 @@ backend/src/
 ├── db.ts              DuckDB en mémoire par jeu de données, verrouillé en lecture seule
 ├── profile.ts         Profil des colonnes, score de qualité, recommandations
 ├── charts.ts          Graphiques de l'agent et graphiques automatiques
-├── analysis.ts        k-means, régression linéaire / logistique, prévision
+├── analysis.ts        k-means
+├── ml/                Apprentissage : préparation, gradient boosting, réseau de neurones, séries temporelles
 ├── store.ts           Métadonnées et analyses en fichiers JSON
 └── agent/
     ├── prompts.ts     Prompt système, catalogue des analyses rapides

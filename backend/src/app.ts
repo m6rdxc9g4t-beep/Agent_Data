@@ -16,6 +16,9 @@ import { autoCharts, columnChart } from './charts.js'
 import { CLAUDE_MODELS, config as defaultConfig, type Config } from './config.js'
 import { DbCache, QueryError, quoteIdent, quoteString, type DatasetDb } from './db.js'
 import { ImportError, importFile, SUPPORTED } from './importer.js'
+import { featureCandidates, targetCandidates } from './ml/prepare.js'
+import { forecastSeries } from './ml/timeseries.js'
+import { predictOne, trainModels, type ModelKind } from './ml/train.js'
 import { computeProfile, profileForPrompt, type Profile } from './profile.js'
 import { Store, type Block, type Conversation, type DatasetMeta, type Turn } from './store.js'
 
@@ -213,6 +216,46 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     const top = await d.query(`SELECT ${q}::VARCHAR AS valeur, count(*) AS lignes FROM data GROUP BY 1 ORDER BY 2 DESC LIMIT 12`, 12)
     return { column: col, chart: await columnChart(d, col), top }
   })
+
+  // ── Prédiction (apprentissage automatique) ────────────────────────────────────────────────
+  app.get<{ Params: { id: string } }>('/api/datasets/:id/ml/options', async (req) => {
+    const meta = await dataset(req.params.id)
+    const p = await profile(meta.id)
+    const targets = targetCandidates(p).map((c) => ({
+      name: c.name, kind: c.kind,
+      task: c.kind === 'numeric' ? 'regression' : c.distinct === 2 ? 'binary' : 'multiclass',
+    }))
+    const features = p.columns.map((c) => ({ name: c.name, kind: c.kind, usable: featureCandidates(p, '').some((f) => f.name === c.name) }))
+    return {
+      targets,
+      features,
+      dates: p.columns.filter((c) => c.kind === 'datetime').map((c) => c.name),
+      values: p.columns.filter((c) => c.kind === 'numeric' || c.kind === 'boolean').map((c) => c.name),
+    }
+  })
+
+  app.post<{ Params: { id: string }; Body: { target?: string; features?: string[]; models?: ModelKind[] } }>(
+    '/api/datasets/:id/ml/train', async (req) => {
+      const meta = await dataset(req.params.id)
+      const target = String(req.body?.target ?? '')
+      if (!target) throw new HttpError(400, 'Choisissez la variable à prédire.')
+      const [d, p] = await Promise.all([db(meta.id), profile(meta.id)])
+      return trainModels(d, p, target, Array.isArray(req.body?.features) ? req.body.features.map(String) : undefined, req.body?.models)
+    })
+
+  app.post<{ Params: { id: string }; Body: { values?: Record<string, unknown> } }>('/api/ml/models/:id/predict', async (req) => {
+    const out = predictOne(req.params.id, req.body?.values ?? {})
+    if (!out) throw new HttpError(404, 'Modèle expiré (serveur redémarré) : relancez l’entraînement.')
+    return out
+  })
+
+  app.post<{ Params: { id: string }; Body: { date?: string; value?: string; agg?: string; grain?: string; periods?: number } }>(
+    '/api/datasets/:id/ml/forecast', async (req) => {
+      const meta = await dataset(req.params.id)
+      const [d, p] = await Promise.all([db(meta.id), profile(meta.id)])
+      return forecastSeries(d, p, String(req.body?.date ?? ''), String(req.body?.value ?? ''),
+        { agg: req.body?.agg, grain: req.body?.grain, periods: req.body?.periods ? Number(req.body.periods) : undefined })
+    })
 
   // ── Conversations ─────────────────────────────────────────────────────────────────────────
   async function conversation(id: string): Promise<Conversation> {

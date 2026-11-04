@@ -1,5 +1,7 @@
 // Outils de l'agent : définitions (schémas JSON) et exécution sur la base du jeu de données.
-import { forecast, kmeans, predictiveModel } from '../analysis.js'
+import { kmeans } from '../analysis.js'
+import { forecastSeries } from '../ml/timeseries.js'
+import { trainModels } from '../ml/train.js'
 import { buildChart, CHART_TYPES } from '../charts.js'
 import { QueryError, type DatasetDb } from '../db.js'
 import type { Profile } from '../profile.js'
@@ -55,8 +57,8 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: 'predict',
-    description: 'Entraîne et évalue (découpe 80/20) un modèle prédictif : régression linéaire si la cible est numérique, logistique si elle est binaire. ' +
-      "Renvoie les métriques, la comparaison à une baseline et les facteurs d'influence.",
+    description: 'Entraîne et compare des modèles prédictifs (référence naïve, régression linéaire ou logistique, gradient boosting, réseau de neurones) ' +
+      "sur un jeu de test ; renvoie leurs métriques, le meilleur modèle et l'influence des variables. Cible numérique ou catégorie (10 modalités au plus).",
     input_schema: {
       type: 'object',
       properties: {
@@ -68,7 +70,8 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: 'forecast',
-    description: 'Prévision temporelle (tendance linéaire + saisonnalité) d\'un indicateur agrégé par période, avec graphique.',
+    description: 'Prévision temporelle d\'un indicateur agrégé par période : compare tendance + saisonnalité, Holt-Winters et un réseau de neurones ' +
+      'sur les dernières périodes, puis projette avec le meilleur (graphique et intervalle).',
     input_schema: {
       type: 'object',
       properties: {
@@ -76,7 +79,7 @@ export const TOOLS: ToolDef[] = [
         value_column: { type: 'string' },
         agg: { type: 'string', enum: ['sum', 'avg', 'count', 'median', 'max', 'min'] },
         grain: { type: 'string', enum: ['day', 'week', 'month', 'quarter', 'year'] },
-        periods: { type: 'integer', minimum: 1, maximum: 24 },
+        periods: { type: 'integer', minimum: 1, maximum: 36 },
       },
       required: ['date_column', 'value_column'],
     },
@@ -135,15 +138,22 @@ export async function runTool(name: string, input: Record<string, unknown>, ctx:
         return { ok: true, table: r.table, summary: `${r.summary}\n${textTable(r.table.columns, r.table.rows)}` }
       }
       case 'predict': {
-        const r = await predictiveModel(ctx.db, ctx.profile, String(input.target ?? ''), asList(input.features))
-        return { ok: true, table: r.table, chart: r.chart, summary: `${r.summary}\n${textTable(r.table.columns, r.table.rows)}` }
+        const r = await trainModels(ctx.db, ctx.profile, String(input.target ?? ''), asList(input.features))
+        const board = r.models.map((m) => [m.label + (m.kind === r.best ? ' (retenu)' : ''), ...m.metrics.map((x) => x.value)])
+        const table = {
+          columns: [{ name: 'modèle', type: 'VARCHAR' }, ...r.models[0].metrics.map((x) => ({ name: x.label, type: 'DOUBLE' }))],
+          rows: board, truncated: false,
+        }
+        const top = r.importance.data.rows.slice(0, 6).map((row) => `${row[0]} : ${row[1]} %`).join(', ')
+        return { ok: true, table, chart: r.importance, summary: `${r.summary}\nInfluence des variables : ${top}\n${textTable(table.columns, table.rows)}` }
       }
       case 'forecast': {
-        const r = await forecast(ctx.db, ctx.profile, String(input.date_column ?? ''), String(input.value_column ?? ''), {
+        const r = await forecastSeries(ctx.db, ctx.profile, String(input.date_column ?? ''), String(input.value_column ?? ''), {
           agg: input.agg ? String(input.agg) : undefined, grain: input.grain ? String(input.grain) : undefined,
           periods: input.periods ? Number(input.periods) : undefined,
         })
-        return { ok: true, table: r.table, chart: r.chart, summary: `${r.summary}\n${textTable(r.table.columns, r.table.rows)}` }
+        const board = r.models.map((m) => `${m.label}${m.kind === r.best ? ' (retenu)' : ''} : erreur ${m.mae}${m.mape !== null ? `, ${m.mape} %` : ''}`).join(' ; ')
+        return { ok: true, table: r.table, chart: r.chart, summary: `${r.summary}\nComparaison : ${board}\n${textTable(r.table.columns, r.table.rows)}` }
       }
       default:
         return { ok: false, summary: `Outil inconnu : ${name}. Outils disponibles : ${TOOLS.map((t) => t.name).join(', ')}.`, error: 'Outil inconnu' }

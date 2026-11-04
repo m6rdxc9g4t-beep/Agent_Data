@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react'
 import * as echarts from 'echarts/core'
 import { BarChart, HeatmapChart, LineChart, PieChart, ScatterChart } from 'echarts/charts'
+import { MarkLineComponent } from 'echarts/components'
 import { GridComponent, LegendComponent, TooltipComponent, VisualMapComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
 
@@ -9,7 +10,7 @@ import { fmtCompact, fmtNumber } from '../format'
 import { useTheme } from '../theme'
 import type { ChartSpec } from '../types'
 
-echarts.use([BarChart, LineChart, PieChart, ScatterChart, HeatmapChart, GridComponent, LegendComponent, TooltipComponent, VisualMapComponent, CanvasRenderer])
+echarts.use([MarkLineComponent, BarChart, LineChart, PieChart, ScatterChart, HeatmapChart, GridComponent, LegendComponent, TooltipComponent, VisualMapComponent, CanvasRenderer])
 
 const PALETTE = {
   light: ['#3437C6', '#0F9D84', '#C98207', '#B4489B', '#2C8FD6', '#7C9A2E', '#6B7280', '#D2463A'],
@@ -69,8 +70,19 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
         textStyle: { color: text }, inRange: { color: symmetric ? [colors[7], dark ? '#1A2133' : '#F4F5F2', colors[0]] : [dark ? '#1A2133' : '#EEF0FB', colors[0]] },
       },
       series: [{
-        type: 'heatmap', data: rows.map((r) => [xs.indexOf(String(r[ix])), ys.indexOf(String(r[iy])), num(r[iv])]),
-        label: { show: xs.length * ys.length <= 100, color: text, formatter: (p: { value: number[] }) => fmtNumber(Number(p.value[2])) },
+        type: 'heatmap',
+        data: rows.map((r) => {
+          const v = num(r[iv]) ?? 0
+          const strong = symmetric ? Math.abs(v) > 0.55 * Math.max(-min, max) : v > min + 0.55 * (max - min)
+          return { value: [xs.indexOf(String(r[ix])), ys.indexOf(String(r[iy])), v], label: { color: strong ? '#FFFFFF' : text } }
+        }),
+        label: {
+          show: xs.length * ys.length <= 100,
+          formatter: (p: { value: number[] }) => fmtNumber(Number(p.value[2])),
+          rich: {},
+        },
+        itemStyle: { borderColor: dark ? '#141A28' : '#FFFFFF', borderWidth: 1 },
+        emphasis: { disabled: true },
       }],
     }
   }
@@ -84,10 +96,19 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
       legend: groups.length > 1 ? { top: 0, textStyle: { color: text } } : undefined,
       xAxis: { ...valueAxis, name: spec.x, nameLocation: 'middle', nameGap: 28, nameTextStyle: { color: text }, scale: true },
       yAxis: { ...valueAxis, name: spec.y[0], nameTextStyle: { color: text }, scale: true },
-      series: groups.map((g) => ({
-        type: 'scatter', name: g, symbolSize: 7, itemStyle: { opacity: 0.75 },
-        data: rows.filter((r) => !spec.series || String(r[columns.indexOf(spec.series)]) === g).map((r) => [num(r[ix]), num(r[iy])]),
-      })),
+      series: groups.map((g, gi) => {
+        const data = rows.filter((r) => !spec.series || String(r[columns.indexOf(spec.series!)]) === g).map((r) => [num(r[ix]), num(r[iy])])
+        const all = data.flat().filter((v): v is number => v !== null)
+        const lo = Math.min(...all), hi = Math.max(...all)
+        return {
+          type: 'scatter', name: g, symbolSize: 7, itemStyle: { opacity: 0.7 }, data,
+          markLine: spec.diagonal && gi === 0 && all.length ? {
+            silent: true, symbol: 'none', label: { show: false },
+            lineStyle: { color: text, type: 'dashed', width: 1, opacity: 0.6 },
+            data: [[{ coord: [lo, lo] }, { coord: [hi, hi] }]],
+          } : undefined,
+        }
+      }),
     }
   }
 
@@ -126,9 +147,12 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
       barMaxWidth: 36,
       barCategoryGap: spec.type === 'histogram' ? '4%' : '30%',
       itemStyle: kind === 'bar' ? { borderRadius: horizontal ? [0, 3, 3, 0] : [3, 3, 0, 0] } : undefined,
-      lineStyle: kind === 'line' ? { width: 2.2, type: s.name === 'prévision' ? 'dashed' : 'solid' } : undefined,
+      lineStyle: kind === 'line'
+        ? s.name.startsWith('borne') ? { width: 1, type: 'dotted', opacity: 0.8 } : { width: 2.2, type: s.name === 'prévision' ? 'dashed' : 'solid' }
+        : undefined,
       areaStyle: spec.type === 'area' ? { opacity: 0.12 } : undefined,
-      color: colors[i % colors.length],
+      color: s.name.startsWith('borne') ? text : colors[i % colors.length],
+      ...(s.name.startsWith('borne') ? { showSymbol: false } : {}),
     })),
   }
 }

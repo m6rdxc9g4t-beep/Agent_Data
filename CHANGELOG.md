@@ -1,5 +1,17 @@
 # Journal des versions
 
+## 6.3.0 — Onglet Prédiction
+
+- **Prévoir une variable** : entraîne et compare quatre modèles (référence naïve, régression linéaire ou
+  logistique, gradient boosting d'arbres, réseau de neurones) sur un jeu de test jamais vu ; tableau des scores,
+  valeurs réelles contre prédites ou matrice de confusion, influence des variables (par permutation) et
+  simulateur pour tester le modèle retenu. Cible numérique, oui / non ou catégorie de 10 modalités au plus.
+- **Prévoir dans le temps** : compare référence naïve, tendance + saisonnalité, Holt-Winters et réseau de
+  neurones autorégressif sur les dernières périodes, puis projette avec le meilleur (intervalle indicatif, export CSV).
+- Modèles écrits en TypeScript (pas de dépendance lourde) ; fonctionne sans moteur IA.
+- « Faire commenter par l'agent » envoie les résultats à l'Assistant.
+- Les outils `predict` et `forecast` de l'agent utilisent ces mêmes modèles.
+
 ## 6.2.1
 
 - Corrige le clignotement à l'ouverture d'un jeu de données : la mise à jour de sa date d'activité
