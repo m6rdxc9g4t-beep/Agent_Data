@@ -1,5 +1,12 @@
 # Journal des versions
 
+## 6.1.0 — Claude avec le forfait
+
+- Nouveau moteur « Claude avec ton forfait » : Claude Agent SDK authentifié par l'abonnement Pro / Max
+  (`CLAUDE_CODE_OAUTH_TOKEN`, obtenu avec `claude setup-token`), sans clé API, pour un usage personnel.
+  Les outils de DataMind sont exposés par un serveur MCP en mémoire ; les outils intégrés de Claude Code sont désactivés.
+- Claude devient le moteur par défaut quand le forfait est configuré.
+
 ## 6.0.0 — Web app TypeScript
 
 DataMind abandonne Streamlit pour une web app avec frontend et backend séparés.

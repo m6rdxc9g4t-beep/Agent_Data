@@ -103,7 +103,8 @@ export function Sidebar(p: Props) {
             <select value={e.claudeModel} onChange={(ev) => p.onEngine({ ...e, claudeModel: ev.target.value })} aria-label="Modèle Claude">
               {cfg.claude.models.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}
             </select>
-            {!cfg.claude.serverKey && (
+            {cfg.claude.plan && <p className="engine-msg">Utilise ton abonnement Claude, sans clé API.</p>}
+            {!cfg.claude.plan && !cfg.claude.serverKey && (
               showKey || !e.apiKey
                 ? <label className="key">
                     <KeyRound size={14} aria-hidden />

@@ -10,6 +10,7 @@ import Fastify, { type FastifyInstance, type FastifyReply } from 'fastify'
 
 import { FEATURED, QUICK_ANALYSES, SYSTEM_PROMPT } from './agent/prompts.js'
 import { EngineError, listOllamaModels, runClaude, runOllama, type AgentEvent, type HistoryMessage } from './agent/engines.js'
+import { runClaudePlan } from './agent/claude-plan.js'
 import { TOOL_LABELS } from './agent/tools.js'
 import { autoCharts, columnChart } from './charts.js'
 import { CLAUDE_MODELS, config as defaultConfig, type Config } from './config.js'
@@ -90,7 +91,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
       maxUploadMb: config.maxUploadMb,
       formats: SUPPORTED,
       ollama: { reachable: !error, error, models, model: preferred },
-      claude: { serverKey: !!config.anthropicApiKey, model: config.claudeModel, models: CLAUDE_MODELS },
+      claude: { plan: !!config.claudeOauthToken, serverKey: !!config.anthropicApiKey, model: config.claudeModel, models: CLAUDE_MODELS },
       quickAnalyses: QUICK_ANALYSES,
       featured: FEATURED,
       toolLabels: TOOL_LABELS,
@@ -255,12 +256,13 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
       const engine = req.body?.engine === 'claude' ? 'claude' : 'ollama'
       const model = String(req.body?.model ?? (engine === 'claude' ? config.claudeModel : config.ollamaModel))
       const apiKey = config.anthropicApiKey ?? String(req.headers['x-anthropic-key'] ?? '')
-      if (engine === 'claude' && !apiKey) throw new HttpError(400, 'Clé API Anthropic manquante.')
+      const plan = engine === 'claude' && !!config.claudeOauthToken
+      if (engine === 'claude' && !plan && !apiKey) throw new HttpError(400, 'Claude non configuré : forfait (CLAUDE_CODE_OAUTH_TOKEN) ou clé API requis.')
 
       const [d, p] = await Promise.all([db(meta.id), profile(meta.id)])
       const turn: Turn = {
         id: `turn-${Date.now().toString(36)}`, question, label: req.body?.label ? String(req.body.label) : undefined,
-        blocks: [], engine, model, createdAt: new Date().toISOString(),
+        blocks: [], engine: plan ? 'claude-forfait' : engine, model, createdAt: new Date().toISOString(),
       }
       const history = buildHistory(conv.turns)
       if (!conv.turns.length) conv.title = (turn.label ?? question).slice(0, 80)
@@ -299,7 +301,8 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
         }
         const usage = options.runEngine
           ? await options.runEngine(engine, model, opts, apiKey)
-          : engine === 'claude' ? await runClaude(opts, apiKey, model) : await runOllama(opts, model)
+          : plan ? await runClaudePlan(opts, model)
+            : engine === 'claude' ? await runClaude(opts, apiKey, model) : await runOllama(opts, model)
         turn.usage = usage
         turn.durationMs = Date.now() - started
         send('done', { usage, durationMs: turn.durationMs })

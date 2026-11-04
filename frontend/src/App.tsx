@@ -59,10 +59,11 @@ export default function App() {
   }, [loadConfig])
 
   useEffect(() => {
+    if (!config) return // on attend la configuration du serveur (moteur par défaut) avant de mémoriser le choix
     const { apiKey, ...rest } = engine
     store.set('datamind:engine', JSON.stringify(rest))
     store.set('datamind:key', apiKey, sessionStorage)
-  }, [engine])
+  }, [engine, config])
 
   // Jeu de données actif : détail et analyses.
   useEffect(() => {
@@ -128,7 +129,8 @@ export default function App() {
   const model = engine.engine === 'claude' ? engine.claudeModel : engine.ollamaModel
   const engineStatus = !config ? { ok: false, text: 'Vérification…' }
     : engine.engine === 'claude'
-      ? (config.claude.serverKey || engine.apiKey ? { ok: true, text: `Claude, ${model}` } : { ok: false, text: 'Saisissez une clé API Anthropic.' })
+      ? (config.claude.plan ? { ok: true, text: `Claude avec ton forfait, ${model}` }
+        : config.claude.serverKey || engine.apiKey ? { ok: true, text: `Claude, ${model}` } : { ok: false, text: 'Claude n’est pas configuré sur le serveur.' })
       : !config.ollama.reachable ? { ok: false, text: 'Ollama injoignable. Essayez Claude ou vérifiez le serveur.' }
         : !config.ollama.models.length ? { ok: false, text: 'Aucun modèle Ollama installé.' }
           : { ok: true, text: `Ollama, ${model}` }

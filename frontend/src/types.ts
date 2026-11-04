@@ -112,7 +112,7 @@ export interface AppConfig {
   maxUploadMb: number
   formats: string[]
   ollama: { reachable: boolean; error: string | null; models: string[]; model: string }
-  claude: { serverKey: boolean; model: string; models: { id: string; label: string }[] }
+  claude: { plan: boolean; serverKey: boolean; model: string; models: { id: string; label: string }[] }
   quickAnalyses: QuickAnalysis[]
   featured: string[]
   toolLabels: Record<string, string>

@@ -32,7 +32,13 @@ Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un
 | Moteur | Coût | Clé | Remarques |
 |---|---|---|---|
 | **Ollama** (défaut) | Gratuit | Aucune | Le modèle doit gérer les outils : `llama3.1`, `llama3.2`, `qwen2.5`, `mistral-nemo`. |
-| **Claude** | À l'usage | `ANTHROPIC_API_KEY` sur le serveur, ou saisie dans l'interface (session) | `claude-sonnet-5-5` par défaut ; Opus 5.5 et Haiku 5.5 au choix. |
+| **Claude avec ton forfait** | Inclus dans Pro / Max | Aucune : jeton `CLAUDE_CODE_OAUTH_TOKEN` | Via le Claude Agent SDK, pour un usage personnel ; consomme les limites de l'abonnement. |
+| **Claude avec une clé API** | À l'usage | `ANTHROPIC_API_KEY` sur le serveur, ou saisie dans l'interface (session) | `claude-sonnet-5-5` par défaut ; Opus 5.5 et Haiku 5.5 au choix. |
+
+**Forfait Claude sans clé API** : sur une machine avec navigateur, lance `claude setup-token` (Claude Code,
+connecté à ton compte Pro ou Max), puis renseigne le jeton obtenu dans `CLAUDE_CODE_OAUTH_TOKEN` sur le serveur.
+DataMind passe alors par le Claude Agent SDK avec tes outils uniquement (fichiers, commandes et web de Claude Code
+désactivés). Cet usage est prévu pour toi seul : n'ouvre pas une instance configurée ainsi à d'autres personnes.
 
 Pour les petits modèles locaux, DataMind rattrape aussi un appel d'outil écrit en JSON dans le texte
 et exécute une requête proposée dans un bloc ` ```sql `, puis renvoie le vrai résultat au modèle.
@@ -79,10 +85,11 @@ Variables d'environnement, toutes facultatives (voir [`.env.example`](.env.examp
 | `DATA_DIR` | `./data` | Jeux de données (Parquet) et analyses (JSON) |
 | `STATIC_DIR` | — | Interface compilée servie par le backend |
 | `MAX_UPLOAD_MB` | `200` | Taille maximale d'un fichier |
-| `DATAMIND_ENGINE` | `ollama` | Moteur proposé par défaut |
+| `DATAMIND_ENGINE` | auto | Moteur proposé par défaut (Claude si le forfait est configuré) |
 | `OLLAMA_URL` | `http://127.0.0.1:11434` | Serveur Ollama |
 | `OLLAMA_MODEL` | `llama3.1` | Modèle Ollama préféré |
 | `OLLAMA_TIMEOUT` | `600` | Délai d'une réponse (s) |
+| `CLAUDE_CODE_OAUTH_TOKEN` | — | Jeton du forfait Claude (`claude setup-token`), prioritaire sur la clé API |
 | `ANTHROPIC_API_KEY` | — | Clé Claude côté serveur |
 | `DATAMIND_CLAUDE_MODEL` | `claude-sonnet-5-5` | Modèle Claude par défaut |
 | `DATAMIND_MAX_STEPS` | `12` | Allers-retours modèle ↔ outils par question |
@@ -104,7 +111,8 @@ backend/src/
 └── agent/
     ├── prompts.ts     Prompt système, catalogue des analyses rapides
     ├── tools.ts       Outils de l'agent (schémas + exécution)
-    └── engines.ts     Boucles Claude et Ollama
+    ├── engines.ts     Boucles Claude (clé API) et Ollama
+    └── claude-plan.ts Claude avec le forfait (Agent SDK, outils exposés par MCP)
 frontend/src/
 ├── App.tsx            État de l'application, envoi des questions, lecture du flux
 ├── components/        Barre latérale, accueil, Assistant, Exploration, Qualité, Données, graphiques (ECharts)

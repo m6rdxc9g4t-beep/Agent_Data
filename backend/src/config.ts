@@ -23,7 +23,7 @@ export const CLAUDE_MODELS = [
 ]
 
 export const config = {
-  version: '6.0.0',
+  version: '6.1.0',
   host: env.HOST ?? '127.0.0.1',
   port: int('PORT', 3600),
   dataDir: resolve(env.DATA_DIR ?? './data'),
@@ -31,18 +31,22 @@ export const config = {
   samplesDir: resolve(env.SAMPLES_DIR ?? new URL('../../sample_data', import.meta.url).pathname),
   maxUploadMb: int('MAX_UPLOAD_MB', 200),
 
-  defaultEngine: (first('DATAMIND_ENGINE') ?? 'ollama') as 'ollama' | 'claude',
   ollamaUrl: (first('OLLAMA_URL', 'OLLAMA_BASE_URL', 'OLLAMA_HOST') ?? 'http://127.0.0.1:11434').replace(/\/$/, ''),
   ollamaModel: first('OLLAMA_MODEL') ?? 'llama3.1',
   ollamaTimeoutMs: int('OLLAMA_TIMEOUT', 600) * 1000,
   ollamaNumCtx: int('OLLAMA_NUM_CTX', 8192),
 
   anthropicApiKey: first('ANTHROPIC_API_KEY'),
+  // Forfait Claude (Pro / Max) sans clé API : jeton de `claude setup-token`, usage personnel.
+  claudeOauthToken: first('CLAUDE_CODE_OAUTH_TOKEN', 'DATAMIND_CLAUDE_OAUTH_TOKEN'),
   claudeModel: first('DATAMIND_CLAUDE_MODEL') ?? CLAUDE_MODELS[0].id,
 
   maxSteps: int('DATAMIND_MAX_STEPS', 12),
   queryTimeoutMs: int('DATAMIND_QUERY_TIMEOUT', 60) * 1000,
   instanceLabel: first('DATAMIND_INSTANCE_LABEL') ?? '',
+
+  // Moteur proposé par défaut : Claude si le forfait est configuré, sinon Ollama.
+  defaultEngine: (first('DATAMIND_ENGINE') ?? (first('CLAUDE_CODE_OAUTH_TOKEN', 'DATAMIND_CLAUDE_OAUTH_TOKEN') ? 'claude' : 'ollama')) as 'ollama' | 'claude',
 }
 
 export type Config = typeof config
