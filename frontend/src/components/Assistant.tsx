@@ -1,12 +1,14 @@
 // Onglet Assistant : fil d'analyse (question, étapes de l'agent, réponse) et zone de saisie.
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
-import { AlertTriangle, ArrowUp, Check, ChevronRight, Download, LoaderCircle, Square, Zap } from 'lucide-react'
+import { AlertTriangle, ArrowRight, ArrowUp, Check, ChevronRight, Download, LoaderCircle, Pencil, Play, RotateCcw, Square, Zap } from 'lucide-react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
+import { api } from '../api'
 import { fmtInt } from '../format'
 import { AnalysisIcon } from '../icons'
-import type { AppConfig, Block, Conversation, QuickAnalysis, Turn } from '../types'
+import type { AppConfig, Block, Conversation, QuickAnalysis, TableData, Turn } from '../types'
+import { PinButton, tablePin, textPin } from '../pins'
 import { ChartFigure } from './Chart'
 import { ResultTable } from './ResultTable'
 
@@ -20,7 +22,54 @@ function stepSummary(b: ToolBlock): string {
   return 'terminé'
 }
 
-function Step({ block, n, label }: { block: ToolBlock; n: number; label: string }) {
+/** Requête d'une étape, modifiable et relançable sur les données (lecture seule). */
+function SqlEditor({ sql, datasetId, source }: { sql: string; datasetId: string; source: string }) {
+  const [editing, setEditing] = useState(false)
+  const [text, setText] = useState(sql)
+  const [result, setResult] = useState<(TableData & { durationMs: number }) | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [busy, setBusy] = useState(false)
+  const run = () => {
+    setBusy(true); setError(null)
+    api.query(datasetId, text).then(setResult).catch((e: Error) => { setError(e.message); setResult(null) }).finally(() => setBusy(false))
+  }
+  if (!editing) {
+    return (
+      <div className="sql-wrap">
+        <pre className="sql"><code>{sql}</code></pre>
+        <button type="button" className="sql-edit" onClick={() => setEditing(true)} title="Modifier et relancer cette requête"><Pencil size={13} /> Modifier</button>
+      </div>
+    )
+  }
+  return (
+    <div className="sql-editor">
+      <textarea value={text} onChange={(e) => setText(e.target.value)} spellCheck={false} rows={Math.min(14, text.split('\n').length + 1)}
+        onKeyDown={(e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); run() } }} aria-label="Requête SQL" />
+      <div className="sql-actions">
+        <button type="button" className="primary-btn small" onClick={run} disabled={busy || !text.trim()}>
+          {busy ? <LoaderCircle size={14} className="spin" /> : <Play size={14} />} Exécuter
+        </button>
+        <button type="button" className="ghost-btn small" onClick={() => { setText(sql); setResult(null); setError(null) }} disabled={text === sql && !result}>
+          <RotateCcw size={14} /> Requête d’origine
+        </button>
+        <button type="button" className="ghost-btn small" onClick={() => setEditing(false)}>Fermer</button>
+        <span className="muted">Ctrl + Entrée pour exécuter · lecture seule</span>
+      </div>
+      {error && <p className="step-error">{error}</p>}
+      {result && (
+        <>
+          <ResultTable table={result} maxRows={50} />
+          <div className="sql-result-meta">
+            <span className="muted">{fmtInt(result.rows.length)}{result.truncated ? '+' : ''} ligne(s) en {result.durationMs} ms</span>
+            <PinButton pin={tablePin(result, `${source} (requête modifiée)`, source, text)} />
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
+function Step({ block, n, label, source, datasetId }: { block: ToolBlock; n: number; label: string; source: string; datasetId: string }) {
   const [open, setOpen] = useState(false)
   const r = block.result
   const sql = (r?.sql ?? block.input.sql) as string | undefined
@@ -37,23 +86,52 @@ function Step({ block, n, label }: { block: ToolBlock; n: number; label: string 
         </button>
         {open && (
           <div className="step-detail">
-            {sql && <pre className="sql"><code>{sql}</code></pre>}
+            {sql && <SqlEditor sql={sql} datasetId={datasetId} source={source} />}
             {r?.error && <p className="step-error">{r.error}</p>}
-            {r?.table && !r.chart && <ResultTable table={r.table} maxRows={20} />}
+            {r?.table && !r.chart && (
+              <>
+                <ResultTable table={r.table} maxRows={20} />
+                <PinButton pin={tablePin(r.table, label === 'Requête SQL' ? source : label, source, sql)} />
+              </>
+            )}
             {r?.table && r.chart && block.name !== 'create_chart' && <ResultTable table={r.table} maxRows={20} />}
           </div>
         )}
-        {r?.ok && r.chart && <ChartFigure spec={r.chart} />}
-        {r?.ok && !r.chart && r.table && block.name !== 'run_sql' && <ResultTable table={r.table} maxRows={12} />}
+        {r?.ok && r.chart && <ChartFigure spec={r.chart} pinSource={source} sql={sql} />}
+        {r?.ok && !r.chart && r.table && block.name !== 'run_sql' && (
+          <div className="pinnable">
+            <PinButton pin={tablePin(r.table, r.summary.split('\n')[0].slice(0, 120) || label, source, sql)} compact />
+            <ResultTable table={r.table} maxRows={12} />
+          </div>
+        )}
       </div>
     </li>
   )
 }
 
-function TurnView({ turn, labels }: { turn: Turn; labels: Record<string, string> }) {
+/** Sépare la section « Pour aller plus loin » (questions de relance) du reste de la réponse. */
+export function splitFollowUps(text: string): { body: string; followUps: string[] } {
+  const m = /\n?(?:#{1,4}\s*|\*\*)?\s*Pour aller plus loin\s*(?:\*\*)?\s*:?\s*(?:\*\*)?\s*\n((?:\s*(?:[-*•]|\d+[.)])\s+.+\n?){1,6})\s*$/i.exec(text)
+  if (!m) return { body: text, followUps: [] }
+  const followUps = m[1].split('\n').map((l) => l.replace(/^\s*(?:[-*•]|\d+[.)])\s+/, '').replace(/\*\*/g, '').replace(/^[«"“]\s*|\s*[»"”]$/g, '').trim())
+    .filter((l) => l.length > 3).slice(0, 4)
+  return { body: text.slice(0, m.index).trimEnd(), followUps }
+}
+
+function TurnView({ turn, labels, datasetId, onFollowUp }: {
+  turn: Turn; labels: Record<string, string>; datasetId: string; onFollowUp?: (q: string) => void
+}) {
   // Les blocs sont regroupés : suites d'étapes (trace numérotée) et paragraphes de réponse.
   const groups: (Block[])[] = []
-  for (const b of turn.blocks) {
+  const lastText = turn.blocks.findLastIndex((b) => b.kind === 'text')
+  let followUps: string[] = []
+  for (const [bi, b0] of turn.blocks.entries()) {
+    let b = b0
+    if (bi === lastText && !turn.pending && b.kind === 'text') {
+      const split = splitFollowUps(b.text)
+      followUps = split.followUps
+      b = { kind: 'text', text: split.body }
+    }
     const last = groups.at(-1)
     if (last && last[0].kind === b.kind && b.kind === 'tool') last.push(b)
     else groups.push([b])
@@ -67,12 +145,29 @@ function TurnView({ turn, labels }: { turn: Turn; labels: Record<string, string>
       {groups.map((g, i) => g[0].kind === 'tool'
         ? (
           <ol className="trace" key={i}>
-            {(g as ToolBlock[]).map((b) => <Step key={b.id} block={b} n={++n} label={labels[b.name] ?? b.name} />)}
+            {(g as ToolBlock[]).map((b) => <Step key={b.id} block={b} n={++n} label={labels[b.name] ?? b.name} source={turn.label ?? turn.question} datasetId={datasetId} />)}
           </ol>
         )
-        : <div className="answer" key={i}><Markdown remarkPlugins={[remarkGfm]}>{(g[0] as { text: string }).text}</Markdown></div>)}
+        : (
+          <div className="answer" key={i}>
+            {!turn.pending && <PinButton pin={textPin((g[0] as { text: string }).text, turn.label ?? turn.question, 'Réponse de l’agent')} compact />}
+            <Markdown remarkPlugins={[remarkGfm]}>{(g[0] as { text: string }).text}</Markdown>
+          </div>
+        ))}
       {turn.pending && !turn.blocks.length && <p className="thinking"><LoaderCircle size={15} className="spin" /> L’agent prépare son analyse…</p>}
       {turn.error && <p className="turn-error"><AlertTriangle size={15} /> {turn.error}</p>}
+      {followUps.length > 0 && (
+        <div className="followups">
+          <span>Pour aller plus loin</span>
+          <div>
+            {followUps.map((q) => (
+              <button key={q} type="button" className="idea" disabled={!onFollowUp} onClick={() => onFollowUp?.(q)}>
+                {q} <ArrowRight size={13} />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       {!turn.pending && !turn.error && turn.durationMs !== undefined && (
         <footer className="turn-meta">
           <Check size={13} aria-hidden /> {n} étape{n > 1 ? 's' : ''} en {(turn.durationMs / 1000).toFixed(1).replace('.', ',')} s, {turn.model}
@@ -125,9 +220,12 @@ interface Props {
   onSend: (text: string, label?: string) => void
   onStop: () => void
   ideas?: string[]
+  datasetId: string
+  /** Autre moteur disponible quand celui choisi ne répond pas. */
+  fallback?: { label: string; onClick: () => void }
 }
 
-export function Assistant({ config, conversation, ready, notReadyReason, busy, engineLabel, ideas, onSend, onStop }: Props) {
+export function Assistant({ config, conversation, ready, notReadyReason, busy, engineLabel, ideas, datasetId, fallback, onSend, onStop }: Props) {
   const [text, setText] = useState('')
   const area = useRef<HTMLTextAreaElement>(null)
   const thread = useRef<HTMLDivElement>(null)
@@ -176,7 +274,7 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
             </div>
             {ideas && ideas.length > 0 && (
               <div className="ideas">
-                <span>Questions suggérées pour ce jeu d’exemple</span>
+                <span>Questions suggérées</span>
                 <div>
                   {ideas.map((q) => (
                     <button key={q} type="button" className="idea" disabled={!ready} onClick={() => onSend(q)}>{q}</button>
@@ -184,10 +282,18 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
                 </div>
               </div>
             )}
-            {!ready && <p className="hint-warn"><AlertTriangle size={15} /> {notReadyReason}</p>}
+            {!ready && (
+              <p className="hint-warn">
+                <AlertTriangle size={15} /> {notReadyReason}
+                {fallback && <button type="button" className="ghost-btn small" onClick={fallback.onClick}>{fallback.label}</button>}
+              </p>
+            )}
           </section>
         )}
-        {turns.map((t) => <TurnView key={t.id} turn={t} labels={config.toolLabels} />)}
+        {turns.map((t, i) => (
+          <TurnView key={t.id} turn={t} labels={config.toolLabels} datasetId={datasetId}
+            onFollowUp={i === turns.length - 1 && ready && !busy ? (q) => onSend(q) : undefined} />
+        ))}
       </div>
 
       <div className="composer-wrap">
@@ -199,7 +305,7 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
             value={text}
             onChange={(e) => setText(e.target.value)}
             onKeyDown={onKey}
-            placeholder={ready ? 'Posez une question sur vos données…' : notReadyReason}
+            placeholder={ready ? 'Posez une question sur vos données…' : 'Moteur IA indisponible : voir « Moteur IA » dans le menu'}
             disabled={!ready}
             aria-label="Question"
           />
@@ -207,7 +313,7 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
             ? <button type="button" className="send stop" onClick={onStop} title="Arrêter l’analyse"><Square size={14} fill="currentColor" /></button>
             : <button type="button" className="send" onClick={submit} disabled={!ready || !text.trim()} title="Envoyer (Entrée)"><ArrowUp size={18} /></button>}
         </div>
-        <p className="composer-note">{engineLabel} · Entrée pour envoyer, Maj + Entrée pour aller à la ligne</p>
+        {ready && <p className="composer-note">{engineLabel} · Entrée pour envoyer, Maj + Entrée pour aller à la ligne</p>}
       </div>
     </div>
   )
@@ -225,7 +331,7 @@ export function exportThread(title: string, datasetName: string) {
     img.style.width = '100%'
     c.replaceWith(img)
   })
-  clone.querySelectorAll('.start, button.step-line svg').forEach((n) => n.remove())
+  clone.querySelectorAll('.start, button.step-line svg, .pin-btn, .followups').forEach((n) => n.remove())
   const css = `body{font:15px/1.6 system-ui,sans-serif;color:#161B2E;background:#F6F7F4;margin:0}
 main{max-width:860px;margin:0 auto;padding:40px 24px}h1{font-size:26px;margin:0}header.doc{margin-bottom:28px;color:#737A8C}
 .question h2{font-size:19px;margin:32px 0 10px}.question-kind{color:#3437C6;font-size:13px}
@@ -245,7 +351,7 @@ Jeu de données : ${escapeHtml(datasetName)} · exporté le ${new Date().toLocal
 }
 
 export function ExportButton({ onClick, disabled }: { onClick: () => void; disabled: boolean }) {
-  return <button type="button" className="ghost-btn" onClick={onClick} disabled={disabled}><Download size={15} /> Exporter le rapport</button>
+  return <button type="button" className="ghost-btn" onClick={onClick} disabled={disabled}><Download size={15} /> <span className="btn-label">Exporter le rapport</span></button>
 }
 
 const escapeHtml = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!)

@@ -8,6 +8,7 @@ import { CanvasRenderer } from 'echarts/renderers'
 
 import { fmtCompact, fmtNumber } from '../format'
 import { useTheme } from '../theme'
+import { chartPin, PinButton } from '../pins'
 import type { ChartSpec } from '../types'
 
 echarts.use([MarkLineComponent, BarChart, LineChart, PieChart, ScatterChart, HeatmapChart, GridComponent, LegendComponent, TooltipComponent, VisualMapComponent, CanvasRenderer])
@@ -172,12 +173,16 @@ export function Chart({ spec, height = 300 }: { spec: ChartSpec; height?: number
   return <div ref={ref} className="chart-canvas" style={{ height: h }} role="img" aria-label={spec.title} />
 }
 
-export function ChartFigure({ spec, height }: { spec: ChartSpec; height?: number }) {
+/** Graphique avec titre ; `pinSource` ajoute le bouton « Épingler » (absent sur le tableau de bord lui-même). */
+export function ChartFigure({ spec, height, pinSource, sql }: { spec: ChartSpec; height?: number; pinSource?: string; sql?: string }) {
   return (
     <figure className="figure">
       <figcaption>
-        <strong>{spec.title}</strong>
-        {spec.subtitle && <span>{spec.subtitle}</span>}
+        <div>
+          <strong>{spec.title}</strong>
+          {spec.subtitle && <span>{spec.subtitle}</span>}
+        </div>
+        {pinSource && <PinButton pin={chartPin(spec, pinSource, sql)} compact />}
       </figcaption>
       <Chart spec={spec} height={height} />
     </figure>

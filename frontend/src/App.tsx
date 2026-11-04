@@ -1,20 +1,23 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { FileSpreadsheet, Trash2, X } from 'lucide-react'
+import { FileSpreadsheet, Menu, Trash2, X } from 'lucide-react'
 
 import { api, ask, type StreamEvent } from './api'
 import { Assistant, exportThread, ExportButton } from './components/Assistant'
+import { Dashboard } from './components/Dashboard'
 import { DataView } from './components/DataView'
 import { Exploration } from './components/Exploration'
+import { LinkBar, LinkDialog } from './components/Links'
 import { Prediction } from './components/Prediction'
 import { Quality } from './components/Quality'
 import { SampleDialog } from './components/SampleGallery'
 import { Sidebar } from './components/Sidebar'
 import { Welcome } from './components/Welcome'
 import { fmtBytes, fmtInt, fmtPct, plural } from './format'
-import type { AppConfig, Block, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, EngineChoice, Sample, Turn } from './types'
+import { PinProviderValue } from './pins'
+import type { AppConfig, Block, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, EngineChoice, LinkInfo, NewPin, Pin, Sample, Turn } from './types'
 
-type Tab = 'assistant' | 'exploration' | 'prediction' | 'quality' | 'data'
-const TABS: [Tab, string][] = [['assistant', 'Assistant'], ['exploration', 'Exploration'], ['prediction', 'Prédiction'], ['quality', 'Qualité'], ['data', 'Données']]
+type Tab = 'assistant' | 'dashboard' | 'exploration' | 'prediction' | 'quality' | 'data'
+const TABS: [Tab, string][] = [['assistant', 'Assistant'], ['dashboard', 'Tableau de bord'], ['exploration', 'Exploration'], ['prediction', 'Prédiction'], ['quality', 'Qualité'], ['data', 'Données']]
 
 const store = {
   get: (k: string, s: Storage = localStorage) => { try { return s.getItem(k) } catch { return null } },
@@ -34,6 +37,10 @@ export default function App() {
   const [dataset, setDataset] = useState<DatasetDetail | null>(null)
   const [conversations, setConversations] = useState<ConversationSummary[]>([])
   const [conversation, setConversation] = useState<Conversation | null>(null)
+  const [pins, setPins] = useState<Pin[]>([])
+  const [links, setLinks] = useState<LinkInfo[]>([])
+  const [showLink, setShowLink] = useState(false)
+  const [navOpen, setNavOpen] = useState(false)
   const [engine, setEngine] = useState<EngineChoice>(initialEngine)
   const [tab, setTab] = useState<Tab>('assistant')
   const [busy, setBusy] = useState(false)
@@ -87,7 +94,11 @@ export default function App() {
     setDataset(null)
     setConversation(null)
     setConversations([])
+    setPins([])
+    setLinks([])
     if (!activeId) return
+    api.pins(activeId).then(setPins).catch(() => {})
+    api.links(activeId).then(setLinks).catch(() => {})
     api.dataset(activeId).then((d) => { setDataset(d); touch(d.id, d.lastActivityAt) }).catch(fail)
     api.conversations(activeId).then((list) => {
       setConversations(list)
@@ -158,6 +169,13 @@ export default function App() {
         : !config.ollama.models.length ? { ok: false, text: 'Aucun modèle Ollama installé.' }
           : { ok: true, text: `Ollama, ${model}` }
 
+  const claudeReady = !!config && (config.claude.plan || config.claude.serverKey || !!engine.apiKey)
+  const ollamaReady = !!config && config.ollama.reachable && config.ollama.models.length > 0
+  const fallback = engineStatus.ok || !config ? undefined
+    : engine.engine === 'ollama' && claudeReady ? { label: 'Utiliser Claude', onClick: () => setEngine((e) => ({ ...e, engine: 'claude' })) }
+      : engine.engine === 'claude' && ollamaReady ? { label: 'Utiliser Ollama', onClick: () => setEngine((e) => ({ ...e, engine: 'ollama' })) }
+        : undefined
+
   // ── Conversation ────────────────────────────────────────────────────────────────────────
   const updateTurn = (turnId: string, fn: (t: Turn) => Turn) =>
     setConversation((c) => (c ? { ...c, turns: c.turns.map((t) => (t.id === turnId ? fn(t) : t)) } : c))
@@ -224,6 +242,58 @@ export default function App() {
     }
   }
 
+  // ── Fichiers liés ───────────────────────────────────────────────────────────────────────
+  const saveLinks = async (next: { id: string; table: string }[]) => {
+    if (!dataset) return
+    const meta = await api.saveLinks(dataset.id, next)
+    setDataset((d) => (d ? { ...d, links: meta.links } : d))
+    setLinks(await api.links(dataset.id))
+  }
+  const addLink = async (otherId: string, table: string) => {
+    await saveLinks([...links.map(({ id, table: t }) => ({ id, table: t })), { id: otherId, table }])
+    setShowLink(false)
+  }
+  const removeLink = (l: LinkInfo) => {
+    saveLinks(links.filter((x) => x.id !== l.id).map(({ id, table }) => ({ id, table }))).catch(fail)
+  }
+  const ideas = [
+    ...links.map((l) => `Croiser avec « ${l.name} » (table ${l.table}) : qu’apprend-on ?`),
+    ...((dataset?.sample ? samples.find((s) => s.file === dataset.fileName)?.ideas : undefined) ?? []),
+  ]
+
+  // ── Tableau de bord ─────────────────────────────────────────────────────────────────────
+  const pinApi = {
+    pins,
+    add: (pin: NewPin) => {
+      if (!dataset) return
+      api.addPin(dataset.id, pin).then((p) => setPins((l) => (l.some((x) => x.id === p.id) ? l : [...l, p]))).catch(fail)
+    },
+    remove: (key: string) => {
+      const p = pins.find((x) => x.key === key)
+      if (dataset && p) removePin(p)
+    },
+  }
+  const removePin = (p: Pin) => {
+    if (!dataset) return
+    setPins((l) => l.filter((x) => x.id !== p.id))
+    api.removePin(dataset.id, p.id).catch(fail)
+  }
+  const updatePin = (p: Pin, patch: { title?: string; note?: string; wide?: boolean }) => {
+    if (!dataset) return
+    setPins((l) => l.map((x) => (x.id === p.id ? { ...x, ...patch } : x)))
+    api.updatePin(dataset.id, p.id, patch).catch(fail)
+  }
+  const movePin = (p: Pin, delta: -1 | 1) => {
+    if (!dataset) return
+    const i = pins.findIndex((x) => x.id === p.id)
+    const j = i + delta
+    if (i < 0 || j < 0 || j >= pins.length) return
+    const next = [...pins]
+    ;[next[i], next[j]] = [next[j], next[i]]
+    setPins(next)
+    api.orderPins(dataset.id, next.map((x) => x.id)).catch(fail)
+  }
+
   const openConversation = (id: string) => {
     if (busy) return
     api.conversation(id).then((c) => { setConversation(c); setTab('assistant') }).catch(fail)
@@ -261,11 +331,21 @@ export default function App() {
       <Sidebar
         config={config} datasets={datasets ?? []} activeId={activeId} conversations={conversations} activeConversation={conversation?.id ?? null}
         engine={engine} engineStatus={engineStatus} uploading={uploading}
-        onUpload={upload} onOpenSamples={() => { refreshSamples(); setShowSamples(true) }} onSelectDataset={(id) => { if (!busy) setActiveId(id) }} onSelectConversation={openConversation}
-        onNewConversation={newConversation} onDeleteConversation={deleteConversation} onEngine={setEngine} onRefreshConfig={loadConfig}
+        onUpload={(f) => { setNavOpen(false); upload(f) }} onOpenSamples={() => { refreshSamples(); setShowSamples(true); setNavOpen(false) }}
+        onSelectDataset={(id) => { if (!busy) { setActiveId(id); setNavOpen(false) } }}
+        onSelectConversation={(id) => { openConversation(id); setNavOpen(false) }}
+        onNewConversation={() => { newConversation(); setNavOpen(false) }} onDeleteConversation={deleteConversation} onEngine={setEngine} onRefreshConfig={loadConfig}
+        open={navOpen} onClose={() => setNavOpen(false)}
       />
+      {navOpen && <div className="drawer-backdrop" onClick={() => setNavOpen(false)} aria-hidden />}
 
       <main className="main">
+        <header className="mobile-bar">
+          <button type="button" className="icon-btn" onClick={() => setNavOpen(true)} aria-label="Ouvrir le menu"><Menu size={20} /></button>
+          <img src="/logo.svg" alt="" width={24} height={24} />
+          <strong>{dataset?.name ?? 'DataMind'}</strong>
+          <span className={`dot ${engineStatus.ok ? 'ok' : 'warn'}`} title={engineStatus.text} />
+        </header>
         {!activeId && config && datasets && (
           <Welcome samples={samples} formats={config.formats} maxUploadMb={config.maxUploadMb} onUpload={upload} onSample={loadSample}
             busy={uploading !== null || sampleBusy !== null} busyFile={sampleBusy} />
@@ -274,7 +354,7 @@ export default function App() {
         {activeId && !dataset && <div className="loading-page"><span className="spinner" /> Ouverture du jeu de données…</div>}
 
         {dataset && q && config && (
-          <>
+          <PinProviderValue value={pinApi}>
             <header className="ds-head">
               <div className="ds-title">
                 <FileSpreadsheet size={22} strokeWidth={1.6} aria-hidden />
@@ -290,6 +370,14 @@ export default function App() {
                       </>
                     )}
                   </p>
+                  {dataset.cleanedFrom && (
+                    <p className="cleaned-from">Version nettoyée de{' '}
+                      {datasets?.some((d) => d.id === dataset.cleanedFrom)
+                        ? <button type="button" className="link-btn" onClick={() => setActiveId(dataset.cleanedFrom!)}>« {datasets.find((d) => d.id === dataset.cleanedFrom)!.name} »</button>
+                        : 'un jeu supprimé'}
+                    </p>
+                  )}
+                  <LinkBar dataset={dataset} links={links} onAdd={() => setShowLink(true)} onRemove={removeLink} />
                 </div>
               </div>
               <dl className="ds-metrics">
@@ -302,7 +390,9 @@ export default function App() {
 
             <div className="tabs" role="tablist">
               {TABS.map(([k, label]) => (
-                <button key={k} type="button" role="tab" aria-selected={tab === k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{label}</button>
+                <button key={k} type="button" role="tab" aria-selected={tab === k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>
+                  {label}{k === 'dashboard' && pins.length > 0 && <span className="tab-count">{pins.length}</span>}
+                </button>
               ))}
               <span className="tabs-spacer" />
               {tab === 'assistant' && (
@@ -315,7 +405,7 @@ export default function App() {
                 config={config} conversation={conversation} ready={ready} busy={busy}
                 notReadyReason={engineStatus.ok ? '' : engineStatus.text}
                 engineLabel={engineStatus.text}
-                ideas={dataset.sample ? samples.find((s) => s.file === dataset.fileName)?.ideas : undefined}
+                ideas={ideas} datasetId={dataset.id} fallback={fallback}
                 onSend={send} onStop={() => abort.current?.abort()}
               />
             </div>
@@ -325,17 +415,27 @@ export default function App() {
             </div>
             {tab === 'quality' && (
               <div className="tab-panel">
-                <Quality dataset={dataset} canAudit={ready && !busy} onAudit={() => {
+                <Quality dataset={dataset} canAudit={ready && !busy}
+                  onPatched={(m) => setDataset((d) => (d && d.id === m.id ? { ...d, descriptions: m.descriptions, context: m.context } : d))}
+                  onCleaned={(m) => setDatasets((list) => [m, ...(list ?? []).filter((d) => d.id !== m.id)])}
+                  onOpen={(id) => { if (!busy) { setActiveId(id); setTab('quality') } }}
+                  onAudit={() => {
                   const a = config.quickAnalyses.find((x) => x.key === 'quality')!
                   send(a.prompt, a.label)
                 }} />
               </div>
             )}
             {tab === 'data' && <div className="tab-panel"><DataView dataset={dataset} /></div>}
-          </>
+            {tab === 'dashboard' && (
+              <div className="tab-panel"><Dashboard dataset={dataset} pins={pins} onUpdate={updatePin} onRemove={removePin} onMove={movePin} /></div>
+            )}
+          </PinProviderValue>
         )}
       </main>
 
+      {showLink && dataset && (
+        <LinkDialog dataset={dataset} datasets={datasets ?? []} links={links} onClose={() => setShowLink(false)} onSave={addLink} />
+      )}
       {showSamples && <SampleDialog samples={samples} onPick={loadSample} onClose={() => setShowSamples(false)} busyFile={sampleBusy} />}
       {dragging && <div className="drop-overlay"><div>Déposez le fichier pour l’importer</div></div>}
       {toast && (

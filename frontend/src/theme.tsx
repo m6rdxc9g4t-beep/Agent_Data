@@ -3,8 +3,8 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 
 export type ThemeMode = 'system' | 'light' | 'dark'
 
-const ThemeContext = createContext<{ mode: ThemeMode; dark: boolean; setMode: (m: ThemeMode) => void }>({
-  mode: 'system', dark: false, setMode: () => {},
+const ThemeContext = createContext<{ mode: ThemeMode; dark: boolean; setMode: (m: ThemeMode) => void; print: () => void }>({
+  mode: 'system', dark: false, setMode: () => {}, print: () => window.print(),
 })
 
 function read(): ThemeMode {
@@ -25,7 +25,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     query.addEventListener('change', on)
     return () => query.removeEventListener('change', on)
   }, [query])
-  const dark = mode === 'dark' || (mode === 'system' && systemDark)
+  // L'impression se fait toujours en clair (graphiques redessinés avant d'ouvrir la boîte d'impression).
+  const [printing, setPrinting] = useState(false)
+  const dark = !printing && (mode === 'dark' || (mode === 'system' && systemDark))
   useEffect(() => {
     document.documentElement.dataset.theme = dark ? 'dark' : 'light'
   }, [dark])
@@ -33,7 +35,18 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setModeState(m)
     try { localStorage.setItem('datamind:theme', m) } catch { /* stockage indisponible */ }
   }
-  return <ThemeContext.Provider value={{ mode, dark, setMode }}>{children}</ThemeContext.Provider>
+  // Mise en page d'impression appliquée avant d'ouvrir la boîte : les graphiques se redessinent à la largeur de la page.
+  const print = () => {
+    const root = document.documentElement
+    setPrinting(true)
+    root.classList.add('printing')
+    setTimeout(() => {
+      window.print()
+      root.classList.remove('printing')
+      setPrinting(false)
+    }, 600)
+  }
+  return <ThemeContext.Provider value={{ mode, dark, setMode, print }}>{children}</ThemeContext.Provider>
 }
 
 export const useTheme = () => useContext(ThemeContext)

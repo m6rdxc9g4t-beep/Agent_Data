@@ -41,7 +41,7 @@ export function Exploration({ dataset }: { dataset: DatasetDetail }) {
         {error && <p className="hint-warn">{error}</p>}
         {!charts && !error && <div className="grid-2">{[0, 1, 2, 3].map((i) => <div key={i} className="figure skeleton" />)}</div>}
         {charts && charts.length === 0 && <p className="muted">Pas assez de colonnes structurées pour proposer des graphiques.</p>}
-        {charts && <div className="grid-2">{charts.map((s, i) => <ChartFigure key={i} spec={s} height={260} />)}</div>}
+        {charts && <div className="grid-2">{charts.map((s, i) => <ChartFigure key={i} spec={s} height={260} pinSource="Exploration automatique" />)}</div>}
       </section>
 
       <section className="section">
@@ -52,7 +52,7 @@ export function Exploration({ dataset }: { dataset: DatasetDetail }) {
           </select>
         </div>
         <div className="column-explorer">
-          <div>{detail?.chart ? <ChartFigure spec={detail.chart} height={280} /> : <div className="figure skeleton" />}</div>
+          <div>{detail?.chart ? <ChartFigure spec={detail.chart} height={280} pinSource={`Exploration de « ${selected} »`} /> : <div className="figure skeleton" />}</div>
           <aside className="column-facts">
             {c && (
               <>

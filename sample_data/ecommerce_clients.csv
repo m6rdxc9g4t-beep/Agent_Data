@@ -1,0 +1,951 @@
+client_id,date_inscription,age,region,canal_acquisition,programme_fidelite,newsletter
+C1000,2024-12-18,38,Île-de-France,Parrainage,1,1
+C1001,2025-06-01,44,Grand Est,Réseaux sociaux,0,1
+C1002,2023-06-04,41,Hauts-de-France,Réseaux sociaux,1,0
+C1003,2025-02-06,47,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1004,2023-09-11,47,Grand Est,Parrainage,1,0
+C1005,2024-08-05,58,Occitanie,Recherche Google,0,0
+C1006,2025-06-01,40,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1007,2024-03-23,44,Bretagne,Réseaux sociaux,0,0
+C1008,2023-09-06,61,Nouvelle-Aquitaine,Recherche Google,1,1
+C1009,2024-03-13,51,Bretagne,Réseaux sociaux,1,0
+C1010,2025-06-01,41,Bretagne,Bouche-à-oreille,1,1
+C1011,2025-04-26,18,Bretagne,Bouche-à-oreille,0,0
+C1012,2024-09-19,56,Bretagne,Recherche Google,0,0
+C1013,2025-06-01,66,Grand Est,Recherche Google,1,1
+C1014,2025-06-01,28,Occitanie,Recherche Google,0,1
+C1015,2023-11-19,41,Île-de-France,Recherche Google,1,1
+C1016,2023-08-05,47,Nouvelle-Aquitaine,Parrainage,1,1
+C1017,2024-05-27,33,Bretagne,Publicité TV,0,0
+C1018,2023-03-21,22,Occitanie,Réseaux sociaux,0,1
+C1019,2025-06-01,38,Grand Est,Recherche Google,0,0
+C1020,2025-05-10,35,Grand Est,Recherche Google,0,0
+C1021,2025-04-10,44,Grand Est,Réseaux sociaux,0,0
+C1022,2025-06-01,20,Grand Est,Bouche-à-oreille,0,1
+C1023,2023-05-22,52,Hauts-de-France,Bouche-à-oreille,1,0
+C1024,2024-02-21,57,Nouvelle-Aquitaine,Bouche-à-oreille,0,1
+C1025,2025-06-01,25,Île-de-France,Recherche Google,0,0
+C1026,2023-09-23,54,Grand Est,Publicité TV,0,0
+C1027,2024-02-02,32,Bretagne,Parrainage,1,1
+C1028,2024-09-21,49,Hauts-de-France,Recherche Google,0,0
+C1029,2023-04-23,57,Nouvelle-Aquitaine,Parrainage,0,0
+C1030,2023-05-23,40,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,1
+C1031,2023-11-18,20,Nouvelle-Aquitaine,Recherche Google,0,0
+C1032,2023-12-31,18,Occitanie,Recherche Google,1,1
+C1033,2024-08-22,31,Hauts-de-France,Publicité TV,0,0
+C1034,2023-12-21,39,Île-de-France,Recherche Google,0,1
+C1035,2023-02-21,38,Occitanie,Recherche Google,1,1
+C1036,2023-05-09,50,Île-de-France,Recherche Google,0,1
+C1037,2024-02-27,48,Nouvelle-Aquitaine,Recherche Google,0,0
+C1038,2023-05-25,47,Occitanie,Parrainage,1,1
+C1039,2024-12-05,18,Occitanie,Parrainage,1,1
+C1040,2023-04-13,37,Auvergne-Rhône-Alpes,Parrainage,1,1
+C1041,2023-09-16,40,Bretagne,Réseaux sociaux,0,1
+C1042,2024-01-19,37,Occitanie,Publicité TV,0,0
+C1043,2025-05-31,18,Bretagne,Réseaux sociaux,0,1
+C1044,2025-03-11,59,Bretagne,Recherche Google,1,1
+C1045,2024-05-31,27,Bretagne,Bouche-à-oreille,0,1
+C1046,2024-02-08,45,Hauts-de-France,Recherche Google,0,1
+C1047,2023-08-13,24,Île-de-France,Bouche-à-oreille,0,1
+C1048,2024-01-21,28,Auvergne-Rhône-Alpes,Publicité TV,1,1
+C1049,2023-11-01,58,Occitanie,Bouche-à-oreille,0,0
+C1050,2023-04-24,22,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1051,2023-12-06,25,Grand Est,Recherche Google,0,0
+C1052,2023-12-27,35,Bretagne,Recherche Google,1,1
+C1053,2023-10-04,43,Île-de-France,Bouche-à-oreille,1,1
+C1054,2024-07-05,35,Nouvelle-Aquitaine,Publicité TV,0,0
+C1055,2023-07-18,37,Bretagne,Réseaux sociaux,0,0
+C1056,2023-05-02,40,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1057,2024-04-29,37,Île-de-France,Recherche Google,0,0
+C1058,2023-10-04,56,Nouvelle-Aquitaine,Recherche Google,1,1
+C1059,2023-08-23,32,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1060,2023-04-07,39,Grand Est,Réseaux sociaux,1,0
+C1061,2024-06-26,60,Île-de-France,Réseaux sociaux,0,1
+C1062,2025-06-01,42,Bretagne,Recherche Google,0,1
+C1063,2025-06-01,18,Île-de-France,Publicité TV,0,0
+C1064,2025-06-01,35,Hauts-de-France,Réseaux sociaux,0,0
+C1065,2024-08-05,27,Grand Est,Bouche-à-oreille,0,0
+C1066,2023-08-18,29,Bretagne,Bouche-à-oreille,0,0
+C1067,2025-06-01,43,Occitanie,Parrainage,0,1
+C1068,2023-07-17,52,Île-de-France,Réseaux sociaux,1,1
+C1069,2023-01-12,34,Grand Est,Publicité TV,1,1
+C1070,2024-02-05,36,Nouvelle-Aquitaine,Recherche Google,1,1
+C1071,2024-05-16,33,Occitanie,Publicité TV,0,1
+C1072,2023-11-02,59,Auvergne-Rhône-Alpes,Publicité TV,1,0
+C1073,2024-05-23,47,Grand Est,Bouche-à-oreille,1,1
+C1074,2023-03-30,53,Bretagne,Publicité TV,0,0
+C1075,2024-04-11,44,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1076,2025-04-14,28,Grand Est,Bouche-à-oreille,0,0
+C1077,2025-08-13,49,Hauts-de-France,Réseaux sociaux,1,1
+C1078,2025-06-01,26,Grand Est,Bouche-à-oreille,0,0
+C1079,2024-07-31,34,Nouvelle-Aquitaine,Recherche Google,0,0
+C1080,2025-03-13,42,Grand Est,Recherche Google,1,1
+C1081,2023-06-02,31,Occitanie,Bouche-à-oreille,0,0
+C1082,2023-09-01,42,Hauts-de-France,Recherche Google,1,0
+C1083,2025-06-01,41,Hauts-de-France,Bouche-à-oreille,1,1
+C1084,2023-09-28,51,Île-de-France,Bouche-à-oreille,1,1
+C1085,2024-05-16,33,Île-de-France,Recherche Google,0,0
+C1086,2023-05-15,42,Grand Est,Parrainage,0,0
+C1087,2024-01-11,38,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1088,2023-12-31,39,Nouvelle-Aquitaine,Recherche Google,1,1
+C1089,2023-05-22,45,Occitanie,Parrainage,1,1
+C1090,2023-08-22,37,Hauts-de-France,Recherche Google,0,1
+C1091,2023-10-07,30,Grand Est,Bouche-à-oreille,1,1
+C1092,2023-10-13,51,Île-de-France,Recherche Google,1,0
+C1093,2024-03-30,28,Île-de-France,Recherche Google,0,1
+C1094,2023-07-23,33,Bretagne,Recherche Google,0,1
+C1095,2024-08-02,45,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1096,2024-10-23,18,Occitanie,Parrainage,0,1
+C1097,2023-08-30,30,Île-de-France,Bouche-à-oreille,1,1
+C1098,2024-03-06,36,Bretagne,Bouche-à-oreille,1,1
+C1099,2024-03-07,41,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1100,2023-12-05,43,Occitanie,Recherche Google,1,1
+C1101,2023-11-25,26,Nouvelle-Aquitaine,Parrainage,0,1
+C1102,2023-02-24,52,Nouvelle-Aquitaine,Publicité TV,0,0
+C1103,2024-03-02,43,Grand Est,Réseaux sociaux,0,1
+C1104,2024-08-16,49,Occitanie,Parrainage,0,1
+C1105,2023-01-04,21,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1106,2024-01-06,26,Grand Est,Recherche Google,0,0
+C1107,2023-06-14,46,Nouvelle-Aquitaine,Recherche Google,1,1
+C1108,2023-09-30,46,Occitanie,Réseaux sociaux,0,0
+C1109,2023-09-02,65,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1110,2023-11-06,58,Île-de-France,Bouche-à-oreille,1,0
+C1111,2024-10-21,37,Occitanie,Bouche-à-oreille,0,0
+C1112,2025-06-01,45,Occitanie,Bouche-à-oreille,1,1
+C1113,2023-10-14,47,Île-de-France,Réseaux sociaux,1,1
+C1114,2023-06-10,50,Auvergne-Rhône-Alpes,Parrainage,1,0
+C1115,2023-04-30,39,Grand Est,Parrainage,1,1
+C1116,2023-09-06,70,Hauts-de-France,Recherche Google,0,0
+C1117,2023-11-26,46,Occitanie,Parrainage,0,0
+C1118,2025-04-24,27,Grand Est,Parrainage,0,0
+C1119,2024-06-30,40,Hauts-de-France,Bouche-à-oreille,0,0
+C1120,2024-02-09,26,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1121,2023-11-14,40,Nouvelle-Aquitaine,Recherche Google,1,1
+C1122,2025-06-01,36,Nouvelle-Aquitaine,Recherche Google,0,0
+C1123,2024-01-31,40,Occitanie,Recherche Google,0,0
+C1124,2025-06-01,56,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1125,2024-06-14,37,Grand Est,Recherche Google,0,0
+C1126,2023-09-02,29,Hauts-de-France,Parrainage,0,0
+C1127,2024-01-03,36,Île-de-France,Réseaux sociaux,1,1
+C1128,2025-06-01,56,Hauts-de-France,Parrainage,0,0
+C1129,2024-02-10,40,Île-de-France,Bouche-à-oreille,1,1
+C1130,2023-08-12,25,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1131,2024-02-22,24,Hauts-de-France,Parrainage,0,0
+C1132,2025-06-01,32,Bretagne,Publicité TV,0,0
+C1133,2024-03-29,38,Auvergne-Rhône-Alpes,Bouche-à-oreille,0,0
+C1134,2023-10-09,29,Nouvelle-Aquitaine,Réseaux sociaux,1,0
+C1135,2024-01-27,25,Nouvelle-Aquitaine,Bouche-à-oreille,1,0
+C1136,2023-09-05,57,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1137,2023-09-19,35,Nouvelle-Aquitaine,Publicité TV,1,1
+C1138,2023-09-11,46,Île-de-France,Réseaux sociaux,1,1
+C1139,2023-05-06,47,Grand Est,Recherche Google,0,0
+C1140,2023-09-27,33,Grand Est,Réseaux sociaux,0,0
+C1141,2025-06-01,32,Grand Est,Recherche Google,0,0
+C1142,2024-06-05,59,Occitanie,Bouche-à-oreille,1,1
+C1143,2023-09-16,38,Hauts-de-France,Réseaux sociaux,0,0
+C1144,2024-08-16,29,Occitanie,Réseaux sociaux,0,0
+C1145,2023-11-07,24,Grand Est,Bouche-à-oreille,0,1
+C1146,2024-04-10,49,Grand Est,Recherche Google,0,0
+C1147,2023-10-26,25,Bretagne,Bouche-à-oreille,0,0
+C1148,2023-01-19,37,Nouvelle-Aquitaine,Recherche Google,1,1
+C1149,2023-09-23,18,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1150,2023-01-16,27,Occitanie,Parrainage,0,1
+C1151,2025-06-01,51,Grand Est,Recherche Google,1,1
+C1152,2025-06-01,56,Grand Est,Recherche Google,0,0
+C1153,2024-06-19,22,Grand Est,Recherche Google,0,0
+C1154,2024-08-06,20,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1155,2023-04-19,18,Île-de-France,Recherche Google,0,1
+C1156,2024-03-12,23,Occitanie,Recherche Google,0,1
+C1157,2023-07-08,40,Occitanie,Réseaux sociaux,0,1
+C1158,2025-06-01,33,Grand Est,Réseaux sociaux,1,1
+C1159,2023-10-19,58,Bretagne,Réseaux sociaux,1,1
+C1160,2024-04-30,51,Nouvelle-Aquitaine,Recherche Google,1,1
+C1161,2023-11-17,31,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1162,2023-06-11,52,Hauts-de-France,Réseaux sociaux,1,1
+C1163,2023-12-31,30,Auvergne-Rhône-Alpes,Parrainage,0,0
+C1164,2023-08-19,44,Auvergne-Rhône-Alpes,Parrainage,1,0
+C1165,2024-12-13,59,Hauts-de-France,Parrainage,0,0
+C1166,2023-04-13,23,Île-de-France,Recherche Google,0,0
+C1167,2023-12-06,40,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1168,2024-10-15,42,Hauts-de-France,Bouche-à-oreille,0,1
+C1169,2024-06-24,42,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1170,2025-03-19,30,Grand Est,Bouche-à-oreille,0,1
+C1171,2025-02-19,35,Auvergne-Rhône-Alpes,Bouche-à-oreille,0,0
+C1172,2023-12-02,54,Bretagne,Réseaux sociaux,1,0
+C1173,2023-10-22,63,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1174,2023-05-07,46,Occitanie,Réseaux sociaux,0,1
+C1175,2025-06-01,32,Nouvelle-Aquitaine,Publicité TV,0,0
+C1176,2023-01-05,55,Occitanie,Réseaux sociaux,1,0
+C1177,2023-08-10,36,Grand Est,Bouche-à-oreille,1,0
+C1178,2024-11-05,67,Occitanie,Réseaux sociaux,0,0
+C1179,2023-10-25,50,Nouvelle-Aquitaine,Recherche Google,0,0
+C1180,2023-06-06,24,Nouvelle-Aquitaine,Réseaux sociaux,1,0
+C1181,2024-08-05,18,Grand Est,Bouche-à-oreille,1,1
+C1182,2024-01-21,39,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1183,2023-06-18,37,Île-de-France,Parrainage,1,1
+C1184,2023-10-27,35,Hauts-de-France,Parrainage,0,1
+C1185,2023-08-17,18,Occitanie,Recherche Google,1,1
+C1186,2023-06-18,52,Hauts-de-France,Parrainage,1,1
+C1187,2023-10-25,34,Bretagne,Parrainage,0,0
+C1188,2023-12-02,28,Grand Est,Parrainage,0,1
+C1189,2023-03-21,26,Île-de-France,Recherche Google,1,1
+C1190,2025-06-01,56,Bretagne,Parrainage,1,1
+C1191,2025-02-20,40,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1192,2024-02-19,40,Grand Est,Recherche Google,1,1
+C1193,2024-01-20,42,Grand Est,Parrainage,1,1
+C1194,2023-02-27,74,Île-de-France,Parrainage,1,1
+C1195,2023-02-24,30,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1196,2025-02-06,24,Occitanie,Recherche Google,0,0
+C1197,2023-06-17,42,Île-de-France,Recherche Google,1,1
+C1198,2023-10-31,54,Grand Est,Recherche Google,1,1
+C1199,2023-12-06,23,Bretagne,Réseaux sociaux,1,0
+C1200,2023-06-19,36,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1201,2024-01-07,24,Occitanie,Réseaux sociaux,0,0
+C1202,2023-04-06,24,Bretagne,Réseaux sociaux,1,0
+C1203,2023-09-30,32,Bretagne,Réseaux sociaux,1,1
+C1204,2023-11-28,70,Grand Est,Réseaux sociaux,1,1
+C1205,2024-03-29,44,Auvergne-Rhône-Alpes,Parrainage,1,0
+C1206,2023-09-15,33,Grand Est,Recherche Google,0,0
+C1207,2025-06-01,48,Nouvelle-Aquitaine,Publicité TV,0,0
+C1208,2023-02-23,41,Occitanie,Réseaux sociaux,1,1
+C1209,2023-03-13,31,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1210,2023-06-09,62,Occitanie,Réseaux sociaux,1,1
+C1211,2023-06-18,34,Île-de-France,Recherche Google,1,1
+C1212,2023-08-26,30,Occitanie,Recherche Google,1,1
+C1213,2023-06-26,38,Bretagne,Recherche Google,1,1
+C1214,2023-05-12,40,Hauts-de-France,Bouche-à-oreille,0,0
+C1215,2023-09-24,29,Auvergne-Rhône-Alpes,Parrainage,1,1
+C1216,2023-12-30,44,Occitanie,Bouche-à-oreille,0,1
+C1217,2023-04-09,58,Bretagne,Bouche-à-oreille,1,1
+C1218,2024-04-16,32,Île-de-France,Réseaux sociaux,1,0
+C1219,2023-01-06,43,Île-de-France,Recherche Google,1,1
+C1220,2024-03-19,48,Bretagne,Réseaux sociaux,0,1
+C1221,2023-03-28,43,Nouvelle-Aquitaine,Bouche-à-oreille,1,0
+C1222,2024-01-02,52,Hauts-de-France,Recherche Google,0,0
+C1223,2025-02-17,39,Île-de-France,Recherche Google,1,0
+C1224,2024-11-23,42,Grand Est,Recherche Google,1,1
+C1225,2023-07-27,37,Grand Est,Bouche-à-oreille,1,1
+C1226,2025-06-01,58,Bretagne,Publicité TV,0,1
+C1227,2023-08-05,59,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1228,2024-11-03,48,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1229,2024-02-02,41,Grand Est,Réseaux sociaux,0,0
+C1230,2024-06-06,47,Bretagne,Recherche Google,1,1
+C1231,2023-02-28,41,Hauts-de-France,Publicité TV,1,1
+C1232,2023-09-07,43,Île-de-France,Bouche-à-oreille,1,1
+C1233,2023-06-27,46,Île-de-France,Bouche-à-oreille,0,0
+C1234,2023-07-08,46,Occitanie,Recherche Google,0,0
+C1235,2023-11-24,54,Île-de-France,Réseaux sociaux,0,0
+C1236,2024-08-12,51,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1237,2023-07-05,42,Île-de-France,Bouche-à-oreille,1,1
+C1238,2023-12-15,30,Hauts-de-France,Recherche Google,1,1
+C1239,2023-02-15,18,Hauts-de-France,Bouche-à-oreille,1,1
+C1240,2025-06-01,34,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1241,2023-11-02,44,Occitanie,Réseaux sociaux,1,1
+C1242,2024-06-06,29,Grand Est,Recherche Google,0,1
+C1243,2024-03-31,60,Occitanie,Publicité TV,0,0
+C1244,2024-01-18,30,Auvergne-Rhône-Alpes,Parrainage,1,0
+C1245,2023-12-23,38,Bretagne,Recherche Google,1,0
+C1246,2023-03-13,49,Île-de-France,Réseaux sociaux,0,1
+C1247,2024-04-02,59,Île-de-France,Réseaux sociaux,0,1
+C1248,2025-01-13,18,Île-de-France,Publicité TV,0,1
+C1249,2023-06-28,44,Nouvelle-Aquitaine,Bouche-à-oreille,1,1
+C1250,2023-03-14,37,Bretagne,Parrainage,0,0
+C1251,2024-05-15,19,Hauts-de-France,Parrainage,0,0
+C1252,2023-06-05,29,Bretagne,Réseaux sociaux,1,1
+C1253,2023-03-16,34,Hauts-de-France,Parrainage,1,1
+C1254,2024-12-05,34,Bretagne,Bouche-à-oreille,0,0
+C1255,2024-04-09,37,Grand Est,Réseaux sociaux,0,0
+C1256,2025-06-01,41,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1257,2024-06-06,62,Nouvelle-Aquitaine,Publicité TV,0,1
+C1258,2024-01-13,24,Île-de-France,Bouche-à-oreille,1,0
+C1259,2024-05-18,44,Île-de-France,Bouche-à-oreille,0,0
+C1260,2023-03-12,33,Occitanie,Bouche-à-oreille,0,1
+C1261,2025-06-01,43,Grand Est,Réseaux sociaux,0,1
+C1262,2023-06-26,42,Île-de-France,Réseaux sociaux,1,1
+C1263,2024-01-25,36,Grand Est,Parrainage,1,0
+C1264,2024-11-27,45,Hauts-de-France,Recherche Google,0,0
+C1265,2023-06-28,59,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1266,2024-02-29,49,Île-de-France,Recherche Google,0,1
+C1267,2023-03-04,56,Occitanie,Réseaux sociaux,1,0
+C1268,2024-03-19,31,Nouvelle-Aquitaine,Recherche Google,1,1
+C1269,2025-06-01,49,Grand Est,Bouche-à-oreille,1,1
+C1270,2023-07-22,59,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1271,2024-08-10,36,Occitanie,Réseaux sociaux,0,0
+C1272,2024-06-17,39,Île-de-France,Parrainage,1,0
+C1273,2023-03-20,18,Nouvelle-Aquitaine,Recherche Google,1,0
+C1274,2024-12-05,42,Grand Est,Réseaux sociaux,0,0
+C1275,2024-05-31,31,Occitanie,Recherche Google,0,0
+C1276,2024-07-09,36,Grand Est,Recherche Google,1,0
+C1277,2024-07-17,35,Grand Est,Recherche Google,1,1
+C1278,2024-02-21,57,Grand Est,Bouche-à-oreille,0,1
+C1279,2024-06-03,35,Hauts-de-France,Recherche Google,1,0
+C1280,2024-06-11,34,Nouvelle-Aquitaine,Recherche Google,0,0
+C1281,2024-12-05,45,Hauts-de-France,Parrainage,1,1
+C1282,2025-04-28,34,Île-de-France,Recherche Google,0,1
+C1283,2023-11-25,44,Hauts-de-France,Recherche Google,1,1
+C1284,2023-08-02,23,Île-de-France,Recherche Google,1,1
+C1285,2024-11-23,25,Île-de-France,Réseaux sociaux,0,1
+C1286,2024-02-20,27,Île-de-France,Bouche-à-oreille,0,0
+C1287,2023-11-04,35,Île-de-France,Réseaux sociaux,1,0
+C1288,2025-06-01,37,Hauts-de-France,Bouche-à-oreille,0,0
+C1289,2023-12-18,39,Hauts-de-France,Bouche-à-oreille,1,0
+C1290,2024-06-21,31,Île-de-France,Parrainage,0,1
+C1291,2024-02-08,43,Hauts-de-France,Recherche Google,1,0
+C1292,2024-03-27,43,Hauts-de-France,Réseaux sociaux,0,1
+C1293,2023-11-24,28,Occitanie,Bouche-à-oreille,0,1
+C1294,2023-06-16,57,Bretagne,Bouche-à-oreille,1,0
+C1295,2025-06-01,22,Nouvelle-Aquitaine,Recherche Google,0,0
+C1296,2024-03-23,40,Bretagne,Réseaux sociaux,0,1
+C1297,2025-06-01,32,Nouvelle-Aquitaine,Recherche Google,0,0
+C1298,2025-06-01,51,Hauts-de-France,Recherche Google,0,1
+C1299,2025-06-01,31,Grand Est,Réseaux sociaux,0,0
+C1300,2023-10-02,51,Occitanie,Bouche-à-oreille,1,1
+C1301,2024-07-15,48,Île-de-France,Réseaux sociaux,0,1
+C1302,2025-06-01,26,Hauts-de-France,Recherche Google,0,0
+C1303,2023-12-30,18,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1304,2023-12-04,49,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1305,2023-11-10,32,Bretagne,Réseaux sociaux,1,1
+C1306,2023-12-17,48,Bretagne,Bouche-à-oreille,0,1
+C1307,2024-07-12,23,Grand Est,Parrainage,0,1
+C1308,2025-06-01,43,Auvergne-Rhône-Alpes,Parrainage,1,1
+C1309,2024-01-31,40,Grand Est,Réseaux sociaux,1,1
+C1310,2023-07-18,31,Bretagne,Recherche Google,0,1
+C1311,2024-03-09,34,Hauts-de-France,Bouche-à-oreille,0,1
+C1312,2024-01-20,24,Nouvelle-Aquitaine,Parrainage,0,0
+C1313,2024-01-26,19,Auvergne-Rhône-Alpes,Publicité TV,1,0
+C1314,2023-07-15,27,Occitanie,Recherche Google,1,1
+C1315,2024-05-14,39,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1316,2023-03-17,50,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1317,2025-06-01,42,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1318,2024-08-01,20,Grand Est,Bouche-à-oreille,0,0
+C1319,2023-08-14,52,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1320,2024-07-18,40,Auvergne-Rhône-Alpes,Réseaux sociaux,0,1
+C1321,2024-06-05,48,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1322,2024-03-22,32,Bretagne,Recherche Google,1,0
+C1323,2023-09-13,44,Île-de-France,Bouche-à-oreille,0,0
+C1324,2024-11-15,36,Nouvelle-Aquitaine,Recherche Google,1,1
+C1325,2024-09-03,27,Grand Est,Réseaux sociaux,0,1
+C1326,2023-09-21,43,Hauts-de-France,Parrainage,1,1
+C1327,2023-09-23,35,Nouvelle-Aquitaine,Recherche Google,1,0
+C1328,2023-05-08,41,Île-de-France,Recherche Google,1,0
+C1329,2024-10-20,40,Grand Est,Bouche-à-oreille,1,1
+C1330,2023-03-11,62,Île-de-France,Parrainage,1,0
+C1331,2023-11-07,35,Nouvelle-Aquitaine,Publicité TV,1,1
+C1332,2023-09-01,32,Bretagne,Bouche-à-oreille,0,0
+C1333,2024-01-12,28,Auvergne-Rhône-Alpes,Publicité TV,1,0
+C1334,2024-09-05,18,Bretagne,Recherche Google,0,1
+C1335,2025-07-07,61,Hauts-de-France,Réseaux sociaux,0,0
+C1336,2023-02-02,41,Grand Est,Réseaux sociaux,0,1
+C1337,2023-04-26,40,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1338,2024-09-15,57,Île-de-France,Recherche Google,1,1
+C1339,2023-09-26,26,Bretagne,Recherche Google,0,1
+C1340,2023-05-29,37,Grand Est,Réseaux sociaux,1,0
+C1341,2024-08-17,51,Occitanie,Recherche Google,1,0
+C1342,2023-12-29,57,Occitanie,Réseaux sociaux,1,0
+C1343,2025-06-01,32,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1344,2024-06-15,43,Bretagne,Bouche-à-oreille,1,1
+C1345,2024-05-14,52,Île-de-France,Bouche-à-oreille,1,1
+C1346,2023-03-16,40,Hauts-de-France,Bouche-à-oreille,1,1
+C1347,2025-08-01,39,Grand Est,Parrainage,0,1
+C1348,2023-02-27,46,Bretagne,Publicité TV,1,1
+C1349,2025-06-01,32,Nouvelle-Aquitaine,Recherche Google,0,0
+C1350,2025-06-01,57,Hauts-de-France,Publicité TV,0,1
+C1351,2024-09-25,33,Auvergne-Rhône-Alpes,Parrainage,1,1
+C1352,2023-10-01,40,Hauts-de-France,Recherche Google,1,1
+C1353,2023-08-17,41,Occitanie,Recherche Google,0,0
+C1354,2023-12-17,43,Auvergne-Rhône-Alpes,Bouche-à-oreille,0,0
+C1355,2024-01-23,46,Hauts-de-France,Recherche Google,1,1
+C1356,2024-10-15,18,Grand Est,Bouche-à-oreille,0,1
+C1357,2023-02-12,53,Hauts-de-France,Bouche-à-oreille,1,1
+C1358,2024-12-28,57,Occitanie,Réseaux sociaux,0,0
+C1359,2025-06-01,18,Bretagne,Recherche Google,1,0
+C1360,2025-06-01,30,Bretagne,Recherche Google,0,1
+C1361,2023-03-30,45,Grand Est,Bouche-à-oreille,0,0
+C1362,2023-07-29,31,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1363,2023-09-04,67,Grand Est,Recherche Google,1,0
+C1364,2023-12-07,39,Nouvelle-Aquitaine,Parrainage,1,1
+C1365,2023-02-20,69,Grand Est,Réseaux sociaux,0,1
+C1366,2025-06-01,66,Occitanie,Parrainage,1,1
+C1367,2023-12-28,34,Île-de-France,Recherche Google,0,0
+C1368,2025-07-04,49,Grand Est,Réseaux sociaux,0,0
+C1369,2023-08-24,55,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1370,2024-03-12,55,Auvergne-Rhône-Alpes,Publicité TV,1,1
+C1371,2023-09-21,28,Bretagne,Bouche-à-oreille,0,0
+C1372,2023-05-10,33,Bretagne,Bouche-à-oreille,1,1
+C1373,2024-05-29,56,Nouvelle-Aquitaine,Recherche Google,1,1
+C1374,2023-09-25,38,Hauts-de-France,Parrainage,0,0
+C1375,2024-01-14,41,Bretagne,Réseaux sociaux,0,1
+C1376,2023-08-16,44,Nouvelle-Aquitaine,Publicité TV,0,0
+C1377,2024-04-23,28,Hauts-de-France,Bouche-à-oreille,0,1
+C1378,2024-03-02,33,Hauts-de-France,Réseaux sociaux,0,1
+C1379,2025-06-01,64,Bretagne,Recherche Google,0,1
+C1380,2023-10-15,44,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1381,2024-02-29,18,Hauts-de-France,Recherche Google,1,1
+C1382,2024-01-06,39,Auvergne-Rhône-Alpes,Bouche-à-oreille,0,1
+C1383,2023-11-22,33,Grand Est,Publicité TV,0,0
+C1384,2023-07-09,40,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1385,2023-09-30,26,Grand Est,Réseaux sociaux,0,0
+C1386,2024-03-30,19,Île-de-France,Réseaux sociaux,1,1
+C1387,2024-02-21,41,Hauts-de-France,Recherche Google,0,0
+C1388,2024-02-10,41,Hauts-de-France,Bouche-à-oreille,1,0
+C1389,2023-03-12,23,Hauts-de-France,Parrainage,0,1
+C1390,2024-04-29,32,Occitanie,Parrainage,0,0
+C1391,2023-03-16,50,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1392,2023-05-21,23,Hauts-de-France,Publicité TV,0,0
+C1393,2023-10-04,40,Hauts-de-France,Parrainage,1,1
+C1394,2024-01-30,52,Île-de-France,Parrainage,1,1
+C1395,2025-06-01,55,Grand Est,Recherche Google,0,1
+C1396,2024-10-06,40,Nouvelle-Aquitaine,Bouche-à-oreille,1,0
+C1397,2024-05-19,18,Île-de-France,Bouche-à-oreille,1,1
+C1398,2024-03-07,47,Occitanie,Parrainage,1,0
+C1399,2024-11-07,25,Occitanie,Bouche-à-oreille,1,1
+C1400,2024-04-25,32,Bretagne,Réseaux sociaux,0,1
+C1401,2023-12-30,49,Occitanie,Parrainage,1,1
+C1402,2023-07-22,27,Nouvelle-Aquitaine,Bouche-à-oreille,1,0
+C1403,2023-10-23,28,Bretagne,Réseaux sociaux,1,1
+C1404,2023-10-01,23,Île-de-France,Recherche Google,1,1
+C1405,2023-10-29,52,Bretagne,Recherche Google,0,0
+C1406,2023-05-16,31,Hauts-de-France,Bouche-à-oreille,1,0
+C1407,2023-10-28,45,Bretagne,Bouche-à-oreille,0,1
+C1408,2023-10-13,47,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1409,2023-06-17,52,Bretagne,Bouche-à-oreille,0,0
+C1410,2024-08-20,30,Hauts-de-France,Bouche-à-oreille,0,1
+C1411,2023-10-27,23,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1412,2025-02-14,46,Île-de-France,Bouche-à-oreille,0,0
+C1413,2024-08-19,50,Occitanie,Recherche Google,0,0
+C1414,2023-04-28,48,Grand Est,Réseaux sociaux,1,0
+C1415,2023-09-04,41,Hauts-de-France,Recherche Google,1,0
+C1416,2023-11-14,75,Bretagne,Réseaux sociaux,0,1
+C1417,2024-04-06,18,Bretagne,Parrainage,0,0
+C1418,2023-05-28,40,Hauts-de-France,Recherche Google,1,1
+C1419,2024-02-14,39,Occitanie,Bouche-à-oreille,0,0
+C1420,2023-01-23,51,Occitanie,Réseaux sociaux,1,0
+C1421,2023-11-27,43,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1422,2023-09-11,45,Grand Est,Recherche Google,0,0
+C1423,2025-06-01,40,Grand Est,Parrainage,0,0
+C1424,2023-05-28,47,Bretagne,Bouche-à-oreille,1,1
+C1425,2023-02-25,51,Occitanie,Réseaux sociaux,0,1
+C1426,2023-08-02,18,Occitanie,Publicité TV,1,0
+C1427,2024-12-09,46,Nouvelle-Aquitaine,Parrainage,1,1
+C1428,2024-01-31,18,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1429,2023-09-11,71,Île-de-France,Bouche-à-oreille,1,0
+C1430,2023-07-24,45,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1431,2023-12-25,39,Grand Est,Bouche-à-oreille,0,0
+C1432,2024-09-02,41,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1433,2025-06-01,25,Grand Est,Recherche Google,1,1
+C1434,2024-07-31,42,Occitanie,Recherche Google,1,1
+C1435,2024-05-14,18,Nouvelle-Aquitaine,Parrainage,1,1
+C1436,2025-05-08,31,Bretagne,Parrainage,0,1
+C1437,2024-04-25,18,Hauts-de-France,Publicité TV,1,0
+C1438,2025-04-24,40,Grand Est,Recherche Google,1,1
+C1439,2024-06-11,30,Hauts-de-France,Parrainage,0,1
+C1440,2025-06-01,50,Nouvelle-Aquitaine,Recherche Google,0,0
+C1441,2023-12-05,24,Occitanie,Réseaux sociaux,0,1
+C1442,2023-07-21,33,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1443,2025-06-01,18,Nouvelle-Aquitaine,Recherche Google,0,0
+C1444,2025-02-11,49,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,0
+C1445,2023-02-07,40,Hauts-de-France,Bouche-à-oreille,1,1
+C1446,2023-12-17,46,Hauts-de-France,Bouche-à-oreille,0,1
+C1447,2023-07-02,51,Île-de-France,Parrainage,0,0
+C1448,2025-06-01,38,Grand Est,Parrainage,0,0
+C1449,2024-01-28,32,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1450,2024-08-18,36,Hauts-de-France,Réseaux sociaux,1,1
+C1451,2023-11-01,39,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1452,2024-02-19,51,Bretagne,Bouche-à-oreille,0,0
+C1453,2023-08-18,28,Nouvelle-Aquitaine,Parrainage,0,1
+C1454,2024-06-03,46,Île-de-France,Recherche Google,1,1
+C1455,2023-07-08,19,Occitanie,Recherche Google,0,0
+C1456,2024-03-30,46,Grand Est,Recherche Google,1,0
+C1457,2023-06-14,45,Bretagne,Recherche Google,0,1
+C1458,2025-06-01,39,Grand Est,Bouche-à-oreille,1,1
+C1459,2025-03-25,52,Nouvelle-Aquitaine,Recherche Google,1,0
+C1460,2025-06-01,47,Occitanie,Bouche-à-oreille,0,1
+C1461,2024-07-07,27,Nouvelle-Aquitaine,Parrainage,0,1
+C1462,2023-11-28,45,Bretagne,Réseaux sociaux,1,1
+C1463,2023-08-31,25,Île-de-France,Réseaux sociaux,1,0
+C1464,2023-06-16,24,Bretagne,Recherche Google,1,1
+C1465,2025-06-01,24,Grand Est,Recherche Google,0,1
+C1466,2024-06-20,36,Occitanie,Bouche-à-oreille,0,0
+C1467,2023-09-22,38,Île-de-France,Bouche-à-oreille,0,0
+C1468,2023-01-18,41,Occitanie,Publicité TV,1,1
+C1469,2023-12-18,59,Bretagne,Recherche Google,0,0
+C1470,2023-06-17,26,Occitanie,Bouche-à-oreille,1,1
+C1471,2024-01-11,46,Grand Est,Recherche Google,1,1
+C1472,2023-01-22,28,Île-de-France,Bouche-à-oreille,1,1
+C1473,2024-06-03,39,Hauts-de-France,Réseaux sociaux,0,0
+C1474,2023-08-04,49,Nouvelle-Aquitaine,Parrainage,0,1
+C1475,2024-03-01,50,Île-de-France,Recherche Google,1,1
+C1476,2023-05-08,41,Bretagne,Recherche Google,1,0
+C1477,2024-07-05,18,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,1
+C1478,2025-02-16,28,Occitanie,Bouche-à-oreille,0,0
+C1479,2024-05-11,63,Bretagne,Publicité TV,0,0
+C1480,2023-10-29,47,Bretagne,Parrainage,0,0
+C1481,2023-01-23,36,Île-de-France,Recherche Google,1,1
+C1482,2023-11-01,38,Grand Est,Recherche Google,1,0
+C1483,2023-11-10,42,Occitanie,Recherche Google,1,0
+C1484,2023-12-09,45,Occitanie,Recherche Google,0,1
+C1485,2025-06-01,36,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1486,2022-12-21,69,Occitanie,Réseaux sociaux,1,1
+C1487,2023-09-11,29,Bretagne,Réseaux sociaux,0,0
+C1488,2023-06-03,33,Hauts-de-France,Recherche Google,1,0
+C1489,2023-08-08,45,Bretagne,Recherche Google,0,1
+C1490,2023-10-25,41,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1491,2024-01-21,33,Île-de-France,Réseaux sociaux,0,1
+C1492,2025-06-01,40,Occitanie,Recherche Google,0,1
+C1493,2024-08-14,44,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,1
+C1494,2023-04-18,49,Île-de-France,Réseaux sociaux,1,1
+C1495,2025-04-16,25,Grand Est,Recherche Google,0,1
+C1496,2025-06-01,40,Nouvelle-Aquitaine,Recherche Google,0,0
+C1497,2023-10-03,45,Grand Est,Recherche Google,1,1
+C1498,2025-06-01,41,Bretagne,Publicité TV,0,1
+C1499,2024-03-21,45,Île-de-France,Recherche Google,1,1
+C1500,2025-01-26,41,Nouvelle-Aquitaine,Recherche Google,1,1
+C1501,2023-12-03,43,Occitanie,Recherche Google,1,0
+C1502,2023-04-29,32,Grand Est,Recherche Google,1,0
+C1503,2024-06-30,54,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1504,2025-06-01,61,Grand Est,Recherche Google,1,1
+C1505,2023-01-21,29,Bretagne,Recherche Google,0,0
+C1506,2023-05-17,39,Île-de-France,Recherche Google,1,1
+C1507,2023-08-25,45,Bretagne,Parrainage,0,0
+C1508,2023-01-27,64,Hauts-de-France,Parrainage,1,1
+C1509,2024-12-31,46,Bretagne,Réseaux sociaux,1,1
+C1510,2024-02-19,37,Grand Est,Recherche Google,1,0
+C1511,2023-08-10,19,Grand Est,Recherche Google,0,0
+C1512,2023-07-27,37,Île-de-France,Réseaux sociaux,1,0
+C1513,2025-08-01,32,Grand Est,Recherche Google,0,1
+C1514,2023-07-18,34,Île-de-France,Recherche Google,1,1
+C1515,2023-11-07,57,Hauts-de-France,Recherche Google,0,1
+C1516,2025-06-01,38,Bretagne,Recherche Google,0,1
+C1517,2025-06-01,41,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1518,2025-01-19,48,Bretagne,Réseaux sociaux,0,1
+C1519,2025-05-02,55,Grand Est,Bouche-à-oreille,1,0
+C1520,2024-03-11,41,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1521,2024-05-01,47,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1522,2024-03-02,47,Occitanie,Réseaux sociaux,1,1
+C1523,2023-06-13,34,Île-de-France,Publicité TV,1,0
+C1524,2024-09-28,52,Grand Est,Parrainage,0,0
+C1525,2024-06-05,44,Île-de-France,Réseaux sociaux,0,1
+C1526,2023-09-26,41,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1527,2023-06-29,33,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1528,2024-04-14,18,Grand Est,Recherche Google,0,0
+C1529,2024-04-24,39,Occitanie,Recherche Google,0,1
+C1530,2023-10-28,40,Île-de-France,Recherche Google,1,1
+C1531,2025-02-19,38,Île-de-France,Recherche Google,0,1
+C1532,2024-08-29,37,Hauts-de-France,Recherche Google,0,0
+C1533,2023-12-16,18,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1534,2023-12-31,63,Bretagne,Publicité TV,0,0
+C1535,2024-01-02,37,Nouvelle-Aquitaine,Recherche Google,0,1
+C1536,2023-10-29,35,Bretagne,Parrainage,1,1
+C1537,2023-03-16,40,Île-de-France,Recherche Google,1,1
+C1538,2024-01-17,43,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1539,2024-04-19,51,Grand Est,Recherche Google,1,0
+C1540,2023-07-28,41,Bretagne,Publicité TV,0,1
+C1541,2024-10-13,48,Île-de-France,Réseaux sociaux,0,0
+C1542,2023-04-23,48,Île-de-France,Parrainage,1,1
+C1543,2024-01-07,55,Île-de-France,Parrainage,0,0
+C1544,2023-06-01,39,Île-de-France,Réseaux sociaux,0,1
+C1545,2024-02-16,40,Bretagne,Réseaux sociaux,1,1
+C1546,2025-02-28,47,Hauts-de-France,Réseaux sociaux,0,1
+C1547,2023-08-02,34,Hauts-de-France,Réseaux sociaux,0,0
+C1548,2023-11-01,61,Nouvelle-Aquitaine,Recherche Google,0,0
+C1549,2023-04-13,21,Nouvelle-Aquitaine,Recherche Google,1,0
+C1550,2023-12-30,60,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1551,2023-07-08,18,Île-de-France,Parrainage,0,0
+C1552,2025-06-01,23,Grand Est,Réseaux sociaux,0,0
+C1553,2024-12-09,29,Bretagne,Parrainage,0,0
+C1554,2025-04-20,43,Hauts-de-France,Réseaux sociaux,0,1
+C1555,2024-05-28,48,Bretagne,Réseaux sociaux,0,0
+C1556,2023-05-05,38,Hauts-de-France,Bouche-à-oreille,1,1
+C1557,2024-01-11,39,Occitanie,Publicité TV,0,0
+C1558,2023-09-05,33,Nouvelle-Aquitaine,Recherche Google,0,0
+C1559,2023-10-23,44,Île-de-France,Publicité TV,1,1
+C1560,2023-09-01,46,Grand Est,Réseaux sociaux,0,1
+C1561,2023-04-09,36,Grand Est,Publicité TV,0,1
+C1562,2024-10-28,34,Hauts-de-France,Réseaux sociaux,0,1
+C1563,2024-07-09,34,Nouvelle-Aquitaine,Recherche Google,0,0
+C1564,2023-08-03,27,Grand Est,Publicité TV,1,1
+C1565,2025-03-26,31,Île-de-France,Publicité TV,0,0
+C1566,2024-01-26,40,Bretagne,Bouche-à-oreille,0,0
+C1567,2024-05-07,42,Occitanie,Parrainage,1,1
+C1568,2025-01-15,53,Nouvelle-Aquitaine,Recherche Google,0,1
+C1569,2025-02-04,33,Grand Est,Recherche Google,0,0
+C1570,2025-06-01,49,Grand Est,Réseaux sociaux,0,1
+C1571,2023-12-14,65,Île-de-France,Réseaux sociaux,0,1
+C1572,2024-05-02,40,Hauts-de-France,Bouche-à-oreille,0,0
+C1573,2024-03-11,46,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1574,2024-09-25,46,Bretagne,Recherche Google,1,1
+C1575,2024-11-27,56,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1576,2023-09-07,39,Île-de-France,Parrainage,1,1
+C1577,2025-07-06,31,Bretagne,Réseaux sociaux,0,0
+C1578,2025-05-27,60,Occitanie,Bouche-à-oreille,1,0
+C1579,2024-04-29,48,Bretagne,Bouche-à-oreille,0,0
+C1580,2023-10-18,43,Bretagne,Réseaux sociaux,1,1
+C1581,2023-08-13,49,Île-de-France,Recherche Google,1,0
+C1582,2023-03-13,18,Île-de-France,Parrainage,0,0
+C1583,2025-01-01,34,Bretagne,Parrainage,0,0
+C1584,2025-06-01,27,Bretagne,Recherche Google,1,0
+C1585,2023-12-01,57,Bretagne,Recherche Google,0,0
+C1586,2023-10-21,19,Nouvelle-Aquitaine,Recherche Google,0,1
+C1587,2025-02-28,41,Auvergne-Rhône-Alpes,Réseaux sociaux,0,1
+C1588,2023-11-05,47,Île-de-France,Recherche Google,0,1
+C1589,2023-11-11,21,Occitanie,Bouche-à-oreille,0,0
+C1590,2024-08-19,50,Nouvelle-Aquitaine,Parrainage,1,0
+C1591,2023-10-17,47,Île-de-France,Réseaux sociaux,0,0
+C1592,2024-02-03,43,Grand Est,Réseaux sociaux,1,1
+C1593,2023-08-04,31,Nouvelle-Aquitaine,Recherche Google,0,0
+C1594,2023-11-30,33,Hauts-de-France,Parrainage,0,0
+C1595,2025-01-02,46,Bretagne,Recherche Google,1,1
+C1596,2023-03-26,18,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1597,2024-03-30,22,Occitanie,Bouche-à-oreille,0,0
+C1598,2025-06-01,59,Hauts-de-France,Recherche Google,0,1
+C1599,2023-06-20,33,Auvergne-Rhône-Alpes,Parrainage,1,1
+C1600,2024-04-30,43,Occitanie,Réseaux sociaux,1,1
+C1601,2023-03-28,36,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1602,2023-11-09,50,Île-de-France,Bouche-à-oreille,1,0
+C1603,2024-09-21,42,Grand Est,Bouche-à-oreille,0,0
+C1604,2024-04-03,65,Hauts-de-France,Parrainage,0,0
+C1605,2024-01-23,39,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1606,2024-05-01,21,Grand Est,Parrainage,0,0
+C1607,2023-05-20,42,Île-de-France,Réseaux sociaux,1,1
+C1608,2024-02-10,53,Île-de-France,Recherche Google,1,1
+C1609,2024-02-04,56,Île-de-France,Parrainage,1,1
+C1610,2023-11-09,43,Île-de-France,Recherche Google,1,1
+C1611,2024-09-18,44,Nouvelle-Aquitaine,Parrainage,1,0
+C1612,2024-08-17,61,Bretagne,Recherche Google,0,1
+C1613,2023-12-16,39,Bretagne,Réseaux sociaux,1,1
+C1614,2024-02-25,45,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1615,2024-04-24,55,Auvergne-Rhône-Alpes,Parrainage,1,1
+C1616,2023-02-04,36,Bretagne,Réseaux sociaux,0,0
+C1617,2023-06-11,67,Occitanie,Publicité TV,1,1
+C1618,2023-01-27,42,Île-de-France,Recherche Google,1,1
+C1619,2023-11-05,53,Hauts-de-France,Publicité TV,1,1
+C1620,2023-05-08,18,Occitanie,Recherche Google,1,1
+C1621,2025-06-01,62,Grand Est,Recherche Google,0,0
+C1622,2023-11-23,67,Grand Est,Réseaux sociaux,0,1
+C1623,2023-09-14,42,Grand Est,Réseaux sociaux,0,0
+C1624,2023-08-10,39,Nouvelle-Aquitaine,Publicité TV,0,1
+C1625,2024-03-25,20,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1626,2025-06-01,69,Occitanie,Recherche Google,0,1
+C1627,2025-06-01,32,Bretagne,Réseaux sociaux,0,1
+C1628,2023-11-28,29,Grand Est,Réseaux sociaux,0,0
+C1629,2023-09-20,18,Bretagne,Parrainage,0,0
+C1630,2023-05-24,29,Occitanie,Recherche Google,1,1
+C1631,2023-04-20,39,Hauts-de-France,Recherche Google,1,1
+C1632,2024-03-12,21,Bretagne,Parrainage,1,1
+C1633,2024-07-27,48,Occitanie,Bouche-à-oreille,0,0
+C1634,2024-04-04,31,Île-de-France,Publicité TV,0,0
+C1635,2023-07-06,36,Bretagne,Réseaux sociaux,1,0
+C1636,2024-02-02,26,Grand Est,Parrainage,0,1
+C1637,2024-07-01,27,Bretagne,Parrainage,0,0
+C1638,2025-04-02,44,Nouvelle-Aquitaine,Bouche-à-oreille,1,0
+C1639,2023-10-22,25,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1640,2025-06-01,41,Grand Est,Publicité TV,0,0
+C1641,2023-05-09,45,Nouvelle-Aquitaine,Bouche-à-oreille,0,1
+C1642,2024-03-07,36,Île-de-France,Recherche Google,0,0
+C1643,2023-06-01,61,Bretagne,Bouche-à-oreille,1,1
+C1644,2023-02-09,46,Île-de-France,Recherche Google,1,1
+C1645,2023-03-12,39,Grand Est,Bouche-à-oreille,1,1
+C1646,2023-10-13,26,Île-de-France,Réseaux sociaux,1,0
+C1647,2023-04-18,40,Occitanie,Recherche Google,1,0
+C1648,2024-01-05,42,Hauts-de-France,Recherche Google,1,0
+C1649,2025-06-01,41,Hauts-de-France,Réseaux sociaux,0,1
+C1650,2023-09-30,38,Occitanie,Réseaux sociaux,1,1
+C1651,2023-09-04,29,Bretagne,Réseaux sociaux,0,0
+C1652,2024-12-16,47,Occitanie,Publicité TV,1,1
+C1653,2024-01-24,34,Nouvelle-Aquitaine,Recherche Google,0,0
+C1654,2024-01-13,29,Nouvelle-Aquitaine,Parrainage,0,1
+C1655,2024-09-23,29,Bretagne,Publicité TV,0,0
+C1656,2024-10-02,44,Bretagne,Bouche-à-oreille,0,1
+C1657,2024-03-25,50,Île-de-France,Réseaux sociaux,1,0
+C1658,2023-11-17,18,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1659,2025-06-01,44,Bretagne,Recherche Google,0,0
+C1660,2024-06-01,28,Île-de-France,Réseaux sociaux,1,1
+C1661,2025-06-01,46,Grand Est,Recherche Google,1,1
+C1662,2024-04-29,48,Nouvelle-Aquitaine,Recherche Google,1,1
+C1663,2023-01-15,46,Île-de-France,Réseaux sociaux,1,1
+C1664,2024-05-07,59,Auvergne-Rhône-Alpes,Publicité TV,0,1
+C1665,2023-07-15,42,Hauts-de-France,Recherche Google,1,0
+C1666,2024-01-07,41,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,1
+C1667,2023-12-09,49,Île-de-France,Bouche-à-oreille,1,1
+C1668,2024-03-02,47,Hauts-de-France,Recherche Google,1,0
+C1669,2023-12-10,28,Île-de-France,Publicité TV,0,0
+C1670,2023-12-12,32,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1671,2024-08-12,20,Bretagne,Réseaux sociaux,0,1
+C1672,2023-07-21,31,Bretagne,Recherche Google,0,1
+C1673,2023-03-04,24,Hauts-de-France,Réseaux sociaux,1,1
+C1674,2024-04-02,53,Nouvelle-Aquitaine,Recherche Google,0,1
+C1675,2023-10-05,51,Île-de-France,Recherche Google,1,1
+C1676,2023-11-11,18,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1677,2023-12-24,30,Occitanie,Recherche Google,1,1
+C1678,2024-09-14,56,Occitanie,Publicité TV,1,1
+C1679,2023-11-13,44,Grand Est,Recherche Google,0,1
+C1680,2025-06-01,54,Bretagne,Parrainage,0,1
+C1681,2023-08-12,26,Nouvelle-Aquitaine,Recherche Google,0,0
+C1682,2024-04-16,39,Nouvelle-Aquitaine,Bouche-à-oreille,1,1
+C1683,2022-12-25,35,Occitanie,Bouche-à-oreille,0,0
+C1684,2024-01-01,18,Nouvelle-Aquitaine,Recherche Google,0,0
+C1685,2024-09-22,47,Grand Est,Parrainage,1,0
+C1686,2024-11-12,62,Grand Est,Bouche-à-oreille,1,0
+C1687,2023-11-14,40,Auvergne-Rhône-Alpes,Bouche-à-oreille,0,1
+C1688,2024-02-07,40,Occitanie,Recherche Google,0,1
+C1689,2023-01-12,51,Île-de-France,Publicité TV,1,0
+C1690,2024-01-22,43,Île-de-France,Réseaux sociaux,0,0
+C1691,2023-09-15,37,Île-de-France,Parrainage,1,1
+C1692,2023-05-23,41,Occitanie,Réseaux sociaux,1,1
+C1693,2023-11-02,54,Hauts-de-France,Parrainage,1,1
+C1694,2023-09-07,36,Auvergne-Rhône-Alpes,Réseaux sociaux,0,1
+C1695,2025-06-01,44,Hauts-de-France,Publicité TV,0,0
+C1696,2024-01-09,46,Île-de-France,Recherche Google,0,1
+C1697,2025-06-01,39,Occitanie,Recherche Google,0,1
+C1698,2023-01-22,31,Hauts-de-France,Réseaux sociaux,0,1
+C1699,2023-09-26,36,Hauts-de-France,Recherche Google,1,0
+C1700,2023-01-31,39,Hauts-de-France,Recherche Google,1,0
+C1701,2024-07-06,32,Grand Est,Réseaux sociaux,0,1
+C1702,2023-07-23,35,Île-de-France,Recherche Google,0,1
+C1703,2023-09-19,38,Auvergne-Rhône-Alpes,Bouche-à-oreille,0,0
+C1704,2023-08-19,61,Bretagne,Bouche-à-oreille,0,0
+C1705,2024-02-27,50,Auvergne-Rhône-Alpes,Parrainage,1,0
+C1706,2023-05-18,65,Île-de-France,Recherche Google,1,1
+C1707,2024-07-30,43,Bretagne,Recherche Google,0,0
+C1708,2025-06-01,47,Île-de-France,Recherche Google,0,0
+C1709,2024-05-04,35,Occitanie,Recherche Google,0,1
+C1710,2024-07-08,44,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1711,2023-06-10,35,Grand Est,Publicité TV,1,1
+C1712,2025-06-01,64,Bretagne,Recherche Google,1,0
+C1713,2023-12-13,27,Île-de-France,Recherche Google,1,1
+C1714,2025-06-01,42,Occitanie,Bouche-à-oreille,1,1
+C1715,2023-08-09,66,Hauts-de-France,Parrainage,1,1
+C1716,2025-03-23,34,Occitanie,Bouche-à-oreille,0,0
+C1717,2024-10-26,40,Hauts-de-France,Recherche Google,0,0
+C1718,2023-08-10,57,Occitanie,Bouche-à-oreille,1,0
+C1719,2023-12-31,30,Occitanie,Recherche Google,1,0
+C1720,2025-06-01,28,Grand Est,Publicité TV,0,1
+C1721,2023-11-07,19,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1722,2025-06-01,48,Bretagne,Réseaux sociaux,1,0
+C1723,2024-01-23,55,Bretagne,Réseaux sociaux,1,1
+C1724,2024-01-24,46,Grand Est,Recherche Google,0,1
+C1725,2025-06-01,53,Bretagne,Réseaux sociaux,0,1
+C1726,2024-11-29,62,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1727,2024-01-05,30,Grand Est,Réseaux sociaux,1,1
+C1728,2024-12-29,27,Bretagne,Réseaux sociaux,1,1
+C1729,2023-07-28,22,Occitanie,Recherche Google,0,0
+C1730,2023-02-23,49,Grand Est,Parrainage,1,0
+C1731,2023-11-16,46,Nouvelle-Aquitaine,Publicité TV,1,0
+C1732,2023-11-13,37,Île-de-France,Bouche-à-oreille,1,1
+C1733,2024-10-30,33,Bretagne,Recherche Google,1,1
+C1734,2023-12-02,38,Grand Est,Réseaux sociaux,0,0
+C1735,2023-10-20,74,Nouvelle-Aquitaine,Bouche-à-oreille,1,0
+C1736,2023-05-12,41,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1737,2023-09-29,29,Occitanie,Parrainage,0,0
+C1738,2024-11-09,28,Hauts-de-France,Recherche Google,0,1
+C1739,2024-01-19,45,Occitanie,Réseaux sociaux,0,0
+C1740,2024-04-15,51,Nouvelle-Aquitaine,Parrainage,1,1
+C1741,2025-06-01,54,Occitanie,Publicité TV,0,0
+C1742,2024-12-09,66,Occitanie,Réseaux sociaux,0,0
+C1743,2024-08-15,29,Nouvelle-Aquitaine,Bouche-à-oreille,1,1
+C1744,2024-02-02,39,Grand Est,Publicité TV,0,0
+C1745,2025-03-30,50,Bretagne,Bouche-à-oreille,0,0
+C1746,2023-12-15,46,Hauts-de-France,Réseaux sociaux,0,1
+C1747,2024-02-18,42,Grand Est,Réseaux sociaux,0,0
+C1748,2025-06-01,27,Grand Est,Bouche-à-oreille,1,1
+C1749,2023-03-11,36,Occitanie,Réseaux sociaux,0,0
+C1750,2023-10-01,36,Grand Est,Réseaux sociaux,0,1
+C1751,2024-01-01,42,Île-de-France,Publicité TV,0,0
+C1752,2024-09-06,46,Grand Est,Bouche-à-oreille,0,0
+C1753,2025-07-22,28,Nouvelle-Aquitaine,Recherche Google,0,1
+C1754,2025-07-01,39,Hauts-de-France,Bouche-à-oreille,0,1
+C1755,2024-05-01,33,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1756,2023-11-12,43,Île-de-France,Réseaux sociaux,0,1
+C1757,2025-06-01,37,Bretagne,Bouche-à-oreille,0,1
+C1758,2023-09-02,39,Occitanie,Réseaux sociaux,1,0
+C1759,2025-06-01,58,Bretagne,Parrainage,0,0
+C1760,2023-05-04,37,Île-de-France,Bouche-à-oreille,1,1
+C1761,2024-05-12,41,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1762,2023-03-19,42,Île-de-France,Réseaux sociaux,1,0
+C1763,2025-09-21,24,Bretagne,Réseaux sociaux,0,0
+C1764,2023-09-29,51,Île-de-France,Recherche Google,0,0
+C1765,2025-09-02,68,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1766,2025-06-01,23,Nouvelle-Aquitaine,Recherche Google,0,1
+C1767,2024-01-01,36,Nouvelle-Aquitaine,Recherche Google,0,1
+C1768,2023-07-29,35,Auvergne-Rhône-Alpes,Parrainage,0,0
+C1769,2024-09-06,51,Nouvelle-Aquitaine,Bouche-à-oreille,1,1
+C1770,2024-02-05,38,Nouvelle-Aquitaine,Recherche Google,1,0
+C1771,2024-04-16,30,Occitanie,Publicité TV,0,0
+C1772,2025-06-10,31,Île-de-France,Bouche-à-oreille,0,0
+C1773,2023-09-08,34,Grand Est,Bouche-à-oreille,0,1
+C1774,2023-09-09,44,Nouvelle-Aquitaine,Réseaux sociaux,0,1
+C1775,2023-05-03,56,Bretagne,Recherche Google,0,1
+C1776,2023-09-13,40,Occitanie,Recherche Google,0,0
+C1777,2024-01-16,40,Grand Est,Parrainage,1,0
+C1778,2024-01-18,32,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1779,2023-12-17,68,Grand Est,Publicité TV,0,0
+C1780,2023-08-22,30,Auvergne-Rhône-Alpes,Réseaux sociaux,0,1
+C1781,2023-12-25,37,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1782,2023-02-04,42,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1783,2023-04-08,48,Bretagne,Réseaux sociaux,0,1
+C1784,2023-11-21,51,Île-de-France,Recherche Google,1,1
+C1785,2024-08-16,35,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1786,2023-12-04,28,Grand Est,Publicité TV,0,1
+C1787,2024-01-03,29,Nouvelle-Aquitaine,Recherche Google,1,0
+C1788,2025-06-01,46,Occitanie,Recherche Google,0,0
+C1789,2023-07-07,38,Auvergne-Rhône-Alpes,Réseaux sociaux,0,1
+C1790,2023-11-09,35,Hauts-de-France,Bouche-à-oreille,0,0
+C1791,2024-09-26,47,Île-de-France,Réseaux sociaux,1,1
+C1792,2025-06-01,39,Hauts-de-France,Bouche-à-oreille,0,0
+C1793,2024-10-02,37,Grand Est,Publicité TV,0,0
+C1794,2023-11-16,43,Occitanie,Réseaux sociaux,1,0
+C1795,2023-04-21,42,Hauts-de-France,Réseaux sociaux,1,1
+C1796,2023-05-20,43,Bretagne,Réseaux sociaux,1,1
+C1797,2024-01-20,55,Bretagne,Réseaux sociaux,1,1
+C1798,2024-10-22,34,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1799,2023-09-11,52,Île-de-France,Bouche-à-oreille,0,1
+C1800,2024-05-25,56,Auvergne-Rhône-Alpes,Recherche Google,0,1
+C1801,2023-10-28,41,Île-de-France,Recherche Google,1,1
+C1802,2024-10-22,28,Nouvelle-Aquitaine,Recherche Google,1,0
+C1803,2024-07-16,40,Bretagne,Recherche Google,1,0
+C1804,2024-07-24,49,Nouvelle-Aquitaine,Recherche Google,1,1
+C1805,2023-02-26,45,Île-de-France,Réseaux sociaux,1,1
+C1806,2024-11-08,28,Île-de-France,Bouche-à-oreille,1,1
+C1807,2024-02-18,41,Grand Est,Publicité TV,1,0
+C1808,2023-07-15,48,Nouvelle-Aquitaine,Recherche Google,1,1
+C1809,2023-08-08,44,Île-de-France,Recherche Google,1,0
+C1810,2024-09-29,30,Grand Est,Recherche Google,0,0
+C1811,2023-04-22,49,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1812,2025-06-01,41,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1813,2025-03-23,22,Grand Est,Recherche Google,0,0
+C1814,2023-05-11,46,Grand Est,Publicité TV,0,1
+C1815,2023-11-17,37,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1816,2023-03-07,26,Bretagne,Réseaux sociaux,0,0
+C1817,2025-06-01,26,Nouvelle-Aquitaine,Bouche-à-oreille,0,1
+C1818,2024-01-26,56,Hauts-de-France,Réseaux sociaux,1,1
+C1819,2024-01-18,32,Hauts-de-France,Parrainage,1,1
+C1820,2024-02-08,26,Île-de-France,Bouche-à-oreille,0,1
+C1821,2022-12-02,42,Auvergne-Rhône-Alpes,Recherche Google,1,1
+C1822,2023-01-23,35,Hauts-de-France,Publicité TV,1,1
+C1823,2024-11-21,49,Occitanie,Recherche Google,0,1
+C1824,2024-03-20,78,Hauts-de-France,Recherche Google,0,1
+C1825,2024-02-02,40,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,0
+C1826,2023-12-22,38,Grand Est,Bouche-à-oreille,0,0
+C1827,2023-07-26,43,Auvergne-Rhône-Alpes,Publicité TV,1,1
+C1828,2025-06-01,36,Grand Est,Recherche Google,0,0
+C1829,2025-03-14,52,Île-de-France,Réseaux sociaux,0,0
+C1830,2025-06-01,41,Grand Est,Publicité TV,0,1
+C1831,2024-02-13,41,Île-de-France,Bouche-à-oreille,1,0
+C1832,2023-11-30,44,Bretagne,Publicité TV,1,0
+C1833,2023-10-29,39,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1834,2023-08-22,43,Grand Est,Réseaux sociaux,0,0
+C1835,2023-10-11,31,Grand Est,Bouche-à-oreille,0,0
+C1836,2025-02-14,24,Hauts-de-France,Bouche-à-oreille,0,0
+C1837,2023-03-04,52,Île-de-France,Réseaux sociaux,1,0
+C1838,2023-05-27,41,Grand Est,Recherche Google,0,0
+C1839,2023-05-13,18,Hauts-de-France,Parrainage,1,1
+C1840,2023-09-19,54,Hauts-de-France,Bouche-à-oreille,1,0
+C1841,2023-06-28,40,Occitanie,Bouche-à-oreille,1,1
+C1842,2025-01-10,34,Grand Est,Réseaux sociaux,0,0
+C1843,2023-09-20,58,Bretagne,Réseaux sociaux,1,1
+C1844,2023-12-29,43,Bretagne,Recherche Google,1,0
+C1845,2024-06-12,46,Grand Est,Publicité TV,0,1
+C1846,2023-02-01,36,Bretagne,Publicité TV,0,1
+C1847,2023-09-01,45,Hauts-de-France,Publicité TV,1,1
+C1848,2023-03-22,36,Île-de-France,Recherche Google,0,1
+C1849,2024-05-22,38,Bretagne,Recherche Google,1,1
+C1850,2024-08-06,26,Grand Est,Recherche Google,1,0
+C1851,2023-05-26,20,Occitanie,Recherche Google,1,1
+C1852,2024-05-09,44,Nouvelle-Aquitaine,Recherche Google,1,1
+C1853,2023-12-19,18,Île-de-France,Réseaux sociaux,1,1
+C1854,2024-11-18,51,Occitanie,Bouche-à-oreille,0,0
+C1855,2023-08-04,44,Hauts-de-France,Réseaux sociaux,1,1
+C1856,2024-03-21,69,Île-de-France,Réseaux sociaux,1,1
+C1857,2024-03-26,57,Bretagne,Publicité TV,1,0
+C1858,2024-08-19,48,Auvergne-Rhône-Alpes,Publicité TV,1,1
+C1859,2024-12-06,20,Grand Est,Réseaux sociaux,0,0
+C1860,2023-07-27,35,Hauts-de-France,Parrainage,1,1
+C1861,2024-02-27,52,Auvergne-Rhône-Alpes,Recherche Google,1,0
+C1862,2023-01-02,57,Île-de-France,Bouche-à-oreille,1,1
+C1863,2024-07-15,19,Nouvelle-Aquitaine,Recherche Google,0,0
+C1864,2025-06-01,25,Hauts-de-France,Bouche-à-oreille,0,0
+C1865,2024-03-07,56,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1866,2023-08-26,41,Hauts-de-France,Recherche Google,1,1
+C1867,2023-10-04,41,Île-de-France,Publicité TV,0,0
+C1868,2024-06-25,41,Hauts-de-France,Recherche Google,0,1
+C1869,2024-04-04,39,Bretagne,Réseaux sociaux,0,1
+C1870,2024-03-31,36,Nouvelle-Aquitaine,Publicité TV,0,0
+C1871,2023-08-07,38,Île-de-France,Recherche Google,1,1
+C1872,2023-09-06,24,Nouvelle-Aquitaine,Recherche Google,0,0
+C1873,2024-09-02,29,Occitanie,Réseaux sociaux,0,0
+C1874,2023-05-01,52,Île-de-France,Recherche Google,1,1
+C1875,2025-06-01,43,Bretagne,Recherche Google,0,0
+C1876,2025-06-01,29,Île-de-France,Recherche Google,0,0
+C1877,2024-10-25,30,Île-de-France,Réseaux sociaux,0,0
+C1878,2023-12-26,56,Hauts-de-France,Réseaux sociaux,1,0
+C1879,2023-09-17,46,Hauts-de-France,Réseaux sociaux,1,0
+C1880,2023-08-11,41,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,1
+C1881,2023-10-27,25,Auvergne-Rhône-Alpes,Réseaux sociaux,0,0
+C1882,2024-09-18,40,Grand Est,Recherche Google,1,1
+C1883,2023-07-29,31,Grand Est,Recherche Google,1,1
+C1884,2025-06-01,42,Bretagne,Bouche-à-oreille,0,0
+C1885,2025-06-01,44,Bretagne,Recherche Google,1,1
+C1886,2023-10-12,48,Grand Est,Parrainage,0,0
+C1887,2025-06-01,52,Bretagne,Réseaux sociaux,1,0
+C1888,2024-05-15,27,Nouvelle-Aquitaine,Bouche-à-oreille,1,1
+C1889,2023-01-18,47,Île-de-France,Recherche Google,1,1
+C1890,2023-02-13,39,Île-de-France,Publicité TV,1,1
+C1891,2024-06-28,33,Nouvelle-Aquitaine,Recherche Google,0,1
+C1892,2024-01-26,25,Occitanie,Réseaux sociaux,0,1
+C1893,2023-09-01,26,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,0
+C1894,2023-09-05,63,Bretagne,Bouche-à-oreille,1,0
+C1895,2023-09-02,44,Occitanie,Réseaux sociaux,1,0
+C1896,2023-09-17,48,Grand Est,Recherche Google,1,0
+C1897,2024-02-11,40,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,1
+C1898,2024-12-24,35,Nouvelle-Aquitaine,Bouche-à-oreille,0,0
+C1899,2023-11-21,33,Nouvelle-Aquitaine,Publicité TV,1,0
+C1900,2024-08-07,43,Auvergne-Rhône-Alpes,Réseaux sociaux,1,0
+C1901,2023-07-03,43,Occitanie,Recherche Google,1,0
+C1902,2025-06-01,41,Hauts-de-France,Réseaux sociaux,0,1
+C1903,2023-08-29,50,Nouvelle-Aquitaine,Recherche Google,0,1
+C1904,2024-11-21,46,Occitanie,Bouche-à-oreille,0,0
+C1905,2023-05-12,37,Île-de-France,Recherche Google,1,0
+C1906,2023-05-25,41,Nouvelle-Aquitaine,Réseaux sociaux,0,0
+C1907,2025-06-01,21,Grand Est,Bouche-à-oreille,0,0
+C1908,2025-03-15,23,Hauts-de-France,Réseaux sociaux,0,0
+C1909,2023-06-02,47,Grand Est,Bouche-à-oreille,0,1
+C1910,2024-06-20,56,Hauts-de-France,Réseaux sociaux,0,1
+C1911,2023-02-08,41,Occitanie,Bouche-à-oreille,1,1
+C1912,2025-01-19,36,Occitanie,Bouche-à-oreille,1,0
+C1913,2024-01-22,50,Auvergne-Rhône-Alpes,Parrainage,0,1
+C1914,2023-07-27,33,Occitanie,Réseaux sociaux,0,0
+C1915,2025-01-17,45,Grand Est,Réseaux sociaux,0,0
+C1916,2022-12-25,39,Hauts-de-France,Recherche Google,1,0
+C1917,2023-07-07,49,Bretagne,Bouche-à-oreille,1,0
+C1918,2023-08-25,55,Auvergne-Rhône-Alpes,Publicité TV,0,0
+C1919,2024-04-15,23,Nouvelle-Aquitaine,Recherche Google,0,1
+C1920,2023-09-09,49,Occitanie,Recherche Google,1,1
+C1921,2024-02-14,38,Hauts-de-France,Réseaux sociaux,0,1
+C1922,2025-06-01,26,Occitanie,Recherche Google,0,1
+C1923,2024-06-04,50,Île-de-France,Réseaux sociaux,0,1
+C1924,2023-12-19,48,Hauts-de-France,Recherche Google,0,1
+C1925,2025-06-01,55,Grand Est,Réseaux sociaux,0,0
+C1926,2024-02-11,47,Grand Est,Réseaux sociaux,1,0
+C1927,2023-12-09,26,Île-de-France,Parrainage,0,0
+C1928,2023-10-06,59,Hauts-de-France,Recherche Google,0,0
+C1929,2023-08-13,36,Île-de-France,Bouche-à-oreille,1,0
+C1930,2024-01-23,39,Occitanie,Réseaux sociaux,1,0
+C1931,2023-11-21,41,Auvergne-Rhône-Alpes,Réseaux sociaux,0,1
+C1932,2025-06-01,43,Nouvelle-Aquitaine,Recherche Google,0,0
+C1933,2025-06-01,39,Grand Est,Recherche Google,1,1
+C1934,2024-03-13,37,Grand Est,Parrainage,0,0
+C1935,2023-08-16,24,Auvergne-Rhône-Alpes,Bouche-à-oreille,1,0
+C1936,2023-08-30,26,Île-de-France,Recherche Google,0,0
+C1937,2025-06-01,37,Hauts-de-France,Publicité TV,0,1
+C1938,2024-04-09,72,Nouvelle-Aquitaine,Réseaux sociaux,1,0
+C1939,2025-03-29,66,Grand Est,Parrainage,1,1
+C1940,2024-02-12,28,Île-de-France,Réseaux sociaux,0,0
+C1941,2023-12-26,31,Occitanie,Réseaux sociaux,0,0
+C1942,2023-04-07,22,Nouvelle-Aquitaine,Réseaux sociaux,1,1
+C1943,2023-11-05,33,Occitanie,Parrainage,0,1
+C1944,2025-06-01,61,Bretagne,Recherche Google,0,0
+C1945,2024-01-05,20,Auvergne-Rhône-Alpes,Réseaux sociaux,1,1
+C1946,2023-09-22,18,Auvergne-Rhône-Alpes,Recherche Google,0,0
+C1947,2024-08-15,38,Occitanie,Recherche Google,0,0
+C1948,2024-05-17,49,Hauts-de-France,Réseaux sociaux,0,0
+C1949,2025-01-18,50,Auvergne-Rhône-Alpes,Parrainage,1,1

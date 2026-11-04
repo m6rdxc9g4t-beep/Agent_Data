@@ -11,6 +11,8 @@ export interface QueryResult { columns: Column[]; rows: Cell[][]; truncated: boo
 
 export class QueryError extends Error {}
 
+export interface ExtraTable { table: string; path: string }
+
 const NUMERIC = /^(TINYINT|SMALLINT|INTEGER|BIGINT|HUGEINT|UTINYINT|USMALLINT|UINTEGER|UBIGINT|UHUGEINT|FLOAT|DOUBLE|DECIMAL)/
 
 export function isNumericType(type: string): boolean {
@@ -68,11 +70,13 @@ export class DatasetDb {
     private readonly timeoutMs: number,
   ) {}
 
-  static async open(parquetPath: string, timeoutMs = 60_000): Promise<DatasetDb> {
+  /** `extra` : autres jeux chargés comme tables supplémentaires (fichiers liés), avant de couper l'accès aux fichiers. */
+  static async open(parquetPath: string, timeoutMs = 60_000, extra: ExtraTable[] = []): Promise<DatasetDb> {
     const instance = await DuckDBInstance.create(':memory:')
     const conn = await instance.connect()
     await conn.run(`SET threads = 2; SET memory_limit = '1GB'`)
     await conn.run(`CREATE TABLE data AS SELECT * FROM read_parquet(${quoteString(parquetPath)})`)
+    for (const t of extra) await conn.run(`CREATE TABLE ${quoteIdent(t.table)} AS SELECT * FROM read_parquet(${quoteString(t.path)})`)
     await conn.run('SET enable_external_access = false')
     await conn.run('SET lock_configuration = true')
     return new DatasetDb(instance, conn, timeoutMs)
@@ -134,14 +138,14 @@ export class DbCache {
   private readonly map = new Map<string, Promise<DatasetDb>>()
   constructor(private readonly max = 4, private readonly timeoutMs = 60_000) {}
 
-  get(id: string, parquetPath: string): Promise<DatasetDb> {
+  get(id: string, parquetPath: string, extra: ExtraTable[] = []): Promise<DatasetDb> {
     const hit = this.map.get(id)
     if (hit) {
       this.map.delete(id)
       this.map.set(id, hit)
       return hit
     }
-    const p = DatasetDb.open(parquetPath, this.timeoutMs)
+    const p = DatasetDb.open(parquetPath, this.timeoutMs, extra)
     p.catch(() => this.map.delete(id))
     this.map.set(id, p)
     while (this.map.size > this.max) {

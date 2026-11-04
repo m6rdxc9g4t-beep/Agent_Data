@@ -22,7 +22,10 @@ Réponse finale
   **Détails** (liste à puces), **Points d'attention** et, si utile, **Recommandations** concrètes.
 - Cite les colonnes entre accents graves (\`colonne\`). Signale les limites (échantillon, valeurs manquantes,
   corrélation n'est pas causalité).
-- Si la demande est ambiguë, choisis l'analyse la plus pertinente et précise ton hypothèse au lieu de bloquer.`
+- Si la demande est ambiguë, choisis l'analyse la plus pertinente et précise ton hypothèse au lieu de bloquer.
+- Respecte la signification des colonnes indiquée par l'utilisateur (unités, définitions) quand elle est fournie.
+- Termine toujours par une section **Pour aller plus loin** : exactement trois questions courtes (une par puce),
+  formulées comme l'utilisateur les poserait, qui prolongent l'analyse sur ces données.`
 
 export interface QuickAnalysis {
   key: string

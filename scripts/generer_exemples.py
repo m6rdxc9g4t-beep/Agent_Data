@@ -70,10 +70,42 @@ def ecommerce():
                        "montant": ca, "region": region, "canal": canal, "nouveau_client": nouveau.astype(int),
                        "delai_livraison_j": delai.astype(int), "note_avis": note, "retour": retour})
     df = holes(df, ["note_avis"], 0.08)
+    # Clients (générateur séparé pour ne pas décaler les autres jeux) : clé client_id commune aux deux fichiers.
+    r2 = np.random.default_rng(77)
+    regions = df["region"].unique()
+    nc = 950
+    c_region = r2.choice(regions, nc)
+    c_id = np.array([f"C{1000 + i}" for i in range(nc)])
+    poids = 1 / np.arange(1, nc + 1) ** 0.55
+    r2.shuffle(poids)
+    client = np.empty(n, dtype=object)
+    for reg in regions:
+        idx = np.where(df["region"].to_numpy() == reg)[0]
+        cand = np.where(c_region == reg)[0]
+        w = poids[cand] / poids[cand].sum()
+        client[idx] = c_id[r2.choice(cand, len(idx), p=w)]
+    df.insert(1, "client_id", client)
     save(df, "ecommerce_commandes.csv", "Boutique en ligne", "Commerce",
-         "3 200 commandes d'un e-commerce sur deux ans : catégories, remises, délais de livraison, avis et retours.",
+         "3 200 commandes d'un e-commerce sur deux ans : catégories, remises, délais de livraison, avis et retours. "
+         "Se croise avec « Clients de la boutique » par client_id.",
          ["Quelles catégories rapportent le plus après remises ?", "Les délais de livraison font-ils baisser les notes ?",
           "Prédire les retours de commande", "Prévoir le chiffre d'affaires mensuel"])
+
+    nb = pd.Series(client).value_counts().reindex(c_id).fillna(0).to_numpy()
+    premiere = pd.Series(pd.to_datetime(df["date"]).to_numpy(), index=client).groupby(level=0).min().reindex(c_id)
+    inscription = (premiere - pd.to_timedelta(r2.integers(0, 400, nc), unit="D")).fillna(pd.Timestamp("2025-06-01"))
+    age = np.clip(np.round(r2.normal(39, 12, nc)), 18, 80).astype(int)
+    fidelite = r2.random(nc) < sigmoid(-1.6 + 0.45 * nb + 0.02 * (age - 39))
+    acquisition = r2.choice(["Recherche Google", "Réseaux sociaux", "Bouche-à-oreille", "Publicité TV", "Parrainage"], nc,
+                            p=[0.34, 0.27, 0.18, 0.11, 0.10])
+    clients = pd.DataFrame({"client_id": c_id, "date_inscription": inscription.dt.strftime("%Y-%m-%d"), "age": age,
+                            "region": c_region, "canal_acquisition": acquisition, "programme_fidelite": fidelite.astype(int),
+                            "newsletter": (r2.random(nc) < 0.4 + 0.25 * fidelite).astype(int)})
+    save(clients, "ecommerce_clients.csv", "Clients de la boutique", "Commerce",
+         "950 clients de la boutique en ligne : âge, région, canal d'acquisition, programme de fidélité. "
+         "À lier à « Boutique en ligne » par client_id pour croiser clients et commandes.",
+         ["Les membres du programme de fidélité dépensent-ils plus ?", "Quel canal d'acquisition amène les clients les plus rentables ?",
+          "Panier moyen par tranche d'âge"])
 
 
 # ── Finance ───────────────────────────────────────────────────────────────────────────────────

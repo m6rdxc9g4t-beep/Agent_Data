@@ -81,7 +81,7 @@ export async function computeProfile(db: DatasetDb): Promise<Profile> {
       parts.push(`min(${q})::VARCHAR AS mi${i}`, `max(${q})::VARCHAR AS ma${i}`)
     } else if (c.type === 'VARCHAR') {
       parts.push(`avg(length(${q}))::DOUBLE AS len${i}`,
-        `avg(CASE WHEN TRY_CAST(replace(trim(${q}), ',', '.') AS DOUBLE) IS NOT NULL THEN 1.0 ELSE 0.0 END) FILTER (WHERE ${q} IS NOT NULL) AS nt${i}`)
+        `avg(CASE WHEN TRY_CAST(replace(replace(replace(replace(trim(${q}), ' ', ''), chr(160), ''), chr(8239), ''), ',', '.') AS DOUBLE) IS NOT NULL THEN 1.0 ELSE 0.0 END) FILTER (WHERE ${q} IS NOT NULL) AS nt${i}`)
     }
   })
   const agg = await db.query(`SELECT ${parts.join(', ')} FROM data`, 1)
@@ -163,15 +163,18 @@ export async function computeProfile(db: DatasetDb): Promise<Profile> {
 }
 
 /** Résumé compact injecté dans le prompt système de l'agent. */
-export function profileForPrompt(name: string, profile: Profile): string {
-  const lines = [`Jeu de données « ${name} » : table \`data\`, ${profile.rows} lignes × ${profile.columns.length} colonnes.`, '', 'Colonnes :']
+export function profileForPrompt(name: string, profile: Profile, dict: { descriptions?: Record<string, string>; context?: string } = {}): string {
+  const lines = [`Jeu de données « ${name} » : table \`data\`, ${profile.rows} lignes × ${profile.columns.length} colonnes.`]
+  if (dict.context) lines.push(`Contexte donné par l'utilisateur : ${dict.context}`)
+  lines.push('', 'Colonnes :')
   for (const c of profile.columns.slice(0, 80)) {
     let detail = `${KIND_LABELS[c.kind].toLowerCase()}, ${c.distinct} valeurs distinctes`
     if (c.kind === 'numeric') detail += `, min ${fmt(c.min)}, médiane ${fmt(c.median)}, max ${fmt(c.max)}`
     else if (c.kind === 'datetime') detail += `, du ${c.min} au ${c.max}`
     else if (c.top) detail += `, la plus fréquente : « ${c.top} »`
     if (c.missing) detail += `, ${c.missing} manquante(s)`
-    lines.push(`- "${c.name}" (${c.type}) — ${detail}`)
+    const desc = dict.descriptions?.[c.name]
+    lines.push(`- "${c.name}" (${c.type}) — ${detail}${desc ? ` — signification : ${desc}` : ''}`)
   }
   if (profile.columns.length > 80) lines.push(`… et ${profile.columns.length - 80} autres colonnes.`)
   return lines.join('\n')

@@ -1,5 +1,26 @@
 # Journal des versions
 
+## 7.0.0 — Tableau de bord, fichiers croisés, nettoyage, modèles réutilisables
+
+- **Tableau de bord** : bouton « Épingler » sur chaque graphique, tableau et réponse (Assistant, Exploration,
+  Prédiction). Nouvel onglet par jeu de données : titres modifiables, commentaires, ordre, pleine largeur,
+  requête visible, export PDF (mise en page claire, graphiques redessinés à la largeur de la page).
+- **Fichiers liés** : un autre jeu devient une table SQL à côté de `data` ; DataMind repère les colonnes communes
+  et mesure les correspondances (« 100 % des commandes trouvent leur client, une ligne par client »).
+  L'agent reçoit le schéma et les clés de jointure. Nouveau jeu d'exemple « Clients de la boutique » à croiser
+  avec « Boutique en ligne » par `client_id`.
+- **Nettoyage appliqué** (onglet Qualité) : espaces, nombres stockés en texte (y compris « 1 234,50 »), colonnes
+  vides ou constantes, doublons (ordre conservé), valeurs manquantes, valeurs atypiques. Crée une version nettoyée,
+  l'original est gardé.
+- **Modèles enregistrés** : « Enregistrer le modèle » après un entraînement ; le modèle survit au redémarrage.
+  Nouveau mode « Appliquer un modèle » : prédire toutes les lignes d'un autre fichier, aperçu et CSV téléchargeable
+  avec la prédiction et sa probabilité.
+- **Assistant** : trois questions « Pour aller plus loin » cliquables après chaque réponse ; requête SQL d'une étape
+  modifiable et relançable (lecture seule) ; dictionnaire des colonnes et contexte du jeu (onglet Qualité)
+  transmis à l'agent.
+- **Finitions** : un seul message quand le moteur IA ne répond pas, avec un bouton pour passer à l'autre moteur ;
+  interface utilisable sur téléphone (menu en tiroir, onglets défilants, fenêtres plein écran).
+
 ## 6.4.0 — Jeux d'exemple dans 9 domaines
 
 - 15 jeux d'exemple fictifs mais réalistes : commerce, finance (transactions et fraude, crédit, bourse),

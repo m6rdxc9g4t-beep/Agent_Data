@@ -21,7 +21,16 @@ export interface DatasetMeta {
   sample: boolean
   /** Dernière ouverture ou analyse : sert à trier la liste. */
   lastActivityAt?: string
+  /** Autres jeux chargés à côté de `data`, sous forme de tables nommées (jointures). */
+  links?: DatasetLink[]
+  /** Dictionnaire : description de chaque colonne et contexte général, transmis à l'agent. */
+  descriptions?: Record<string, string>
+  context?: string
+  /** Version nettoyée : identifiant du jeu d'origine. */
+  cleanedFrom?: string
 }
+
+export interface DatasetLink { id: string; table: string }
 
 export type Block =
   | { kind: 'text'; text: string }
@@ -49,6 +58,23 @@ export interface ChartSpec {
   yLabel?: string
   /** Trace la diagonale y = x (valeurs réelles contre prédites). */
   diagonal?: boolean
+}
+
+/** Élément épinglé au tableau de bord d'un jeu de données (instantané : données figées au moment de l'épinglage). */
+export interface Pin {
+  id: string
+  /** Empreinte du contenu, pour savoir côté interface si un résultat est déjà épinglé. */
+  key: string
+  kind: 'chart' | 'table' | 'text'
+  title: string
+  note?: string
+  wide?: boolean
+  chart?: ChartSpec
+  table?: { columns: Column[]; rows: unknown[][]; truncated: boolean }
+  text?: string
+  sql?: string
+  source: string
+  createdAt: string
 }
 
 export interface Turn {
@@ -138,6 +164,15 @@ export class Store {
     meta.lastActivityAt = new Date().toISOString()
     await this.saveDataset(meta)
     return meta
+  }
+
+  // ── Tableau de bord ──
+  async listPins(datasetId: string): Promise<Pin[]> {
+    return (await readJson<{ pins: Pin[] }>(join(this.datasetDir(datasetId), 'dashboard.json')))?.pins ?? []
+  }
+
+  async savePins(datasetId: string, pins: Pin[]): Promise<void> {
+    await writeJson(join(this.datasetDir(datasetId), 'dashboard.json'), { pins })
   }
 
   async deleteDataset(id: string): Promise<void> {

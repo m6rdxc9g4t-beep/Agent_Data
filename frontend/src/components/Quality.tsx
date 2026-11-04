@@ -1,8 +1,12 @@
 // Onglet Qualité : score, recommandations et profil des colonnes.
-import { ShieldCheck } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { BookText, ShieldCheck } from 'lucide-react'
+
+import { api } from '../api'
 
 import { fmtCell, fmtInt, fmtNumber, fmtPct } from '../format'
-import type { DatasetDetail, Kind } from '../types'
+import type { DatasetDetail, DatasetMeta, Kind } from '../types'
+import { CleanPanel } from './CleanPanel'
 
 export const KIND_LABELS: Record<Kind, string> = {
   numeric: 'Numérique', datetime: 'Date', boolean: 'Booléen', category: 'Catégorie', text: 'Texte', id: 'Identifiant', constant: 'Constante',
@@ -12,7 +16,24 @@ function Inline({ text }: { text: string }) {
   return <>{text.split('`').map((p, i) => (i % 2 ? <code key={i}>{p}</code> : p))}</>
 }
 
-export function Quality({ dataset, onAudit, canAudit }: { dataset: DatasetDetail; onAudit: () => void; canAudit: boolean }) {
+/** Champ de description enregistré à la sortie du champ (dictionnaire des colonnes). */
+function DescInput({ value, placeholder, onSave, multiline }: { value: string; placeholder: string; onSave: (v: string) => void; multiline?: boolean }) {
+  const [text, setText] = useState(value)
+  useEffect(() => setText(value), [value])
+  const commit = () => { if (text.trim() !== value) onSave(text.trim()) }
+  return multiline
+    ? <textarea className="desc-input" rows={2} value={text} placeholder={placeholder} onChange={(e) => setText(e.target.value)} onBlur={commit} maxLength={2000} />
+    : <input className="desc-input" value={text} placeholder={placeholder} onChange={(e) => setText(e.target.value)} onBlur={commit}
+        onKeyDown={(e) => { if (e.key === 'Enter') (e.target as HTMLInputElement).blur() }} maxLength={300} />
+}
+
+export function Quality({ dataset, onAudit, canAudit, onCleaned, onOpen, onPatched }: {
+  dataset: DatasetDetail; onAudit: () => void; canAudit: boolean; onCleaned: (m: DatasetMeta) => void; onOpen: (id: string) => void
+  onPatched: (m: DatasetMeta) => void
+}) {
+  const [saveError, setSaveError] = useState<string | null>(null)
+  const patch = (p: { descriptions?: Record<string, string>; context?: string }) =>
+    api.updateDataset(dataset.id, p).then((m) => { onPatched(m); setSaveError(null) }).catch((e: Error) => setSaveError(e.message))
   const q = dataset.profile.quality
   const tone = q.score >= 75 ? 'good' : q.score >= 55 ? 'mid' : 'bad'
   return (
@@ -36,17 +57,32 @@ export function Quality({ dataset, onAudit, canAudit }: { dataset: DatasetDetail
         </div>
       </section>
 
+      <CleanPanel dataset={dataset} onCreated={onCleaned} onOpen={onOpen} />
+
       <section className="section">
-        <h2 className="section-title">Profil des colonnes</h2>
+        <div className="section-head">
+          <h2 className="section-title">Profil et dictionnaire des colonnes</h2>
+          <span className="muted small"><BookText size={14} /> Les significations saisies ici sont transmises à l’agent.</span>
+        </div>
+        <label className="context-field">
+          <span>Contexte du jeu de données</span>
+          <DescInput multiline value={dataset.context ?? ''} onSave={(v) => patch({ context: v })}
+            placeholder="Ex. : export des ventes 2024 du magasin de Lyon, montants en euros HT, une ligne par ticket de caisse." />
+        </label>
+        {saveError && <p className="hint-warn">{saveError}</p>}
         <div className="result-table profile-table">
           <table>
             <thead>
-              <tr><th>Colonne</th><th>Type</th><th>Renseignées</th><th className="num">Distinctes</th><th className="num">Min</th><th className="num">Médiane</th><th className="num">Max</th><th>Valeur fréquente</th></tr>
+              <tr><th>Colonne</th><th>Signification</th><th>Type</th><th>Renseignées</th><th className="num">Distinctes</th><th className="num">Min</th><th className="num">Médiane</th><th className="num">Max</th><th>Valeur fréquente</th></tr>
             </thead>
             <tbody>
               {dataset.profile.columns.map((c) => (
                 <tr key={c.name}>
                   <td className="col-name">{c.name}</td>
+                  <td className="desc-cell">
+                    <DescInput value={dataset.descriptions?.[c.name] ?? ''} placeholder="Ajouter…"
+                      onSave={(v) => patch({ descriptions: { [c.name]: v } })} />
+                  </td>
                   <td><span className={`kind kind-${c.kind}`}>{KIND_LABELS[c.kind]}</span></td>
                   <td>
                     <span className="bar" aria-label={fmtPct(c.completeness)}><span style={{ width: `${c.completeness * 100}%` }} className={c.completeness < 0.8 ? 'low' : undefined} /></span>

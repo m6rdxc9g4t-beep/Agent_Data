@@ -23,6 +23,9 @@ interface Props {
   onDeleteConversation: (id: string) => void
   onEngine: (e: EngineChoice) => void
   onRefreshConfig: () => void
+  /** Petits écrans : la barre latérale est un tiroir. */
+  open: boolean
+  onClose: () => void
 }
 
 export function Sidebar(p: Props) {
@@ -37,13 +40,14 @@ export function Sidebar(p: Props) {
   const e = p.engine
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar${p.open ? ' open' : ''}`} aria-label="Navigation">
       <div className="brand">
         <img src="/logo.svg" alt="" width={30} height={30} />
         <div>
           <strong>DataMind</strong>
           <span>{cfg?.instanceLabel || 'Agent d’analyse de données'}</span>
         </div>
+        <button type="button" className="icon-btn drawer-close" onClick={p.onClose} aria-label="Fermer le menu"><X size={18} /></button>
       </div>
 
       <button type="button" className="import-btn" onClick={() => file.current?.click()} disabled={p.uploading !== null}>
@@ -110,7 +114,7 @@ export function Sidebar(p: Props) {
             ? <select value={e.ollamaModel} onChange={(ev) => p.onEngine({ ...e, ollamaModel: ev.target.value })} aria-label="Modèle Ollama">
                 {cfg.ollama.models.map((m) => <option key={m}>{m}</option>)}
               </select>
-            : <p className="engine-msg">{cfg.ollama.reachable ? 'Aucun modèle installé sur le serveur Ollama.' : 'Ollama ne répond pas sur le serveur.'}</p>
+            : null
         )}
         {cfg && e.engine === 'claude' && (
           <>
@@ -129,7 +133,7 @@ export function Sidebar(p: Props) {
             )}
           </>
         )}
-        <p className="engine-status">{p.engineStatus.text}</p>
+        {!p.engineStatus.ok && <p className="engine-status warn">{p.engineStatus.text}</p>}
       </div>
 
       <div className="theme-switch" role="radiogroup" aria-label="Thème">

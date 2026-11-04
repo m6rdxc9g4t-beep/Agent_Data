@@ -2,11 +2,11 @@
 //   « Prévoir une variable » : entraîne et compare quatre modèles, explique le meilleur et permet de le tester.
 //   « Prévoir dans le temps » : compare quatre méthodes de prévision sur les dernières périodes et projette.
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { BrainCircuit, ChartSpline, Check, Download, LoaderCircle, MessageSquareText, Play, SlidersHorizontal } from 'lucide-react'
+import { AlertTriangle, BrainCircuit, ChartSpline, Check, Download, LoaderCircle, MessageSquareText, Play, Save, SlidersHorizontal, Trash2, Wand2 } from 'lucide-react'
 
 import { api } from '../api'
 import { fmtInt, fmtNumber, fmtPct } from '../format'
-import type { DatasetDetail, ForecastResult, MlOptions, Task, TrainResult } from '../types'
+import type { DatasetDetail, ForecastResult, MlOptions, SavedModel, ScorePreview, Task, TrainResult } from '../types'
 import { ChartFigure } from './Chart'
 import { ResultTable } from './ResultTable'
 
@@ -54,7 +54,7 @@ function FeaturePicker({ options, target, selected, onChange }: {
   )
 }
 
-function Simulator({ result }: { result: TrainResult }) {
+function Simulator({ result }: { result: { id: string; simulator: TrainResult['simulator']; target: { name: string } } }) {
   const [values, setValues] = useState<Record<string, string | number>>(() => Object.fromEntries(result.simulator.map((f) => [f.name, f.default])))
   const [out, setOut] = useState<Awaited<ReturnType<typeof api.predictOne>> | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -104,7 +104,33 @@ function Simulator({ result }: { result: TrainResult }) {
   )
 }
 
-function VariableMode({ dataset, options, onAsk }: { dataset: DatasetDetail; options: MlOptions; onAsk: (prompt: string, label: string) => void }) {
+function SaveModel({ result, dataset, onSaved }: { result: TrainResult; dataset: DatasetDetail; onSaved: () => void }) {
+  const [editing, setEditing] = useState(false)
+  const [name, setName] = useState(`Prédire ${result.target.name} — ${dataset.name.replace(/\.[^.]+$/, '')}`)
+  const [state, setState] = useState<'idle' | 'saving' | 'saved'>('idle')
+  const [error, setError] = useState<string | null>(null)
+  const save = () => {
+    setState('saving')
+    api.saveModel(result.id, dataset.id, name).then(() => { setState('saved'); setEditing(false); onSaved() })
+      .catch((e: Error) => { setError(e.message); setState('idle') })
+  }
+  if (state === 'saved') return <span className="saved-note"><Check size={15} /> Modèle enregistré</span>
+  if (!editing) return <button type="button" className="ghost-btn" onClick={() => setEditing(true)}><Save size={15} /> Enregistrer le modèle</button>
+  return (
+    <span className="save-model">
+      <input value={name} onChange={(e) => setName(e.target.value)} maxLength={120} aria-label="Nom du modèle" autoFocus
+        onKeyDown={(e) => { if (e.key === 'Enter' && name.trim()) save(); if (e.key === 'Escape') setEditing(false) }} />
+      <button type="button" className="primary-btn" onClick={save} disabled={!name.trim() || state === 'saving'}>
+        {state === 'saving' ? <LoaderCircle size={15} className="spin" /> : <Save size={15} />} Enregistrer
+      </button>
+      {error && <span className="step-error">{error}</span>}
+    </span>
+  )
+}
+
+function VariableMode({ dataset, options, onAsk, onSaved }: {
+  dataset: DatasetDetail; options: MlOptions; onAsk: (prompt: string, label: string) => void; onSaved: () => void
+}) {
   const [target, setTarget] = useState(options.targets[0]?.name ?? '')
   const [features, setFeatures] = useState<string[]>([])
   const [result, setResult] = useState<TrainResult | null>(null)
@@ -164,7 +190,10 @@ function VariableMode({ dataset, options, onAsk }: { dataset: DatasetDetail; opt
           <div className="verdict">
             <BrainCircuit size={20} aria-hidden />
             <p>{result.summary}</p>
-            <button type="button" className="ghost-btn" onClick={askAgent}><MessageSquareText size={15} /> Faire commenter par l’agent</button>
+            <div className="verdict-actions">
+              <SaveModel key={result.id} result={result} dataset={dataset} onSaved={onSaved} />
+              <button type="button" className="ghost-btn" onClick={askAgent}><MessageSquareText size={15} /> Faire commenter par l’agent</button>
+            </div>
           </div>
 
           <div className="result-table leaderboard">
@@ -197,14 +226,108 @@ function VariableMode({ dataset, options, onAsk }: { dataset: DatasetDetail; opt
           </div>
 
           <div className="grid-2">
-            <ChartFigure spec={result.quality} height={300} />
-            <ChartFigure spec={result.importance} height={300} />
+            <ChartFigure spec={result.quality} height={300} pinSource="Prédiction" />
+            <ChartFigure spec={result.importance} height={300} pinSource="Prédiction" />
           </div>
 
           <Simulator key={result.id} result={result} />
         </div>
       )}
     </>
+  )
+}
+
+function ApplyMode({ dataset, models, onChanged }: { dataset: DatasetDetail; models: SavedModel[]; onChanged: () => void }) {
+  const [selected, setSelected] = useState<string | null>(models[0]?.id ?? null)
+  const [preview, setPreview] = useState<ScorePreview | null>(null)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [sim, setSim] = useState(false)
+  const model = models.find((m) => m.id === selected) ?? null
+
+  useEffect(() => { setPreview(null); setError(null); setSim(false) }, [selected, dataset.id])
+  useEffect(() => { if (!models.some((m) => m.id === selected)) setSelected(models[0]?.id ?? null) }, [models, selected])
+
+  const run = () => {
+    if (!model) return
+    setBusy(true); setError(null)
+    api.scorePreview(model.id, dataset.id).then(setPreview).catch((e: Error) => setError(e.message)).finally(() => setBusy(false))
+  }
+  const remove = (m: SavedModel) => {
+    if (!confirm(`Supprimer le modèle « ${m.name} » ?`)) return
+    api.deleteModel(m.id).then(onChanged).catch((e: Error) => setError(e.message))
+  }
+
+  if (!models.length) {
+    return (
+      <p className="ml-note">
+        Aucun modèle enregistré. Entraînez un modèle dans « Prévoir une variable », puis cliquez sur <strong>Enregistrer le modèle</strong> :
+        il restera disponible après un redémarrage et pourra prédire les lignes de n’importe quel autre fichier ayant les mêmes colonnes
+        (par exemple de nouveaux clients).
+      </p>
+    )
+  }
+  return (
+    <div className="apply">
+      <ul className="model-list">
+        {models.map((m) => (
+          <li key={m.id} className={m.id === selected ? 'on' : undefined}>
+            <button type="button" className="model-pick" onClick={() => setSelected(m.id)} aria-pressed={m.id === selected}>
+              <strong>{m.name}</strong>
+              <span>{m.label} · {m.metrics[0].label} {fmtMetric(m.metrics[0].key, m.metrics[0].value)}</span>
+              <span className="muted">Entraîné sur « {m.datasetName} » ({fmtInt(m.rows)} lignes) le {new Date(m.createdAt).toLocaleDateString('fr-FR')}</span>
+            </button>
+            <button type="button" className="icon-btn small" onClick={() => remove(m)} title="Supprimer ce modèle"><Trash2 size={14} /></button>
+          </li>
+        ))}
+      </ul>
+
+      {model && (
+        <div className="apply-panel">
+          <p className="ml-note">
+            Applique « {model.name} » à chaque ligne de <strong>{dataset.name}</strong> et ajoute la colonne <code>{model.target.name}_prédit</code>
+            {model.target.task === 'binary' && ' avec sa probabilité'}{model.target.task === 'multiclass' && ' avec la confiance du modèle'}.
+            {model.datasetId !== dataset.id ? ' Si des colonnes manquent dans ce fichier, elles sont remplacées par des valeurs typiques.' : ''}
+          </p>
+          <div className="apply-actions">
+            <button type="button" className="primary-btn" onClick={run} disabled={busy}>
+              {busy ? <LoaderCircle size={15} className="spin" /> : <Wand2 size={15} />} Prédire sur ce fichier
+            </button>
+            {preview && <a className="ghost-btn" href={api.scoreUrl(model.id, dataset.id)} download><Download size={15} /> Télécharger les {fmtInt(preview.total)} prédictions (CSV)</a>}
+            <button type="button" className="ghost-btn" onClick={() => setSim(!sim)} aria-pressed={sim}><SlidersHorizontal size={15} /> Tester à la main</button>
+          </div>
+          {error && <p className="hint-warn">{error}</p>}
+          {preview && (
+            <>
+              {preview.missing.length > 0 && (
+                <p className="hint-warn"><AlertTriangle size={14} /> Colonnes absentes de ce fichier, remplacées par une valeur typique : {preview.missing.join(', ')}.
+                  {preview.missing.length > model.features.length / 2 && ' Plus de la moitié des variables manquent : les prédictions sont peu fiables.'}</p>
+              )}
+              <div className="apply-summary">
+                {preview.stats && (
+                  <>
+                    <div><span>Lignes prédites</span><strong>{fmtInt(preview.total)}</strong></div>
+                    <div><span>Moyenne prédite</span><strong>{fmtNumber(preview.stats.mean)}</strong></div>
+                    <div><span>Minimum</span><strong>{fmtNumber(preview.stats.min)}</strong></div>
+                    <div><span>Maximum</span><strong>{fmtNumber(preview.stats.max)}</strong></div>
+                  </>
+                )}
+                {preview.distribution && (
+                  <>
+                    <div><span>Lignes prédites</span><strong>{fmtInt(preview.total)}</strong></div>
+                    {preview.distribution.slice(0, 5).map((d) => (
+                      <div key={d.value}><span>{preview.target} = {d.value}</span><strong>{fmtInt(d.rows)} <small>({fmtPct(d.rows / Math.max(1, preview.total), 0)})</small></strong></div>
+                    ))}
+                  </>
+                )}
+              </div>
+              <ResultTable table={preview.preview} maxRows={15} />
+            </>
+          )}
+          {sim && <Simulator key={model.id} result={{ id: model.id, simulator: model.simulator, target: model.target }} />}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -281,7 +404,7 @@ function TimeMode({ dataset, options, onAsk }: { dataset: DatasetDetail; options
             <p>{result.summary}</p>
             <button type="button" className="ghost-btn" onClick={askAgent}><MessageSquareText size={15} /> Faire commenter par l’agent</button>
           </div>
-          <ChartFigure spec={result.chart} height={340} />
+          <ChartFigure spec={result.chart} height={340} pinSource="Prévision" />
           <div className="grid-2">
             <div className="result-table leaderboard">
               <table>
@@ -314,11 +437,14 @@ function TimeMode({ dataset, options, onAsk }: { dataset: DatasetDetail; options
 
 export function Prediction({ dataset, onAsk }: { dataset: DatasetDetail; onAsk: (prompt: string, label: string) => void }) {
   const [options, setOptions] = useState<MlOptions | null>(null)
-  const [mode, setMode] = useState<'variable' | 'time'>('variable')
+  const [mode, setMode] = useState<'variable' | 'time' | 'apply'>('variable')
   const [error, setError] = useState<string | null>(null)
+  const [saved, setSaved] = useState<SavedModel[]>([])
+  const refreshSaved = () => api.savedModels().then(setSaved).catch(() => {})
   useEffect(() => {
     setOptions(null)
     api.mlOptions(dataset.id).then(setOptions).catch((e: Error) => setError(e.message))
+    refreshSaved()
   }, [dataset.id])
   const noTargets = useMemo(() => options && !options.targets.length, [options])
 
@@ -331,13 +457,17 @@ export function Prediction({ dataset, onAsk }: { dataset: DatasetDetail; onAsk: 
         <button type="button" role="radio" aria-checked={mode === 'time'} className={mode === 'time' ? 'on' : ''} onClick={() => setMode('time')}>
           <ChartSpline size={16} /> <span><strong>Prévoir dans le temps</strong><small>Prolonger l’évolution d’un indicateur sur les prochaines périodes</small></span>
         </button>
+        <button type="button" role="radio" aria-checked={mode === 'apply'} className={mode === 'apply' ? 'on' : ''} onClick={() => { setMode('apply'); refreshSaved() }}>
+          <Wand2 size={16} /> <span><strong>Appliquer un modèle{saved.length > 0 && <span className="tab-count">{saved.length}</span>}</strong><small>Utiliser un modèle enregistré pour prédire les lignes de ce fichier</small></span>
+        </button>
       </div>
       {error && <p className="hint-warn">{error}</p>}
       {!options && !error && <p className="ml-explain"><LoaderCircle size={15} className="spin" /> Préparation…</p>}
       {options && mode === 'variable' && (noTargets
         ? <p className="ml-explain">Aucune colonne ne peut servir de cible : il faut une colonne numérique ou une catégorie de 10 modalités au plus.</p>
-        : <VariableMode key={dataset.id} dataset={dataset} options={options} onAsk={onAsk} />)}
+        : <VariableMode key={dataset.id} dataset={dataset} options={options} onAsk={onAsk} onSaved={refreshSaved} />)}
       {options && mode === 'time' && <TimeMode key={dataset.id} dataset={dataset} options={options} onAsk={onAsk} />}
+      {mode === 'apply' && <ApplyMode dataset={dataset} models={saved} onChanged={refreshSaved} />}
     </div>
   )
 }

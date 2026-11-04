@@ -16,13 +16,26 @@
   "label": "Boutique en ligne",
   "domain": "Commerce",
   "rows": 3200,
-  "columns": 12,
-  "description": "3 200 commandes d'un e-commerce sur deux ans : catégories, remises, délais de livraison, avis et retours.",
+  "columns": 13,
+  "description": "3 200 commandes d'un e-commerce sur deux ans : catégories, remises, délais de livraison, avis et retours. Se croise avec « Clients de la boutique » par client_id.",
   "ideas": [
    "Quelles catégories rapportent le plus après remises ?",
    "Les délais de livraison font-ils baisser les notes ?",
    "Prédire les retours de commande",
    "Prévoir le chiffre d'affaires mensuel"
+  ]
+ },
+ {
+  "file": "ecommerce_clients.csv",
+  "label": "Clients de la boutique",
+  "domain": "Commerce",
+  "rows": 950,
+  "columns": 7,
+  "description": "950 clients de la boutique en ligne : âge, région, canal d'acquisition, programme de fidélité. À lier à « Boutique en ligne » par client_id pour croiser clients et commandes.",
+  "ideas": [
+   "Les membres du programme de fidélité dépensent-ils plus ?",
+   "Quel canal d'acquisition amène les clients les plus rentables ?",
+   "Panier moyen par tranche d'âge"
   ]
  },
  {

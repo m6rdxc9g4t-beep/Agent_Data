@@ -12,12 +12,17 @@ Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un
 |---|---|
 | ![Exploration](docs/screenshots/exploration.png) | ![Qualité](docs/screenshots/qualite.png) |
 
+| Tableau de bord | Appliquer un modèle enregistré |
+|---|---|
+| ![Tableau de bord](docs/screenshots/tableau-de-bord.png) | ![Modèle](docs/screenshots/appliquer-modele.png) |
+
 ## Fonctionnalités
 
 - **Assistant** — l'agent dispose de cinq outils : `run_sql` (requête en lecture seule sur la table `data`),
   `create_chart` (graphique interactif), `segment` (k-means), `predict` (régression linéaire ou logistique,
   évaluée sur un jeu de test contre une baseline) et `forecast` (tendance + saisonnalité). Chaque étape
-  s'affiche dans une trace numérotée : requête SQL, résultat, graphique. 15 analyses en un clic.
+  s'affiche dans une trace numérotée : requête SQL (modifiable et relançable), résultat, graphique. 15 analyses en un clic,
+  questions de relance après chaque réponse, dictionnaire des colonnes transmis à l'agent.
 - **Prédiction** — apprentissage automatique sans code. *Prévoir une variable* : quatre modèles comparés sur un
   jeu de test (référence naïve, régression linéaire ou logistique, gradient boosting d'arbres, réseau de neurones),
   influence des variables et simulateur. *Prévoir dans le temps* : référence naïve, tendance + saisonnalité,
@@ -25,6 +30,12 @@ Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un
 - **Exploration** — graphiques automatiques (évolution, comparaison, répartition, distribution) et
   exploration colonne par colonne, sans IA.
 - **Qualité** — score sur 100, profil de chaque colonne, recommandations de nettoyage.
+- **Tableau de bord** — épinglez graphiques, tableaux et réponses ; commentaires, ordre, export PDF.
+- **Fichiers liés** — croisez plusieurs fichiers (commandes et clients…) : chaque fichier lié devient une table SQL,
+  les clés communes sont détectées et vérifiées.
+- **Nettoyage appliqué** — doublons, espaces, nombres en texte, colonnes vides, valeurs manquantes ou atypiques,
+  dans une nouvelle version du jeu (l'original est conservé).
+- **Modèles enregistrés** — un modèle entraîné se garde et s'applique à un autre fichier (prédictions en CSV).
 - **Données** — table paginée côté serveur, recherche, tri, export CSV au format français.
 - **Historique** — jeux de données et analyses enregistrés sur le serveur ; export d'une analyse en page HTML.
 - **Fichiers** — CSV / TSV (encodage et séparateur détectés, format français `;` et virgule décimale),
@@ -89,7 +100,7 @@ Variables d'environnement, toutes facultatives (voir [`.env.example`](.env.examp
 | Variable | Défaut | Rôle |
 |---|---|---|
 | `HOST`, `PORT` | `127.0.0.1`, `3600` | Adresse d'écoute |
-| `DATA_DIR` | `./data` | Jeux de données (Parquet) et analyses (JSON) |
+| `DATA_DIR` | `./data` | Jeux de données (Parquet), analyses, tableaux de bord et modèles enregistrés (JSON) |
 | `STATIC_DIR` | — | Interface compilée servie par le backend |
 | `MAX_UPLOAD_MB` | `200` | Taille maximale d'un fichier |
 | `DATAMIND_ENGINE` | auto | Moteur proposé par défaut (Claude si le forfait est configuré) |
@@ -114,7 +125,9 @@ backend/src/
 ├── profile.ts         Profil des colonnes, score de qualité, recommandations
 ├── charts.ts          Graphiques de l'agent et graphiques automatiques
 ├── analysis.ts        k-means
-├── ml/                Apprentissage : préparation, gradient boosting, réseau de neurones, séries temporelles
+├── clean.ts           Nettoyage appliqué (nouvelle version du jeu)
+├── ml/                Apprentissage : préparation, gradient boosting, réseau de neurones, séries temporelles,
+│                      modèles enregistrés (models.ts)
 ├── store.ts           Métadonnées et analyses en fichiers JSON
 └── agent/
     ├── prompts.ts     Prompt système, catalogue des analyses rapides

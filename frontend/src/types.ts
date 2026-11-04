@@ -15,6 +15,17 @@ export interface DatasetMeta {
   sheet: string | null
   sample: boolean
   lastActivityAt?: string
+  links?: DatasetLink[]
+  cleanedFrom?: string
+  descriptions?: Record<string, string>
+  context?: string
+}
+
+export interface DatasetLink { id: string; table: string }
+export interface LinkInfo extends DatasetLink { name: string; rows: number; columns: Column[]; keys: { column: string; other: string }[] }
+export interface LinkSuggestion {
+  table: string
+  keys: { column: string; other: string; matchShare: number; uniqueInOther: boolean; distinct: number }[]
 }
 
 export type Kind = 'numeric' | 'datetime' | 'boolean' | 'category' | 'text' | 'id' | 'constant'
@@ -172,4 +183,52 @@ export interface ForecastResult {
   chart: ChartSpec
   table: TableData
   summary: string
+}
+
+export interface Pin {
+  id: string
+  key: string
+  kind: 'chart' | 'table' | 'text'
+  title: string
+  note?: string
+  wide?: boolean
+  chart?: ChartSpec
+  table?: TableData
+  text?: string
+  sql?: string
+  source: string
+  createdAt: string
+}
+
+export type NewPin = Omit<Pin, 'id' | 'createdAt'>
+
+export type CleanStepKind = 'dedupe' | 'trim' | 'convert' | 'drop_columns' | 'fill_missing' | 'cap_outliers'
+export interface PlannedStep { kind: CleanStepKind; columns: string[]; title: string; detail: string; recommended: boolean; columnNotes: Record<string, string> }
+
+export interface SavedModel {
+  id: string
+  name: string
+  datasetId: string
+  datasetName: string
+  target: { name: string; task: Task; classes: string[] }
+  label: string
+  metrics: Metric[]
+  summary: string
+  features: string[]
+  simulator: TrainResult['simulator']
+  rows: number
+  createdAt: string
+}
+
+export interface ScorePreview {
+  dataset: { id: string; name: string }
+  total: number
+  truncated: boolean
+  missing: string[]
+  task: Task
+  target: string
+  distribution: { value: string; rows: number }[] | null
+  stats: { mean: number; min: number; max: number } | null
+  preview: TableData
+  columns: number
 }

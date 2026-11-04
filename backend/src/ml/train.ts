@@ -56,12 +56,46 @@ export interface TrainResult {
 
 type Predictor = (X: number[][]) => number[][]
 
-interface Stored { encodings: FeatureEncoding[]; target: TargetInfo; predict: Predictor; label: string; createdAt: number }
+/** Paramètres d'un modèle entraîné, sérialisables en JSON (enregistrement sur disque). */
+export type ModelBody =
+  | { kind: 'baseline'; probs: number[] }
+  | { kind: 'linear' | 'mlp'; mlp: MlpModel }
+  | { kind: 'gbm'; gbm: GbmModel }
+
+export function predictorOf(body: ModelBody): Predictor {
+  if (body.kind === 'baseline') return (X) => X.map(() => body.probs)
+  if (body.kind === 'gbm') return (X) => predictGbm(body.gbm, X)
+  return (X) => predictMlp(body.mlp, X)
+}
+
+/** Modèle retenu après un entraînement : de quoi prédire et le décrire. */
+export interface Stored {
+  encodings: FeatureEncoding[]
+  target: TargetInfo
+  body: ModelBody
+  predict: Predictor
+  label: string
+  metrics: Metric[]
+  summary: string
+  rows: number
+  createdAt: number
+}
 const registry = new Map<string, Stored>()
 
 function remember(id: string, s: Stored) {
   registry.set(id, s)
   while (registry.size > 20) registry.delete(registry.keys().next().value as string)
+}
+
+/** Derniers modèles entraînés (en mémoire). */
+export function recentModel(id: string): Stored | undefined {
+  return registry.get(id)
+}
+export function rememberModel(id: string, s: Stored): void {
+  remember(id, s)
+}
+export function forgetModel(id: string): void {
+  registry.delete(id)
 }
 
 const round = (x: number, d = 4) => (Number.isFinite(x) ? Number(x.toFixed(d)) : 0)
@@ -118,24 +152,24 @@ function classificationMetrics(probs: number[][], y: number[], k: number): Metri
 // ── Modèles ────────────────────────────────────────────────────────────────────────────────────
 interface Split { Xtr: number[][]; ytr: number[]; Xva: number[][]; yva: number[]; Xte: number[][]; yte: number[] }
 
-function fit(kind: ModelKind, s: Split, task: TargetInfo['task'], k: number): { predict: Predictor; detail: string } {
+function fit(kind: ModelKind, s: Split, task: TargetInfo['task'], k: number): { body: ModelBody; detail: string } {
   if (kind === 'baseline') {
     if (task === 'regression') {
       const m = s.ytr.reduce((a, b) => a + b, 0) / s.ytr.length
-      return { predict: (X) => X.map(() => [m]), detail: `moyenne = ${round(m, 3)}` }
+      return { body: { kind: 'baseline', probs: [m] }, detail: `moyenne = ${round(m, 3)}` }
     }
     const counts = new Array(k).fill(0)
     s.ytr.forEach((v) => counts[v]++)
     const p = counts.map((c) => c / s.ytr.length)
-    return { predict: (X) => X.map(() => p), detail: 'classe la plus fréquente' }
+    return { body: { kind: 'baseline', probs: p }, detail: 'classe la plus fréquente' }
   }
   if (kind === 'linear') {
     const m: MlpModel = trainMlp(s.Xtr, s.ytr, s.Xva, s.yva, task, k, { hidden: [], epochs: 200, lr: 0.01, batch: 64, l2: 1e-4, timeBudgetMs: 6000 })
-    return { predict: (X) => predictMlp(m, X), detail: `${m.epochs} époques` }
+    return { body: { kind: 'linear', mlp: m }, detail: `${m.epochs} époques` }
   }
   if (kind === 'gbm') {
     const m: GbmModel = trainGbm(s.Xtr, s.ytr, s.Xva, s.yva, task, k, { timeBudgetMs: 15_000 })
-    return { predict: (X) => predictGbm(m, X), detail: `${m.trees.length} arbres de profondeur 4` }
+    return { body: { kind: 'gbm', gbm: m }, detail: `${m.trees.length} arbres de profondeur 4` }
   }
   // Taille du réseau adaptée au volume : un petit jeu de données appelle un petit réseau, plus régularisé.
   const n = Math.min(s.Xtr.length, 6000)
@@ -143,7 +177,7 @@ function fit(kind: ModelKind, s: Split, task: TargetInfo['task'], k: number): { 
   const m: MlpModel = trainMlp(s.Xtr.slice(0, n), s.ytr.slice(0, n), s.Xva, s.yva, task, k, small
     ? { hidden: [32, 16], epochs: 400, batch: 16, lr: 0.003, l2: 1e-3, patience: 40, timeBudgetMs: 15_000 }
     : { hidden: [48, 24], epochs: 200, batch: 32, lr: 0.003, l2: 1e-4, patience: 15, timeBudgetMs: 15_000 })
-  return { predict: (X) => predictMlp(m, X), detail: `couches ${m.sizes.join(' → ')}, meilleure époque ${m.epochs}` }
+  return { body: { kind: 'mlp', mlp: m }, detail: `couches ${m.sizes.join(' → ')}, meilleure époque ${m.epochs}` }
 }
 
 function evaluate(task: TargetInfo['task'], k: number, out: number[][], y: number[]): Metric[] {
@@ -166,13 +200,14 @@ export async function trainModels(db: DatasetDb, profile: Profile, target: strin
 
   const wanted: ModelKind[] = kinds?.length ? kinds : ['baseline', 'linear', 'gbm', 'mlp']
   if (!wanted.includes('baseline')) wanted.unshift('baseline')
-  const models: (ModelResult & { predict: Predictor })[] = []
+  const models: (ModelResult & { predict: Predictor; body: ModelBody })[] = []
   for (const kind of wanted) {
     const t0 = Date.now()
-    const { predict, detail } = fit(kind, split, task, k)
+    const { body, detail } = fit(kind, split, task, k)
+    const predict = predictorOf(body)
     const metrics = evaluate(task, k, predict(split.Xte), split.yte)
     const label = kind === 'linear' && task !== 'regression' ? 'Régression logistique' : MODEL_LABELS[kind]
-    models.push({ kind, label, hint: MODEL_HINTS[kind], metrics, score: metrics[0].value, trainMs: Date.now() - t0, detail, predict })
+    models.push({ kind, label, hint: MODEL_HINTS[kind], metrics, score: metrics[0].value, trainMs: Date.now() - t0, detail, predict, body })
   }
   const best = models.filter((m) => m.kind !== 'baseline').sort((x, y) => y.score - x.score)[0] ?? models[0]
 
@@ -208,7 +243,6 @@ export async function trainModels(db: DatasetDb, profile: Profile, target: strin
   }
 
   const id = randomUUID()
-  remember(id, { encodings: data.encodings, target: data.target, predict: best.predict, label: best.label, createdAt: Date.now() })
 
   const simulator = data.encodings.map((e) => {
     if (e.kind === 'cat') return { name: e.name, kind: e.kind, levels: e.levels, default: e.mode }
@@ -229,20 +263,23 @@ export async function trainModels(db: DatasetDb, profile: Profile, target: strin
       : `Modèle retenu : ${best.label}. Pour prédire « ${data.target.name} » (${data.target.classes.join(' / ')}), ${fr(main.value * 100, 1)} % de bonnes réponses ` +
         `sur le jeu de test (référence : ${fr(base.score * 100, 1)} %).${top.length ? ` Variables les plus influentes : ${top.join(', ')}.` : ''}`
 
+  remember(id, {
+    encodings: data.encodings, target: data.target, body: best.body, predict: best.predict, label: best.label,
+    metrics: best.metrics, summary, rows: data.X.length, createdAt: Date.now(),
+  })
+
   return {
     id, target: data.target, task,
     rows: { train: tr.length, validation: va.length, test: te.length },
     features: data.encodings.map((e) => e.name),
-    models: models.map(({ predict: _p, ...m }) => m),
+    models: models.map(({ predict: _p, body: _b, ...m }) => m),
     best: best.kind, importance, quality, simulator, summary,
     durationMs: Date.now() - started,
   }
 }
 
 /** Prédiction pour une ligne saisie dans le simulateur. */
-export function predictOne(id: string, values: Record<string, unknown>): { model: string; value?: number; probabilities?: { label: string; p: number }[] } | null {
-  const s = registry.get(id)
-  if (!s) return null
+export function predictOne(s: Stored, values: Record<string, unknown>): { model: string; value?: number; probabilities?: { label: string; p: number }[] } {
   const out = s.predict([encodeRow(s.encodings, values)])[0]
   if (s.target.task === 'regression') return { model: s.label, value: round(out[0], 4) }
   return {

@@ -3,7 +3,7 @@ import * as XLSX from 'xlsx'
 
 import { kmeans } from '../src/analysis.js'
 import { forecastSeries } from '../src/ml/timeseries.js'
-import { predictOne, trainModels } from '../src/ml/train.js'
+import { predictOne, recentModel, trainModels } from '../src/ml/train.js'
 import { autoCharts, buildChart, pickMeasure } from '../src/charts.js'
 import { assertReadOnly, DatasetDb, QueryError } from '../src/db.js'
 import { decodeText, ImportError, importFile, sniffDelimiter } from '../src/importer.js'
@@ -135,7 +135,7 @@ describe('apprentissage automatique', () => {
     expect(r.models[0].score).toBeLessThan(0.1)
     expect(r.importance.data.rows[0][0]).toBe('panier_moyen')
     expect(r.quality.type).toBe('scatter')
-    const out = predictOne(r.id, Object.fromEntries(r.simulator.map((f) => [f.name, f.default])))
+    const out = predictOne(recentModel(r.id)!, Object.fromEntries(r.simulator.map((f) => [f.name, f.default])))
     expect(typeof out?.value).toBe('number')
     await cleanup()
   })
@@ -147,9 +147,9 @@ describe('apprentissage automatique', () => {
     expect(r.target.classes).toHaveLength(3)
     expect(r.models.find((m) => m.kind === r.best)!.score).toBeGreaterThan(0.8)
     expect(r.quality.type).toBe('heatmap')
-    const out = predictOne(r.id, { panier_moyen: 400, depenses_totales: 8000, nb_commandes: 20 })
+    const out = predictOne(recentModel(r.id)!, { panier_moyen: 400, depenses_totales: 8000, nb_commandes: 20 })
     expect(out?.probabilities?.reduce((s, p) => s + p.p, 0)).toBeCloseTo(1, 2)
-    expect(predictOne('inconnu', {})).toBeNull()
+    expect(recentModel('inconnu')).toBeUndefined()
     await cleanup()
   })
 

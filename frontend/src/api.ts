@@ -1,6 +1,6 @@
 // Accès à l'API du backend.
 import type {
-  AppConfig, ChartSpec, ColumnProfile, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, ForecastResult, MlOptions, Sample, TableData,
+  AppConfig, ChartSpec, CleanStepKind, SavedModel, ScorePreview, DatasetLink, PlannedStep, LinkInfo, LinkSuggestion, NewPin, Pin, ColumnProfile, Conversation, ConversationSummary, DatasetDetail, DatasetMeta, ForecastResult, MlOptions, Sample, TableData,
   ToolOutput, TrainResult,
 } from './types'
 
@@ -37,6 +37,9 @@ export const api = {
   datasets: () => request<DatasetMeta[]>('/api/datasets'),
   dataset: (id: string) => request<DatasetDetail>(`/api/datasets/${id}`),
   renameDataset: (id: string, name: string) => request<DatasetMeta>(`/api/datasets/${id}`, json('PATCH', { name })),
+  updateDataset: (id: string, patch: { descriptions?: Record<string, string>; context?: string }) =>
+    request<DatasetMeta>(`/api/datasets/${id}`, json('PATCH', patch)),
+  query: (id: string, sql: string) => request<TableData & { durationMs: number }>(`/api/datasets/${id}/query`, json('POST', { sql })),
   deleteDataset: (id: string) => request<void>(`/api/datasets/${id}`, json('DELETE')),
   selectSheet: (id: string, sheet: string) => request<DatasetMeta>(`/api/datasets/${id}/sheet`, json('POST', { sheet })),
   charts: (id: string) => request<ChartSpec[]>(`/api/datasets/${id}/charts`),
@@ -51,8 +54,25 @@ export const api = {
   train: (id: string, body: { target: string; features?: string[] }) => request<TrainResult>(`/api/datasets/${id}/ml/train`, json('POST', body)),
   predictOne: (modelId: string, values: Record<string, unknown>) =>
     request<{ model: string; value?: number; probabilities?: { label: string; p: number }[] }>(`/api/ml/models/${modelId}/predict`, json('POST', { values })),
+  savedModels: () => request<SavedModel[]>('/api/ml/models'),
+  saveModel: (modelId: string, datasetId: string, name: string) => request<SavedModel>(`/api/ml/models/${modelId}/save`, json('POST', { datasetId, name })),
+  deleteModel: (modelId: string) => request<void>(`/api/ml/models/${modelId}`, json('DELETE')),
+  scorePreview: (modelId: string, datasetId: string) => request<ScorePreview>(`/api/ml/models/${modelId}/score?dataset=${encodeURIComponent(datasetId)}`),
+  scoreUrl: (modelId: string, datasetId: string) => `/api/ml/models/${modelId}/score.csv?dataset=${encodeURIComponent(datasetId)}`,
   forecast: (id: string, body: { date: string; value: string; agg: string; grain: string; periods: number }) =>
     request<ForecastResult>(`/api/datasets/${id}/ml/forecast`, json('POST', body)),
+  cleanPlan: (id: string) => request<PlannedStep[]>(`/api/datasets/${id}/clean/plan`),
+  clean: (id: string, steps: { kind: CleanStepKind; columns: string[] }[]) =>
+    request<{ dataset: DatasetMeta; report: string[] }>(`/api/datasets/${id}/clean`, json('POST', { steps })),
+  links: (id: string) => request<LinkInfo[]>(`/api/datasets/${id}/links`),
+  suggestLink: (id: string, other: string) => request<LinkSuggestion>(`/api/datasets/${id}/links/suggest?other=${encodeURIComponent(other)}`),
+  saveLinks: (id: string, links: DatasetLink[]) => request<DatasetMeta>(`/api/datasets/${id}/links`, json('PUT', { links })),
+  pins: (id: string) => request<Pin[]>(`/api/datasets/${id}/dashboard`),
+  addPin: (id: string, pin: NewPin) => request<Pin>(`/api/datasets/${id}/dashboard`, json('POST', pin)),
+  updatePin: (id: string, pinId: string, patch: { title?: string; note?: string; wide?: boolean }) =>
+    request<Pin>(`/api/datasets/${id}/dashboard/${pinId}`, json('PATCH', patch)),
+  removePin: (id: string, pinId: string) => request<void>(`/api/datasets/${id}/dashboard/${pinId}`, json('DELETE')),
+  orderPins: (id: string, order: string[]) => request<Pin[]>(`/api/datasets/${id}/dashboard/order`, json('PUT', { order })),
   conversations: (datasetId: string) => request<ConversationSummary[]>(`/api/datasets/${datasetId}/conversations`),
   createConversation: (datasetId: string) => request<Conversation>(`/api/datasets/${datasetId}/conversations`, json('POST')),
   conversation: (id: string) => request<Conversation>(`/api/conversations/${id}`),
