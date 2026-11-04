@@ -1,0 +1,31 @@
+date,region,produit,categorie,quantite,prix_unitaire,montant,satisfaction
+2024-01-05,Nord,Ordinateur portable,Informatique,3,899.00,2697.00,4.5
+2024-01-08,Sud,Smartphone,Téléphonie,5,599.00,2995.00,4.2
+2024-01-12,Est,Casque audio,Accessoires,12,79.90,958.80,4.8
+2024-01-15,Ouest,Ordinateur portable,Informatique,2,899.00,1798.00,3.9
+2024-01-19,Nord,Tablette,Informatique,4,449.00,1796.00,4.1
+2024-01-22,Sud,Casque audio,Accessoires,8,79.90,639.20,4.7
+2024-01-26,Est,Smartphone,Téléphonie,6,599.00,3594.00,4.0
+2024-02-02,Ouest,Clavier mécanique,Accessoires,15,119.00,1785.00,4.6
+2024-02-06,Nord,Smartphone,Téléphonie,7,599.00,4193.00,4.3
+2024-02-09,Sud,Tablette,Informatique,3,449.00,1347.00,
+2024-02-13,Est,Ordinateur portable,Informatique,1,899.00,899.00,3.5
+2024-02-17,Ouest,Souris sans fil,Accessoires,20,39.90,798.00,4.4
+2024-02-21,Nord,Casque audio,Accessoires,9,79.90,719.10,4.9
+2024-02-24,Sud,Smartphone,Téléphonie,4,599.00,2396.00,4.1
+2024-03-01,Est,Tablette,Informatique,6,449.00,2694.00,4.2
+2024-03-05,Ouest,Ordinateur portable,Informatique,2,899.00,1798.00,4.0
+2024-03-09,Nord,Clavier mécanique,Accessoires,11,119.00,1309.00,4.5
+2024-03-12,Sud,Souris sans fil,Accessoires,18,39.90,718.20,4.3
+2024-03-16,Est,Casque audio,Accessoires,7,79.90,559.30,4.6
+2024-03-20,Ouest,Smartphone,Téléphonie,5,599.00,2995.00,3.8
+2024-03-24,Nord,Tablette,Informatique,3,449.00,1347.00,4.4
+2024-03-28,Sud,Ordinateur portable,Informatique,4,899.00,3596.00,4.7
+2024-04-02,Est,Souris sans fil,Accessoires,25,39.90,997.50,4.2
+2024-04-06,Ouest,Casque audio,Accessoires,10,79.90,799.00,4.8
+2024-04-10,Nord,Smartphone,Téléphonie,8,599.00,4792.00,4.1
+2024-04-14,Sud,Clavier mécanique,Accessoires,13,119.00,1547.00,
+2024-04-18,Est,Tablette,Informatique,5,449.00,2245.00,4.0
+2024-04-22,Ouest,Ordinateur portable,Informatique,3,899.00,2697.00,4.3
+2024-04-26,Nord,Souris sans fil,Accessoires,22,39.90,877.80,4.5
+2024-04-30,Sud,Casque audio,Accessoires,6,79.90,479.40,4.6
