@@ -1,39 +1,58 @@
-// Thème clair / sombre / système, mémorisé dans le navigateur.
+// Thème clair / sombre / système, commun à la suite Atelier (styles/atelier-brand/atelier-theme.js,
+// chargé avant le premier rendu) : la préférence vit dans le cookie atelier_theme sur le VPS, sinon dans
+// localStorage « atelier:theme ». Ici, on ne fait que la lire, l'écrire et suivre ses changements.
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 
 export type ThemeMode = 'system' | 'light' | 'dark'
+
+interface AtelierTheme {
+  get: () => ThemeMode
+  set: (pref: ThemeMode) => void
+  resolved: () => 'light' | 'dark'
+}
+declare global {
+  interface Window { atelierTheme?: AtelierTheme }
+}
 
 const ThemeContext = createContext<{ mode: ThemeMode; dark: boolean; setMode: (m: ThemeMode) => void; print: () => void }>({
   mode: 'system', dark: false, setMode: () => {}, print: () => window.print(),
 })
 
-function read(): ThemeMode {
-  try {
-    const v = localStorage.getItem('datamind:theme')
-    return v === 'light' || v === 'dark' ? v : 'system'
-  } catch {
-    return 'system'
-  }
+const readMode = (): ThemeMode => window.atelierTheme?.get() ?? 'system'
+const readDark = () => (window.atelierTheme?.resolved() ?? document.documentElement.dataset.theme) === 'dark'
+
+/** Pose les deux marqueurs du thème sur <html> (data-theme et classe dark). */
+function mark(dark: boolean) {
+  const r = document.documentElement
+  r.dataset.theme = dark ? 'dark' : 'light'
+  r.classList.toggle('dark', dark)
+  r.style.colorScheme = dark ? 'dark' : 'light'
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [mode, setModeState] = useState<ThemeMode>(read)
-  const query = window.matchMedia('(prefers-color-scheme: dark)')
-  const [systemDark, setSystemDark] = useState(query.matches)
+  const [mode, setModeState] = useState<ThemeMode>(readMode)
+  const [resolvedDark, setResolvedDark] = useState(readDark)
   useEffect(() => {
-    const on = (e: MediaQueryListEvent) => setSystemDark(e.matches)
-    query.addEventListener('change', on)
-    return () => query.removeEventListener('change', on)
-  }, [query])
+    const sync = () => { setModeState(readMode()); setResolvedDark(readDark()) }
+    const query = window.matchMedia('(prefers-color-scheme: dark)')
+    // Le script commun réapplique le thème au changement du système et au retour sur l'onglet : on suit.
+    const later = () => setTimeout(sync, 0)
+    window.addEventListener('atelier-theme', sync)
+    query.addEventListener('change', later)
+    document.addEventListener('visibilitychange', later)
+    return () => {
+      window.removeEventListener('atelier-theme', sync)
+      query.removeEventListener('change', later)
+      document.removeEventListener('visibilitychange', later)
+    }
+  }, [])
   // L'impression se fait toujours en clair (graphiques redessinés avant d'ouvrir la boîte d'impression).
   const [printing, setPrinting] = useState(false)
-  const dark = !printing && (mode === 'dark' || (mode === 'system' && systemDark))
-  useEffect(() => {
-    document.documentElement.dataset.theme = dark ? 'dark' : 'light'
-  }, [dark])
+  const dark = !printing && resolvedDark
+  useEffect(() => { mark(dark) }, [dark])
   const setMode = (m: ThemeMode) => {
-    setModeState(m)
-    try { localStorage.setItem('datamind:theme', m) } catch { /* stockage indisponible */ }
+    if (window.atelierTheme) window.atelierTheme.set(m)
+    else { setModeState(m); setResolvedDark(m === 'dark' || (m === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) }
   }
   // Mise en page d'impression appliquée avant d'ouvrir la boîte : les graphiques se redessinent à la largeur de la page.
   const print = () => {

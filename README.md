@@ -43,7 +43,7 @@ Web app TypeScript : backend **Fastify + DuckDB**, frontend **React + Vite**, un
 - **Jeux d'exemple** — 15 jeux fictifs mais réalistes dans 9 domaines (commerce, finance, marketing, IA & tech,
   RH, énergie, santé, immobilier, logistique), accessibles à tout moment depuis la barre latérale, avec des
   questions suggérées pour chacun.
-- **Thème** clair, sombre ou celui du système.
+- **Thème** clair, sombre ou celui du système, commun à la suite Atelier (voir « Apparence »).
 
 ## Moteurs IA
 
@@ -136,8 +136,11 @@ backend/src/
     └── claude-plan.ts Claude avec le forfait (Agent SDK, outils exposés par MCP)
 frontend/src/
 ├── App.tsx            État de l'application, envoi des questions, lecture du flux
-├── components/        Barre latérale, accueil, Assistant, Exploration, Qualité, Données, graphiques (ECharts)
-└── styles.css         Thème clair / sombre
+├── components/        Barre latérale, marque et « À propos », accueil, Assistant, Exploration, Qualité, Données,
+│                      graphiques (ECharts)
+├── theme.tsx          Choix du thème (Système / Clair / Sombre) branché sur atelier-theme.js
+├── styles.css         Styles de l'app, branchés sur les jetons --atelier-*
+└── styles/atelier-brand/  Marque commune de la suite Atelier (copie verbatim, voir « Apparence »)
 sample_data/           Jeux d'exemple + catalog.json (titre, domaine, description, questions suggérées)
 scripts/
 └── generer_exemples.py  Régénère les jeux d'exemple (Python + numpy, graine fixe)
@@ -148,6 +151,26 @@ aux fichiers est coupé (`enable_external_access = false`) et la configuration v
 instructions de lecture sont acceptées, une à la fois, avec un délai maximal. Aucun code arbitraire n'est
 exécuté. L'app n'a pas de connexion propre : sur un serveur, placez-la derrière une authentification
 (c'est le rôle du portail dans la suite Atelier).
+
+## Apparence (suite Atelier)
+
+DataMind suit la charte v2 « Linear » de la suite Atelier (règles : `Atelier_Deploy/DESIGN.md`,
+`Atelier_Projets/docs/SUITE.md` §1) : structure neutre gris froid en clair et en sombre, police Inter embarquée
+(13 px), traits de 1 px, aucune ombre au repos. La couleur signature de DataMind, **indigo `#6967e1`**
+(`data-atelier-app="datamind"` sur `<html>`), ne sert qu'à l'accent : bouton principal, sélection, focus, liens
+et icône de l'app (carré arrondi en dégradé, glyphe Lucide `sparkles`). La palette des **séries de graphiques**
+(`frontend/src/components/Chart.tsx`) et les couleurs du score de qualité ne changent pas.
+
+`frontend/src/styles/atelier-brand/` contient une **copie verbatim** de `Atelier_Projets/design-system/brand/`
+(v2) : `atelier-brand.css` (jetons `--atelier-*`, marque, fenêtre « À propos »), `atelier-theme.js` (préférence
+de thème commune) et la police Inter (`inter-latin-wght-normal.woff2`, `inter-latin-ext-wght-normal.woff2`,
+`LICENSE-Inter.txt`, SIL OFL 1.1). Ne pas modifier ces fichiers ici : les changer dans Atelier_Projets puis les
+recopier tels quels. `frontend/vite.config.ts` recopie `atelier-theme.js` en script bloquant en tête de page
+(aucun flash) ; la préférence vit dans le cookie `atelier_theme` sur le VPS, partagé avec le portail et les autres
+apps, sinon dans `localStorage["atelier:theme"]` (l'ancienne clé `datamind:theme` est reprise une fois).
+`frontend/src/styles.css` branche les variables de l'app (`--paper`, `--surface`, `--ink`, `--accent`…) sur ces jetons.
+
+Icônes : `frontend/public/logo.svg` (favicon), `favicon.png` (128 px) et `apple-touch-icon.png` (180 px).
 
 ## Développement
 

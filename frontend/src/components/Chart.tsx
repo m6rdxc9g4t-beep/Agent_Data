@@ -13,17 +13,25 @@ import type { ChartSpec } from '../types'
 
 echarts.use([MarkLineComponent, BarChart, LineChart, PieChart, ScatterChart, HeatmapChart, GridComponent, LegendComponent, TooltipComponent, VisualMapComponent, CanvasRenderer])
 
+// Palette de DONNÉES (séries) : inchangée par la charte v2 de la suite Atelier.
 const PALETTE = {
   light: ['#3437C6', '#0F9D84', '#C98207', '#B4489B', '#2C8FD6', '#7C9A2E', '#6B7280', '#D2463A'],
   dark: ['#8D90FF', '#3CCFB2', '#F0B43C', '#E07CCB', '#5CB3F2', '#A8C657', '#9CA3AF', '#F2766B'],
 }
 
+// Habillage neutre (charte v2 « Linear ») : mêmes valeurs que les jetons --atelier-* de atelier-brand.css.
+const CHROME = {
+  light: { text: '#5f636c', rule: '#e3e4e8', surface: '#ffffff', ink: '#1a1b1e' },
+  dark: { text: '#969aa3', rule: '#24262b', surface: '#17181b', ink: '#e8e9ec' },
+}
+const FONT = '"Atelier Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif'
+
 const num = (v: unknown) => (v === null || v === undefined || v === '' ? null : Number(v))
 
 function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption {
   const colors = PALETTE[dark ? 'dark' : 'light']
-  const text = dark ? '#C9CDD8' : '#4A5168'
-  const rule = dark ? '#242C3F' : '#E6E8E3'
+  const chrome = CHROME[dark ? 'dark' : 'light']
+  const { text, rule } = chrome
   const { columns, rows } = spec.data
   const ix = columns.indexOf(spec.x)
   const valueAxis = { type: 'value', axisLabel: { color: text, formatter: (v: number) => fmtCompact(v) }, splitLine: { lineStyle: { color: rule } } }
@@ -32,8 +40,13 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
   })
   const base = {
     color: colors,
-    textStyle: { fontFamily: 'Instrument Sans Variable, system-ui, sans-serif' },
-    tooltip: { trigger: 'axis', valueFormatter: (v: number) => (typeof v === 'number' ? fmtNumber(v) : v), confine: true },
+    textStyle: { fontFamily: FONT, fontSize: 11.5 },
+    tooltip: {
+      trigger: 'axis', valueFormatter: (v: number) => (typeof v === 'number' ? fmtNumber(v) : v), confine: true,
+      backgroundColor: chrome.surface, borderColor: rule, borderWidth: 1, padding: [6, 10],
+      textStyle: { color: chrome.ink, fontFamily: FONT, fontSize: 12 },
+      extraCssText: `border-radius:7px;box-shadow:${dark ? '0 1px 2px rgb(0 0 0 / .4), 0 12px 32px -10px rgb(0 0 0 / .7)' : '0 1px 2px rgb(16 17 20 / .06), 0 8px 24px -8px rgb(16 17 20 / .18)'}`,
+    },
     grid: { left: 8, right: 16, top: 36, bottom: 8, containLabel: true },
     animationDuration: 400,
   }
@@ -42,11 +55,11 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
     const iy = columns.indexOf(spec.y[0])
     return {
       ...base,
-      tooltip: { trigger: 'item', valueFormatter: (v: number) => fmtNumber(v) },
+      tooltip: { ...base.tooltip, trigger: 'item', valueFormatter: (v: number) => fmtNumber(v) },
       legend: { orient: 'vertical', right: 0, top: 'middle', textStyle: { color: text }, icon: 'roundRect' },
       series: [{
         type: 'pie', radius: ['48%', '74%'], center: ['36%', '54%'], avoidLabelOverlap: true,
-        itemStyle: { borderColor: dark ? '#141A28' : '#FFFFFF', borderWidth: 2 }, label: { show: false },
+        itemStyle: { borderColor: chrome.surface, borderWidth: 2 }, label: { show: false },
         data: rows.map((r) => ({ name: String(r[ix]), value: num(r[iy]) })),
       }],
     }
@@ -62,7 +75,7 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
     const symmetric = min < 0 && max > 0
     return {
       ...base,
-      tooltip: { position: 'top', valueFormatter: (v: unknown) => (Array.isArray(v) ? fmtNumber(Number(v[2])) : String(v)) },
+      tooltip: { ...base.tooltip, trigger: 'item', position: 'top', valueFormatter: (v: unknown) => (Array.isArray(v) ? fmtNumber(Number(v[2])) : String(v)) },
       grid: { ...base.grid, bottom: 48 },
       xAxis: { ...catAxis(xs), axisLabel: { color: text, rotate: 30 } },
       yAxis: catAxis(ys),
@@ -82,7 +95,7 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
           formatter: (p: { value: number[] }) => fmtNumber(Number(p.value[2])),
           rich: {},
         },
-        itemStyle: { borderColor: dark ? '#141A28' : '#FFFFFF', borderWidth: 1 },
+        itemStyle: { borderColor: chrome.surface, borderWidth: 1 },
         emphasis: { disabled: true },
       }],
     }
@@ -93,7 +106,7 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
     const groups = spec.series ? [...new Set(rows.map((r) => String(r[columns.indexOf(spec.series!)])))] : [spec.y[0]]
     return {
       ...base,
-      tooltip: { trigger: 'item' },
+      tooltip: { ...base.tooltip, trigger: 'item' },
       legend: groups.length > 1 ? { top: 0, textStyle: { color: text } } : undefined,
       xAxis: { ...valueAxis, name: spec.x, nameLocation: 'middle', nameGap: 28, nameTextStyle: { color: text }, scale: true },
       yAxis: { ...valueAxis, name: spec.y[0], nameTextStyle: { color: text }, scale: true },

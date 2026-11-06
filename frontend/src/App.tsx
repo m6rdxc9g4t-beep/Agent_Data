@@ -10,6 +10,7 @@ import { LinkBar, LinkDialog } from './components/Links'
 import { Prediction } from './components/Prediction'
 import { Quality } from './components/Quality'
 import { SampleDialog } from './components/SampleGallery'
+import { BrandTile } from './components/Brand'
 import { Sidebar } from './components/Sidebar'
 import { Welcome } from './components/Welcome'
 import { fmtBytes, fmtInt, fmtPct, plural } from './format'
@@ -340,12 +341,14 @@ export default function App() {
       {navOpen && <div className="drawer-backdrop" onClick={() => setNavOpen(false)} aria-hidden />}
 
       <main className="main">
-        <header className="mobile-bar">
-          <button type="button" className="icon-btn" onClick={() => setNavOpen(true)} aria-label="Ouvrir le menu"><Menu size={20} /></button>
-          <img src="/logo.svg" alt="" width={24} height={24} />
-          <strong>{dataset?.name ?? 'DataMind'}</strong>
-          <span className={`dot ${engineStatus.ok ? 'ok' : 'warn'}`} title={engineStatus.text} />
-        </header>
+        {!dataset && (
+          <header className="topbar">
+            <button type="button" className="icon-btn menu-btn" onClick={() => setNavOpen(true)} aria-label="Ouvrir le menu"><Menu size={18} /></button>
+            <BrandTile />
+            <h1 className="topbar-title">{activeId ? 'Ouverture…' : 'Accueil'}</h1>
+            {!engineStatus.ok && config && <span className="dot warn" title={engineStatus.text} />}
+          </header>
+        )}
         {!activeId && config && datasets && (
           <Welcome samples={samples} formats={config.formats} maxUploadMb={config.maxUploadMb} onUpload={upload} onSample={loadSample}
             busy={uploading !== null || sampleBusy !== null} busyFile={sampleBusy} />
@@ -355,49 +358,50 @@ export default function App() {
 
         {dataset && q && config && (
           <PinProviderValue value={pinApi}>
-            <header className="ds-head">
-              <div className="ds-title">
-                <FileSpreadsheet size={22} strokeWidth={1.6} aria-hidden />
-                <div>
-                  <h1>{dataset.name}</h1>
-                  <p>
-                    {plural(dataset.rows, 'ligne')}, {plural(dataset.columns.length, 'colonne')} ({plural(nNum, 'numérique')}, {plural(nDates, 'date')}) · {dataset.format}, {fmtBytes(dataset.sizeBytes)}
-                    {dataset.sheets.length > 1 && (
-                      <> · feuille{' '}
-                        <select className="inline-select" value={dataset.sheet ?? ''} onChange={(e) => changeSheet(e.target.value)} aria-label="Feuille Excel">
-                          {dataset.sheets.map((s) => <option key={s}>{s}</option>)}
-                        </select>
-                      </>
-                    )}
-                  </p>
-                  {dataset.cleanedFrom && (
-                    <p className="cleaned-from">Version nettoyée de{' '}
-                      {datasets?.some((d) => d.id === dataset.cleanedFrom)
-                        ? <button type="button" className="link-btn" onClick={() => setActiveId(dataset.cleanedFrom!)}>« {datasets.find((d) => d.id === dataset.cleanedFrom)!.name} »</button>
-                        : 'un jeu supprimé'}
-                    </p>
-                  )}
-                  <LinkBar dataset={dataset} links={links} onAdd={() => setShowLink(true)} onRemove={removeLink} />
-                </div>
-              </div>
+            <header className="topbar ds-head">
+              <button type="button" className="icon-btn menu-btn" onClick={() => setNavOpen(true)} aria-label="Ouvrir le menu"><Menu size={18} /></button>
+              <FileSpreadsheet className="ds-icon" size={16} strokeWidth={1.75} aria-hidden />
+              <h1 className="topbar-title" title={dataset.name}>{dataset.name}</h1>
+              <p className="ds-meta">
+                {plural(dataset.rows, 'ligne')}, {plural(dataset.columns.length, 'colonne')} ({plural(nNum, 'numérique')}, {plural(nDates, 'date')}) · {dataset.format}, {fmtBytes(dataset.sizeBytes)}
+                {dataset.sheets.length > 1 && (
+                  <> · feuille{' '}
+                    <select className="inline-select" value={dataset.sheet ?? ''} onChange={(e) => changeSheet(e.target.value)} aria-label="Feuille Excel">
+                      {dataset.sheets.map((s) => <option key={s}>{s}</option>)}
+                    </select>
+                  </>
+                )}
+              </p>
               <dl className="ds-metrics">
                 <div><dt>Complétude</dt><dd>{fmtPct(q.completeness)}</dd></div>
                 <div><dt>Doublons</dt><dd className={q.duplicateRows ? 'warn' : undefined}>{fmtInt(q.duplicateRows)}</dd></div>
                 <div><dt>Qualité</dt><dd className={q.score >= 75 ? 'good' : q.score >= 55 ? 'warn' : 'bad'}>{q.score}<small>/100</small></dd></div>
               </dl>
-              <button type="button" className="icon-btn" onClick={deleteDataset} title="Supprimer ce jeu de données"><Trash2 size={16} /></button>
+              {!engineStatus.ok && <span className="dot warn" title={engineStatus.text} />}
+              <button type="button" className="icon-btn ds-delete" onClick={deleteDataset} title="Supprimer ce jeu de données" aria-label="Supprimer ce jeu de données"><Trash2 size={15} /></button>
             </header>
 
-            <div className="tabs" role="tablist">
-              {TABS.map(([k, label]) => (
-                <button key={k} type="button" role="tab" aria-selected={tab === k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>
-                  {label}{k === 'dashboard' && pins.length > 0 && <span className="tab-count">{pins.length}</span>}
-                </button>
-              ))}
-              <span className="tabs-spacer" />
-              {tab === 'assistant' && (
-                <ExportButton disabled={!conversation?.turns.length || busy} onClick={() => exportThread(conversation?.title ?? 'Analyse', dataset.name)} />
-              )}
+            <div className="tabs">
+              <div className="tab-list" role="tablist">
+                {TABS.map(([k, label]) => (
+                  <button key={k} type="button" role="tab" aria-selected={tab === k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>
+                    {label}{k === 'dashboard' && pins.length > 0 && <span className="tab-count">{pins.length}</span>}
+                  </button>
+                ))}
+              </div>
+              <div className="tabs-aside">
+                {dataset.cleanedFrom && (
+                  <p className="cleaned-from">Version nettoyée de{' '}
+                    {datasets?.some((d) => d.id === dataset.cleanedFrom)
+                      ? <button type="button" className="link-btn" onClick={() => setActiveId(dataset.cleanedFrom!)}>« {datasets.find((d) => d.id === dataset.cleanedFrom)!.name} »</button>
+                      : 'un jeu supprimé'}
+                  </p>
+                )}
+                <LinkBar dataset={dataset} links={links} onAdd={() => setShowLink(true)} onRemove={removeLink} />
+                {tab === 'assistant' && (
+                  <ExportButton disabled={!conversation?.turns.length || busy} onClick={() => exportThread(conversation?.title ?? 'Analyse', dataset.name)} />
+                )}
+              </div>
             </div>
 
             <div className="tab-panel" hidden={tab !== 'assistant'}>

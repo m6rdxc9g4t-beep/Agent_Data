@@ -1,0 +1,425 @@
+/* Atelier — marque commune et palette de la suite (v2, style « Linear », 6 nov. 2026).
+   Source de vérité : Atelier_Projets/design-system/brand/.
+   Copiée telle quelle, avec la police Inter, dans les applications de la suite :
+   toute modification se fait ici puis dans chaque copie. Règles : Atelier_Deploy/DESIGN.md.
+
+   Charte v2 : une seule structure neutre pour toute la suite (gris froids, clair et sombre),
+   la couleur signature de l'app ne sert qu'à ce qui porte un sens : accent (bouton principal,
+   sélection, focus, lien), icône de l'app, données « neutres » d'une seule mesure.
+   Pas de halo, pas de grille de fond, pas de lueur : surfaces plates, traits de 1 px.
+   Les couleurs qui portent un sens (statuts, types, séries de graphiques, positif / négatif) ne changent pas.
+
+   L'API reste celle de la v1 (mêmes jetons --atelier-*, mêmes classes) : une app qui copie ce
+   fichier change d'apparence sans toucher à son code. Les jetons de halo existent encore mais
+   valent une ombre discrète ou « none ».
+
+   Activation : data-atelier-app="<app>" sur <html> (toute l'app) ou sur un élément
+   (ex. chaque entrée du sélecteur de la suite, qui prend alors SA couleur).
+   Thème sombre : :root[data-theme="dark"], :root.dark ou [data-theme="dark"] / .dark sur un ancêtre.
+   Préférence de thème partagée : voir atelier-theme.js (cookie atelier_theme).
+
+   Balisage de la marque :
+     <html data-atelier-app="viz">
+     <button type="button" class="atelier-brand" aria-haspopup="dialog">
+       <span class="atelier-brand__tile" aria-hidden="true"><svg …icône Lucide de l'app…/></span>
+       <span class="atelier-brand__name"><span class="atelier-brand__prefix">Atelier </span>Nom</span>
+     </button>
+
+   Aucune règle `display` sur __name ni `margin` / `padding` sur .atelier-brand : les utilitaires de chaque app
+   (hidden, lg:inline…) gardent la main.
+
+   Police : Inter variable (SIL Open Font License 1.1, voir LICENSE-Inter.txt), embarquée — aucune requête réseau. */
+
+@font-face {
+  font-family: "Atelier Inter";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./inter-latin-wght-normal.woff2") format("woff2-variations"),
+    url("./inter-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Atelier Inter";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./inter-latin-ext-wght-normal.woff2") format("woff2-variations"),
+    url("./inter-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ---------------------------------------------------------------------------
+   1. Couleurs signature (une par app, ≥ 4,5:1 avec du texte blanc)
+   Mêmes valeurs que les icônes du portail (Atelier_Deploy/portail/server.mjs).
+   --------------------------------------------------------------------------- */
+:root {
+  --atelier-sig-nexus: #c84f00;
+  --atelier-sig-viz: #996c00;
+  --atelier-sig-tab: #1c8742;
+  --atelier-sig-projets: #568100;
+  --atelier-sig-wiki: #007cbb;
+  --atelier-sig-formulaire: #008478;
+  --atelier-sig-tresorerie: #3c72da;
+  --atelier-sig-savoir: #a853c1;
+  --atelier-sig-cine: #cd3d83;
+  --atelier-sig-convert: #9d6d1c;
+  --atelier-sig-portfolio: #4a5468;
+  --atelier-sig-ops: #895bd5;
+  --atelier-sig-mission: #b55d00;
+  --atelier-sig-datamind: #6967e1;
+  --atelier-sig-suivi: #008295;
+  --atelier-sig-dates: #db373a;
+  --atelier-sig-cuisine: #8568a7;
+  --atelier-sig-dressing: #a16464;
+
+  /* Hors app identifiée (portail, suite) : l'indigo de la suite. */
+  --atelier-signature: #5b5bd6;
+  /* Texte posé SUR la signature (bouton plein) : blanc pour toutes les apps. */
+  --atelier-signature-contrast: #ffffff;
+
+  --atelier-font: "Atelier Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --atelier-font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  /* Conservé pour la v1 : la marque utilise désormais la même police que l'interface. */
+  --atelier-brand-font: var(--atelier-font);
+
+  /* Forme (px) : 5 touches/icônes 20 px · 7 boutons, champs, lignes · 10 panneaux, tuiles */
+  --atelier-radius-sm: 5px;
+  --atelier-radius-md: 7px;
+  --atelier-radius-lg: 10px;
+}
+
+[data-atelier-app="nexus"] { --atelier-signature: var(--atelier-sig-nexus); }
+[data-atelier-app="viz"] { --atelier-signature: var(--atelier-sig-viz); }
+[data-atelier-app="tab"] { --atelier-signature: var(--atelier-sig-tab); }
+[data-atelier-app="projets"] { --atelier-signature: var(--atelier-sig-projets); }
+[data-atelier-app="wiki"] { --atelier-signature: var(--atelier-sig-wiki); }
+[data-atelier-app="formulaire"] { --atelier-signature: var(--atelier-sig-formulaire); }
+[data-atelier-app="tresorerie"] { --atelier-signature: var(--atelier-sig-tresorerie); }
+[data-atelier-app="savoir"] { --atelier-signature: var(--atelier-sig-savoir); }
+[data-atelier-app="cine"] { --atelier-signature: var(--atelier-sig-cine); }
+[data-atelier-app="convert"] { --atelier-signature: var(--atelier-sig-convert); }
+[data-atelier-app="portfolio"] { --atelier-signature: var(--atelier-sig-portfolio); }
+[data-atelier-app="ops"] { --atelier-signature: var(--atelier-sig-ops); }
+[data-atelier-app="mission"] { --atelier-signature: var(--atelier-sig-mission); }
+[data-atelier-app="datamind"] { --atelier-signature: var(--atelier-sig-datamind); }
+[data-atelier-app="suivi"] { --atelier-signature: var(--atelier-sig-suivi); }
+[data-atelier-app="dates"] { --atelier-signature: var(--atelier-sig-dates); }
+[data-atelier-app="cuisine"] { --atelier-signature: var(--atelier-sig-cuisine); }
+[data-atelier-app="dressing"] { --atelier-signature: var(--atelier-sig-dressing); }
+
+/* ---------------------------------------------------------------------------
+   2. Palette — thème CLAIR (défaut). Structure neutre, identique dans toutes les apps.
+   --------------------------------------------------------------------------- */
+:root,
+[data-atelier-app] {
+  /* Fonds et surfaces */
+  --atelier-bg: #fbfbfc;
+  --atelier-sidebar: #f4f5f7;
+  --atelier-surface: #ffffff;
+  --atelier-surface-2: #eeeff2;   /* survol, menus */
+  --atelier-surface-3: #e7e8ee;   /* élément courant (navigation), sélection neutre */
+  --atelier-field: #ffffff;       /* champs de saisie */
+
+  /* Texte */
+  --atelier-text: #1a1b1e;
+  --atelier-muted: #5f636c;
+  --atelier-faint: #6c7079;
+  /* Signature utilisée comme TEXTE ou icône fine (≥ 4,5:1 sur blanc). */
+  --atelier-ink: color-mix(in oklab, var(--atelier-signature) 88%, #000000);
+
+  /* Traits */
+  --atelier-border: #e3e4e8;       /* contour des cartes et panneaux */
+  --atelier-border-soft: #d0d2d8;  /* champs, boutons secondaires */
+  --atelier-line: #e3e4e8;         /* séparateurs, lignes de tableau */
+
+  /* Remplissages en transparence de la signature */
+  --atelier-signature-soft: color-mix(in oklab, var(--atelier-signature) 14%, transparent);   /* sélection, tag */
+  --atelier-signature-faint: color-mix(in oklab, var(--atelier-signature) 7%, transparent);   /* survol teinté */
+  /* Bouton principal au survol */
+  --atelier-signature-hover: color-mix(in oklab, var(--atelier-signature) 88%, #000000);
+
+  /* Ombres : plat au repos ; une ombre seulement pour ce qui flotte (menus, dialogues). */
+  --atelier-glow: 0 1px 2px rgb(16 17 20 / 0.04);
+  --atelier-glow-strong: 0 1px 2px rgb(16 17 20 / 0.06), 0 8px 24px -8px rgb(16 17 20 / 0.18);
+  --atelier-signature-glow: none;
+  --atelier-text-glow: none;
+  --atelier-focus: 0 0 0 3px color-mix(in oklab, var(--atelier-signature) 28%, transparent);
+
+  /* Fond de page : uni. Reste une couche valide pour `background: var(--atelier-backdrop), var(--atelier-bg)`. */
+  --atelier-backdrop: linear-gradient(transparent, transparent);
+
+  /* Graphiques : la signature en paliers de transparence (séries « neutres » d'une seule mesure). */
+  --atelier-chart-1: var(--atelier-signature);
+  --atelier-chart-2: color-mix(in oklab, var(--atelier-signature) 60%, transparent);
+  --atelier-chart-3: color-mix(in oklab, var(--atelier-signature) 32%, transparent);
+  --atelier-chart-fill: linear-gradient(180deg, color-mix(in oklab, var(--atelier-signature) 40%, transparent), color-mix(in oklab, var(--atelier-signature) 4%, transparent));
+
+  /* États (service, tâche) : uniquement quand ce n'est pas nominal. */
+  --atelier-up: #1a8a4c;
+  --atelier-warn: #a35f00;
+  --atelier-down: #c9302b;
+}
+
+/* ---------------------------------------------------------------------------
+   3. Palette — thème SOMBRE
+   --------------------------------------------------------------------------- */
+:root[data-theme="dark"],
+:root.dark,
+[data-theme="dark"],
+.dark,
+[data-theme="dark"] [data-atelier-app],
+.dark [data-atelier-app] {
+  --atelier-bg: #0f1012;
+  --atelier-sidebar: #131416;
+  --atelier-surface: #17181b;
+  --atelier-surface-2: #1c1d21;
+  --atelier-surface-3: #24252b;
+  --atelier-field: #141518;
+
+  --atelier-text: #e8e9ec;
+  --atelier-muted: #969aa3;
+  --atelier-faint: #868a94;
+  /* Signature comme texte ou icône sur fond sombre : éclaircie. */
+  --atelier-ink: color-mix(in oklab, var(--atelier-signature) 62%, #ffffff);
+
+  --atelier-border: #24262b;
+  --atelier-border-soft: #33353c;
+  --atelier-line: #24262b;
+
+  --atelier-signature-soft: color-mix(in oklab, var(--atelier-signature) 22%, transparent);
+  --atelier-signature-faint: color-mix(in oklab, var(--atelier-signature) 11%, transparent);
+  --atelier-signature-hover: color-mix(in oklab, var(--atelier-signature) 86%, #ffffff);
+
+  --atelier-glow: none;
+  --atelier-glow-strong: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -10px rgb(0 0 0 / 0.7);
+  --atelier-focus: 0 0 0 3px color-mix(in oklab, var(--atelier-signature) 38%, transparent);
+
+  --atelier-up: #4cc38a;
+  --atelier-warn: #f0b44c;
+  --atelier-down: #ff6b6b;
+}
+
+/* ---------------------------------------------------------------------------
+   4. Classes prêtes à l'emploi (facultatives)
+   --------------------------------------------------------------------------- */
+.atelier-backdrop {
+  background: var(--atelier-bg);
+}
+
+/* Carte / panneau : surface, trait de 1 px, plat au repos. */
+.atelier-card {
+  background-color: var(--atelier-surface);
+  border: 1px solid var(--atelier-border);
+  border-radius: var(--atelier-radius-lg);
+}
+
+/* Bouton principal : plein, dans les deux thèmes. */
+.atelier-btn-primary {
+  background: var(--atelier-signature);
+  color: var(--atelier-signature-contrast);
+  border: 1px solid transparent;
+}
+.atelier-btn-primary:hover {
+  background: var(--atelier-signature-hover);
+}
+
+/* Entrée de navigation / onglet actif : fond neutre, texte plein (pas de barre de couleur). */
+.atelier-nav-active {
+  color: var(--atelier-text);
+  background: var(--atelier-surface-3);
+}
+
+/* v1 : le texte néon n'existe plus. */
+.atelier-neon-text {
+  text-shadow: none;
+}
+
+/* Sélection (ligne, tuile choisie au clavier) : fond teinté de la signature. */
+.atelier-selected {
+  background: var(--atelier-signature-soft);
+}
+
+/* ---------------------------------------------------------------------------
+   5. Marque (icône + nom) : carré arrondi en dégradé de la signature, glyphe blanc.
+   --------------------------------------------------------------------------- */
+.atelier-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5625rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.atelier-brand__tile {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--atelier-radius-md);
+  color: #ffffff;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--atelier-signature) 78%, #ffffff), var(--atelier-signature));
+  box-shadow: inset 0 0 0 0.5px rgb(0 0 0 / 0.14), inset 0 1px 0 rgb(255 255 255 / 0.22);
+}
+
+.atelier-brand__tile svg {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 2.1;
+}
+
+.atelier-brand__name {
+  font-family: var(--atelier-font);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  color: var(--atelier-text);
+}
+
+.atelier-brand__prefix {
+  font-weight: 500;
+  color: var(--atelier-muted);
+}
+
+/* La marque est un bouton qui ouvre la fenêtre « À propos ». */
+button.atelier-brand {
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  border-radius: var(--atelier-radius-md);
+}
+button.atelier-brand:hover .atelier-brand__name { color: var(--atelier-text); }
+
+.atelier-brand:focus-visible {
+  outline: 2px solid var(--atelier-signature);
+  outline-offset: 3px;
+}
+
+/* Variante compacte (menus, listes) : icône 20 px. */
+.atelier-brand__tile--sm {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: var(--atelier-radius-sm);
+}
+
+.atelier-brand__tile--sm svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.atelier-brand__name--sm {
+  font-size: 0.8125rem;
+}
+
+/* ---------------------------------------------------------------------------
+   6. Fenêtre « À propos » (<dialog class="atelier-about">) : suit le thème de l'app.
+   Balisage (le logo est désormais la grande icône de l'app) :
+     <dialog class="atelier-about" aria-labelledby="…">
+       <div class="atelier-about__panel">
+         <button class="atelier-about__close" aria-label="Fermer">…icône x…</button>
+         <span class="atelier-about__icon atelier-brand__tile" aria-hidden="true"><svg …/></span>
+         <h2 class="atelier-about__name"><span class="atelier-brand__prefix">Atelier </span>Nom</h2>
+         <p class="atelier-about__tagline">…</p>
+         <p class="atelier-about__suite">Suite Atelier</p>
+       </div>
+     </dialog>
+   Une ancienne <img class="atelier-about__logo"> reste affichée, en petit.
+   --------------------------------------------------------------------------- */
+.atelier-about {
+  width: min(22rem, calc(100vw - 2rem));
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  color: var(--atelier-text);
+  background: transparent;
+}
+
+.atelier-about::backdrop {
+  background: rgb(10 11 13 / 0.45);
+}
+
+.atelier-about__panel {
+  position: relative;
+  padding: 1.75rem 1.5rem 1.25rem;
+  border-radius: var(--atelier-radius-lg);
+  text-align: center;
+  font-family: var(--atelier-font);
+  border: 1px solid var(--atelier-border);
+  background: var(--atelier-surface);
+  box-shadow: var(--atelier-glow-strong);
+}
+
+.atelier-about__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  border-radius: 0.875rem;
+}
+.atelier-about__icon svg {
+  width: 1.875rem;
+  height: 1.875rem;
+  stroke-width: 1.9;
+}
+
+.atelier-about__logo {
+  display: block;
+  width: 5rem;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.atelier-about__name {
+  margin: 0.875rem 0 0;
+  font-family: var(--atelier-font);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  color: var(--atelier-text);
+}
+
+.atelier-about__tagline {
+  margin: 0.375rem auto 0;
+  max-width: 18rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--atelier-muted);
+}
+
+.atelier-about__suite {
+  margin: 1.25rem 0 0;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--atelier-line);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--atelier-faint);
+}
+
+.atelier-about__close {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  display: grid;
+  place-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--atelier-radius-md);
+  font: 400 1.125rem/1 var(--atelier-font);
+  color: var(--atelier-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.atelier-about__close:hover {
+  background: var(--atelier-surface-2);
+  color: var(--atelier-text);
+}
