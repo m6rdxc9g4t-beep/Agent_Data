@@ -1,6 +1,6 @@
 // Onglet Assistant : fil d'analyse (question, étapes de l'agent, réponse) et zone de saisie.
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
-import { AlertTriangle, ArrowRight, ArrowUp, Check, ChevronRight, Download, LoaderCircle, Pencil, Play, RotateCcw, Square, Zap } from 'lucide-react'
+import { AlertTriangle, ArrowRight, ArrowUp, Check, ChevronRight, Download, LoaderCircle, Pencil, Play, RotateCcw, Sparkles, Square, Zap } from 'lucide-react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -77,7 +77,7 @@ function Step({ block, n, label, source, datasetId }: { block: ToolBlock; n: num
   const hasDetail = !!(sql || r?.table || r?.error || (r && !r.ok))
   return (
     <li className={`step step-${state}`}>
-      <span className="step-n" aria-hidden>{state === 'running' ? <LoaderCircle size={13} className="spin" /> : n}</span>
+      <span className="step-n" aria-hidden>{state === 'running' ? <LoaderCircle size={12} className="spin" /> : state === 'error' ? <AlertTriangle size={11} /> : n}</span>
       <div className="step-body">
         <button type="button" className="step-line" onClick={() => setOpen(!open)} aria-expanded={open} disabled={!hasDetail}>
           <span className="step-name">{label}</span>
@@ -140,8 +140,14 @@ function TurnView({ turn, labels, datasetId, onFollowUp }: {
   return (
     <article className="turn">
       <header className="question">
-        {turn.label ? <><span className="question-kind">Analyse rapide</span><h2>{turn.label}</h2></> : <h2>{turn.question}</h2>}
+        <h2>{turn.label ?? turn.question}</h2>
+        {turn.label && <span className="question-kind"><Zap size={12} aria-hidden /> Analyse rapide</span>}
       </header>
+      <div className="reply-head">
+        <span className="atelier-brand__tile atelier-brand__tile--sm" aria-hidden><Sparkles /></span>
+        <strong>DataMind</strong>
+        {turn.pending && <span className="reply-state"><LoaderCircle size={12} className="spin" aria-hidden /> en cours</span>}
+      </div>
       {groups.map((g, i) => g[0].kind === 'tool'
         ? (
           <ol className="trace" key={i}>
@@ -241,6 +247,7 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
 
   const lastTurn = turns.at(-1)
   useEffect(() => {
+    if (!turns.length) return // écran d'accueil de l'Assistant : on garde son titre en vue
     thread.current?.lastElementChild?.scrollIntoView({ block: 'end', behavior: 'smooth' })
   }, [turns.length, lastTurn?.blocks.length, lastTurn?.pending])
 
@@ -264,6 +271,13 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
           <section className="start">
             <h2>Que voulez-vous savoir sur ces données ?</h2>
             <p>Posez une question en français ou lancez une analyse. L’agent écrit des requêtes, les exécute sur vos données et vous montre chaque étape.</p>
+            {!ready && (
+              <div className="hint-warn" role="status">
+                <AlertTriangle size={15} aria-hidden />
+                <p><strong>Moteur IA indisponible</strong> {notReadyReason}</p>
+                {fallback && <button type="button" className="ghost-btn small" onClick={fallback.onClick}>{fallback.label}</button>}
+              </div>
+            )}
             <div className="starters">
               {featured.map((a) => (
                 <button key={a.key} type="button" className="starter" disabled={!ready} onClick={() => onSend(a.prompt, a.label)}>
@@ -281,12 +295,6 @@ export function Assistant({ config, conversation, ready, notReadyReason, busy, e
                   ))}
                 </div>
               </div>
-            )}
-            {!ready && (
-              <p className="hint-warn">
-                <AlertTriangle size={15} /> {notReadyReason}
-                {fallback && <button type="button" className="ghost-btn small" onClick={fallback.onClick}>{fallback.label}</button>}
-              </p>
             )}
           </section>
         )}
@@ -332,15 +340,18 @@ export function exportThread(title: string, datasetName: string) {
     c.replaceWith(img)
   })
   clone.querySelectorAll('.start, button.step-line svg, .pin-btn, .followups').forEach((n) => n.remove())
-  const css = `body{font:15px/1.6 system-ui,sans-serif;color:#161B2E;background:#F6F7F4;margin:0}
-main{max-width:860px;margin:0 auto;padding:40px 24px}h1{font-size:26px;margin:0}header.doc{margin-bottom:28px;color:#737A8C}
-.question h2{font-size:19px;margin:32px 0 10px}.question-kind{color:#3437C6;font-size:13px}
-.trace{list-style:none;padding:0;margin:8px 0;border-left:2px solid #E3E5E0}.step{padding:4px 0 4px 14px}
-.step-line{border:0;background:none;font:inherit;color:#4A5168;padding:0;text-align:left}.step-name{font-weight:600;margin-right:8px}
-.step-n{display:none}.answer{background:#fff;border:1px solid #E3E5E0;border-radius:10px;padding:4px 20px;margin:10px 0}
-.figure{background:#fff;border:1px solid #E3E5E0;border-radius:10px;padding:12px;margin:10px 0}.figure figcaption span{display:block;color:#737A8C;font-size:13px}
-table{border-collapse:collapse;font-size:13px;margin:8px 0}td,th{border-bottom:1px solid #E3E5E0;padding:4px 10px;text-align:left}.num{text-align:right}
-pre{background:#161B2E;color:#E7E9F0;padding:12px;border-radius:8px;overflow:auto}.turn-meta{color:#737A8C;font-size:13px}`
+  const css = `body{font:14px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#1a1b1e;background:#fbfbfc;margin:0}
+main{max-width:820px;margin:0 auto;padding:40px 24px}h1{font-size:20px;font-weight:600;margin:0}header.doc{margin-bottom:28px;color:#5f636c}
+.question{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:32px 0 10px}.question h2{font-size:15px;font-weight:600;margin:0}
+.question-kind{color:#5f636c;font-size:12px}.question-kind svg,.reply-head svg,.atelier-brand__tile{display:none}
+.reply-head{font-size:13px;color:#5f636c;margin:0 0 6px}.reply-state{display:none}
+.trace{list-style:none;padding:0;margin:8px 0;border-left:1px solid #e3e4e8}.step{padding:3px 0 3px 14px}
+.step-line{border:0;background:none;font:inherit;color:#393c42;padding:0;text-align:left}.step-name{font-weight:500;margin-right:8px}
+.step-summary{color:#5f636c}.step-n{display:none}.answer{margin:10px 0}
+.figure{background:#fff;border:1px solid #e3e4e8;border-radius:10px;padding:12px;margin:10px 0}.figure figcaption strong{font-weight:600}.figure figcaption span{display:block;color:#5f636c;font-size:12.5px}
+table{border-collapse:collapse;font-size:13px;margin:8px 0;font-variant-numeric:tabular-nums}td,th{border-bottom:1px solid #e3e4e8;padding:5px 10px;text-align:left}th{font-weight:500;color:#5f636c}.num{text-align:right}
+pre{background:#f4f5f7;border:1px solid #e3e4e8;color:#1a1b1e;padding:10px 12px;border-radius:7px;overflow:auto;font:12.5px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.9em}.turn-meta{color:#6c7079;font-size:12px}.turn-meta svg{display:none}`
   const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title} — DataMind</title><style>${css}</style></head><body><main><header class="doc"><h1>${escapeHtml(title)}</h1>
 Jeu de données : ${escapeHtml(datasetName)} · exporté le ${new Date().toLocaleString('fr-FR')} depuis DataMind</header>${clone.innerHTML}</main></body></html>`

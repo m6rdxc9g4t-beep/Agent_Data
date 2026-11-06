@@ -1,15 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DataMind">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Atelier DataMind">
+  <!-- Icône de la suite Atelier : carré arrondi en dégradé de la signature DataMind (#6967e1), glyphe Lucide « sparkles » blanc. -->
   <defs>
-    <linearGradient id="dm-g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6366F1"/>
-      <stop offset="1" stop-color="#4338CA"/>
+    <linearGradient id="dm-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#868aea"/>
+      <stop offset="1" stop-color="#6967e1"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#dm-g)"/>
-  <rect x="15" y="34" width="8" height="15" rx="2.5" fill="#fff" opacity=".55"/>
-  <rect x="28" y="26" width="8" height="23" rx="2.5" fill="#fff" opacity=".8"/>
-  <rect x="41" y="31" width="8" height="18" rx="2.5" fill="#fff"/>
-  <path d="M19 26 L32 17 L45 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="45" cy="23" r="4" fill="#fff"/>
-  <circle cx="45" cy="23" r="1.8" fill="#4F46E5"/>
+  <rect width="64" height="64" rx="14" fill="url(#dm-g)"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="13.5" fill="none" stroke="#000" stroke-opacity=".14"/>
+  <g transform="translate(12.16 12.16) scale(1.653)" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+    <path d="M20 2v4"/>
+    <path d="M22 4h-4"/>
+    <circle cx="4" cy="20" r="2"/>
+  </g>
 </svg>

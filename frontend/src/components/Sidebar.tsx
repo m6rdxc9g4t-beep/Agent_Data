@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { Cpu, KeyRound, LibraryBig, Monitor, Moon, Plus, RefreshCw, Search, Sun, Trash2, Upload, X } from 'lucide-react'
 
 import { fmtInt, fmtRelative } from '../format'
+import { Brand } from './Brand'
 import { useTheme, type ThemeMode } from '../theme'
 import type { AppConfig, ConversationSummary, DatasetMeta, EngineChoice } from '../types'
 
@@ -42,11 +43,7 @@ export function Sidebar(p: Props) {
   return (
     <aside className={`sidebar${p.open ? ' open' : ''}`} aria-label="Navigation">
       <div className="brand">
-        <img src="/logo.svg" alt="" width={30} height={30} />
-        <div>
-          <strong>DataMind</strong>
-          <span>{cfg?.instanceLabel || 'Agent d’analyse de données'}</span>
-        </div>
+        <Brand instanceLabel={cfg?.instanceLabel} version={cfg?.version} />
         <button type="button" className="icon-btn drawer-close" onClick={p.onClose} aria-label="Fermer le menu"><X size={18} /></button>
       </div>
 
@@ -99,7 +96,7 @@ export function Sidebar(p: Props) {
       <div className="engine">
         <div className="engine-head">
           <h3>Moteur IA</h3>
-          <span className={`dot ${p.engineStatus.ok ? 'ok' : 'warn'}`} title={p.engineStatus.text} />
+          {!p.engineStatus.ok && <span className="dot warn" title={p.engineStatus.text} />}
           <button type="button" className="icon-btn small" onClick={p.onRefreshConfig} title="Vérifier à nouveau"><RefreshCw size={13} /></button>
         </div>
         <div className="segmented" role="radiogroup" aria-label="Moteur IA">
@@ -136,13 +133,15 @@ export function Sidebar(p: Props) {
         {!p.engineStatus.ok && <p className="engine-status warn">{p.engineStatus.text}</p>}
       </div>
 
-      <div className="theme-switch" role="radiogroup" aria-label="Thème">
-        {([['system', Monitor, 'Comme le système'], ['light', Sun, 'Clair'], ['dark', Moon, 'Sombre']] as const).map(([m, Icon, label]) => (
-          <button key={m} type="button" role="radio" aria-checked={mode === m} className={mode === m ? 'on' : ''} onClick={() => setMode(m as ThemeMode)} title={label}>
-            <Icon size={14} />
-          </button>
-        ))}
-        <span className="version">v{cfg?.version}</span>
+      <div className="side-foot">
+        <div className="theme-switch" role="radiogroup" aria-label="Thème">
+          {([['system', Monitor, 'Comme le système'], ['light', Sun, 'Clair'], ['dark', Moon, 'Sombre']] as const).map(([m, Icon, label]) => (
+            <button key={m} type="button" role="radio" aria-checked={mode === m} className={mode === m ? 'on' : ''} onClick={() => setMode(m as ThemeMode)} title={label} aria-label={label}>
+              <Icon size={14} />
+            </button>
+          ))}
+        </div>
+        {cfg?.version && <span className="version">v{cfg.version}</span>}
       </div>
     </aside>
   )

@@ -1,5 +1,20 @@
 # Journal des versions
 
+## Prochaine version — Charte v2 « Linear » de la suite Atelier
+
+- **Apparence** : structure neutre gris froid commune à la suite (clair et sombre), police Inter embarquée
+  (13 px, chiffres tabulaires), traits de 1 px, plus d'ombres au repos ni de grille de fond. La couleur signature
+  de DataMind (indigo `#6967e1`) ne sert qu'à l'accent. La palette des séries de graphiques ne change pas.
+- **Marque** : icône carrée en dégradé avec le glyphe `sparkles` et « Atelier DataMind » ; clic sur la marque :
+  fenêtre « À propos ». Favicon et icône d'écran d'accueil (iOS) redessinés.
+- **Coquille** : barre latérale de 232 px, barre haute de 44 px avec le nom du jeu, ses mesures et sa qualité ;
+  onglets à fond neutre.
+- **Assistant** : question dans une bulle neutre, réponse signée DataMind, étapes d'outils discrètes (numéro gris,
+  erreur corrigée en rouge seulement sur la ligne), tableaux et blocs de code Markdown lisibles, moteur IA
+  indisponible signalé en tête de l'écran.
+- **Thème** commun à la suite (`atelier-theme.js`) : le choix Système / Clair / Sombre suit d'une app à l'autre
+  sur le VPS ; l'ancienne préférence `datamind:theme` est reprise.
+
 ## 7.0.0 — Tableau de bord, fichiers croisés, nettoyage, modèles réutilisables
 
 - **Tableau de bord** : bouton « Épingler » sur chaque graphique, tableau et réponse (Assistant, Exploration,

@@ -1,5 +1,4 @@
-import '@fontsource-variable/instrument-sans'
-import '@fontsource-variable/jetbrains-mono'
+import './styles/atelier-brand/atelier-brand.css'
 import './styles.css'
 
 import { StrictMode } from 'react'

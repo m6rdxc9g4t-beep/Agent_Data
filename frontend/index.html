@@ -1,20 +1,15 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-atelier-app="datamind">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
-    <title>DataMind</title>
-    <script>
-      // Thème appliqué avant le premier rendu (évite un flash de couleur).
-      try {
-        var m = localStorage.getItem('datamind:theme')
-        var dark = m === 'dark' || (m !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches)
-        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
-      } catch (e) {}
-    </script>
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="128x128" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Atelier DataMind</title>
+    <!-- Aucune ressource externe (Inter embarquée). Le thème commun à la suite (atelier-theme.js)
+         est posé avant le premier rendu par vite.config.ts (atelierTheme). -->
   </head>
   <body>
     <div id="root"></div>
