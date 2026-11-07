@@ -155,11 +155,13 @@ exécuté. L'app n'a pas de connexion propre : sur un serveur, placez-la derriè
 ## Apparence (suite Atelier)
 
 DataMind suit la charte v2 « Linear » de la suite Atelier (règles : `Atelier_Deploy/DESIGN.md`,
-`Atelier_Projets/docs/SUITE.md` §1) : structure neutre gris froid en clair et en sombre, police Inter embarquée
-(13 px), traits de 1 px, aucune ombre au repos. La couleur signature de DataMind, **indigo `#6967e1`**
+`Atelier_Projets/docs/SUITE.md` §1) : structure commune à la suite, **crème** en clair (`#f8f4ec`) et **bleu nuit**
+en sombre (`#0b1220`), police Inter embarquée (13 px), traits de 1 px, aucune ombre au repos. Les cartes de chiffres
+(synthèse des prédictions, score de qualité) prennent la forme commune `.atelier-kpi` (coins de 12 px). La couleur signature de DataMind, **indigo `#6967e1`**
 (`data-atelier-app="datamind"` sur `<html>`), ne sert qu'à l'accent : bouton principal, sélection, focus, liens
 et icône de l'app (carré arrondi en dégradé, glyphe Lucide `sparkles`). La palette des **séries de graphiques**
-(`frontend/src/components/Chart.tsx`) et les couleurs du score de qualité ne changent pas.
+(`frontend/src/components/Chart.tsx`) et les couleurs du score de qualité ne changent pas (vert et ambre un cran plus
+foncés en clair, pour rester lisibles sur la crème).
 
 `frontend/src/styles/atelier-brand/` contient une **copie verbatim** de `Atelier_Projets/design-system/brand/`
 (v2) : `atelier-brand.css` (jetons `--atelier-*`, marque, fenêtre « À propos »), `atelier-theme.js` (préférence

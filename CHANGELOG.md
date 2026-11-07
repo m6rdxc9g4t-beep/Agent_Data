@@ -2,6 +2,9 @@
 
 ## Prochaine version — Charte v2 « Linear » de la suite Atelier
 
+- **Crème et bleu nuit** : la structure commune passe en crème en clair et en bleu nuit en sombre (fond, surfaces,
+  texte, traits, habillage des graphiques, page HTML exportée) ; les synthèses de prédiction et le score de qualité
+  deviennent des cartes de chiffres arrondies (`.atelier-kpi`, coins de 12 px).
 - **Apparence** : structure neutre gris froid commune à la suite (clair et sombre), police Inter embarquée
   (13 px, chiffres tabulaires), traits de 1 px, plus d'ombres au repos ni de grille de fond. La couleur signature
   de DataMind (indigo `#6967e1`) ne sert qu'à l'accent. La palette des séries de graphiques ne change pas.

@@ -306,17 +306,17 @@ function ApplyMode({ dataset, models, onChanged }: { dataset: DatasetDetail; mod
               <div className="apply-summary">
                 {preview.stats && (
                   <>
-                    <div><span>Lignes prédites</span><strong>{fmtInt(preview.total)}</strong></div>
-                    <div><span>Moyenne prédite</span><strong>{fmtNumber(preview.stats.mean)}</strong></div>
-                    <div><span>Minimum</span><strong>{fmtNumber(preview.stats.min)}</strong></div>
-                    <div><span>Maximum</span><strong>{fmtNumber(preview.stats.max)}</strong></div>
+                    <div className="atelier-kpi"><span className="atelier-kpi__label">Lignes prédites</span><strong className="atelier-kpi__value">{fmtInt(preview.total)}</strong></div>
+                    <div className="atelier-kpi"><span className="atelier-kpi__label">Moyenne prédite</span><strong className="atelier-kpi__value">{fmtNumber(preview.stats.mean)}</strong></div>
+                    <div className="atelier-kpi"><span className="atelier-kpi__label">Minimum</span><strong className="atelier-kpi__value">{fmtNumber(preview.stats.min)}</strong></div>
+                    <div className="atelier-kpi"><span className="atelier-kpi__label">Maximum</span><strong className="atelier-kpi__value">{fmtNumber(preview.stats.max)}</strong></div>
                   </>
                 )}
                 {preview.distribution && (
                   <>
-                    <div><span>Lignes prédites</span><strong>{fmtInt(preview.total)}</strong></div>
+                    <div className="atelier-kpi"><span className="atelier-kpi__label">Lignes prédites</span><strong className="atelier-kpi__value">{fmtInt(preview.total)}</strong></div>
                     {preview.distribution.slice(0, 5).map((d) => (
-                      <div key={d.value}><span>{preview.target} = {d.value}</span><strong>{fmtInt(d.rows)} <small>({fmtPct(d.rows / Math.max(1, preview.total), 0)})</small></strong></div>
+                      <div key={d.value} className="atelier-kpi"><span className="atelier-kpi__label">{preview.target} = {d.value}</span><strong className="atelier-kpi__value">{fmtInt(d.rows)} <small>({fmtPct(d.rows / Math.max(1, preview.total), 0)})</small></strong></div>
                     ))}
                   </>
                 )}

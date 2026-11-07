@@ -1,6 +1,6 @@
 /* DataMind — styles (charte v2 « Linear » de la suite Atelier).
-   Structure neutre gris froid commune à la suite, jetons --atelier-* de styles/atelier-brand/atelier-brand.css
-   (copie verbatim), clair et sombre. La signature DataMind (#6967e1, data-atelier-app="datamind" sur <html>)
+   Structure commune à la suite, crème en clair et bleu nuit en sombre : jetons --atelier-* de
+   styles/atelier-brand/atelier-brand.css (copie verbatim). La signature DataMind (#6967e1, data-atelier-app="datamind" sur <html>)
    ne sert qu'à l'accent : bouton principal, sélection, focus, liens, icône, mesures d'une seule série.
    Plat au repos, traits de 1 px, Inter 13 px, chiffres tabulaires dans les données.
    Les couleurs de DONNÉES (séries des graphiques, score de qualité, types de colonnes) ne changent pas. */
@@ -34,9 +34,10 @@
   --ui-bad: var(--atelier-down);
   --ui-up: var(--atelier-up);
 
-  /* Couleurs de données (score, types, bons / mauvais) : inchangées. */
-  --good: #0F8C76;
-  --warn: #B87503;
+  /* Couleurs de données (score, types, bons / mauvais). Vert et ambre un cran plus foncés en clair
+     pour rester lisibles en texte (≥ 4,5:1) sur la crème. */
+  --good: #0d7e6a;
+  --warn: #9c6303;
   --bad: #C63E33;
 
   --code-bg: var(--atelier-sidebar);
@@ -211,7 +212,7 @@ h1, h2, h3 { letter-spacing: -0.012em; }
 }
 .segmented button:hover, .theme-switch button:hover { color: var(--ink); }
 .segmented button.on, .theme-switch button.on {
-  background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 0 0 1px var(--rule);
+  background: var(--surface); color: var(--ink); box-shadow: var(--atelier-glow), 0 0 0 1px var(--rule);
 }
 .engine select, .key {
   width: 100%; height: 28px; border-radius: var(--r-md); border: 1px solid var(--rule-strong); background: var(--field); padding: 0 8px; font-size: 12.5px;
@@ -321,7 +322,7 @@ h1, h2, h3 { letter-spacing: -0.012em; }
 
 .dialog-backdrop {
   position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 24px;
-  background: rgb(10 11 13 / 0.45); animation: fade 0.15s ease-out;
+  background: rgb(11 18 32 / 0.45); animation: fade 0.15s ease-out;
 }
 @keyframes fade { from { opacity: 0; } }
 .dialog {
@@ -536,6 +537,7 @@ p.step-error { margin: 0; padding: 0 2px; font: 12px/1.55 var(--mono); color: va
 
 /* ── Qualité ─────────────────────────────────────────────────────────────── */
 .quality-top { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.2fr); gap: 32px; align-items: start; margin-bottom: 32px; }
+.score-card { align-items: center; justify-self: start; padding: 14px 18px 12px; }
 .score { position: relative; width: 120px; height: 120px; }
 .score svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .score circle { fill: none; stroke-width: 9; }
@@ -723,11 +725,10 @@ textarea.desc-input { border-color: var(--rule-strong); border-radius: var(--r-m
 .apply-panel code { font-family: var(--mono); font-size: 0.9em; }
 .apply-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .apply-actions a.ghost-btn { text-decoration: none; }
-.apply-summary { display: flex; flex-wrap: wrap; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r-lg); overflow: hidden; }
-.apply-summary div { flex: 1 1 150px; display: flex; flex-direction: column; gap: 2px; padding: 10px 14px; background: var(--surface); }
-.apply-summary span { font-size: 12px; color: var(--muted); }
-.apply-summary strong { font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.apply-summary small { font-size: 11.5px; color: var(--faint); font-weight: 500; }
+/* Cartes de chiffres : .atelier-kpi (coins de 12 px), en rangée espacée. */
+.apply-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.apply-summary div { padding: 10px 14px; }
+.apply-summary small { font-size: 12px; color: var(--faint); font-weight: 500; }
 @media (max-width: 1100px) { .ml-modes { grid-template-columns: 1fr 1fr; } .apply { grid-template-columns: 1fr; } }
 
 /* ── Nettoyage appliqué ──────────────────────────────────────────────────── */
@@ -851,7 +852,7 @@ textarea.desc-input { border-color: var(--rule-strong); border-radius: var(--r-m
   .panel-scroll { overflow: visible !important; padding: 0 !important; }
   .print-only { display: block !important; }
   .print-title { margin: 0 0 12px; font-size: 18px; font-weight: 600; color: #000; }
-  .pin-card { break-inside: avoid; border-color: #ccc; }
+  .pin-card { break-inside: avoid; border-color: #e4dac8; }
   .pin-note:placeholder-shown { display: none; }
   .pin-note { border: 0; resize: none; padding: 0; }
   .pin-title { border: 0 !important; }
@@ -894,7 +895,7 @@ html.printing .dashboard { width: 690px; padding: 0 !important; }
   }
   .sidebar.open { transform: none; }
   .drawer-close { display: inline-grid; margin-left: auto; }
-  .drawer-backdrop { display: block; position: fixed; inset: 0; z-index: 65; background: rgb(10 11 13 / 0.45); }
+  .drawer-backdrop { display: block; position: fixed; inset: 0; z-index: 65; background: rgb(11 18 32 / 0.45); }
 
   .topbar { padding: 0 10px 0 6px; gap: 8px; }
   .menu-btn, .topbar > .atelier-brand__tile { display: inline-grid; }
