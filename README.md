@@ -118,7 +118,7 @@ DATAMIND_DEMO=1 DATA_DIR=/srv/datamind-demo STATIC_DIR=frontend/dist npm start
   visiteur). Garde-fous : `DATAMIND_DEMO_QUESTIONS_PAR_HEURE` questions par adresse IP et par heure (l'en-tête
   `X-Forwarded-For` n'est lu que si la connexion vient du proxy de bouclage `127.0.0.1`, et seulement sa dernière
   adresse) ; **une seule question à la fois** sur toute l'instance, deux en attente au plus, au-delà « La démo est
-  occupée, réessaie dans un instant » ; 6 étapes par question (12 en privé), 3 min par question et 2 min par appel à
+  occupée, réessayez dans un instant » ; 6 étapes par question (12 en privé), 3 min par question et 2 min par appel à
   Ollama (10 min en privé), 1 500 jetons par appel, 12 000 caractères de réponse, 2 000 caractères de question, requêtes
   SQL limitées à 20 s et toujours en lecture seule ; calculs sans IA (requête, entraînement, prévision) limités à 120
   par adresse et par heure.

@@ -39,7 +39,7 @@ export const DEMO_LIMITS = {
 }
 
 export const DEMO_REFUSED = 'Indisponible dans la démo publique : seuls les jeux d’exemple sont proposés, en lecture seule.'
-export const DEMO_BUSY = 'La démo est occupée, réessaie dans un instant.'
+export const DEMO_BUSY = 'La démo est occupée, réessayez dans un instant.'
 export const DEMO_CLAUDE_OFF = 'Claude est désactivé dans la démo publique : seule l’IA du serveur (Ollama) répond.'
 export const DEMO_TIMEOUT = 'Délai de la démo dépassé (3 min) : une question plus courte ou plus simple a plus de chances d’aboutir.'
 
