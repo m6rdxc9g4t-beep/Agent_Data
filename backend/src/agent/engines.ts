@@ -21,6 +21,10 @@ export interface RunOptions {
   onEvent: (e: AgentEvent) => void
   signal?: AbortSignal
   maxSteps?: number
+  /** Délai d'un appel au modèle (Ollama ; défaut : OLLAMA_TIMEOUT). */
+  callTimeoutMs?: number
+  /** Jetons produits au plus par appel (Ollama : `num_predict`). */
+  maxOutputTokens?: number
 }
 
 export interface Usage { inputTokens: number; outputTokens: number }
@@ -159,11 +163,14 @@ export async function runOllama(opts: RunOptions, model: string): Promise<Usage>
   for (let step = 0; step < (opts.maxSteps ?? config.maxSteps); step++) {
     let res: Response
     try {
-      const signals = [AbortSignal.timeout(config.ollamaTimeoutMs), ...(opts.signal ? [opts.signal] : [])]
+      const signals = [AbortSignal.timeout(opts.callTimeoutMs ?? config.ollamaTimeoutMs), ...(opts.signal ? [opts.signal] : [])]
       res = await fetch(`${config.ollamaUrl}/api/chat`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ model, messages, tools, stream: false, options: { num_ctx: config.ollamaNumCtx, temperature: 0.2 } }),
+        body: JSON.stringify({
+          model, messages, tools, stream: false,
+          options: { num_ctx: config.ollamaNumCtx, temperature: 0.2, ...(opts.maxOutputTokens ? { num_predict: opts.maxOutputTokens } : {}) },
+        }),
         signal: AbortSignal.any(signals),
       })
     } catch (err) {

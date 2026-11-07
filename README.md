@@ -93,6 +93,40 @@ DataMind est intégré au kit [Atelier_Deploy](https://github.com/m6rdxc9g4t-bee
 cd ~/Ateliers/Atelier_Deploy && sudo ./update.sh datamind
 ```
 
+### Démo publique (`DATAMIND_DEMO=1`)
+
+Une instance ouverte à tous, par exemple depuis un portfolio, sans connexion. Sans cette variable, rien ne change.
+
+```bash
+DATAMIND_DEMO=1 DATA_DIR=/srv/datamind-demo STATIC_DIR=frontend/dist npm start
+```
+
+- **Données** : seulement les jeux d'exemple de `sample_data/`, chargés au démarrage dans `DATA_DIR` (prévoir un dossier
+  dédié à la démo). Ensuite, plus aucune écriture sur le disque. Les routes d'écriture sont refusées **côté serveur**
+  (403, « Indisponible dans la démo publique… ») par une liste blanche vérifiée avant la lecture du corps : import et
+  feuille Excel, renommage, dictionnaire et contexte, suppression, nettoyage, fichiers liés, modèles enregistrés,
+  tableau de bord. Toute nouvelle route d'écriture est refusée d'office (le test `demo.test.ts` en tient la liste).
+  Les jeux importés hors démo qui traîneraient dans le dossier restent invisibles (404). L'interface masque ces fonctions.
+- **Analyses** : chaque visiteur reçoit une session éphémère, en mémoire, identifiée par un cookie aléatoire
+  (`datamind_demo`, 256 bits, `HttpOnly`, `SameSite=Lax`, `Secure` derrière le proxy HTTPS). Ses analyses et la liste de
+  ses jeux ouverts y vivent : un autre visiteur ne peut ni les lister ni les lire (404). Rien n'est écrit sur le disque ;
+  une session est oubliée après 2 h sans activité (500 sessions au plus, 10 analyses de 12 questions par session).
+  Le tableau de bord reste dans l'onglet du navigateur ; l'export du rapport (page HTML), du tableau de bord (PDF) et
+  des données (CSV) se fait par téléchargement, sans rien écrire sur le serveur.
+- **IA** : Claude est coupé (jeton `CLAUDE_CODE_OAUTH_TOKEN` et clé `ANTHROPIC_API_KEY` ignorés, et retirés de
+  l'environnement du processus) ; seul Ollama répond, avec le modèle du serveur (`OLLAMA_MODEL`, jamais choisi par le
+  visiteur). Garde-fous : `DATAMIND_DEMO_QUESTIONS_PAR_HEURE` questions par adresse IP et par heure (l'en-tête
+  `X-Forwarded-For` n'est lu que si la connexion vient du proxy de bouclage `127.0.0.1`, et seulement sa dernière
+  adresse) ; **une seule question à la fois** sur toute l'instance, deux en attente au plus, au-delà « La démo est
+  occupée, réessayez dans un instant » ; 6 étapes par question (12 en privé), 3 min par question et 2 min par appel à
+  Ollama (10 min en privé), 1 500 jetons par appel, 12 000 caractères de réponse, 2 000 caractères de question, requêtes
+  SQL limitées à 20 s et toujours en lecture seule ; calculs sans IA (requête, entraînement, prévision) limités à 120
+  par adresse et par heure.
+- **Interface** : bandeau « Démo publique · jeux d'exemple · IA du serveur, peut prendre une minute » et lien
+  « Portfolio » (`DATAMIND_DEMO_RETOUR`) ; libellé d'instance (`DATAMIND_INSTANCE_LABEL`) inchangé.
+
+Le port (`PORT`) et la route de santé (`/api/health`) sont les mêmes qu'en privé.
+
 ## Configuration
 
 Variables d'environnement, toutes facultatives (voir [`.env.example`](.env.example)) :
@@ -113,6 +147,9 @@ Variables d'environnement, toutes facultatives (voir [`.env.example`](.env.examp
 | `DATAMIND_MAX_STEPS` | `12` | Allers-retours modèle ↔ outils par question |
 | `DATAMIND_QUERY_TIMEOUT` | `60` | Durée maximale d'une requête (s) |
 | `DATAMIND_INSTANCE_LABEL` | — | Libellé sous le nom de l'app |
+| `DATAMIND_DEMO` | — | `1` : démo publique (voir plus haut) |
+| `DATAMIND_DEMO_QUESTIONS_PAR_HEURE` | `10` | Démo : questions à l'agent par adresse IP et par heure |
+| `DATAMIND_DEMO_RETOUR` | — | Démo : adresse du lien « Portfolio » du bandeau (http ou https) |
 
 ## Architecture
 
@@ -129,6 +166,7 @@ backend/src/
 ├── ml/                Apprentissage : préparation, gradient boosting, réseau de neurones, séries temporelles,
 │                      modèles enregistrés (models.ts)
 ├── store.ts           Métadonnées et analyses en fichiers JSON
+├── demo.ts            Démo publique : liste blanche des routes, sessions éphémères, limites de l'IA
 └── agent/
     ├── prompts.ts     Prompt système, catalogue des analyses rapides
     ├── tools.ts       Outils de l'agent (schémas + exécution)

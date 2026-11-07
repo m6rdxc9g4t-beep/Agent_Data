@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { Cpu, KeyRound, LibraryBig, Monitor, Moon, Plus, RefreshCw, Search, Sun, Trash2, Upload, X } from 'lucide-react'
 
 import { fmtInt, fmtRelative } from '../format'
+import { useDemo } from '../demo'
 import { Brand } from './Brand'
 import { useTheme, type ThemeMode } from '../theme'
 import type { AppConfig, ConversationSummary, DatasetMeta, EngineChoice } from '../types'
@@ -39,6 +40,7 @@ export function Sidebar(p: Props) {
   const searchable = p.datasets.length > 6
   const cfg = p.config
   const e = p.engine
+  const demo = useDemo()
 
   return (
     <aside className={`sidebar${p.open ? ' open' : ''}`} aria-label="Navigation">
@@ -47,12 +49,14 @@ export function Sidebar(p: Props) {
         <button type="button" className="icon-btn drawer-close" onClick={p.onClose} aria-label="Fermer le menu"><X size={18} /></button>
       </div>
 
-      <button type="button" className="import-btn" onClick={() => file.current?.click()} disabled={p.uploading !== null}>
-        {p.uploading !== null ? <><span className="progress" style={{ width: `${p.uploading * 100}%` }} /> Import en cours… {Math.round(p.uploading * 100)} %</>
-          : <><Upload size={16} /> Importer un fichier</>}
-      </button>
+      {!demo && (
+        <button type="button" className="import-btn" onClick={() => file.current?.click()} disabled={p.uploading !== null}>
+          {p.uploading !== null ? <><span className="progress" style={{ width: `${p.uploading * 100}%` }} /> Import en cours… {Math.round(p.uploading * 100)} %</>
+            : <><Upload size={16} /> Importer un fichier</>}
+        </button>
+      )}
       <button type="button" className="samples-btn" onClick={p.onOpenSamples}><LibraryBig size={16} /> Jeux d’exemple</button>
-      <input ref={file} type="file" hidden accept={cfg?.formats.join(',')} onChange={(ev) => { const f = ev.target.files?.[0]; if (f) p.onUpload(f); ev.target.value = '' }} />
+      {!demo && <input ref={file} type="file" hidden accept={cfg?.formats.join(',')} onChange={(ev) => { const f = ev.target.files?.[0]; if (f) p.onUpload(f); ev.target.value = '' }} />}
 
       <nav className="nav" aria-label="Jeux de données">
         <h3>Jeux de données{p.datasets.length > 1 && <span className="count">{p.datasets.length}</span>}</h3>
@@ -63,7 +67,7 @@ export function Sidebar(p: Props) {
             {filter && <button type="button" onClick={() => setFilter('')} aria-label="Effacer la recherche"><X size={13} /></button>}
           </label>
         )}
-        {p.datasets.length === 0 && <p className="nav-empty">Aucun pour l’instant.</p>}
+        {p.datasets.length === 0 && <p className="nav-empty">{demo ? 'Ouvrez un jeu d’exemple pour commencer.' : 'Aucun pour l’instant.'}</p>}
         {p.datasets.length > 0 && shown.length === 0 && <p className="nav-empty">Aucun jeu ne contient « {filter.trim()} ».</p>}
         <ul>
           {shown.map((d) => (
@@ -99,21 +103,22 @@ export function Sidebar(p: Props) {
           {!p.engineStatus.ok && <span className="dot warn" title={p.engineStatus.text} />}
           <button type="button" className="icon-btn small" onClick={p.onRefreshConfig} title="Vérifier à nouveau"><RefreshCw size={13} /></button>
         </div>
-        <div className="segmented" role="radiogroup" aria-label="Moteur IA">
+        {demo && <p className="engine-msg"><Cpu size={13} aria-hidden /> IA du serveur{cfg?.ollama.reachable && cfg.ollama.model ? ` · ${cfg.ollama.model}` : ''}</p>}
+        {!demo && <div className="segmented" role="radiogroup" aria-label="Moteur IA">
           {(['ollama', 'claude'] as const).map((k) => (
             <button key={k} type="button" role="radio" aria-checked={e.engine === k} className={e.engine === k ? 'on' : ''} onClick={() => p.onEngine({ ...e, engine: k })}>
               {k === 'ollama' ? <><Cpu size={14} /> Ollama</> : <>Claude</>}
             </button>
           ))}
-        </div>
-        {cfg && e.engine === 'ollama' && (
+        </div>}
+        {cfg && !demo && e.engine === 'ollama' && (
           cfg.ollama.models.length
             ? <select value={e.ollamaModel} onChange={(ev) => p.onEngine({ ...e, ollamaModel: ev.target.value })} aria-label="Modèle Ollama">
                 {cfg.ollama.models.map((m) => <option key={m}>{m}</option>)}
               </select>
             : null
         )}
-        {cfg && e.engine === 'claude' && (
+        {cfg && !demo && e.engine === 'claude' && (
           <>
             <select value={e.claudeModel} onChange={(ev) => p.onEngine({ ...e, claudeModel: ev.target.value })} aria-label="Modèle Claude">
               {cfg.claude.models.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}

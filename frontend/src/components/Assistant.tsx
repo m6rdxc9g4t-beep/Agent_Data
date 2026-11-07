@@ -160,7 +160,7 @@ function TurnView({ turn, labels, datasetId, onFollowUp }: {
             <Markdown remarkPlugins={[remarkGfm]}>{(g[0] as { text: string }).text}</Markdown>
           </div>
         ))}
-      {turn.pending && !turn.blocks.length && <p className="thinking"><LoaderCircle size={15} className="spin" /> L’agent prépare son analyse…</p>}
+      {turn.pending && !turn.blocks.length && <p className="thinking"><LoaderCircle size={15} className="spin" /> {turn.queued ?? 'L’agent prépare son analyse…'}</p>}
       {turn.error && <p className="turn-error"><AlertTriangle size={15} /> {turn.error}</p>}
       {followUps.length > 0 && (
         <div className="followups">

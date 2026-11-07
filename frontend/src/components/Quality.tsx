@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { BookText, ShieldCheck } from 'lucide-react'
 
 import { api } from '../api'
+import { useDemo } from '../demo'
 
 import { fmtCell, fmtInt, fmtNumber, fmtPct } from '../format'
 import type { DatasetDetail, DatasetMeta, Kind } from '../types'
@@ -31,6 +32,7 @@ export function Quality({ dataset, onAudit, canAudit, onCleaned, onOpen, onPatch
   dataset: DatasetDetail; onAudit: () => void; canAudit: boolean; onCleaned: (m: DatasetMeta) => void; onOpen: (id: string) => void
   onPatched: (m: DatasetMeta) => void
 }) {
+  const demo = useDemo()
   const [saveError, setSaveError] = useState<string | null>(null)
   const patch = (p: { descriptions?: Record<string, string>; context?: string }) =>
     api.updateDataset(dataset.id, p).then((m) => { onPatched(m); setSaveError(null) }).catch((e: Error) => setSaveError(e.message))
@@ -59,32 +61,34 @@ export function Quality({ dataset, onAudit, canAudit, onCleaned, onOpen, onPatch
         </div>
       </section>
 
-      <CleanPanel dataset={dataset} onCreated={onCleaned} onOpen={onOpen} />
+      {!demo && <CleanPanel dataset={dataset} onCreated={onCleaned} onOpen={onOpen} />}
 
       <section className="section">
         <div className="section-head">
-          <h2 className="section-title">Profil et dictionnaire des colonnes</h2>
-          <span className="muted small"><BookText size={14} /> Les significations saisies ici sont transmises à l’agent.</span>
+          <h2 className="section-title">{demo ? 'Profil des colonnes' : 'Profil et dictionnaire des colonnes'}</h2>
+          {!demo && <span className="muted small"><BookText size={14} /> Les significations saisies ici sont transmises à l’agent.</span>}
         </div>
-        <label className="context-field">
+        {!demo && <label className="context-field">
           <span>Contexte du jeu de données</span>
           <DescInput multiline value={dataset.context ?? ''} onSave={(v) => patch({ context: v })}
             placeholder="Ex. : export des ventes 2024 du magasin de Lyon, montants en euros HT, une ligne par ticket de caisse." />
-        </label>
+        </label>}
         {saveError && <p className="hint-warn">{saveError}</p>}
         <div className="result-table profile-table">
           <table>
             <thead>
-              <tr><th>Colonne</th><th>Signification</th><th>Type</th><th>Renseignées</th><th className="num">Distinctes</th><th className="num">Min</th><th className="num">Médiane</th><th className="num">Max</th><th>Valeur fréquente</th></tr>
+              <tr><th>Colonne</th>{!demo && <th>Signification</th>}<th>Type</th><th>Renseignées</th><th className="num">Distinctes</th><th className="num">Min</th><th className="num">Médiane</th><th className="num">Max</th><th>Valeur fréquente</th></tr>
             </thead>
             <tbody>
               {dataset.profile.columns.map((c) => (
                 <tr key={c.name}>
                   <td className="col-name">{c.name}</td>
-                  <td className="desc-cell">
-                    <DescInput value={dataset.descriptions?.[c.name] ?? ''} placeholder="Ajouter…"
-                      onSave={(v) => patch({ descriptions: { [c.name]: v } })} />
-                  </td>
+                  {!demo && (
+                    <td className="desc-cell">
+                      <DescInput value={dataset.descriptions?.[c.name] ?? ''} placeholder="Ajouter…"
+                        onSave={(v) => patch({ descriptions: { [c.name]: v } })} />
+                    </td>
+                  )}
                   <td><span className={`kind kind-${c.kind}`}>{KIND_LABELS[c.kind]}</span></td>
                   <td>
                     <span className="bar" aria-label={fmtPct(c.completeness)}><span style={{ width: `${c.completeness * 100}%` }} className={c.completeness < 0.8 ? 'low' : undefined} /></span>

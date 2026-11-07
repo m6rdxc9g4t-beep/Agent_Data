@@ -231,6 +231,27 @@ h1, h2, h3 { letter-spacing: -0.012em; }
 .theme-switch button { flex: none; width: 26px; padding: 0; }
 .version { margin-left: auto; font-size: 11.5px; font-weight: 500; color: var(--faint); font-variant-numeric: tabular-nums; }
 
+/* ── Démo publique : bandeau discret au-dessus de la barre haute ─────────── */
+.demo-banner {
+  flex: none; display: flex; align-items: center; gap: 12px; min-height: 30px; padding: 5px 12px 5px var(--gutter);
+  border-bottom: 1px solid var(--rule); background: var(--sunken); font-size: 12px; color: var(--muted);
+}
+.demo-banner p { flex: 1 1 auto; min-width: 0; margin: 0; display: flex; flex-wrap: wrap; line-height: 1.45; }
+.demo-banner strong { color: var(--ink-2); font-weight: 600; }
+.demo-sep { color: var(--faint); white-space: pre; }
+@media (max-width: 860px) {
+  .demo-banner { padding-left: 14px; }
+  .demo-banner p { flex-direction: column; }
+  .demo-sep--wide { display: none; }
+}
+.demo-back {
+  flex: none; display: inline-flex; align-items: center; gap: 3px; color: var(--accent-ink); font-weight: 500;
+  text-decoration: none; border-radius: var(--r-xs);
+}
+.demo-back:hover { text-decoration: underline; text-underline-offset: 2px; }
+.demo-back:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.engine-msg svg { vertical-align: -2px; margin-right: 4px; color: var(--faint); }
+
 /* ── Barre haute (44 px) ─────────────────────────────────────────────────── */
 .topbar {
   flex: none; display: flex; align-items: center; gap: 10px; min-height: var(--top-h); padding: 0 12px 0 var(--gutter);
@@ -598,6 +619,7 @@ p.step-error { margin: 0; padding: 0 2px; font: 12px/1.55 var(--mono); color: va
 /* ── Prédiction ──────────────────────────────────────────────────────────── */
 .prediction { display: flex; flex-direction: column; gap: 16px; }
 .ml-modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 1180px; }
+.ml-modes.two { grid-template-columns: repeat(2, 1fr); max-width: 790px; }
 .ml-modes button {
   display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; text-align: left; border-radius: var(--r-lg);
   border: 1px solid var(--rule); background: var(--surface); color: var(--faint); transition: background 120ms, border-color 120ms;

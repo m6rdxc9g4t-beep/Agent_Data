@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { AlertTriangle, BrainCircuit, ChartSpline, Check, Download, LoaderCircle, MessageSquareText, Play, Save, SlidersHorizontal, Trash2, Wand2 } from 'lucide-react'
 
 import { api } from '../api'
+import { useDemo } from '../demo'
 import { fmtInt, fmtNumber, fmtPct } from '../format'
 import type { DatasetDetail, ForecastResult, MlOptions, SavedModel, ScorePreview, Task, TrainResult } from '../types'
 import { ChartFigure } from './Chart'
@@ -131,6 +132,7 @@ function SaveModel({ result, dataset, onSaved }: { result: TrainResult; dataset:
 function VariableMode({ dataset, options, onAsk, onSaved }: {
   dataset: DatasetDetail; options: MlOptions; onAsk: (prompt: string, label: string) => void; onSaved: () => void
 }) {
+  const demo = useDemo()
   const [target, setTarget] = useState(options.targets[0]?.name ?? '')
   const [features, setFeatures] = useState<string[]>([])
   const [result, setResult] = useState<TrainResult | null>(null)
@@ -191,7 +193,7 @@ function VariableMode({ dataset, options, onAsk, onSaved }: {
             <BrainCircuit size={20} aria-hidden />
             <p>{result.summary}</p>
             <div className="verdict-actions">
-              <SaveModel key={result.id} result={result} dataset={dataset} onSaved={onSaved} />
+              {!demo && <SaveModel key={result.id} result={result} dataset={dataset} onSaved={onSaved} />}
               <button type="button" className="ghost-btn" onClick={askAgent}><MessageSquareText size={15} /> Faire commenter par l’agent</button>
             </div>
           </div>
@@ -437,6 +439,7 @@ function TimeMode({ dataset, options, onAsk }: { dataset: DatasetDetail; options
 
 export function Prediction({ dataset, onAsk }: { dataset: DatasetDetail; onAsk: (prompt: string, label: string) => void }) {
   const [options, setOptions] = useState<MlOptions | null>(null)
+  const demo = useDemo()
   const [mode, setMode] = useState<'variable' | 'time' | 'apply'>('variable')
   const [error, setError] = useState<string | null>(null)
   const [saved, setSaved] = useState<SavedModel[]>([])
@@ -450,16 +453,18 @@ export function Prediction({ dataset, onAsk }: { dataset: DatasetDetail; onAsk: 
 
   return (
     <div className="panel-scroll prediction">
-      <div className="ml-modes" role="radiogroup" aria-label="Type de prédiction">
+      <div className={`ml-modes${demo ? ' two' : ''}`} role="radiogroup" aria-label="Type de prédiction">
         <button type="button" role="radio" aria-checked={mode === 'variable'} className={mode === 'variable' ? 'on' : ''} onClick={() => setMode('variable')}>
           <BrainCircuit size={16} /> <span><strong>Prévoir une variable</strong><small>Estimer une valeur ou une catégorie à partir des autres colonnes</small></span>
         </button>
         <button type="button" role="radio" aria-checked={mode === 'time'} className={mode === 'time' ? 'on' : ''} onClick={() => setMode('time')}>
           <ChartSpline size={16} /> <span><strong>Prévoir dans le temps</strong><small>Prolonger l’évolution d’un indicateur sur les prochaines périodes</small></span>
         </button>
-        <button type="button" role="radio" aria-checked={mode === 'apply'} className={mode === 'apply' ? 'on' : ''} onClick={() => { setMode('apply'); refreshSaved() }}>
-          <Wand2 size={16} /> <span><strong>Appliquer un modèle{saved.length > 0 && <span className="tab-count">{saved.length}</span>}</strong><small>Utiliser un modèle enregistré pour prédire les lignes de ce fichier</small></span>
-        </button>
+        {!demo && (
+          <button type="button" role="radio" aria-checked={mode === 'apply'} className={mode === 'apply' ? 'on' : ''} onClick={() => { setMode('apply'); refreshSaved() }}>
+            <Wand2 size={16} /> <span><strong>Appliquer un modèle{saved.length > 0 && <span className="tab-count">{saved.length}</span>}</strong><small>Utiliser un modèle enregistré pour prédire les lignes de ce fichier</small></span>
+          </button>
+        )}
       </div>
       {error && <p className="hint-warn">{error}</p>}
       {!options && !error && <p className="ml-explain"><LoaderCircle size={15} className="spin" /> Préparation…</p>}
@@ -467,7 +472,7 @@ export function Prediction({ dataset, onAsk }: { dataset: DatasetDetail; onAsk: 
         ? <p className="ml-explain">Aucune colonne ne peut servir de cible : il faut une colonne numérique ou une catégorie de 10 modalités au plus.</p>
         : <VariableMode key={dataset.id} dataset={dataset} options={options} onAsk={onAsk} onSaved={refreshSaved} />)}
       {options && mode === 'time' && <TimeMode key={dataset.id} dataset={dataset} options={options} onAsk={onAsk} />}
-      {mode === 'apply' && <ApplyMode dataset={dataset} models={saved} onChanged={refreshSaved} />}
+      {mode === 'apply' && !demo && <ApplyMode dataset={dataset} models={saved} onChanged={refreshSaved} />}
     </div>
   )
 }
