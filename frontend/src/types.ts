@@ -103,6 +103,8 @@ export interface Turn {
   usage?: { inputTokens: number; outputTokens: number }
   error?: string
   pending?: boolean
+  /** Démo : la question attend son tour (une seule à la fois sur l'instance). */
+  queued?: string
 }
 
 export interface ConversationSummary {
@@ -126,6 +128,8 @@ export interface AppConfig {
   formats: string[]
   ollama: { reachable: boolean; error: string | null; models: string[]; model: string }
   claude: { plan: boolean; serverKey: boolean; model: string; models: { id: string; label: string }[] }
+  /** Démo publique (DATAMIND_DEMO=1) : jeux d'exemple seulement, Ollama seul ; `null` sur une instance privée. */
+  demo: { questionsPerHour: number; returnUrl: string | null } | null
   quickAnalyses: QuickAnalysis[]
   featured: string[]
   toolLabels: Record<string, string>

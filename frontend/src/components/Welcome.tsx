@@ -2,6 +2,7 @@
 import { useRef } from 'react'
 import { Upload } from 'lucide-react'
 
+import { useDemo } from '../demo'
 import type { Sample } from '../types'
 import { SampleGallery } from './SampleGallery'
 
@@ -15,6 +16,29 @@ export function Welcome({ samples, formats, maxUploadMb, onUpload, onSample, bus
   busyFile: string | null
 }) {
   const input = useRef<HTMLInputElement>(null)
+  const demo = useDemo()
+  if (demo) {
+    return (
+      <div className="welcome">
+        <div className="welcome-inner">
+          <h1>Posez vos questions à des données d’exemple.</h1>
+          <p className="lede">
+            DataMind écrit les requêtes SQL et les calculs nécessaires, les exécute réellement et répond avec des chiffres
+            vérifiables, des graphiques et chaque étape de son raisonnement. Choisissez un jeu ci-dessous pour commencer.
+          </p>
+          <section className="samples">
+            <h2>Jeux d’exemple</h2>
+            <SampleGallery samples={samples} onPick={onSample} busyFile={busyFile} />
+          </section>
+          <dl className="how">
+            <div><dt>Données fictives</dt><dd>Quinze jeux réalistes dans neuf domaines, en lecture seule. L’import de fichiers est réservé à l’instance privée.</dd></div>
+            <div><dt>Chaque chiffre est calculé</dt><dd>L’agent n’avance rien sans l’avoir obtenu par une requête que vous pouvez relire.</dd></div>
+            <div><dt>IA du serveur</dt><dd>Un modèle Ollama tourne sur ce serveur : une réponse peut prendre une minute. Vos analyses restent dans votre navigateur et disparaissent après deux heures.</dd></div>
+          </dl>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="welcome">
       <div className="welcome-inner">

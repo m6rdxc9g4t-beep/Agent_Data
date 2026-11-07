@@ -98,6 +98,7 @@ export const api = {
 }
 
 export type StreamEvent =
+  | { event: 'queued'; data: { message: string } }
   | { event: 'turn'; data: { id: string; question: string; label?: string; engine: string; model: string; title: string } }
   | { event: 'text'; data: { text: string } }
   | { event: 'tool_start'; data: { id: string; name: string; input: Record<string, unknown> } }

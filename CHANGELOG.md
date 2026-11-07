@@ -1,6 +1,15 @@
 # Journal des versions
 
-## Prochaine version — Charte v2 « Linear » de la suite Atelier
+## Prochaine version — Démo publique, charte v2 « Linear » de la suite Atelier
+
+- **Démo publique** (`DATAMIND_DEMO=1`, sans effet sinon) : jeux d'exemple seulement, chargés au démarrage ; toute
+  écriture refusée côté serveur (403) par une liste blanche de routes, et masquée dans l'interface (import, suppression,
+  renommage, dictionnaire, nettoyage, fichiers liés, modèles enregistrés). Analyses de chaque visiteur dans une session
+  éphémère en mémoire (cookie aléatoire, 2 h), tableau de bord dans le navigateur, exports par téléchargement.
+  Claude coupé (jeton et clé ignorés), Ollama seul avec le modèle du serveur ; questions limitées par adresse IP et par
+  heure (`DATAMIND_DEMO_QUESTIONS_PAR_HEURE`, 10 par défaut, `X-Forwarded-For` lu seulement depuis le proxy de
+  bouclage), une question à la fois sur l'instance (file de deux, puis « La démo est occupée »), étapes, délais et
+  longueur des réponses bornés. Bandeau « Démo publique » et lien « Portfolio » (`DATAMIND_DEMO_RETOUR`).
 
 - **Crème et bleu nuit** : la structure commune passe en crème en clair et en bleu nuit en sombre (fond, surfaces,
   texte, traits, habillage des graphiques, page HTML exportée) ; les synthèses de prédiction et le score de qualité

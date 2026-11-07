@@ -17,11 +17,15 @@ import { applyCleaning, planCleaning, type CleanStep } from './clean.js'
 import { autoCharts, columnChart } from './charts.js'
 import { CLAUDE_MODELS, config as defaultConfig, type Config } from './config.js'
 import { DatasetDb, DbCache, QueryError, quoteIdent, quoteString, type ExtraTable } from './db.js'
+import {
+  clientIp, DEMO_BUSY, DEMO_CLAUDE_OFF, DEMO_COMPUTE, DEMO_LIMITS, DEMO_READ_BLOCKED, DEMO_REFUSED, DEMO_TIMEOUT, DEMO_WRITE_ALLOWED,
+  DemoBusyError, DemoSessions, HourlyLimit, SingleSlot, type DemoSession,
+} from './demo.js'
 import { ImportError, importFile, SUPPORTED } from './importer.js'
 import { featureCandidates, targetCandidates } from './ml/prepare.js'
 import { forecastSeries } from './ml/timeseries.js'
 import { ModelStore, scoreRows } from './ml/models.js'
-import { predictOne, trainModels, type ModelKind } from './ml/train.js'
+import { predictOne, recentModel, trainModels, type ModelKind } from './ml/train.js'
 import { computeProfile, profileForPrompt, type Profile } from './profile.js'
 import { Store, type Block, type Conversation, type DatasetLink, type DatasetMeta, type Pin, type Turn } from './store.js'
 
@@ -37,11 +41,17 @@ export interface AppOptions {
   runEngine?: (engine: string, model: string, opts: Parameters<typeof runOllama>[0], apiKey: string) => Promise<{ inputTokens: number; outputTokens: number }>
 }
 
+/** En démo publique, Claude est coupé quelle que soit la configuration (jeton du forfait et clé API ignorés). */
+function demoSafe(config: Config): Config {
+  return config.demo ? { ...config, claudeOauthToken: undefined, anthropicApiKey: undefined, defaultEngine: 'ollama' } : config
+}
+
 export async function buildApp(options: AppOptions = {}): Promise<FastifyInstance> {
-  const config = options.config ?? defaultConfig
+  const config = demoSafe(options.config ?? defaultConfig)
+  const demo = config.demo
   const store = new Store(config.dataDir)
   await store.init()
-  const dbs = new DbCache(4, config.queryTimeoutMs)
+  const dbs = new DbCache(4, demo ? Math.min(config.queryTimeoutMs, DEMO_LIMITS.queryTimeoutMs) : config.queryTimeoutMs)
   const profiles = new Map<string, Promise<Profile>>()
   const models = new ModelStore(config.dataDir)
 
@@ -57,15 +67,49 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     return reply.status(500).send({ error: 'Erreur interne du serveur.' })
   })
 
+  // ── Démo publique : liste blanche des routes, sessions éphémères, limites de l'IA ─────────────
+  const sessions = new DemoSessions()
+  const questionLimit = new HourlyLimit(config.demoQuestionsPerHour)
+  const computeLimit = new HourlyLimit(DEMO_LIMITS.computePerHour)
+  const slot = new SingleSlot(DEMO_LIMITS.queueSize, DEMO_LIMITS.queueWaitMs)
+  /** Refus explicite dans les routes d'écriture (en plus de la liste blanche ci-dessous). */
+  const noDemo = () => { if (demo) throw new HttpError(403, DEMO_REFUSED) }
+  if (demo) {
+    // Avant toute lecture du corps : une écriture hors liste blanche est refusée, quel que soit son contenu.
+    app.addHook('onRequest', async (req, reply) => {
+      const route = req.routeOptions.url
+      if (!route?.startsWith('/api/')) return
+      const method = req.method === 'HEAD' ? 'GET' : req.method
+      const key = `${method} ${route}`
+      if (method === 'GET' ? DEMO_READ_BLOCKED.has(key) : !DEMO_WRITE_ALLOWED.has(key)) {
+        return reply.status(403).send({ error: DEMO_REFUSED })
+      }
+      if (DEMO_COMPUTE.has(key)) {
+        const ip = clientIp(req)
+        const wait = computeLimit.waitMinutes(ip)
+        if (wait) return reply.status(429).send({ error: `Limite de la démo atteinte pour les calculs : nouvel essai possible dans ${wait} min.` })
+        computeLimit.take(ip)
+      }
+    })
+  }
+  /** Analyse de la session du visiteur (démo). */
+  function demoConversation(session: DemoSession | null, id: string): Conversation {
+    const c = session?.conversations.get(id)
+    if (!c) throw new HttpError(404, 'Conversation introuvable.')
+    return c
+  }
+
   // ── Accès aux jeux de données ──────────────────────────────────────────────────────────────
   async function dataset(id: string): Promise<DatasetMeta> {
     const meta = await store.getDataset(id).catch(() => null)
-    if (!meta) throw new HttpError(404, 'Jeu de données introuvable.')
+    // Démo : seuls les jeux d'exemple d'origine existent (jamais un fichier importé ni une version nettoyée).
+    if (!meta || (demo && (!meta.sample || meta.cleanedFrom))) throw new HttpError(404, 'Jeu de données introuvable.')
     return meta
   }
   /** Fichiers liés encore présents, avec leur métadonnée. */
   async function linked(meta: DatasetMeta): Promise<{ link: DatasetLink; meta: DatasetMeta }[]> {
     const out: { link: DatasetLink; meta: DatasetMeta }[] = []
+    if (demo) return out // pas de fichiers liés dans la démo
     for (const link of meta.links ?? []) {
       const other = await store.getDataset(link.id).catch(() => null)
       if (other) out.push({ link, meta: other })
@@ -94,7 +138,8 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   // ── Santé et configuration ────────────────────────────────────────────────────────────────
   app.get('/api/health', async () => ({ status: 'ok', app: 'datamind', version: config.version }))
 
-  app.get('/api/config', async () => {
+  /** Modèles du serveur Ollama et modèle préféré (OLLAMA_MODEL s'il est installé). */
+  async function ollamaModels(): Promise<{ models: string[]; error: string | null; preferred: string }> {
     let models: string[] = []
     let error: string | null = null
     try {
@@ -104,14 +149,28 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     }
     const preferred = models.includes(config.ollamaModel) ? config.ollamaModel
       : models.includes(`${config.ollamaModel}:latest`) ? `${config.ollamaModel}:latest` : models[0] ?? config.ollamaModel
+    return { models, error, preferred }
+  }
+  // Démo : le modèle est celui du serveur, jamais choisi par le visiteur (relu au plus toutes les minutes).
+  let demoModel: { at: number; name: string } | null = null
+  async function serverModel(): Promise<string> {
+    if (!demoModel || Date.now() - demoModel.at > 60_000) demoModel = { at: Date.now(), name: (await ollamaModels()).preferred }
+    return demoModel.name
+  }
+
+  app.get('/api/config', async () => {
+    const { models, error, preferred } = await ollamaModels()
     return {
       version: config.version,
       instanceLabel: config.instanceLabel,
       defaultEngine: config.defaultEngine,
-      maxUploadMb: config.maxUploadMb,
-      formats: SUPPORTED,
-      ollama: { reachable: !error, error, models, model: preferred },
-      claude: { plan: !!config.claudeOauthToken, serverKey: !!config.anthropicApiKey, model: config.claudeModel, models: CLAUDE_MODELS },
+      maxUploadMb: demo ? 0 : config.maxUploadMb,
+      formats: demo ? [] : SUPPORTED,
+      ollama: { reachable: !error, error, models: demo ? (error ? [] : [preferred]) : models, model: preferred },
+      claude: demo
+        ? { plan: false, serverKey: false, model: config.claudeModel, models: [] }
+        : { plan: !!config.claudeOauthToken, serverKey: !!config.anthropicApiKey, model: config.claudeModel, models: CLAUDE_MODELS },
+      demo: demo ? { questionsPerHour: config.demoQuestionsPerHour, returnUrl: config.demoReturnUrl || null } : null,
       quickAnalyses: QUICK_ANALYSES,
       featured: FEATURED,
       toolLabels: TOOL_LABELS,
@@ -119,9 +178,21 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   })
 
   // ── Jeux de données ───────────────────────────────────────────────────────────────────────
-  app.get('/api/datasets', async () => store.listDatasets())
+  app.get('/api/datasets', async (req) => {
+    if (!demo) return store.listDatasets()
+    // Démo : les jeux d'exemple ouverts par ce visiteur, le plus récent en tête.
+    const session = sessions.find(req)
+    if (!session) return []
+    const opened = [...session.opened].sort((a, b) => b[1] - a[1])
+    const metas = await Promise.all(opened.map(async ([id, at]) => {
+      const meta = await store.getDataset(id).catch(() => null)
+      return meta?.sample ? { ...meta, lastActivityAt: new Date(at).toISOString() } : null
+    }))
+    return metas.filter((m) => !!m)
+  })
 
   app.post('/api/datasets', async (req) => {
+    noDemo()
     const file = await req.file()
     if (!file) throw new HttpError(400, 'Aucun fichier reçu.')
     const tmp = store.tmpPath(file.filename)
@@ -138,15 +209,39 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   interface SampleEntry { file: string; label: string; domain: string; rows: number; columns: number; description: string; ideas: string[] }
   const catalog: SampleEntry[] = JSON.parse(await readFile(join(config.samplesDir, 'catalog.json'), 'utf8').catch(() => '[]'))
 
-  app.get('/api/samples', async () => {
+  // Démo : tous les jeux d'exemple sont chargés au démarrage (par le serveur, depuis sample_data/ seulement) ;
+  // ensuite, plus aucune écriture sur le disque.
+  if (demo) {
+    const present = new Set((await store.listDatasets()).filter((d) => d.sample && !d.cleanedFrom).map((d) => d.fileName))
+    for (const entry of catalog) {
+      if (present.has(entry.file)) continue
+      const meta = await importFile(store, join(config.samplesDir, entry.file), entry.file, { sample: true })
+      meta.name = entry.label
+      await store.saveDataset(meta)
+    }
+  }
+  const sampleMeta = async (file: string) =>
+    (await store.listDatasets()).find((d) => d.sample && !d.cleanedFrom && d.fileName === file)
+
+  app.get('/api/samples', async (req) => {
     const loaded = new Map((await store.listDatasets()).filter((d) => d.sample).map((d) => [d.fileName, d.id]))
-    return catalog.map((c) => ({ ...c, datasetId: loaded.get(c.file) ?? null }))
+    const opened = demo ? sessions.find(req)?.opened : undefined
+    return catalog.map((c) => {
+      const id = loaded.get(c.file) ?? null
+      return { ...c, datasetId: demo ? (id && opened?.has(id) ? id : null) : id }
+    })
   })
 
-  app.post<{ Params: { file: string } }>('/api/samples/:file', async (req) => {
+  app.post<{ Params: { file: string } }>('/api/samples/:file', async (req, reply) => {
     const entry = catalog.find((c) => c.file === req.params.file)
     if (!entry) throw new HttpError(404, 'Exemple inconnu.')
-    const existing = (await store.listDatasets()).find((d) => d.sample && d.fileName === entry.file)
+    const existing = await sampleMeta(entry.file)
+    if (demo) {
+      // Rien n'est importé : l'exemple a été chargé au démarrage, il rejoint la liste de ce visiteur.
+      if (!existing) throw new HttpError(404, 'Exemple indisponible.')
+      sessions.get(req, reply).opened.set(existing.id, Date.now())
+      return existing
+    }
     if (existing) return existing
     const meta = await importFile(store, join(config.samplesDir, entry.file), entry.file, { sample: true })
     meta.name = entry.label
@@ -156,11 +251,12 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
 
   app.get<{ Params: { id: string } }>('/api/datasets/:id', async (req) => {
     const meta = await dataset(req.params.id)
-    const touched = (await store.touchDataset(meta.id)) ?? meta
+    const touched = demo ? meta : (await store.touchDataset(meta.id)) ?? meta
     return { ...touched, profile: await profile(meta.id) }
   })
 
   app.patch<{ Params: { id: string }; Body: { name?: string; descriptions?: Record<string, string>; context?: string } }>('/api/datasets/:id', async (req) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     const b = req.body ?? {}
     const name = String(b.name ?? '').trim().slice(0, 120)
@@ -186,6 +282,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   })
 
   app.post<{ Params: { id: string }; Body: { sheet?: string } }>('/api/datasets/:id/sheet', async (req) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     if (!meta.sheets.includes(String(req.body?.sheet))) throw new HttpError(400, 'Feuille inconnue.')
     forget(meta.id)
@@ -198,6 +295,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   })
 
   app.delete<{ Params: { id: string } }>('/api/datasets/:id', async (req, reply) => {
+    noDemo()
     await dataset(req.params.id)
     forget(req.params.id)
     await store.deleteDataset(req.params.id)
@@ -262,6 +360,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   })
 
   app.post<{ Params: { id: string }; Body: { steps?: CleanStep[] } }>('/api/datasets/:id/clean', async (req) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     const steps = Array.isArray(req.body?.steps) ? req.body.steps : []
     try {
@@ -306,6 +405,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   })
 
   app.put<{ Params: { id: string }; Body: { links?: DatasetLink[] } }>('/api/datasets/:id/links', async (req) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     const links = Array.isArray(req.body?.links) ? req.body.links : []
     if (links.length > 5) throw new HttpError(400, 'Cinq fichiers liés au plus.')
@@ -353,7 +453,8 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     })
 
   async function model(id: string) {
-    const m = await models.get(id).catch(() => null)
+    // Démo : seulement les modèles entraînés en mémoire, jamais ceux enregistrés sur le disque.
+    const m = demo ? recentModel(id) ?? null : await models.get(id).catch(() => null)
     if (!m) throw new HttpError(404, 'Modèle introuvable : il n’a pas été enregistré avant le redémarrage du serveur. Relancez l’entraînement.')
     return m
   }
@@ -364,11 +465,12 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   // Modèles enregistrés : survivent au redémarrage, réutilisables sur d'autres fichiers.
   app.get<{ Params: { id: string } }>('/api/datasets/:id/ml/models', async (req) => {
     const meta = await dataset(req.params.id)
-    return models.list(meta.id)
+    return demo ? [] : models.list(meta.id)
   })
-  app.get('/api/ml/models', async () => models.list())
+  app.get('/api/ml/models', async () => (demo ? [] : models.list()))
 
   app.post<{ Params: { id: string }; Body: { name?: string; datasetId?: string } }>('/api/ml/models/:id/save', async (req) => {
+    noDemo()
     const meta = await dataset(String(req.body?.datasetId ?? ''))
     const name = String(req.body?.name ?? '').trim().slice(0, 120)
     if (!name) throw new HttpError(400, 'Donnez un nom au modèle.')
@@ -378,6 +480,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
   })
 
   app.delete<{ Params: { id: string } }>('/api/ml/models/:id', async (req, reply) => {
+    noDemo()
     await models.remove(req.params.id)
     return reply.status(204).send()
   })
@@ -439,12 +542,14 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     })
 
   // ── Tableau de bord (éléments épinglés) ───────────────────────────────────────────────────
+  // Démo : le tableau de bord vit seulement dans le navigateur du visiteur ; rien n'est gardé ici.
   app.get<{ Params: { id: string } }>('/api/datasets/:id/dashboard', async (req) => {
     const meta = await dataset(req.params.id)
-    return store.listPins(meta.id)
+    return demo ? [] : store.listPins(meta.id)
   })
 
   app.post<{ Params: { id: string }; Body: Partial<Pin> }>('/api/datasets/:id/dashboard', async (req) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     const b = req.body ?? {}
     if (!['chart', 'table', 'text'].includes(String(b.kind))) throw new HttpError(400, 'Type d’élément inconnu.')
@@ -474,6 +579,7 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
 
   app.patch<{ Params: { id: string; pin: string }; Body: { title?: string; note?: string; wide?: boolean } }>(
     '/api/datasets/:id/dashboard/:pin', async (req) => {
+      noDemo()
       const meta = await dataset(req.params.id)
       const pins = await store.listPins(meta.id)
       const pin = pins.find((p) => p.id === req.params.pin)
@@ -487,12 +593,14 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     })
 
   app.delete<{ Params: { id: string; pin: string } }>('/api/datasets/:id/dashboard/:pin', async (req, reply) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     await store.savePins(meta.id, (await store.listPins(meta.id)).filter((p) => p.id !== req.params.pin))
     return reply.status(204).send()
   })
 
   app.put<{ Params: { id: string }; Body: { order?: string[] } }>('/api/datasets/:id/dashboard/order', async (req) => {
+    noDemo()
     const meta = await dataset(req.params.id)
     const pins = await store.listPins(meta.id)
     const order = Array.isArray(req.body?.order) ? req.body.order.map(String) : []
@@ -509,46 +617,81 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
     return c
   }
 
+  // Démo : les analyses vivent dans la session du visiteur (mémoire), jamais sur le disque ni chez un autre visiteur.
   app.get<{ Params: { id: string } }>('/api/datasets/:id/conversations', async (req) => {
     await dataset(req.params.id)
-    return store.listConversations(req.params.id)
+    if (!demo) return store.listConversations(req.params.id)
+    return [...(sessions.find(req)?.conversations.values() ?? [])]
+      .filter((c) => c.datasetId === req.params.id)
+      .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
+      .map(({ turns, ...rest }) => ({ ...rest, turnCount: turns.length }))
   })
 
-  app.post<{ Params: { id: string } }>('/api/datasets/:id/conversations', async (req) => {
+  app.post<{ Params: { id: string } }>('/api/datasets/:id/conversations', async (req, reply) => {
     await dataset(req.params.id)
-    return store.createConversation(req.params.id)
+    return demo ? sessions.createConversation(sessions.get(req, reply), req.params.id) : store.createConversation(req.params.id)
   })
 
-  app.get<{ Params: { id: string } }>('/api/conversations/:id', async (req) => conversation(req.params.id))
+  app.get<{ Params: { id: string } }>('/api/conversations/:id', async (req) =>
+    (demo ? demoConversation(sessions.find(req), req.params.id) : conversation(req.params.id)))
 
   app.patch<{ Params: { id: string }; Body: { title?: string } }>('/api/conversations/:id', async (req) => {
-    const c = await conversation(req.params.id)
+    const c = demo ? demoConversation(sessions.find(req), req.params.id) : await conversation(req.params.id)
     const title = String(req.body?.title ?? '').trim().slice(0, 120)
     if (title) {
       c.title = title
-      await store.saveConversation(c)
+      if (demo) c.updatedAt = new Date().toISOString()
+      else await store.saveConversation(c)
     }
     return c
   })
 
   app.delete<{ Params: { id: string } }>('/api/conversations/:id', async (req, reply) => {
-    await store.deleteConversation(req.params.id)
+    if (demo) sessions.find(req)?.conversations.delete(req.params.id)
+    else await store.deleteConversation(req.params.id)
     return reply.status(204).send()
   })
 
   app.post<{ Params: { id: string }; Body: { text?: string; label?: string; engine?: string; model?: string } }>(
     '/api/conversations/:id/messages', async (req, reply) => {
-      const conv = await conversation(req.params.id)
+      const conv = demo ? demoConversation(sessions.find(req), req.params.id) : await conversation(req.params.id)
       const meta = await dataset(conv.datasetId)
       const question = String(req.body?.text ?? '').trim()
       if (!question) throw new HttpError(400, 'Message vide.')
-      const engine = req.body?.engine === 'claude' ? 'claude' : 'ollama'
-      const model = String(req.body?.model ?? (engine === 'claude' ? config.claudeModel : config.ollamaModel))
-      const apiKey = config.anthropicApiKey ?? String(req.headers['x-anthropic-key'] ?? '')
+      // Démo : Ollama seulement, avec le modèle du serveur ; Claude refusé, clé transmise par l'en-tête ignorée.
+      if (demo && req.body?.engine === 'claude') throw new HttpError(403, DEMO_CLAUDE_OFF)
+      if (demo && question.length > 2000) throw new HttpError(400, 'Question trop longue pour la démo (2 000 caractères au plus).')
+      const engine = !demo && req.body?.engine === 'claude' ? 'claude' : 'ollama'
+      const model = demo ? await serverModel() : String(req.body?.model ?? (engine === 'claude' ? config.claudeModel : config.ollamaModel))
+      const apiKey = demo ? '' : config.anthropicApiKey ?? String(req.headers['x-anthropic-key'] ?? '')
       const plan = engine === 'claude' && !!config.claudeOauthToken
       if (engine === 'claude' && !plan && !apiKey) throw new HttpError(400, 'Claude non configuré : forfait (CLAUDE_CODE_OAUTH_TOKEN) ou clé API requis.')
 
       const [d, p] = await Promise.all([db(meta.id), profile(meta.id)])
+      const controller = new AbortController()
+      req.raw.on('close', () => { if (!reply.raw.writableEnded) controller.abort() })
+      // Démo : le départ du visiteur (connexion fermée) libère sa place dans la file ou arrête sa question.
+      // L'événement « close » de la requête est déjà passé à ce stade (corps lu) : on écoute la réponse.
+      if (demo) reply.raw.on('close', () => { if (!reply.raw.writableEnded) controller.abort() })
+
+      // Démo : limite par visiteur, puis une seule question à la fois sur l'instance (file courte).
+      const ip = demo ? clientIp(req) : ''
+      let admission: ReturnType<SingleSlot['enter']> = null
+      if (demo) {
+        if (conv.turns.length >= DEMO_LIMITS.maxTurns) {
+          throw new HttpError(400, `Cette analyse compte déjà ${DEMO_LIMITS.maxTurns} questions : une nouvelle analyse permet de continuer.`)
+        }
+        const wait = questionLimit.waitMinutes(ip)
+        if (wait) {
+          throw new HttpError(429, `Limite de la démo atteinte : ${config.demoQuestionsPerHour} questions par heure et par visiteur. Nouvel essai possible dans ${wait} min.`)
+        }
+        admission = slot.enter(controller.signal)
+        if (!admission) throw new HttpError(503, DEMO_BUSY)
+        admission.ready.catch(() => {}) // rejet traité plus bas (attente trop longue ou visiteur parti)
+        questionLimit.take(ip)
+        // À partir d'ici, plus rien ne doit échouer avant le bloc try qui libère la place.
+      }
+
       const turn: Turn = {
         id: `turn-${Date.now().toString(36)}`, question, label: req.body?.label ? String(req.body.label) : undefined,
         blocks: [], engine: plan ? 'claude-forfait' : engine, model, createdAt: new Date().toISOString(),
@@ -557,8 +700,6 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
       if (!conv.turns.length) conv.title = (turn.label ?? question).slice(0, 80)
       conv.turns.push(turn)
 
-      const controller = new AbortController()
-      req.raw.on('close', () => { if (!reply.raw.writableEnded) controller.abort() })
       reply.hijack()
       reply.raw.writeHead(200, {
         'content-type': 'text/event-stream; charset=utf-8',
@@ -572,7 +713,15 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
       const ping = setInterval(() => reply.raw.write(': ping\n\n'), 15_000)
       send('turn', { id: turn.id, question, label: turn.label, engine, model, title: conv.title })
 
+      // Démo : longueur totale du texte des réponses bornée.
+      let answerChars = 0
       const onEvent = (e: AgentEvent) => {
+        if (demo && e.type === 'text') {
+          if (answerChars >= DEMO_LIMITS.maxAnswerChars) return
+          const room = DEMO_LIMITS.maxAnswerChars - answerChars
+          answerChars += e.text.length
+          if (e.text.length > room) e = { type: 'text', text: `${e.text.slice(0, room)}\n\n… (réponse tronquée dans la démo)` }
+        }
         if (e.type === 'text') turn.blocks.push({ kind: 'text', text: e.text })
         else if (e.type === 'tool_start') turn.blocks.push({ kind: 'tool', id: e.id, name: e.name, input: e.input })
         else {
@@ -582,11 +731,26 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
         send(e.type, e)
       }
 
-      const started = Date.now()
+      let started = Date.now()
+      let release: (() => void) | null = null
+      let deadline: AbortSignal | null = null
       try {
+        if (admission) {
+          if (admission.queued) send('queued', { message: 'Une autre question est en cours sur la démo : la vôtre suit.' })
+          try {
+            release = await admission.ready
+          } catch (err) {
+            if (err instanceof DemoBusyError) questionLimit.refund(ip)
+            throw err
+          }
+          started = Date.now()
+          deadline = AbortSignal.timeout(DEMO_LIMITS.turnTimeoutMs)
+        }
         const opts = {
           system: `${SYSTEM_PROMPT}\n\n--- DONNÉES ---\n${profileForPrompt(meta.name, p, meta)}${linkedForPrompt(meta, await linked(meta))}`,
-          history, question, ctx: { db: d, profile: p }, onEvent, signal: controller.signal,
+          history, question, ctx: { db: d, profile: p }, onEvent,
+          signal: deadline ? AbortSignal.any([controller.signal, deadline]) : controller.signal,
+          ...(demo ? { maxSteps: DEMO_LIMITS.maxSteps, callTimeoutMs: DEMO_LIMITS.callTimeoutMs, maxOutputTokens: DEMO_LIMITS.maxOutputTokens } : {}),
         }
         const usage = options.runEngine
           ? await options.runEngine(engine, model, opts, apiKey)
@@ -597,13 +761,20 @@ export async function buildApp(options: AppOptions = {}): Promise<FastifyInstanc
         send('done', { usage, durationMs: turn.durationMs })
       } catch (err) {
         const aborted = controller.signal.aborted
-        turn.error = aborted ? 'Analyse arrêtée.' : err instanceof EngineError ? err.message : `Erreur : ${err instanceof Error ? err.message : String(err)}`
-        if (!aborted && !(err instanceof EngineError)) app.log.error(err)
+        const late = !aborted && !!deadline?.aborted
+        const known = err instanceof EngineError || err instanceof DemoBusyError
+        turn.error = aborted ? 'Analyse arrêtée.' : late ? DEMO_TIMEOUT
+          : known ? err.message : `Erreur : ${err instanceof Error ? err.message : String(err)}`
+        if (!aborted && !late && !known) app.log.error(err)
         send('error', { message: turn.error })
       } finally {
+        release?.()
         clearInterval(ping)
-        await store.saveConversation(conv).catch((e) => app.log.error(e))
-        await store.touchDataset(meta.id).catch(() => null)
+        if (demo) conv.updatedAt = new Date().toISOString() // session en mémoire : rien n'est écrit
+        else {
+          await store.saveConversation(conv).catch((e) => app.log.error(e))
+          await store.touchDataset(meta.id).catch(() => null)
+        }
         reply.raw.end()
       }
     })
