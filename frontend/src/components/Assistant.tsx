@@ -340,18 +340,18 @@ export function exportThread(title: string, datasetName: string) {
     c.replaceWith(img)
   })
   clone.querySelectorAll('.start, button.step-line svg, .pin-btn, .followups').forEach((n) => n.remove())
-  const css = `body{font:14px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#1a1b1e;background:#fbfbfc;margin:0}
-main{max-width:820px;margin:0 auto;padding:40px 24px}h1{font-size:20px;font-weight:600;margin:0}header.doc{margin-bottom:28px;color:#5f636c}
+  const css = `body{font:14px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#1f1b16;background:#f8f4ec;margin:0}
+main{max-width:820px;margin:0 auto;padding:40px 24px}h1{font-size:20px;font-weight:600;margin:0}header.doc{margin-bottom:28px;color:#5f574b}
 .question{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:32px 0 10px}.question h2{font-size:15px;font-weight:600;margin:0}
-.question-kind{color:#5f636c;font-size:12px}.question-kind svg,.reply-head svg,.atelier-brand__tile{display:none}
-.reply-head{font-size:13px;color:#5f636c;margin:0 0 6px}.reply-state{display:none}
-.trace{list-style:none;padding:0;margin:8px 0;border-left:1px solid #e3e4e8}.step{padding:3px 0 3px 14px}
-.step-line{border:0;background:none;font:inherit;color:#393c42;padding:0;text-align:left}.step-name{font-weight:500;margin-right:8px}
-.step-summary{color:#5f636c}.step-n{display:none}.answer{margin:10px 0}
-.figure{background:#fff;border:1px solid #e3e4e8;border-radius:10px;padding:12px;margin:10px 0}.figure figcaption strong{font-weight:600}.figure figcaption span{display:block;color:#5f636c;font-size:12.5px}
-table{border-collapse:collapse;font-size:13px;margin:8px 0;font-variant-numeric:tabular-nums}td,th{border-bottom:1px solid #e3e4e8;padding:5px 10px;text-align:left}th{font-weight:500;color:#5f636c}.num{text-align:right}
-pre{background:#f4f5f7;border:1px solid #e3e4e8;color:#1a1b1e;padding:10px 12px;border-radius:7px;overflow:auto;font:12.5px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
-code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.9em}.turn-meta{color:#6c7079;font-size:12px}.turn-meta svg{display:none}`
+.question-kind{color:#5f574b;font-size:12px}.question-kind svg,.reply-head svg,.atelier-brand__tile{display:none}
+.reply-head{font-size:13px;color:#5f574b;margin:0 0 6px}.reply-state{display:none}
+.trace{list-style:none;padding:0;margin:8px 0;border-left:1px solid #e4dac8}.step{padding:3px 0 3px 14px}
+.step-line{border:0;background:none;font:inherit;color:#3a3328;padding:0;text-align:left}.step-name{font-weight:500;margin-right:8px}
+.step-summary{color:#5f574b}.step-n{display:none}.answer{margin:10px 0}
+.figure{background:#fffdf8;border:1px solid #e4dac8;border-radius:10px;padding:12px;margin:10px 0}.figure figcaption strong{font-weight:600}.figure figcaption span{display:block;color:#5f574b;font-size:12.5px}
+table{border-collapse:collapse;font-size:13px;margin:8px 0;font-variant-numeric:tabular-nums}td,th{border-bottom:1px solid #e4dac8;padding:5px 10px;text-align:left}th{font-weight:500;color:#5f574b}.num{text-align:right}
+pre{background:#f1ebdf;border:1px solid #e4dac8;color:#1f1b16;padding:10px 12px;border-radius:7px;overflow:auto;font:12.5px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.9em}.turn-meta{color:#6b6255;font-size:12px}.turn-meta svg{display:none}`
   const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title} — DataMind</title><style>${css}</style></head><body><main><header class="doc"><h1>${escapeHtml(title)}</h1>
 Jeu de données : ${escapeHtml(datasetName)} · exporté le ${new Date().toLocaleString('fr-FR')} depuis DataMind</header>${clone.innerHTML}</main></body></html>`

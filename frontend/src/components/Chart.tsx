@@ -19,10 +19,11 @@ const PALETTE = {
   dark: ['#8D90FF', '#3CCFB2', '#F0B43C', '#E07CCB', '#5CB3F2', '#A8C657', '#9CA3AF', '#F2766B'],
 }
 
-// Habillage neutre (charte v2 « Linear ») : mêmes valeurs que les jetons --atelier-* de atelier-brand.css.
+// Habillage (crème en clair, bleu nuit en sombre) : mêmes valeurs que les jetons --atelier-* de atelier-brand.css
+// (--atelier-muted, --atelier-line, --atelier-surface, --atelier-text).
 const CHROME = {
-  light: { text: '#5f636c', rule: '#e3e4e8', surface: '#ffffff', ink: '#1a1b1e' },
-  dark: { text: '#969aa3', rule: '#24262b', surface: '#17181b', ink: '#e8e9ec' },
+  light: { text: '#5f574b', rule: '#e4dac8', surface: '#fffdf8', ink: '#1f1b16' },
+  dark: { text: '#a3aec2', rule: '#1f2a40', surface: '#121b2d', ink: '#e6eaf2' },
 }
 const FONT = '"Atelier Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif'
 
@@ -45,7 +46,7 @@ function buildOption(spec: ChartSpec, dark: boolean): echarts.EChartsCoreOption 
       trigger: 'axis', valueFormatter: (v: number) => (typeof v === 'number' ? fmtNumber(v) : v), confine: true,
       backgroundColor: chrome.surface, borderColor: rule, borderWidth: 1, padding: [6, 10],
       textStyle: { color: chrome.ink, fontFamily: FONT, fontSize: 12 },
-      extraCssText: `border-radius:7px;box-shadow:${dark ? '0 1px 2px rgb(0 0 0 / .4), 0 12px 32px -10px rgb(0 0 0 / .7)' : '0 1px 2px rgb(16 17 20 / .06), 0 8px 24px -8px rgb(16 17 20 / .18)'}`,
+      extraCssText: 'border-radius:7px;box-shadow:var(--atelier-glow-strong)',
     },
     grid: { left: 8, right: 16, top: 36, bottom: 8, containLabel: true },
     animationDuration: 400,

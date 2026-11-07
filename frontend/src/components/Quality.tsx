@@ -39,12 +39,14 @@ export function Quality({ dataset, onAudit, canAudit, onCleaned, onOpen, onPatch
   return (
     <div className="panel-scroll">
       <section className="quality-top">
+        <div className="atelier-kpi score-card">
         <div className={`score score-${tone}`}>
           <svg viewBox="0 0 120 120" aria-hidden>
             <circle cx="60" cy="60" r="52" className="score-track" />
             <circle cx="60" cy="60" r="52" className="score-value" strokeDasharray={`${(q.score / 100) * 326.7} 326.7`} />
           </svg>
           <div className="score-text"><strong>{q.score}</strong><span>sur 100</span></div>
+        </div>
         </div>
         <div className="score-explain">
           <h2>Qualité {q.grade.toLowerCase()}</h2>
